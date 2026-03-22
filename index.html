@@ -387,28 +387,42 @@
     .cs-pill { display: inline-block; background: var(--c-matcha-l, #e8f0e9); color: var(--c-matcha); font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.5rem 1.25rem; border-radius: 999px; margin-bottom: 2.25rem; }
 
     /* ─── Footer ─────────────────────────────────── */
-    footer { background: var(--c-ink); color: #fff; padding: 6rem 0 3rem; }
-    .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 5rem; }
-    .foot-brand img { height: 44px; width: auto; object-fit: contain; margin-bottom: 1.75rem; opacity: 0.9; }
-    .foot-brand p { font-size: 0.9rem; color: rgba(255,255,255,0.45); line-height: 1.75; max-width: 260px; }
-    .foot-h { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 1.5rem; }
-    .foot-link { display: block; font-size: 0.9375rem; color: rgba(255,255,255,0.55); text-decoration: none; margin-bottom: 0.875rem; cursor: pointer; transition: color 0.15s ease, padding-left 0.2s var(--ease-out-expo); }
-    .foot-link:hover { color: #fff; padding-left: 0.375rem; }
-    .foot-hours-big { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; color: #fff; line-height: 1; margin-bottom: 0.375rem; }
-    .foot-hours-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-matcha); margin-bottom: 1rem; }
-    .soc { display: flex; gap: 0.625rem; }
+    footer {
+      background: #fff;
+      border-top: 1px solid var(--c-border);
+    }
+    .foot-top {
+      padding: 5rem 0 4rem;
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
+      gap: 4rem;
+    }
+    .foot-brand img { height: 40px; width: auto; object-fit: contain; margin-bottom: 1.5rem; }
+    .foot-brand p { font-size: 0.9rem; color: #6b6560; line-height: 1.75; max-width: 240px; }
+    .foot-h { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #b0a99e; margin-bottom: 1.375rem; }
+    .foot-link { display: block; font-size: 0.9375rem; font-weight: 500; color: #4a4845; text-decoration: none; margin-bottom: 0.75rem; cursor: pointer; transition: color 0.15s ease; }
+    .foot-link:hover { color: var(--c-matcha); }
+    .foot-hours-big { font-size: 2.25rem; font-weight: 800; letter-spacing: -0.03em; color: var(--c-ink); line-height: 1; margin-bottom: 0.5rem; }
+    .foot-hours-label { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c-matcha); margin-bottom: 0.75rem; }
+    .foot-hours-days { font-size: 0.875rem; color: #6b6560; }
+    .soc { display: flex; gap: 0.5rem; }
     .soc-a {
-      width: 42px; height: 42px; border-radius: 50%;
+      width: 40px; height: 40px; border-radius: 50%;
       display: inline-flex; align-items: center; justify-content: center;
-      border: 1.5px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.55);
-      font-size: 0.75rem; font-weight: 800; text-decoration: none;
+      border: 1.5px solid var(--c-border); color: #6b6560;
+      font-size: 0.6875rem; font-weight: 800; text-decoration: none;
       transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
     }
-    .soc-a:hover { border-color: rgba(255,255,255,0.5); color: #fff; background: rgba(255,255,255,0.08); }
-    .foot-bot { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-    .foot-copy { font-size: 0.8125rem; color: rgba(255,255,255,0.25); }
-    .foot-power { font-size: 0.8125rem; color: rgba(255,255,255,0.25); text-decoration: none; transition: color 0.15s ease; }
-    .foot-power:hover { color: rgba(255,255,255,0.5); }
+    .soc-a:hover { border-color: var(--c-matcha); color: var(--c-matcha); background: #e8f0e9; }
+    .foot-handle { font-size: 0.8125rem; color: #b0a99e; margin-top: 0.875rem; }
+    .foot-bot {
+      border-top: 1px solid var(--c-border);
+      padding: 1.75rem 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    }
+    .foot-copy { font-size: 0.8125rem; color: #b0a99e; }
+    .foot-power { font-size: 0.8125rem; color: #b0a99e; text-decoration: none; transition: color 0.15s ease; }
+    .foot-power:hover { color: var(--c-matcha); }
 
     /* ─── Cookie ─────────────────────────────────── */
     #cookie {
@@ -452,7 +466,7 @@
       .about-grid { grid-template-columns: 1fr; }
       .about-img-col { height: 400px; position: relative; }
       .about-text-col { padding: 4rem 2.5rem; }
-      .foot-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+      .foot-top { grid-template-columns: 1fr 1fr; gap: 3rem; }
       .loc-info-grid { grid-template-columns: 1fr; gap: 3rem; }
     }
     @media (max-width: 900px) {
@@ -477,7 +491,7 @@
       .hero-aside { align-items: flex-start; }
       .hero-title { font-size: clamp(3.5rem, 13vw, 6rem); }
       .loc-hero-content { padding: 0 2rem; }
-      .foot-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .foot-top { grid-template-columns: 1fr; gap: 2.5rem; }
       .wrap, .wrap-sm, .wrap-lg { padding: 0 1.5rem; }
       .sec { padding: 5rem 0; }
       .form-card { padding: 2rem 1.5rem; }
@@ -541,7 +555,7 @@
 <div id="pg-hem" class="pg on">
 
   <!-- Hero -->
-  <div class="hero" style="margin-top:72px; height: calc(100svh - 72px);">
+  <div class="hero">
     <div class="hero-img loaded" id="hero-bg-home"></div>
     <div class="hero-grad"></div>
     <div class="hero-content">
@@ -806,20 +820,20 @@
     <div class="wrap">
       <div class="loc-info-grid">
         <div>
-          <div style="display:inline-flex; align-items:center; gap:0.625rem; background:#fffbec; border:1px solid #ffd36e; border-radius:999px; padding:0.5rem 1.125rem; margin-bottom:2rem;" data-r="up">
-            <span style="width:6px;height:6px;border-radius:50%;background:#f5a623;flex-shrink:0;display:inline-block;"></span>
-            <span style="font-size:0.6875rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#b07d10;">Ny öppning</span>
+          <div style="display:inline-flex; align-items:center; gap:0.625rem; background:#e8f0e9; border:1px solid #b8d8c0; border-radius:999px; padding:0.5rem 1.125rem; margin-bottom:2rem;" data-r="up">
+            <span style="width:6px;height:6px;border-radius:50%;background:#6ee49c;flex-shrink:0;display:inline-block;animation:pulse 2s ease infinite;"></span>
+            <span style="font-size:0.6875rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--c-matcha);">Öppet nu</span>
           </div>
-          <h2 class="t-h2" style="margin-bottom:1.75rem;" data-r="up" data-delay="100">Fluffy House öppnar i Uppsala!</h2>
+          <h2 class="t-h2" style="margin-bottom:1.75rem;" data-r="up" data-delay="100">Fluffy House Uppsala — nu öppet!</h2>
           <p class="t-body" style="margin-bottom:1.25rem;" data-r="up" data-delay="200">
-            Vi är otroligt glada att kunna meddela att Fluffy House nu är öppet i Uppsala! Bolaget Fluffy House Uppsala AB är redan registrerat och vi tar med oss hela konceptet — japanska fluffy pancakes och äkta matcha — till en ny stad.
+            Vi har tagit med oss hela Fluffy House-konceptet till Uppsala — äkta japanska fluffy pancakes och matcha i en ny stad. Välkommen att uppleva det fluffigaste caféet i Sverige, nu även i Uppsala.
           </p>
           <p class="t-body" style="margin-bottom:2.5rem;" data-r="up" data-delay="250">
-            Mer information om exakt adress och öppningsdetaljer kommer inom kort. Följ oss på Instagram för de senaste nyheterna.
+            Öppet alla dagar 10:00–20:00. Följ oss på Instagram för de senaste uppdateringarna om vår Uppsala-enhet.
           </p>
 
           <div style="display:flex; gap:0.875rem; flex-wrap:wrap;" data-r="up" data-delay="300">
-            <a href="https://www.instagram.com/fluffyhouse_sweden/" target="_blank" rel="noopener" class="btn btn-green">Följ oss på Instagram ↗</a>
+            <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn btn-green">Beställ online</a>
             <button class="btn btn-outline" data-pg="kontakt">Kontakta oss</button>
           </div>
         </div>
@@ -827,16 +841,12 @@
         <div data-r="right" data-delay="200">
           <div class="info-card">
             <div style="display:flex; align-items:center; gap:0.625rem; margin-bottom:1.5rem;">
-              <span style="width:8px;height:8px;border-radius:50%;background:#ffd36e;flex-shrink:0;display:inline-block;"></span>
-              <span style="font-size:0.8125rem; font-weight:700; color:#b07d10;">Ny enhet</span>
+              <span style="width:8px;height:8px;border-radius:50%;background:#6ee49c;flex-shrink:0;display:inline-block;animation:pulse 2s ease infinite;"></span>
+              <span style="font-size:0.8125rem; font-weight:700; color:var(--c-matcha);">Öppet nu</span>
             </div>
             <div class="info-row">
               <span class="info-key">Stad</span>
               <span class="info-val">Uppsala, Sverige</span>
-            </div>
-            <div class="info-row">
-              <span class="info-key">Adress</span>
-              <span class="info-val">Meddelas snart</span>
             </div>
             <div class="info-row">
               <span class="info-key">Öppettider</span>
@@ -844,10 +854,11 @@
             </div>
             <div class="info-row">
               <span class="info-key">Status</span>
-              <span class="info-val" style="color:var(--c-matcha);">Nu öppen!</span>
+              <span class="info-val" style="color:var(--c-matcha); font-weight:700;">Nu öppen ✓</span>
             </div>
             <div style="padding-top:1.5rem; display:flex; flex-direction:column; gap:0.75rem;">
-              <a href="https://www.instagram.com/fluffyhouse_sweden/" target="_blank" rel="noopener" class="btn btn-green" style="justify-content:center;">Instagram ↗</a>
+              <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn btn-green" style="justify-content:center;">Beställ online</a>
+              <a href="https://www.instagram.com/fluffyhouse_sweden/" target="_blank" rel="noopener" class="btn btn-outline" style="justify-content:center;">Instagram ↗</a>
             </div>
           </div>
         </div>
@@ -1001,33 +1012,48 @@
 <template id="foot-tpl">
   <footer>
     <div class="wrap">
-      <div class="foot-grid">
+      <div class="foot-top">
+
+        <!-- Brand -->
         <div class="foot-brand">
-          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd02f35d1b410f47979f27.png" alt="Fluffy House" onerror="this.outerHTML='<div style=\'font-weight:800;font-size:1.25rem;color:#fff;margin-bottom:1.75rem;\'>Fluffy House</div>'" />
+          <img
+            src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png"
+            alt="Fluffy House"
+            onerror="this.outerHTML='<div style=\'font-weight:800;font-size:1.125rem;letter-spacing:-0.02em;color:#1c1c1a;margin-bottom:1.5rem;\'>Fluffy House</div>'"
+          />
           <p>Japanska fluffy pancakes och äkta matcha — en upplevelse utan motstycke i Sverige.</p>
         </div>
+
+        <!-- Navigation -->
         <div>
           <p class="foot-h">Navigering</p>
           <a class="foot-link" data-pg="hem">Hem</a>
           <a class="foot-link" data-pg="restauranger">Restauranger</a>
+          <a class="foot-link" data-pg="giftcard">Giftcard</a>
           <a class="foot-link" data-pg="event">Event</a>
           <a class="foot-link" data-pg="jobb">Jobba med oss</a>
           <a class="foot-link" data-pg="kontakt">Kontakt</a>
         </div>
+
+        <!-- Hours -->
         <div>
           <p class="foot-h">Öppettider</p>
           <p class="foot-hours-label">Alla dagar</p>
           <p class="foot-hours-big">10:00–20:00</p>
+          <p class="foot-hours-days">Måndag – Söndag</p>
         </div>
+
+        <!-- Social -->
         <div>
           <p class="foot-h">Följ oss</p>
-          <div class="soc" style="margin-bottom:1.25rem;">
+          <div class="soc">
             <a class="soc-a" href="https://www.instagram.com/fluffyhouse_sweden/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
             <a class="soc-a" href="https://www.tiktok.com/@fluffy.house.swed" target="_blank" rel="noopener" aria-label="TikTok">TK</a>
             <a class="soc-a" href="https://www.facebook.com/profile.php?id=61579297283770" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
           </div>
-          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.3);">@fluffyhouse_sweden</p>
+          <p class="foot-handle">@fluffyhouse_sweden</p>
         </div>
+
       </div>
       <div class="foot-bot">
         <p class="foot-copy">© Fluffy House Stockholm AB</p>
