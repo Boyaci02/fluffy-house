@@ -150,6 +150,7 @@
       transition: opacity 0.3s ease;
     }
     #mob-menu.open { opacity: 1; pointer-events: all; }
+    #nav.mob-hidden { opacity: 0; pointer-events: none; transition: opacity 0.2s ease; }
 
     .mob-menu-header {
       display: flex; align-items: center; justify-content: space-between;
@@ -1294,6 +1295,7 @@ const mob     = document.getElementById('mob-menu');
 const overlay = document.getElementById('mob-overlay');
 const mobClose = document.getElementById('mob-close');
 
+const navEl = document.getElementById('nav');
 function openDrawer() {
   mob.classList.add('open');
   overlay.style.display = 'block';
@@ -1301,6 +1303,7 @@ function openDrawer() {
   ham.classList.add('open');
   ham.setAttribute('aria-expanded', 'true');
   document.body.style.overflow = 'hidden';
+  navEl.classList.add('mob-hidden');
 }
 function closeMob() {
   mob.classList.remove('open');
@@ -1308,6 +1311,7 @@ function closeMob() {
   ham.classList.remove('open');
   ham.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
+  navEl.classList.remove('mob-hidden');
   setTimeout(() => { overlay.style.display = ''; }, 300);
 }
 ham.addEventListener('click', () => mob.classList.contains('open') ? closeMob() : openDrawer());
