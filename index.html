@@ -372,7 +372,7 @@
       border: 1px solid rgba(255,255,255,0.25);
       border-radius: 999px; padding: 0.625rem 1.25rem;
       font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
-      color: #fff; text-decoration: none; cursor: pointer;
+      color: #fff; text-decoration: none; cursor: pointer; white-space: nowrap;
       transition: background 0.2s ease, border-color 0.2s ease;
     }
     .rest-card-cta:hover { background: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.4); }
@@ -493,6 +493,45 @@
     [data-delay="400"] { transition-delay: 0.4s; }
     [data-delay="500"] { transition-delay: 0.5s; }
 
+    /* ─── Nav end (lang + hamburger) ────────────── */
+    .nav-end { display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem; }
+
+    /* ─── Language picker ────────────────────────── */
+    .lang-picker { position: relative; }
+    .lang-btn {
+      display: flex; align-items: center; gap: 0.375rem;
+      background: transparent; border: 1.5px solid var(--c-border);
+      border-radius: 999px; padding: 0.35rem 0.7rem;
+      font-family: inherit; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
+      color: var(--c-ink); cursor: pointer; white-space: nowrap;
+      transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+    }
+    .lang-btn:hover { border-color: var(--c-matcha); color: var(--c-matcha); }
+    #nav.hero-mode .lang-btn { border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.85); }
+    #nav.hero-mode .lang-btn:hover { border-color: rgba(255,255,255,0.6); color: #fff; background: rgba(255,255,255,0.08); }
+    .lang-chevron { transition: transform 0.2s var(--ease-out-expo); flex-shrink:0; }
+    .lang-btn.open .lang-chevron { transform: rotate(180deg); }
+    .lang-dd {
+      position: absolute; top: calc(100% + 10px); right: 0;
+      background: #fff; border-radius: 12px; border: 1px solid var(--c-border);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.14); overflow: hidden; z-index: 201;
+      min-width: 148px;
+      opacity: 0; transform: translateY(-6px) scale(0.97); pointer-events: none;
+      transition: opacity 0.18s var(--ease-out-expo), transform 0.18s var(--ease-out-expo);
+    }
+    .lang-dd.open { opacity: 1; transform: none; pointer-events: all; }
+    .lang-opt {
+      display: flex; align-items: center; gap: 0.625rem;
+      width: 100%; padding: 0.75rem 1rem;
+      font-family: inherit; font-size: 0.8125rem; font-weight: 600;
+      color: var(--c-ink); background: transparent; border: none; cursor: pointer; text-align: left;
+      transition: background 0.1s ease;
+    }
+    .lang-opt:hover { background: var(--c-cream); }
+    .lang-opt.active { color: var(--c-matcha); font-weight: 700; }
+    .lang-check { margin-left: auto; font-size: 0.7rem; display: none; }
+    .lang-opt.active .lang-check { display: inline; }
+
     /* ─── Map ────────────────────────────────────── */
     .map-frame { width: 100%; height: 380px; border: none; border-radius: 16px; display: block; }
 
@@ -544,11 +583,11 @@
 <nav id="nav">
   <div class="nav-wrap">
     <div class="nav-group">
-      <a class="nav-a active" data-pg="hem">Hem</a>
-      <a class="nav-a" data-pg="restauranger">Restauranger</a>
-      <a class="nav-a" data-pg="giftcard">Giftcard</a>
-      <a class="nav-a" data-pg="event">Event</a>
-      <a class="nav-a" data-pg="jobb">Jobb</a>
+      <a class="nav-a active" data-pg="hem" data-i18n="nav.hem">Hem</a>
+      <a class="nav-a" data-pg="restauranger" data-i18n="nav.restauranger">Restauranger</a>
+      <a class="nav-a" data-pg="giftcard" data-i18n="nav.giftcard">Giftcard</a>
+      <a class="nav-a" data-pg="event" data-i18n="nav.event">Event</a>
+      <a class="nav-a" data-pg="jobb" data-i18n="nav.jobb">Jobb</a>
     </div>
 
     <div class="nav-logo">
@@ -558,16 +597,33 @@
       </span>
     </div>
 
-    <div class="nav-group nav-right">
-      <a class="nav-a" data-pg="brunch">Brunch</a>
-      <a class="nav-a" data-pg="collaboration">Collab</a>
-      <a class="nav-a nav-a-ext" href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener">Meny <span class="ext-arrow">↗</span></a>
-      <a class="nav-a" data-pg="kontakt">Kontakt</a>
-    </div>
+    <div class="nav-end">
+      <div class="nav-group nav-right">
+        <a class="nav-a" data-pg="brunch" data-i18n="nav.brunch">Brunch</a>
+        <a class="nav-a" data-pg="collaboration" data-i18n="nav.collab">Collab</a>
+        <a class="nav-a nav-a-ext" href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener"><span data-i18n="nav.meny">Meny</span> <span class="ext-arrow">↗</span></a>
+        <a class="nav-a" data-pg="kontakt" data-i18n="nav.kontakt">Kontakt</a>
+      </div>
 
-    <button class="hamburger" id="ham" aria-label="Öppna meny" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+      <!-- Language picker -->
+      <div class="lang-picker" id="lang-picker">
+        <button class="lang-btn" id="lang-btn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="lang-flag">🇸🇪</span>
+          <span id="lang-code">SV</span>
+          <svg class="lang-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lang-dd" id="lang-dd" role="listbox">
+          <button class="lang-opt active" data-lang="sv" role="option">🇸🇪 Svenska <span class="lang-check">✓</span></button>
+          <button class="lang-opt" data-lang="en" role="option">🇬🇧 English <span class="lang-check">✓</span></button>
+          <button class="lang-opt" data-lang="da" role="option">🇩🇰 Dansk <span class="lang-check">✓</span></button>
+          <button class="lang-opt" data-lang="no" role="option">🇳🇴 Norsk <span class="lang-check">✓</span></button>
+        </div>
+      </div>
+
+      <button class="hamburger" id="ham" aria-label="Öppna meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </nav>
 
@@ -585,18 +641,18 @@
     <button class="mob-close" id="mob-close" aria-label="Stäng meny">✕</button>
   </div>
   <div class="mob-menu-inner">
-    <a class="mob-a active" data-pg="hem">Hem</a>
-    <a class="mob-a" data-pg="restauranger">Restauranger</a>
-    <a class="mob-a" data-pg="giftcard">Giftcard</a>
-    <a class="mob-a" data-pg="event">Event</a>
-    <a class="mob-a" data-pg="jobb">Jobb</a>
-    <a class="mob-a" data-pg="brunch">Brunch</a>
-    <a class="mob-a" data-pg="collaboration">Collab</a>
-    <a class="mob-a" href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener">Meny ↗</a>
-    <a class="mob-a" data-pg="kontakt">Kontakt</a>
+    <a class="mob-a active" data-pg="hem" data-i18n="nav.hem">Hem</a>
+    <a class="mob-a" data-pg="restauranger" data-i18n="nav.restauranger">Restauranger</a>
+    <a class="mob-a" data-pg="giftcard" data-i18n="nav.giftcard">Giftcard</a>
+    <a class="mob-a" data-pg="event" data-i18n="nav.event">Event</a>
+    <a class="mob-a" data-pg="jobb" data-i18n="nav.jobb">Jobb</a>
+    <a class="mob-a" data-pg="brunch" data-i18n="nav.brunch">Brunch</a>
+    <a class="mob-a" data-pg="collaboration" data-i18n="nav.collab">Collab</a>
+    <a class="mob-a" href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener"><span data-i18n="nav.meny">Meny</span> ↗</a>
+    <a class="mob-a" data-pg="kontakt" data-i18n="nav.kontakt">Kontakt</a>
   </div>
   <div class="mob-menu-footer">
-    <p>Öppet alla dagar 10:00–20:00</p>
+    <p data-i18n="mob.footer">Öppet alla dagar 10:00–20:00</p>
   </div>
 </div>
 
@@ -615,15 +671,15 @@
     <div class="hero-content">
       <div class="hero-text">
         <h1 class="hero-title">Fluffy<br>House</h1>
-        <p class="hero-sub">Japanska fluffy pancakes och äkta matcha, en upplevelse utan motstycke i Sverige.</p>
+        <p class="hero-sub" data-i18n="hero.sub">Japanska fluffy pancakes och äkta matcha, en upplevelse utan motstycke i Sverige.</p>
         <div class="hero-actions">
-          <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn btn-white">Beställ online</a>
-          <button class="btn btn-outline-white" data-pg="restauranger">Hitta oss</button>
+          <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn btn-white" data-i18n="btn.order">Beställ online</a>
+          <button class="btn btn-outline-white" data-pg="restauranger" data-i18n="hero.find">Hitta oss</button>
         </div>
       </div>
     </div>
     <div class="hero-scroll">
-      <span class="hero-scroll-text">Scrolla</span>
+      <span class="hero-scroll-text" data-i18n="hero.scroll">Scrolla</span>
       <div class="hero-scroll-line"></div>
     </div>
   </div>
@@ -631,18 +687,18 @@
   <!-- Ticker -->
   <div class="intro-strip">
     <div class="ticker-track" id="ticker">
-      <span class="ticker-item"><span class="ticker-dot"></span>Japanska Fluffy Pancakes</span>
-      <span class="ticker-item"><span class="ticker-dot"></span>Äkta Matcha</span>
-      <span class="ticker-item"><span class="ticker-dot"></span>Kungsholmen, Stockholm</span>
-      <span class="ticker-item"><span class="ticker-dot"></span>Nu i Uppsala</span>
-      <span class="ticker-item"><span class="ticker-dot"></span>Beställ Online</span>
-      <span class="ticker-item"><span class="ticker-dot"></span>Öppet Alla Dagar 10–20</span>
-      <span class="ticker-item"><span class="ticker-dot"></span>Japanska Fluffy Pancakes</span>
-      <span class="ticker-item"><span class="ticker-dot"></span>Äkta Matcha</span>
-      <span class="ticker-item"><span class="ticker-dot"></span>Kungsholmen, Stockholm</span>
-      <span class="ticker-item"><span class="ticker-dot"></span>Nu i Uppsala</span>
-      <span class="ticker-item"><span class="ticker-dot"></span>Beställ Online</span>
-      <span class="ticker-item"><span class="ticker-dot"></span>Öppet Alla Dagar 10–20</span>
+      <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="ticker.pancakes">Japanska Fluffy Pancakes</span></span>
+      <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="ticker.matcha">Äkta Matcha</span></span>
+      <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="ticker.stockholm">Kungsholmen, Stockholm</span></span>
+      <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="ticker.uppsala">Nu i Uppsala</span></span>
+      <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="ticker.order">Beställ Online</span></span>
+      <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="ticker.hours">Öppet Alla Dagar 10–20</span></span>
+      <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="ticker.pancakes">Japanska Fluffy Pancakes</span></span>
+      <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="ticker.matcha">Äkta Matcha</span></span>
+      <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="ticker.stockholm">Kungsholmen, Stockholm</span></span>
+      <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="ticker.uppsala">Nu i Uppsala</span></span>
+      <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="ticker.order">Beställ Online</span></span>
+      <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="ticker.hours">Öppet Alla Dagar 10–20</span></span>
     </div>
   </div>
 
@@ -662,18 +718,18 @@
     </div>
     <div class="about-text-col">
       <div class="label-bar" data-r="up">
-        <span class="t-label">Om oss</span>
+        <span class="t-label" data-i18n="about.label">Om oss</span>
       </div>
-      <h2 class="t-h2" style="margin-bottom:1.75rem;" data-r="up" data-delay="100">Det bästa från Japan, i hjärtat av Stockholm</h2>
-      <p class="t-body" style="margin-bottom:1.25rem;" data-r="up" data-delay="200">
+      <h2 class="t-h2" style="margin-bottom:1.75rem;" data-r="up" data-delay="100" data-i18n="about.h2">Det bästa från Japan, i hjärtat av Stockholm</h2>
+      <p class="t-body" style="margin-bottom:1.25rem;" data-r="up" data-delay="200" data-i18n="about.p1">
         På Fluffy House serverar vi inte bara våra berömda fluffiga pannkakor, vi erbjuder äkta japansk matcha i unika smaker. Smaka klassisk matcha men också spännande varianter som matcha jordgubb eller matcha mango.
       </p>
-      <p class="t-body" style="margin-bottom:2.75rem;" data-r="up" data-delay="250">
+      <p class="t-body" style="margin-bottom:2.75rem;" data-r="up" data-delay="250" data-i18n="about.p2">
         Matcha är mer än bara te, det är en del av den japanska kulturen. Den unika smaken harmoniserar perfekt med våra pannkakor och ger en upplevelse som är frisk, djup och uppiggande.
       </p>
       <div style="display:flex; gap:0.875rem; flex-wrap:wrap;" data-r="up" data-delay="350">
-        <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn btn-green">Beställ online</a>
-        <button class="btn btn-outline" data-pg="restauranger">Hitta oss</button>
+        <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn btn-green" data-i18n="btn.order">Beställ online</a>
+        <button class="btn btn-outline" data-pg="restauranger" data-i18n="hero.find">Hitta oss</button>
       </div>
     </div>
   </div>
@@ -681,12 +737,12 @@
   <!-- USP -->
   <div style="background: var(--c-cream2); padding: 7rem 0;">
     <div class="wrap-sm" style="text-align:center;">
-      <p class="t-label" style="margin-bottom:1.25rem;" data-r="up">Sveriges första</p>
-      <h2 class="t-h1" style="margin-bottom:2rem; color:var(--c-ink);" data-r="up" data-delay="100">Fluffiga pannkakor i Stockholm</h2>
-      <p class="t-body" style="margin-bottom:3rem; max-width:620px; margin-left:auto; margin-right:auto;" data-r="up" data-delay="200">
+      <p class="t-label" style="margin-bottom:1.25rem;" data-r="up" data-i18n="usp.label">Sveriges första</p>
+      <h2 class="t-h1" style="margin-bottom:2rem; color:var(--c-ink);" data-r="up" data-delay="100" data-i18n="usp.h2">Fluffiga pannkakor i Stockholm</h2>
+      <p class="t-body" style="margin-bottom:3rem; max-width:620px; margin-left:auto; margin-right:auto;" data-r="up" data-delay="200" data-i18n="usp.body">
         Fluffy House är det första caféet i Sverige som serverar äkta japanska fluffy pancakes, de luftiga soufflé-pannkakorna som tagit världen med storm. Mer än pannkakor, en upplevelse.
       </p>
-      <button class="btn btn-green" data-pg="restauranger" data-r="up" data-delay="300">Våra Caféer</button>
+      <button class="btn btn-green" data-pg="restauranger" data-r="up" data-delay="300" data-i18n="usp.cta">Våra Caféer</button>
     </div>
   </div>
 
@@ -695,8 +751,8 @@
     <div class="wrap">
       <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; margin-bottom:2.5rem; flex-wrap:wrap;">
         <div>
-          <p class="t-label" style="margin-bottom:0.75rem;" data-r="up">Galleri</p>
-          <h2 class="t-h2" style="color:var(--c-ink);" data-r="up" data-delay="100">Se våra skapelser</h2>
+          <p class="t-label" style="margin-bottom:0.75rem;" data-r="up" data-i18n="gallery.label">Galleri</p>
+          <h2 class="t-h2" style="color:var(--c-ink);" data-r="up" data-delay="100" data-i18n="gallery.h2">Se våra skapelser</h2>
         </div>
         <a href="https://www.instagram.com/fluffyhouse_sweden/" target="_blank" rel="noopener" class="btn btn-outline" data-r="up" data-delay="200">Instagram ↗</a>
       </div>
@@ -721,9 +777,9 @@
   <div class="sec">
     <div class="wrap">
       <div style="text-align:center; margin-bottom:4rem;">
-        <p class="t-label" style="margin-bottom:1rem;" data-r="up">Våra enheter</p>
-        <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:1.25rem;" data-r="up" data-delay="100">Restauranger</h1>
-        <p class="t-body" style="max-width:520px; margin:0 auto;" data-r="up" data-delay="200">Hitta din närmaste Fluffy House. Nu öppna i Stockholm och Uppsala.</p>
+        <p class="t-label" style="margin-bottom:1rem;" data-r="up" data-i18n="rest.label">Våra enheter</p>
+        <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:1.25rem;" data-r="up" data-delay="100" data-i18n="rest.h1">Restauranger</h1>
+        <p class="t-body" style="max-width:520px; margin:0 auto;" data-r="up" data-delay="200" data-i18n="rest.body">Hitta din närmaste Fluffy House. Nu öppna i Stockholm och Uppsala.</p>
       </div>
 
       <div class="restaurant-cards">
@@ -732,12 +788,12 @@
           <div class="rest-card-img"></div>
           <div class="rest-card-grad"></div>
           <div class="rest-card-body">
-            <div class="rest-card-badge"><span class="rest-badge-dot"></span> Öppet nu</div>
+            <div class="rest-card-badge"><span class="rest-badge-dot"></span> <span data-i18n="rest.open">Öppet nu</span></div>
             <h2 class="rest-card-name">Fluffy House<br>Kungsholmen</h2>
             <p class="rest-card-addr">Sankt Eriksgatan 44 · Stockholm</p>
             <div class="rest-card-meta">
               <span class="rest-card-hours">10:00–20:00 · Alla dagar</span>
-              <span class="rest-card-cta">Utforska →</span>
+              <span class="rest-card-cta" data-i18n="rest.cta">Utforska →</span>
             </div>
           </div>
         </div>
@@ -747,14 +803,14 @@
           <div class="rest-card-img"></div>
           <div class="rest-card-grad"></div>
           <div class="rest-card-body">
-            <div class="rest-card-badge" style="background:rgba(255,211,110,0.18); border-color:rgba(255,211,110,0.3);">
-              <span class="rest-badge-dot" style="background:#ffd36e;animation:none;"></span> Ny öppning
+            <div class="rest-card-badge">
+              <span class="rest-badge-dot"></span> <span data-i18n="rest.open">Öppet nu</span>
             </div>
             <h2 class="rest-card-name">Fluffy House<br>Uppsala</h2>
             <p class="rest-card-addr">Uppsala, Sverige</p>
             <div class="rest-card-meta">
               <span class="rest-card-hours">10:00–20:00 · Alla dagar</span>
-              <span class="rest-card-cta">Utforska →</span>
+              <span class="rest-card-cta" data-i18n="rest.cta">Utforska →</span>
             </div>
           </div>
         </div>
@@ -778,7 +834,7 @@
       <h1 class="t-h1" style="color:#fff; margin-bottom:1rem;">Kungsholmen</h1>
       <div style="display:flex; gap:0.875rem; flex-wrap:wrap;">
         <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn btn-white">Beställ online</a>
-        <button class="btn btn-outline-white" data-pg="restauranger">← Alla restauranger</button>
+        <button class="btn btn-outline-white" data-pg="restauranger" data-i18n="btn.back.rest">← Alla restauranger</button>
       </div>
     </div>
   </div>
@@ -787,12 +843,12 @@
     <div class="wrap">
       <div class="loc-info-grid">
         <div>
-          <p class="t-label" style="margin-bottom:1rem;" data-r="up">Om restaurangen</p>
-          <h2 class="t-h2" style="margin-bottom:1.75rem;" data-r="up" data-delay="100">Vår första enhet, hjärtat av Kungsholmen</h2>
-          <p class="t-body" style="margin-bottom:1.25rem;" data-r="up" data-delay="200">
+          <p class="t-label" style="margin-bottom:1rem;" data-r="up" data-i18n="loc.k.label">Om restaurangen</p>
+          <h2 class="t-h2" style="margin-bottom:1.75rem;" data-r="up" data-delay="100" data-i18n="loc.k.h2">Vår första enhet, hjärtat av Kungsholmen</h2>
+          <p class="t-body" style="margin-bottom:1.25rem;" data-r="up" data-delay="200" data-i18n="loc.k.p1">
             Det var här allt startade. Fluffy House Kungsholmen öppnade den 10 oktober 2024 och är det allra första stället i Sverige att servera äkta japanska fluffy pancakes.
           </p>
-          <p class="t-body" style="margin-bottom:2.5rem;" data-r="up" data-delay="250">
+          <p class="t-body" style="margin-bottom:2.5rem;" data-r="up" data-delay="250" data-i18n="loc.k.p2">
             Beläget på Sankt Eriksgatan 44, bara 200 meter från Fridhemsplan, är caféet lätt att nå med tunnelbana. Välkommen in och upplev matcha och soufflé-pannkakor som du aldrig smakat dem förut.
           </p>
 
@@ -854,7 +910,7 @@
       <h1 class="t-h1" style="color:#fff; margin-bottom:1rem;">Uppsala</h1>
       <div style="display:flex; gap:0.875rem; flex-wrap:wrap;">
         <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn btn-white">Beställ online</a>
-        <button class="btn btn-outline-white" data-pg="restauranger">← Alla restauranger</button>
+        <button class="btn btn-outline-white" data-pg="restauranger" data-i18n="btn.back.rest">← Alla restauranger</button>
       </div>
     </div>
   </div>
@@ -867,11 +923,11 @@
             <span style="width:6px;height:6px;border-radius:50%;background:#6ee49c;flex-shrink:0;display:inline-block;animation:pulse 2s ease infinite;"></span>
             <span style="font-size:0.6875rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--c-matcha);">Öppet nu</span>
           </div>
-          <h2 class="t-h2" style="margin-bottom:1.75rem;" data-r="up" data-delay="100">Fluffy House Uppsala, nu öppet!</h2>
-          <p class="t-body" style="margin-bottom:1.25rem;" data-r="up" data-delay="200">
+          <h2 class="t-h2" style="margin-bottom:1.75rem;" data-r="up" data-delay="100" data-i18n="loc.u.h2">Fluffy House Uppsala, nu öppet!</h2>
+          <p class="t-body" style="margin-bottom:1.25rem;" data-r="up" data-delay="200" data-i18n="loc.u.p1">
             Vi har tagit med oss hela Fluffy House-konceptet till Uppsala, äkta japanska fluffy pancakes och matcha i en ny stad. Välkommen att uppleva det fluffigaste caféet i Sverige, nu även i Uppsala.
           </p>
-          <p class="t-body" style="margin-bottom:2.5rem;" data-r="up" data-delay="250">
+          <p class="t-body" style="margin-bottom:2.5rem;" data-r="up" data-delay="250" data-i18n="loc.u.p2">
             Öppet alla dagar 10:00–20:00. Följ oss på Instagram för de senaste uppdateringarna om vår Uppsala-enhet.
           </p>
 
@@ -943,10 +999,10 @@
 <div id="pg-event" class="pg" style="padding-top:72px;">
   <div class="cs-wrap">
     <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png" alt="Fluffy House" style="height:52px;margin-bottom:3rem;opacity:0.25;" onerror="this.style.display='none'" />
-    <div class="cs-pill">Kommer snart</div>
-    <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:1.25rem;">Event</h1>
-    <p class="t-body" style="max-width:460px; margin:0 auto 2.5rem;">You will soon be able to book your events at Fluffy House.</p>
-    <button class="btn btn-outline" data-pg="hem">← Tillbaka till startsidan</button>
+    <div class="cs-pill" data-i18n="cs.pill">Kommer snart</div>
+    <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:1.25rem;" data-i18n="event.h1">Event</h1>
+    <p class="t-body" style="max-width:460px; margin:0 auto 2.5rem;" data-i18n="event.body">You will soon be able to book your events at Fluffy House.</p>
+    <button class="btn btn-outline" data-pg="hem" data-i18n="event.back">← Tillbaka till startsidan</button>
   </div>
   <div id="foot-event"></div>
 </div>
@@ -958,9 +1014,9 @@
 <div id="pg-jobb" class="pg" style="padding-top:72px;">
   <div class="sec">
     <div class="wrap-sm">
-      <p class="t-label" style="margin-bottom:1rem;">Lediga tjänster</p>
-      <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:0.75rem;">Fluffy Jobs</h1>
-      <p class="t-body" style="margin-bottom:3.5rem;">Vill du jobba i ett unikt café med Japans bästa pannkakor? Skicka in din ansökan!</p>
+      <p class="t-label" style="margin-bottom:1rem;" data-i18n="jobb.label">Lediga tjänster</p>
+      <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:0.75rem;" data-i18n="jobb.h1">Fluffy Jobs</h1>
+      <p class="t-body" style="margin-bottom:3.5rem;" data-i18n="jobb.body">Vill du jobba i ett unikt café med Japans bästa pannkakor? Skicka in din ansökan!</p>
       <div class="form-card">
         <form id="jobb-form" novalidate>
           <div class="f-row">
@@ -985,10 +1041,10 @@
 <div id="pg-brunch" class="pg" style="padding-top:72px;">
   <div class="cs-wrap">
     <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png" alt="Fluffy House" style="height:52px;margin-bottom:3rem;opacity:0.25;" onerror="this.style.display='none'" />
-    <div class="cs-pill">Kommer snart</div>
-    <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:0.75rem;">Brunch</h1>
-    <p class="t-body" style="max-width:400px; margin:0 auto 2.5rem;">Vi arbetar på något fantastiskt, håll utkik!</p>
-    <button class="btn btn-outline" data-pg="hem">← Tillbaka till startsidan</button>
+    <div class="cs-pill" data-i18n="cs.pill">Kommer snart</div>
+    <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:0.75rem;" data-i18n="brunch.h1">Brunch</h1>
+    <p class="t-body" style="max-width:400px; margin:0 auto 2.5rem;" data-i18n="brunch.body">Vi arbetar på något fantastiskt, håll utkik!</p>
+    <button class="btn btn-outline" data-pg="hem" data-i18n="event.back">← Tillbaka till startsidan</button>
   </div>
   <div id="foot-brunch"></div>
 </div>
@@ -1029,9 +1085,9 @@
 <div id="pg-kontakt" class="pg" style="padding-top:72px;">
   <div class="sec">
     <div class="wrap-sm">
-      <p class="t-label" style="margin-bottom:1rem;">Kontakt</p>
-      <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:0.75rem;">Kontakta Oss</h1>
-      <p class="t-body" style="margin-bottom:3.5rem;">Skicka in ditt meddelande här så hör vi av oss inom kort.</p>
+      <p class="t-label" style="margin-bottom:1rem;" data-i18n="kontakt.label">Kontakt</p>
+      <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:0.75rem;" data-i18n="kontakt.h1">Kontakta Oss</h1>
+      <p class="t-body" style="margin-bottom:3.5rem;" data-i18n="kontakt.body">Skicka in ditt meddelande här så hör vi av oss inom kort.</p>
       <div class="form-card">
         <form id="kontakt-form" novalidate>
           <div class="f-row">
@@ -1064,31 +1120,31 @@
             alt="Fluffy House"
             onerror="this.outerHTML='<div style=\'font-weight:800;font-size:1.125rem;letter-spacing:-0.02em;color:#1c1c1a;margin-bottom:1.5rem;\'>Fluffy House</div>'"
           />
-          <p>Japanska fluffy pancakes och äkta matcha, en upplevelse utan motstycke i Sverige.</p>
+          <p data-i18n="foot.brand">Japanska fluffy pancakes och äkta matcha, en upplevelse utan motstycke i Sverige.</p>
         </div>
 
         <!-- Navigation -->
         <div>
-          <p class="foot-h">Navigering</p>
-          <a class="foot-link" data-pg="hem">Hem</a>
-          <a class="foot-link" data-pg="restauranger">Restauranger</a>
-          <a class="foot-link" data-pg="giftcard">Giftcard</a>
-          <a class="foot-link" data-pg="event">Event</a>
-          <a class="foot-link" data-pg="jobb">Jobba med oss</a>
-          <a class="foot-link" data-pg="kontakt">Kontakt</a>
+          <p class="foot-h" data-i18n="foot.nav.h">Navigering</p>
+          <a class="foot-link" data-pg="hem" data-i18n="nav.hem">Hem</a>
+          <a class="foot-link" data-pg="restauranger" data-i18n="nav.restauranger">Restauranger</a>
+          <a class="foot-link" data-pg="giftcard" data-i18n="nav.giftcard">Giftcard</a>
+          <a class="foot-link" data-pg="event" data-i18n="nav.event">Event</a>
+          <a class="foot-link" data-pg="jobb" data-i18n="foot.nav.jobb">Jobba med oss</a>
+          <a class="foot-link" data-pg="kontakt" data-i18n="nav.kontakt">Kontakt</a>
         </div>
 
         <!-- Hours -->
         <div>
-          <p class="foot-h">Öppettider</p>
-          <p class="foot-hours-label">Alla dagar</p>
+          <p class="foot-h" data-i18n="foot.hours.h">Öppettider</p>
+          <p class="foot-hours-label" data-i18n="foot.hours.label">Alla dagar</p>
           <p class="foot-hours-big">10:00–20:00</p>
-          <p class="foot-hours-days">Måndag–Söndag</p>
+          <p class="foot-hours-days" data-i18n="foot.hours.days">Måndag–Söndag</p>
         </div>
 
         <!-- Social -->
         <div>
-          <p class="foot-h">Följ oss</p>
+          <p class="foot-h" data-i18n="foot.social.h">Följ oss</p>
           <div class="soc">
             <a class="soc-a" href="https://www.instagram.com/fluffyhouse_sweden/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
             <a class="soc-a" href="https://www.tiktok.com/@fluffy.house.swed" target="_blank" rel="noopener" aria-label="TikTok">TK</a>
@@ -1099,8 +1155,8 @@
 
       </div>
       <div class="foot-bot">
-        <p class="foot-copy">© Fluffy House Stockholm AB</p>
-        <a class="foot-power" href="https://synsnumedia.se" target="_blank" rel="noopener">Powered By Syns Nu</a>
+        <p class="foot-copy" data-i18n="foot.copy">© Fluffy House Stockholm AB</p>
+        <a class="foot-power" href="https://synsnumedia.se" target="_blank" rel="noopener" data-i18n="foot.power">Powered By Syns Nu</a>
       </div>
     </div>
   </footer>
@@ -1111,11 +1167,11 @@
      COOKIE
 ══════════════════════════════════════════════════════════ -->
 <div id="cookie" class="hidden" role="dialog" aria-label="Cookies">
-  <p class="cookie-title">Vi använder cookies</p>
-  <p class="cookie-body">Vi använder cookies och andra tekniker för att anpassa din upplevelse och utföra analyser. Vi använder dem inte utan ditt samtycke.</p>
+  <p class="cookie-title" data-i18n="cookie.title">Vi använder cookies</p>
+  <p class="cookie-body" data-i18n="cookie.body">Vi använder cookies och andra tekniker för att anpassa din upplevelse och utföra analyser. Vi använder dem inte utan ditt samtycke.</p>
   <div class="cookie-btns">
-    <button class="ck-nec" id="ck-nec">Acceptera nödvändiga</button>
-    <button class="ck-accept" id="ck-ok">Acceptera alla</button>
+    <button class="ck-nec" id="ck-nec" data-i18n="cookie.nec">Acceptera nödvändiga</button>
+    <button class="ck-accept" id="ck-ok" data-i18n="cookie.accept">Acceptera alla</button>
   </div>
 </div>
 
@@ -1232,6 +1288,8 @@ document.querySelectorAll('[id^="foot-"]').forEach(slot => {
   if (slot.id === 'foot-tpl') return;
   slot.appendChild(footTpl.content.cloneNode(true));
 });
+// Apply saved language after footer clones are in DOM
+applyLang(currentLang);
 
 // ─── Scroll reveal ────────────────────────────────────────
 let revealObserver;
@@ -1256,19 +1314,273 @@ function dismissCookie() { ck.classList.add('hidden'); localStorage.setItem('fh-
 document.getElementById('ck-ok').addEventListener('click', dismissCookie);
 document.getElementById('ck-nec').addEventListener('click', dismissCookie);
 
-// ─── Forms ───────────────────────────────────────────────
-['jobb-form','collab-form','kontakt-form'].forEach(id => {
-  const f = document.getElementById(id);
-  if (!f) return;
-  f.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = f.querySelector('button[type="submit"]');
-    const orig = btn.textContent;
-    btn.textContent = '✓ Skickat!';
-    btn.style.background = '#2e5039';
-    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 3000);
+// ─── i18n ────────────────────────────────────────────────
+const T = {
+  sv: {
+    'nav.hem':'Hem','nav.restauranger':'Restauranger','nav.giftcard':'Giftcard',
+    'nav.event':'Event','nav.jobb':'Jobb','nav.brunch':'Brunch','nav.collab':'Collab',
+    'nav.meny':'Meny','nav.kontakt':'Kontakt',
+    'foot.nav.h':'Navigering','foot.nav.jobb':'Jobba med oss',
+    'foot.hours.h':'Öppettider','foot.hours.label':'Alla dagar','foot.hours.days':'Måndag–Söndag',
+    'foot.social.h':'Följ oss','foot.brand':'Japanska fluffy pancakes och äkta matcha, en upplevelse utan motstycke i Sverige.',
+    'foot.copy':'© Fluffy House Stockholm AB','foot.power':'Powered By Syns Nu',
+    'hero.sub':'Japanska fluffy pancakes och äkta matcha, en upplevelse utan motstycke i Sverige.',
+    'hero.find':'Hitta oss','hero.scroll':'Scrolla','btn.order':'Beställ online',
+    'btn.back.rest':'← Alla restauranger','btn.directions':'Vägbeskrivning ↗',
+    'btn.instagram':'Instagram ↗','btn.contact':'Kontakta oss',
+    'ticker.pancakes':'Japanska Fluffy Pancakes','ticker.matcha':'Äkta Matcha',
+    'ticker.stockholm':'Kungsholmen, Stockholm','ticker.uppsala':'Nu i Uppsala',
+    'ticker.order':'Beställ Online','ticker.hours':'Öppet Alla Dagar 10–20',
+    'about.label':'Om oss','about.h2':'Det bästa från Japan, i hjärtat av Stockholm',
+    'about.p1':'På Fluffy House serverar vi inte bara våra berömda fluffiga pannkakor, vi erbjuder äkta japansk matcha i unika smaker. Smaka klassisk matcha men också spännande varianter som matcha jordgubb eller matcha mango.',
+    'about.p2':'Matcha är mer än bara te, det är en del av den japanska kulturen. Den unika smaken harmoniserar perfekt med våra pannkakor och ger en upplevelse som är frisk, djup och uppiggande.',
+    'usp.label':'Sveriges första','usp.h2':'Fluffiga pannkakor i Stockholm',
+    'usp.body':'Fluffy House är det första caféet i Sverige som serverar äkta japanska fluffy pancakes, de luftiga soufflé-pannkakorna som tagit världen med storm. Mer än pannkakor, en upplevelse.',
+    'usp.cta':'Våra Caféer',
+    'gallery.label':'Galleri','gallery.h2':'Se våra skapelser',
+    'rest.label':'Våra enheter','rest.h1':'Restauranger',
+    'rest.body':'Hitta din närmaste Fluffy House. Nu öppna i Stockholm och Uppsala.',
+    'rest.open':'Öppet nu','rest.cta':'Utforska →',
+    'loc.k.label':'Om restaurangen','loc.k.h2':'Vår första enhet, hjärtat av Kungsholmen',
+    'loc.k.p1':'Det var här allt startade. Fluffy House Kungsholmen öppnade den 10 oktober 2024 och är det allra första stället i Sverige att servera äkta japanska fluffy pancakes.',
+    'loc.k.p2':'Beläget på Sankt Eriksgatan 44, bara 200 meter från Fridhemsplan, är caféet lätt att nå med tunnelbana. Välkommen in och upplev matcha och soufflé-pannkakor som du aldrig smakat dem förut.',
+    'loc.u.h2':'Fluffy House Uppsala, nu öppet!',
+    'loc.u.p1':'Vi har tagit med oss hela Fluffy House-konceptet till Uppsala, äkta japanska fluffy pancakes och matcha i en ny stad. Välkommen att uppleva det fluffigaste caféet i Sverige, nu även i Uppsala.',
+    'loc.u.p2':'Öppet alla dagar 10:00–20:00. Följ oss på Instagram för de senaste uppdateringarna om vår Uppsala-enhet.',
+    'cs.pill':'Kommer snart','event.h1':'Event',
+    'event.body':'You will soon be able to book your events at Fluffy House.',
+    'event.back':'← Tillbaka till startsidan',
+    'brunch.h1':'Brunch','brunch.body':'Vi arbetar på något fantastiskt, håll utkik!',
+    'jobb.label':'Lediga tjänster','jobb.h1':'Fluffy Jobs',
+    'jobb.body':'Vill du jobba i ett unikt café med Japans bästa pannkakor? Skicka in din ansökan!',
+    'kontakt.label':'Kontakt','kontakt.h1':'Kontakta Oss',
+    'kontakt.body':'Skicka in ditt meddelande här så hör vi av oss inom kort.',
+    'cookie.title':'Vi använder cookies',
+    'cookie.body':'Vi använder cookies och andra tekniker för att anpassa din upplevelse och utföra analyser. Vi använder dem inte utan ditt samtycke.',
+    'cookie.accept':'Acceptera alla','cookie.nec':'Acceptera nödvändiga',
+    'mob.footer':'Öppet alla dagar 10:00–20:00',
+    'form.sending':'Skickar…','form.sent':'✓ Skickat!','form.error':'⚠ Försök igen',
+  },
+  en: {
+    'nav.hem':'Home','nav.restauranger':'Restaurants','nav.giftcard':'Gift Card',
+    'nav.event':'Event','nav.jobb':'Jobs','nav.brunch':'Brunch','nav.collab':'Collab',
+    'nav.meny':'Menu','nav.kontakt':'Contact',
+    'foot.nav.h':'Navigation','foot.nav.jobb':'Work with us',
+    'foot.hours.h':'Opening Hours','foot.hours.label':'Every day','foot.hours.days':'Monday–Sunday',
+    'foot.social.h':'Follow us','foot.brand':'Japanese fluffy pancakes and authentic matcha, an experience unlike any other in Sweden.',
+    'foot.copy':'© Fluffy House Stockholm AB','foot.power':'Powered By Syns Nu',
+    'hero.sub':'Japanese fluffy pancakes and authentic matcha, an experience unlike any other in Sweden.',
+    'hero.find':'Find us','hero.scroll':'Scroll','btn.order':'Order online',
+    'btn.back.rest':'← All restaurants','btn.directions':'Directions ↗',
+    'btn.instagram':'Instagram ↗','btn.contact':'Contact us',
+    'ticker.pancakes':'Japanese Fluffy Pancakes','ticker.matcha':'Authentic Matcha',
+    'ticker.stockholm':'Kungsholmen, Stockholm','ticker.uppsala':'Now in Uppsala',
+    'ticker.order':'Order Online','ticker.hours':'Open Every Day 10–20',
+    'about.label':'About us','about.h2':'The best of Japan, in the heart of Stockholm',
+    'about.p1':'At Fluffy House we don\'t just serve our famous fluffy pancakes — we offer authentic Japanese matcha in unique flavours. Taste classic matcha as well as exciting variants like strawberry matcha or mango matcha.',
+    'about.p2':'Matcha is more than just tea — it\'s part of Japanese culture. The unique flavour pairs perfectly with our pancakes and provides an experience that is fresh, deep and invigorating.',
+    'usp.label':'Sweden\'s first','usp.h2':'Fluffy Pancakes in Stockholm',
+    'usp.body':'Fluffy House is the first café in Sweden to serve authentic Japanese fluffy pancakes — the light soufflé pancakes that have taken the world by storm. More than pancakes, an experience.',
+    'usp.cta':'Our Cafés',
+    'gallery.label':'Gallery','gallery.h2':'See our creations',
+    'rest.label':'Our locations','rest.h1':'Restaurants',
+    'rest.body':'Find your nearest Fluffy House. Now open in Stockholm and Uppsala.',
+    'rest.open':'Open now','rest.cta':'Explore →',
+    'loc.k.label':'About the restaurant','loc.k.h2':'Our first location, heart of Kungsholmen',
+    'loc.k.p1':'This is where it all started. Fluffy House Kungsholmen opened on 10 October 2024 and is the very first place in Sweden to serve authentic Japanese fluffy pancakes.',
+    'loc.k.p2':'Located at Sankt Eriksgatan 44, just 200 metres from Fridhemsplan, the café is easy to reach by metro. Come in and experience matcha and soufflé pancakes like you\'ve never tasted them before.',
+    'loc.u.h2':'Fluffy House Uppsala, now open!',
+    'loc.u.p1':'We have brought the entire Fluffy House concept to Uppsala — authentic Japanese fluffy pancakes and matcha in a new city. Welcome to experience the fluffiest café in Sweden, now also in Uppsala.',
+    'loc.u.p2':'Open every day 10:00–20:00. Follow us on Instagram for the latest updates about our Uppsala location.',
+    'cs.pill':'Coming soon','event.h1':'Event',
+    'event.body':'You will soon be able to book your events at Fluffy House.',
+    'event.back':'← Back to home',
+    'brunch.h1':'Brunch','brunch.body':'We\'re working on something amazing — stay tuned!',
+    'jobb.label':'Open positions','jobb.h1':'Fluffy Jobs',
+    'jobb.body':'Want to work in a unique café with Japan\'s best pancakes? Send in your application!',
+    'kontakt.label':'Contact','kontakt.h1':'Contact Us',
+    'kontakt.body':'Send us your message here and we\'ll get back to you shortly.',
+    'cookie.title':'We use cookies',
+    'cookie.body':'We use cookies and other technologies to personalise your experience and perform analytics. We do not use them without your consent.',
+    'cookie.accept':'Accept all','cookie.nec':'Accept necessary',
+    'mob.footer':'Open every day 10:00–20:00',
+    'form.sending':'Sending…','form.sent':'✓ Sent!','form.error':'⚠ Try again',
+  },
+  da: {
+    'nav.hem':'Hjem','nav.restauranger':'Restauranter','nav.giftcard':'Gavekort',
+    'nav.event':'Event','nav.jobb':'Job','nav.brunch':'Brunch','nav.collab':'Samarbeid',
+    'nav.meny':'Menu','nav.kontakt':'Kontakt',
+    'foot.nav.h':'Navigation','foot.nav.jobb':'Arbejd hos os',
+    'foot.hours.h':'Åbningstider','foot.hours.label':'Alle dage','foot.hours.days':'Mandag–Søndag',
+    'foot.social.h':'Følg os','foot.brand':'Japanske fluffy pandekager og ægte matcha, en oplevelse uden sidestykke i Sverige.',
+    'foot.copy':'© Fluffy House Stockholm AB','foot.power':'Powered By Syns Nu',
+    'hero.sub':'Japanske fluffy pandekager og ægte matcha, en oplevelse uden sidestykke i Sverige.',
+    'hero.find':'Find os','hero.scroll':'Rul ned','btn.order':'Bestil online',
+    'btn.back.rest':'← Alle restauranter','btn.directions':'Rutevejledning ↗',
+    'btn.instagram':'Instagram ↗','btn.contact':'Kontakt os',
+    'ticker.pancakes':'Japanske Fluffy Pandekager','ticker.matcha':'Ægte Matcha',
+    'ticker.stockholm':'Kungsholmen, Stockholm','ticker.uppsala':'Nu i Uppsala',
+    'ticker.order':'Bestil Online','ticker.hours':'Åbent Alle Dage 10–20',
+    'about.label':'Om os','about.h2':'Det bedste fra Japan, i hjertet af Stockholm',
+    'about.p1':'Hos Fluffy House serverer vi ikke bare vores berømte fluffy pandekager, vi tilbyder ægte japansk matcha i unikke smagsvarianter. Smag klassisk matcha, men også spændende varianter som jordbær-matcha eller mango-matcha.',
+    'about.p2':'Matcha er mere end bare te, det er en del af den japanske kultur. Den unikke smag harmonerer perfekt med vores pandekager og giver en oplevelse, der er frisk, dyb og opkvikkende.',
+    'usp.label':'Sveriges første','usp.h2':'Fluffy pandekager i Stockholm',
+    'usp.body':'Fluffy House er den første café i Sverige, der serverer ægte japanske fluffy pandekager, de luftige soufflé-pandekager, der har taget verden med storm. Mere end pandekager, en oplevelse.',
+    'usp.cta':'Vores Caféer',
+    'gallery.label':'Galleri','gallery.h2':'Se vores kreationer',
+    'rest.label':'Vores enheder','rest.h1':'Restauranter',
+    'rest.body':'Find din nærmeste Fluffy House. Nu åbent i Stockholm og Uppsala.',
+    'rest.open':'Åbent nu','rest.cta':'Udforsk →',
+    'loc.k.label':'Om restauranten','loc.k.h2':'Vores første enhed, hjertet af Kungsholmen',
+    'loc.k.p1':'Det var her, det hele startede. Fluffy House Kungsholmen åbnede den 10. oktober 2024 og er det første sted i Sverige, der serverer ægte japanske fluffy pandekager.',
+    'loc.k.p2':'Beliggende på Sankt Eriksgatan 44, kun 200 meter fra Fridhemsplan, er caféen nem at nå med metro. Kom ind og oplev matcha og soufflé-pandekager som du aldrig har smagt dem før.',
+    'loc.u.h2':'Fluffy House Uppsala, nu åbent!',
+    'loc.u.p1':'Vi har taget hele Fluffy House-konceptet med til Uppsala, ægte japanske fluffy pandekager og matcha i en ny by. Velkommen til at opleve den fluffigste café i Sverige, nu også i Uppsala.',
+    'loc.u.p2':'Åbent alle dage 10:00–20:00. Følg os på Instagram for de seneste opdateringer om vores Uppsala-enhed.',
+    'cs.pill':'Kommer snart','event.h1':'Event',
+    'event.body':'Du vil snart kunne booke dine events hos Fluffy House.',
+    'event.back':'← Tilbage til forsiden',
+    'brunch.h1':'Brunch','brunch.body':'Vi arbejder på noget fantastisk — hold øje!',
+    'jobb.label':'Ledige stillinger','jobb.h1':'Fluffy Jobs',
+    'jobb.body':'Vil du arbejde i en unik café med Japans bedste pandekager? Send din ansøgning!',
+    'kontakt.label':'Kontakt','kontakt.h1':'Kontakt Os',
+    'kontakt.body':'Send din besked her, og vi vender tilbage til dig inden for kort tid.',
+    'cookie.title':'Vi bruger cookies',
+    'cookie.body':'Vi bruger cookies og andre teknologier til at tilpasse din oplevelse og udføre analyser. Vi bruger dem ikke uden dit samtykke.',
+    'cookie.accept':'Accepter alle','cookie.nec':'Accepter nødvendige',
+    'mob.footer':'Åbent alle dage 10:00–20:00',
+    'form.sending':'Sender…','form.sent':'✓ Sendt!','form.error':'⚠ Prøv igen',
+  },
+  no: {
+    'nav.hem':'Hjem','nav.restauranger':'Restauranter','nav.giftcard':'Gavekort',
+    'nav.event':'Event','nav.jobb':'Jobb','nav.brunch':'Brunch','nav.collab':'Samarbeid',
+    'nav.meny':'Meny','nav.kontakt':'Kontakt',
+    'foot.nav.h':'Navigasjon','foot.nav.jobb':'Jobb hos oss',
+    'foot.hours.h':'Åpningstider','foot.hours.label':'Alle dager','foot.hours.days':'Mandag–Søndag',
+    'foot.social.h':'Følg oss','foot.brand':'Japanske fluffy pannekaker og ekte matcha, en opplevelse uten sidestykke i Sverige.',
+    'foot.copy':'© Fluffy House Stockholm AB','foot.power':'Powered By Syns Nu',
+    'hero.sub':'Japanske fluffy pannekaker og ekte matcha, en opplevelse uten sidestykke i Sverige.',
+    'hero.find':'Finn oss','hero.scroll':'Rull ned','btn.order':'Bestill online',
+    'btn.back.rest':'← Alle restauranter','btn.directions':'Veibeskrivelse ↗',
+    'btn.instagram':'Instagram ↗','btn.contact':'Kontakt oss',
+    'ticker.pancakes':'Japanske Fluffy Pannekaker','ticker.matcha':'Ekte Matcha',
+    'ticker.stockholm':'Kungsholmen, Stockholm','ticker.uppsala':'Nå i Uppsala',
+    'ticker.order':'Bestill Online','ticker.hours':'Åpent Alle Dager 10–20',
+    'about.label':'Om oss','about.h2':'Det beste fra Japan, i hjertet av Stockholm',
+    'about.p1':'På Fluffy House serverer vi ikke bare våre berømte fluffy pannekaker, vi tilbyr ekte japansk matcha i unike smaker. Smak klassisk matcha, men også spennende varianter som jordbær-matcha eller mango-matcha.',
+    'about.p2':'Matcha er mer enn bare te, det er en del av den japanske kulturen. Den unike smaken harmonerer perfekt med pannekakene våre og gir en opplevelse som er frisk, dyp og oppkvikkende.',
+    'usp.label':'Sveriges første','usp.h2':'Fluffy pannekaker i Stockholm',
+    'usp.body':'Fluffy House er den første kaféen i Sverige som serverer ekte japanske fluffy pannekaker, de luftige soufflé-pannekakene som har tatt verden med storm. Mer enn pannekaker, en opplevelse.',
+    'usp.cta':'Våre Kaféer',
+    'gallery.label':'Galleri','gallery.h2':'Se våre skapelser',
+    'rest.label':'Våre enheter','rest.h1':'Restauranter',
+    'rest.body':'Finn din nærmeste Fluffy House. Nå åpent i Stockholm og Uppsala.',
+    'rest.open':'Åpent nå','rest.cta':'Utforsk →',
+    'loc.k.label':'Om restauranten','loc.k.h2':'Vår første enhet, hjertet av Kungsholmen',
+    'loc.k.p1':'Det var her alt startet. Fluffy House Kungsholmen åpnet 10. oktober 2024 og er det aller første stedet i Sverige som serverer ekte japanske fluffy pannekaker.',
+    'loc.k.p2':'Plassert på Sankt Eriksgatan 44, bare 200 meter fra Fridhemsplan, er kaféen lett å nå med T-bane. Kom inn og opplev matcha og soufflé-pannekaker som du aldri har smakt dem før.',
+    'loc.u.h2':'Fluffy House Uppsala, nå åpent!',
+    'loc.u.p1':'Vi har tatt med oss hele Fluffy House-konseptet til Uppsala, ekte japanske fluffy pannekaker og matcha i en ny by. Velkommen til å oppleve den fluffigste kaféen i Sverige, nå også i Uppsala.',
+    'loc.u.p2':'Åpent alle dager 10:00–20:00. Følg oss på Instagram for de siste oppdateringene om vår Uppsala-enhet.',
+    'cs.pill':'Kommer snart','event.h1':'Event',
+    'event.body':'Du vil snart kunne booke dine arrangementer hos Fluffy House.',
+    'event.back':'← Tilbake til forsiden',
+    'brunch.h1':'Brunch','brunch.body':'Vi jobber med noe fantastisk — følg med!',
+    'jobb.label':'Ledige stillinger','jobb.h1':'Fluffy Jobs',
+    'jobb.body':'Vil du jobbe i en unik kafé med Japans beste pannekaker? Send inn søknaden din!',
+    'kontakt.label':'Kontakt','kontakt.h1':'Kontakt Oss',
+    'kontakt.body':'Send meldingen din her, så kontakter vi deg snart.',
+    'cookie.title':'Vi bruker informasjonskapsler',
+    'cookie.body':'Vi bruker informasjonskapsler og andre teknologier for å tilpasse opplevelsen din og utføre analyser. Vi bruker dem ikke uten ditt samtykke.',
+    'cookie.accept':'Godta alle','cookie.nec':'Godta nødvendige',
+    'mob.footer':'Åpent alle dager 10:00–20:00',
+    'form.sending':'Sender…','form.sent':'✓ Sendt!','form.error':'⚠ Prøv igjen',
+  },
+};
+
+const LANG_META = { sv:{flag:'🇸🇪',code:'SV'}, en:{flag:'🇬🇧',code:'EN'}, da:{flag:'🇩🇰',code:'DA'}, no:{flag:'🇳🇴',code:'NO'} };
+let currentLang = localStorage.getItem('fh-lang') || 'sv';
+
+function applyLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.getElementById('lang-flag').textContent = LANG_META[lang].flag;
+  document.getElementById('lang-code').textContent = LANG_META[lang].code;
+  document.querySelectorAll('.lang-opt').forEach(o => o.classList.toggle('active', o.dataset.lang === lang));
+  const t = T[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t[el.getAttribute('data-i18n')];
+    if (v !== undefined) el.textContent = v;
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const v = t[el.getAttribute('data-i18n-ph')];
+    if (v !== undefined) el.placeholder = v;
+  });
+  localStorage.setItem('fh-lang', lang);
+}
+
+// Lang picker toggle
+const langBtn = document.getElementById('lang-btn');
+const langDd  = document.getElementById('lang-dd');
+langBtn.addEventListener('click', e => {
+  e.stopPropagation();
+  const open = langDd.classList.toggle('open');
+  langBtn.classList.toggle('open', open);
+  langBtn.setAttribute('aria-expanded', open);
+});
+document.querySelectorAll('.lang-opt').forEach(opt => {
+  opt.addEventListener('click', () => {
+    applyLang(opt.dataset.lang);
+    langDd.classList.remove('open');
+    langBtn.classList.remove('open');
+    langBtn.setAttribute('aria-expanded', 'false');
   });
 });
+document.addEventListener('click', e => {
+  if (!document.getElementById('lang-picker').contains(e.target)) {
+    langDd.classList.remove('open');
+    langBtn.classList.remove('open');
+    langBtn.setAttribute('aria-expanded', 'false');
+  }
+});
+
+// ─── Forms (Formspree) ────────────────────────────────────
+// To activate: create a free account at formspree.io, create a form pointing
+// to info@fluffyhouse.se, then replace YOUR_FORM_ID with the form ID (e.g. xbljoryz).
+const FORMSPREE_ID = 'YOUR_FORM_ID';
+
+function setupForm(formId, subject) {
+  const f = document.getElementById(formId);
+  if (!f) return;
+  f.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (!f.checkValidity()) { f.reportValidity(); return; }
+    const btn = f.querySelector('button[type="submit"]');
+    const orig = btn.textContent;
+    btn.textContent = T[currentLang]['form.sending'] || 'Skickar…';
+    btn.disabled = true;
+    try {
+      const data = new FormData(f);
+      data.append('_subject', subject);
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST', body: data, headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        btn.textContent = T[currentLang]['form.sent'] || '✓ Skickat!';
+        btn.style.background = '#2e5039';
+        f.reset();
+        setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.disabled = false; }, 4000);
+      } else { throw new Error(); }
+    } catch {
+      btn.textContent = T[currentLang]['form.error'] || '⚠ Försök igen';
+      btn.style.background = '#d4556a';
+      setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.disabled = false; }, 3000);
+    }
+  });
+}
+setupForm('jobb-form',    'Jobbansökan – Fluffy House');
+setupForm('collab-form',  'Collaboration Inquiry – Fluffy House');
+setupForm('kontakt-form', 'Kontaktformulär – Fluffy House');
 </script>
 </body>
 </html>
