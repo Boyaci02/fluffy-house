@@ -4,14 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fluffy House Stockholm — Japanska Fluffy Pancakes & Matcha</title>
-  <meta name="description" content="Fluffy House – det första caféet i Sverige med äkta japanska fluffy pancakes och matcha. Sankt Eriksgatan 44, Kungsholmen, Stockholm." />
+  <meta name="description" content="Fluffy House – det första caféet i Sverige med äkta japanska fluffy pancakes och matcha. Nu i Stockholm och Uppsala." />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -19,1249 +17,1174 @@
         extend: {
           colors: {
             cream: '#faf8f4',
-            'cream-dark': '#f2ede5',
+            'cream-2': '#f2ede5',
+            'cream-3': '#e8e0d4',
             matcha: '#3a6147',
-            'matcha-light': '#e8f0e9',
-            'matcha-hover': '#2e5039',
-            strawberry: '#d4556a',
-            gold: '#b89860',
-            'ink': '#1c1c1a',
-            'ink-mid': '#6b6560',
-            'border-warm': '#e5dfd5',
+            'matcha-d': '#2e5039',
+            'matcha-l': '#e8f0e9',
+            ink: '#1c1c1a',
+            'ink-2': '#4a4845',
+            'ink-3': '#6b6560',
+            warm: '#b89860',
           },
-          fontFamily: {
-            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
-          },
-          letterSpacing: {
-            tightest: '-0.03em',
-            tight: '-0.02em',
-            button: '0.05em',
-          },
-          lineHeight: {
-            body: '1.75',
-          },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'] },
         },
       },
     }
   </script>
 
   <style>
-    /* Base */
+    :root {
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+      --c-cream: #faf8f4;
+      --c-cream2: #f2ede5;
+      --c-ink: #1c1c1a;
+      --c-matcha: #3a6147;
+      --c-border: #e2dbd0;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-      background-color: #faf8f4;
-      color: #1c1c1a;
+      background: var(--c-cream);
+      color: var(--c-ink);
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    /* Typography scale */
-    .display-xl {
-      font-size: clamp(3rem, 8vw, 6.5rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.05;
-    }
-    .display-lg {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-    }
-    .display-md {
-      font-size: clamp(1.6rem, 3.5vw, 2.5rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
-    .display-sm {
-      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      line-height: 1.3;
-    }
-    .body-lg {
-      font-size: 1.125rem;
-      font-weight: 400;
-      line-height: 1.75;
-      color: #6b6560;
-    }
-    .body-md {
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.75;
-      color: #6b6560;
-    }
-    .label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #3a6147;
-    }
+    /* ─── Typography ─────────────────────────────── */
+    .t-display { font-size: clamp(3.5rem, 9vw, 8rem); font-weight: 800; letter-spacing: -0.035em; line-height: 0.95; }
+    .t-h1      { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+    .t-h2      { font-size: clamp(1.875rem, 4vw, 3.25rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; }
+    .t-h3      { font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-weight: 700; letter-spacing: -0.015em; line-height: 1.2; }
+    .t-body    { font-size: 1.0625rem; font-weight: 400; line-height: 1.8; color: #6b6560; }
+    .t-label   { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-matcha); }
+    .t-meta    { font-size: 0.8125rem; font-weight: 500; color: #9e9891; }
 
-    /* Buttons */
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: #3a6147;
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 0.875rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      padding: 0.875rem 2rem;
-      border-radius: 9999px;
-      border: 2px solid transparent;
-      cursor: pointer;
-      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 20px rgba(58, 97, 71, 0.25);
-      text-decoration: none;
+    /* ─── Buttons ────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-weight: 700; font-size: 0.8125rem; letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 0.9375rem 2.25rem; border-radius: 9999px; border: 2px solid transparent;
+      cursor: pointer; text-decoration: none; white-space: nowrap;
+      transition: transform 0.2s var(--ease-out-expo), box-shadow 0.2s var(--ease-out-expo), background 0.2s ease, color 0.2s ease;
     }
-    .btn-primary:hover {
-      background-color: #2e5039;
-      transform: translateY(-1px);
-      box-shadow: 0 8px 28px rgba(58, 97, 71, 0.35);
-    }
-    .btn-primary:active { transform: translateY(0); }
-    .btn-primary:focus-visible {
-      outline: 3px solid #3a6147;
-      outline-offset: 3px;
-    }
+    .btn:focus-visible { outline: 3px solid var(--c-matcha); outline-offset: 3px; }
+    .btn:active { transform: scale(0.97) !important; }
+    .btn-green { background: var(--c-matcha); color: #fff; box-shadow: 0 4px 24px rgba(58,97,71,0.28); }
+    .btn-green:hover { background: #2e5039; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(58,97,71,0.4); }
+    .btn-white { background: #fff; color: var(--c-ink); box-shadow: 0 4px 20px rgba(0,0,0,0.14); }
+    .btn-white:hover { background: #f5f3f0; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(0,0,0,0.2); }
+    .btn-outline { background: transparent; color: var(--c-matcha); border-color: var(--c-matcha); }
+    .btn-outline:hover { background: var(--c-matcha); color: #fff; transform: translateY(-2px); }
+    .btn-outline-white { background: transparent; color: #fff; border-color: rgba(255,255,255,0.5); }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.12); border-color: #fff; transform: translateY(-2px); }
+    .btn-icon { width: 52px; height: 52px; padding: 0; border-radius: 50%; justify-content: center; }
 
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: transparent;
-      color: #3a6147;
-      font-weight: 600;
-      font-size: 0.875rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      padding: 0.875rem 2rem;
-      border-radius: 9999px;
-      border: 2px solid #3a6147;
-      cursor: pointer;
-      transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
-      text-decoration: none;
-    }
-    .btn-secondary:hover {
-      background-color: #3a6147;
-      color: #ffffff;
-      transform: translateY(-1px);
-    }
-    .btn-secondary:active { transform: translateY(0); }
-    .btn-secondary:focus-visible {
-      outline: 3px solid #3a6147;
-      outline-offset: 3px;
-    }
-
-    .btn-white {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: #ffffff;
-      color: #1c1c1a;
-      font-weight: 600;
-      font-size: 0.875rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      padding: 0.875rem 2rem;
-      border-radius: 9999px;
-      border: 2px solid transparent;
-      cursor: pointer;
-      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-      text-decoration: none;
-    }
-    .btn-white:hover {
-      background-color: #f0f0ee;
-      transform: translateY(-1px);
-      box-shadow: 0 8px 28px rgba(0,0,0,0.2);
-    }
-    .btn-white:active { transform: translateY(0); }
-
-    /* Navigation */
-    #navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: rgba(250, 248, 244, 0.95);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    #navbar.scrolled {
-      border-color: #e5dfd5;
-      box-shadow: 0 2px 20px rgba(60, 40, 10, 0.07);
-    }
-    .nav-inner {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
+    /* ─── Nav ────────────────────────────────────── */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       height: 72px;
+      transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
     }
-    .nav-left, .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
+    #nav.solid {
+      background: rgba(250,248,244,0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 var(--c-border);
     }
+    #nav.hero-mode { background: transparent; }
+    .nav-wrap {
+      max-width: 1440px; margin: 0 auto;
+      padding: 0 2.5rem;
+      height: 72px;
+      display: grid; grid-template-columns: 1fr auto 1fr;
+      align-items: center; gap: 1rem;
+    }
+    .nav-group { display: flex; align-items: center; gap: 0.125rem; }
     .nav-right { justify-content: flex-end; }
-    .nav-logo { display: flex; align-items: center; justify-content: center; }
-    .nav-logo img { height: 40px; width: auto; object-fit: contain; }
-    .nav-link {
-      font-size: 0.8125rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: #1c1c1a;
-      text-decoration: none;
-      padding: 0.5rem 0.75rem;
-      border-radius: 6px;
-      transition: color 0.15s ease, background-color 0.15s ease;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-    .nav-link:hover { color: #3a6147; background-color: #e8f0e9; }
-    .nav-link.active { color: #3a6147; }
-    .nav-link-ext::after { content: '↗'; font-size: 0.7rem; margin-left: 2px; opacity: 0.6; }
+    .nav-logo { display: flex; justify-content: center; }
+    .nav-logo img { height: 38px; width: auto; object-fit: contain; transition: opacity 0.3s ease; }
+    .nav-logo .logo-dark { display: block; }
+    .nav-logo .logo-light { display: none; }
+    #nav.hero-mode .nav-logo .logo-dark { display: none; }
+    #nav.hero-mode .nav-logo .logo-light { display: block; }
 
-    /* Mobile nav */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 8px;
-      background: none;
-      border: none;
+    .nav-a {
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+      color: var(--c-ink); text-decoration: none; padding: 0.5rem 0.75rem; border-radius: 8px;
+      cursor: pointer; position: relative;
+      transition: color 0.15s ease, background 0.15s ease;
     }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: #1c1c1a;
-      border-radius: 2px;
-      transition: transform 0.3s ease, opacity 0.3s ease;
+    .nav-a::after {
+      content: ''; position: absolute; bottom: 4px; left: 50%; right: 50%;
+      height: 2px; background: var(--c-matcha); border-radius: 2px;
+      transition: left 0.25s var(--ease-out-expo), right 0.25s var(--ease-out-expo);
     }
+    .nav-a:hover { color: var(--c-matcha); }
+    .nav-a.active::after { left: 0.75rem; right: 0.75rem; }
+    .nav-a.active { color: var(--c-matcha); }
+    #nav.hero-mode .nav-a { color: rgba(255,255,255,0.85); }
+    #nav.hero-mode .nav-a:hover { color: #fff; background: rgba(255,255,255,0.1); }
+    #nav.hero-mode .nav-a.active { color: #fff; }
+    #nav.hero-mode .nav-a::after { background: rgba(255,255,255,0.7); }
+    .nav-a-ext::after { display: none; }
+    .nav-a-ext .ext-arrow { font-size: 0.6rem; opacity: 0.5; margin-left: 1px; }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; padding: 10px; background: none; border: none; cursor: pointer; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--c-ink); border-radius: 2px; transition: transform 0.3s var(--ease-out-expo), opacity 0.25s ease; }
+    #nav.hero-mode .hamburger span { background: #fff; }
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    #mobile-menu {
-      display: none;
-      position: fixed;
-      top: 72px;
-      left: 0;
-      right: 0;
-      background: #faf8f4;
-      border-bottom: 1px solid #e5dfd5;
-      z-index: 99;
-      padding: 1rem 2rem 1.5rem;
-      box-shadow: 0 8px 32px rgba(60,40,10,0.1);
-    }
-    #mobile-menu.open { display: block; }
-    .mobile-nav-link {
-      display: block;
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: #1c1c1a;
-      text-decoration: none;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid #e5dfd5;
-      cursor: pointer;
-      transition: color 0.15s ease;
-    }
-    .mobile-nav-link:last-child { border-bottom: none; }
-    .mobile-nav-link:hover, .mobile-nav-link.active { color: #3a6147; }
 
-    /* Page sections */
-    .page-section {
-      display: none;
-      min-height: 100vh;
+    #mob-menu {
+      position: fixed; top: 72px; left: 0; right: 0; z-index: 99;
+      background: var(--c-cream);
+      border-bottom: 1px solid var(--c-border);
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.45s var(--ease-out-expo), box-shadow 0.4s ease;
     }
-    .page-section.active { display: block; }
+    #mob-menu.open { max-height: 600px; box-shadow: 0 8px 40px rgba(0,0,0,0.12); }
+    .mob-menu-inner { padding: 1.25rem 2rem 2rem; }
+    .mob-a {
+      display: block; font-size: 1rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+      color: var(--c-ink); text-decoration: none; padding: 0.875rem 0;
+      border-bottom: 1px solid var(--c-border); cursor: pointer;
+      transition: color 0.15s ease, padding-left 0.2s var(--ease-out-expo);
+    }
+    .mob-a:last-child { border-bottom: none; }
+    .mob-a:hover, .mob-a.active { color: var(--c-matcha); padding-left: 0.5rem; }
 
-    /* Hero */
+    /* ─── Pages ──────────────────────────────────── */
+    .pg { display: none; }
+    .pg.on { display: block; }
+
+    /* ─── Page transitions ───────────────────────── */
+    #page-fade {
+      position: fixed; inset: 0; z-index: 90;
+      background: var(--c-cream);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    #page-fade.show { opacity: 1; }
+
+    /* ─── Hero ───────────────────────────────────── */
     .hero {
-      position: relative;
-      height: 100vh;
-      min-height: 600px;
+      position: relative; height: 100svh; min-height: 640px;
+      display: flex; align-items: flex-end;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background-image: url('https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg');
-      background-size: cover;
-      background-position: center;
-      transform: scale(1.05);
-      transition: transform 8s ease;
+    .hero-img {
+      position: absolute; inset: 0;
+      background: #111 url('https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg') center / cover no-repeat;
+      transform: scale(1.08);
+      transition: transform 10s ease;
     }
-    .hero-bg.loaded { transform: scale(1); }
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
+    .hero-img.k { background-image: url('https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg'); }
+    .hero-img.u { background-image: url('https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/6913555d10d6933f64f0a36a.jpg'); }
+    .hero-img.loaded { transform: scale(1); }
+    .hero-grad {
+      position: absolute; inset: 0;
       background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.2) 0%,
-        rgba(0,0,0,0.45) 50%,
-        rgba(0,0,0,0.65) 100%
+        160deg,
+        rgba(0,0,0,0.08) 0%,
+        rgba(0,0,0,0.0) 30%,
+        rgba(0,0,0,0.55) 70%,
+        rgba(0,0,0,0.85) 100%
       );
     }
     .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      padding: 0 2rem;
-      max-width: 800px;
+      position: relative; z-index: 2;
+      padding: 0 4rem 5rem;
+      width: 100%;
+      display: flex; align-items: flex-end; justify-content: space-between; gap: 3rem;
     }
-    .hero-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.7);
-      margin-bottom: 1.5rem;
+    .hero-text { max-width: 720px; }
+    .hero-label { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 1.25rem; }
+    .hero-title { font-size: clamp(4rem, 11vw, 9rem); font-weight: 800; letter-spacing: -0.04em; line-height: 0.92; color: #fff; margin-bottom: 1.5rem; }
+    .hero-sub { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 400; line-height: 1.65; color: rgba(255,255,255,0.72); margin-bottom: 2.5rem; max-width: 440px; }
+    .hero-actions { display: flex; gap: 0.875rem; flex-wrap: wrap; }
+    .hero-aside { flex-shrink: 0; display: flex; flex-direction: column; gap: 1rem; align-items: flex-end; }
+    .hero-pill {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 0.625rem 1.125rem;
+      display: flex; align-items: center; gap: 0.625rem;
     }
-    .hero-title {
-      font-size: clamp(3.5rem, 10vw, 7.5rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.0;
-      color: #ffffff;
-      margin-bottom: 1rem;
+    .hero-pill-dot { width: 6px; height: 6px; border-radius: 50%; background: #6ee49c; flex-shrink: 0; animation: pulse 2s ease infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.4)} }
+    .hero-pill-text { font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.8); white-space: nowrap; }
+    .hero-scroll {
+      position: absolute; bottom: 2.25rem; left: 50%; transform: translateX(-50%);
+      z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      animation: float 2.5s ease-in-out infinite;
     }
-    .hero-subtitle {
-      font-size: clamp(1rem, 2.5vw, 1.375rem);
-      font-weight: 400;
-      line-height: 1.6;
-      color: rgba(255,255,255,0.85);
-      margin-bottom: 2.5rem;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .hero-address {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
-    }
+    @keyframes float { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+    .hero-scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.5)); }
+    .hero-scroll-text { font-size: 0.625rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
 
-    /* Sections */
-    .section-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-    .section-pad { padding: 7rem 0; }
-    .section-pad-sm { padding: 5rem 0; }
+    /* ─── Section layouts ────────────────────────── */
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 0 2.5rem; }
+    .wrap-sm { max-width: 840px; margin: 0 auto; padding: 0 2.5rem; }
+    .wrap-lg { max-width: 1440px; margin: 0 auto; padding: 0 2.5rem; }
+    .sec { padding: 7rem 0; }
+    .sec-sm { padding: 5rem 0; }
 
-    /* Gallery grid */
-    .gallery-grid {
+    /* ─── Intro strip ────────────────────────────── */
+    .intro-strip {
+      background: var(--c-ink); color: #fff;
+      padding: 1.125rem 0; overflow: hidden;
+    }
+    .ticker-track {
+      display: flex; gap: 3rem; width: max-content;
+      animation: ticker 28s linear infinite;
+    }
+    @keyframes ticker { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+    .ticker-item { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); white-space: nowrap; display: flex; align-items: center; gap: 1.5rem; }
+    .ticker-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--c-matcha); flex-shrink: 0; }
+
+    /* ─── About / feature section ────────────────── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: 680px; }
+    .about-img-col { position: relative; overflow: hidden; }
+    .about-img {
+      position: absolute; inset: 0;
+      background: url('https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df1a443570053b09cd535.jpg') center / cover no-repeat;
+      transition: transform 0.8s var(--ease-out-expo);
+    }
+    .about-img-col:hover .about-img { transform: scale(1.04); }
+    .about-text-col {
+      background: var(--c-cream2);
+      padding: 6rem 5rem;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .about-text-col .label-bar { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem; }
+    .about-text-col .label-bar::after { content: ''; flex: 1; height: 1px; background: var(--c-border); }
+
+    /* ─── Stats row ──────────────────────────────── */
+    .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--c-border); border-bottom: 1px solid var(--c-border); }
+    .stat-item { padding: 3rem 2.5rem; border-right: 1px solid var(--c-border); text-align: center; }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.03em; color: var(--c-ink); line-height: 1; margin-bottom: 0.5rem; }
+    .stat-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-matcha); }
+
+    /* ─── Gallery ────────────────────────────────── */
+    .gallery-mosaic {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-    .gallery-grid img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      border-radius: 12px;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      box-shadow: 0 4px 20px rgba(60,40,10,0.08);
-    }
-    .gallery-grid img:hover {
-      transform: scale(1.02);
-      box-shadow: 0 12px 40px rgba(60,40,10,0.16);
-    }
-
-    /* Form styles */
-    .form-group { margin-bottom: 1.5rem; }
-    .form-label {
-      display: block;
-      font-size: 0.8125rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: #1c1c1a;
-      margin-bottom: 0.5rem;
-    }
-    .form-input {
-      width: 100%;
-      padding: 0.875rem 1rem;
-      background: #ffffff;
-      border: 1.5px solid #e5dfd5;
-      border-radius: 10px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1rem;
-      color: #1c1c1a;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-      outline: none;
-    }
-    .form-input::placeholder { color: #aaa49e; }
-    .form-input:focus {
-      border-color: #3a6147;
-      box-shadow: 0 0 0 3px rgba(58, 97, 71, 0.12);
-    }
-    textarea.form-input { resize: vertical; min-height: 140px; }
-    .form-checkbox-row {
-      display: flex;
-      align-items: flex-start;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(2, 280px);
       gap: 0.75rem;
-      margin-bottom: 2rem;
     }
-    .form-checkbox {
-      width: 18px;
-      height: 18px;
-      accent-color: #3a6147;
-      flex-shrink: 0;
-      margin-top: 2px;
-      cursor: pointer;
-    }
-    .form-checkbox-label {
-      font-size: 0.875rem;
-      color: #6b6560;
-      line-height: 1.5;
-    }
-
-    /* Card */
-    .card {
-      background: #ffffff;
-      border-radius: 16px;
-      border: 1px solid #e5dfd5;
-      box-shadow: 0 4px 24px rgba(60,40,10,0.06);
-      overflow: hidden;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #1c1c1a;
-      color: #ffffff;
-    }
-    .footer-link {
-      color: rgba(255,255,255,0.6);
-      text-decoration: none;
-      font-size: 0.9375rem;
-      font-weight: 400;
-      transition: color 0.15s ease;
-      cursor: pointer;
+    .gal-item { overflow: hidden; border-radius: 12px; position: relative; }
+    .gal-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.6s var(--ease-out-expo);
       display: block;
-      margin-bottom: 0.75rem;
     }
-    .footer-link:hover { color: #ffffff; }
-    .footer-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
+    .gal-item:hover img { transform: scale(1.06); }
+    .gal-item:nth-child(1) { grid-column: 1 / 6; grid-row: 1 / 3; border-radius: 16px; }
+    .gal-item:nth-child(2) { grid-column: 6 / 10; grid-row: 1 / 2; }
+    .gal-item:nth-child(3) { grid-column: 10 / 13; grid-row: 1 / 2; }
+    .gal-item:nth-child(4) { grid-column: 6 / 9; grid-row: 2 / 3; }
+    .gal-item:nth-child(5) { grid-column: 9 / 13; grid-row: 2 / 3; }
+
+    /* ─── Restaurant cards ───────────────────────── */
+    .restaurant-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .rest-card {
+      position: relative; overflow: hidden; border-radius: 20px;
+      min-height: 520px; cursor: pointer;
+      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s ease;
+    }
+    .rest-card:hover { transform: translateY(-6px); box-shadow: 0 32px 80px rgba(0,0,0,0.22); }
+    .rest-card-img {
+      position: absolute; inset: 0;
+      background: #111 center / cover no-repeat;
+      transition: transform 0.7s var(--ease-out-expo);
+    }
+    .rest-card:hover .rest-card-img { transform: scale(1.06); }
+    .rest-card-k .rest-card-img { background-image: url('https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg'); }
+    .rest-card-u .rest-card-img { background-image: url('https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/6913555d10d6933f64f0a36a.jpg'); }
+    .rest-card-grad {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.2) 55%, rgba(0,0,0,0) 100%);
+    }
+    .rest-card-body {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 2.5rem;
+    }
+    .rest-card-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px; padding: 0.375rem 0.875rem;
+      font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
       margin-bottom: 1.25rem;
     }
-    .social-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: 1.5px solid rgba(255,255,255,0.2);
-      color: rgba(255,255,255,0.6);
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 600;
-      transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+    .rest-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #6ee49c; animation: pulse 2s ease infinite; }
+    .rest-card-name { font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 800; letter-spacing: -0.025em; color: #fff; margin-bottom: 0.75rem; line-height: 1.1; }
+    .rest-card-addr { font-size: 0.875rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; }
+    .rest-card-meta { display: flex; align-items: center; justify-content: space-between; }
+    .rest-card-hours { font-size: 0.875rem; font-weight: 600; color: rgba(255,255,255,0.75); }
+    .rest-card-cta {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(255,255,255,0.15); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 999px; padding: 0.625rem 1.25rem;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+      color: #fff; text-decoration: none; cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
     }
-    .social-icon:hover {
-      border-color: rgba(255,255,255,0.6);
-      color: #ffffff;
-      background-color: rgba(255,255,255,0.08);
-    }
-    .social-icon:focus-visible {
-      outline: 2px solid rgba(255,255,255,0.5);
-      outline-offset: 2px;
-    }
+    .rest-card-cta:hover { background: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.4); }
 
-    /* Coming soon page */
-    .coming-soon-wrap {
-      min-height: calc(100vh - 72px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 4rem 2rem;
-      background-color: #faf8f4;
+    /* ─── Location page ──────────────────────────── */
+    .loc-hero { position: relative; height: 60vh; min-height: 400px; overflow: hidden; }
+    .loc-hero-img {
+      position: absolute; inset: 0;
+      background: center / cover no-repeat;
+      transform: scale(1.04);
+      transition: transform 8s ease;
     }
-    .coming-soon-pill {
-      display: inline-block;
-      background: #e8f0e9;
-      color: #3a6147;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.375rem 1rem;
-      border-radius: 9999px;
-      margin-bottom: 2rem;
+    .loc-hero-img.loaded { transform: scale(1); }
+    .loc-hero-grad { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.65)); }
+    .loc-hero-content { position: absolute; bottom: 3.5rem; left: 0; right: 0; padding: 0 4rem; }
+    .loc-info-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 5rem; align-items: start; }
+    .info-card {
+      background: #fff; border-radius: 16px; padding: 2.5rem;
+      border: 1px solid var(--c-border);
+      box-shadow: 0 4px 32px rgba(0,0,0,0.06);
     }
+    .info-row { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--c-border); gap: 1rem; }
+    .info-row:last-child { border-bottom: none; }
+    .info-key { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9e9891; }
+    .info-val { font-size: 0.9375rem; font-weight: 600; color: var(--c-ink); text-align: right; }
 
-    /* Maps iframe */
-    .map-iframe {
-      width: 100%;
-      height: 420px;
-      border: none;
-      border-radius: 16px;
-      box-shadow: 0 4px 24px rgba(60,40,10,0.08);
+    /* ─── Forms ──────────────────────────────────── */
+    .form-card { background: #fff; border-radius: 20px; padding: 3rem; border: 1px solid var(--c-border); box-shadow: 0 4px 40px rgba(0,0,0,0.06); }
+    .f-label { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-ink); margin-bottom: 0.625rem; }
+    .f-input {
+      width: 100%; padding: 0.9375rem 1.125rem;
+      background: var(--c-cream); border: 1.5px solid var(--c-border);
+      border-radius: 12px; font-family: inherit; font-size: 0.9375rem; color: var(--c-ink);
+      outline: none; transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
+    .f-input::placeholder { color: #b0a99e; }
+    .f-input:focus { border-color: var(--c-matcha); box-shadow: 0 0 0 4px rgba(58,97,71,0.1); background: #fff; }
+    textarea.f-input { resize: vertical; min-height: 150px; }
+    .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .f-group { margin-bottom: 1.375rem; }
+    .f-check-row { display: flex; align-items: flex-start; gap: 0.875rem; margin-bottom: 2rem; }
+    .f-check { width: 18px; height: 18px; accent-color: var(--c-matcha); flex-shrink: 0; margin-top: 2px; cursor: pointer; }
+    .f-check-label { font-size: 0.875rem; color: #6b6560; line-height: 1.6; }
 
-    /* Cookie banner */
-    #cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 200;
-      background: #ffffff;
-      border-top: 1px solid #e5dfd5;
-      padding: 1.25rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      box-shadow: 0 -8px 32px rgba(60,40,10,0.1);
-    }
-    #cookie-banner.hidden { display: none; }
-    .cookie-text {
-      font-size: 0.875rem;
-      color: #6b6560;
-      line-height: 1.6;
-      flex: 1;
-      min-width: 0;
-    }
-    .cookie-buttons { display: flex; gap: 0.75rem; flex-shrink: 0; }
-    .cookie-btn-accept {
-      background: #3a6147;
-      color: #fff;
-      border: none;
-      border-radius: 9999px;
-      padding: 0.625rem 1.25rem;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.8125rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-    .cookie-btn-accept:hover { background: #2e5039; }
-    .cookie-btn-necessary {
-      background: transparent;
-      color: #6b6560;
-      border: 1.5px solid #e5dfd5;
-      border-radius: 9999px;
-      padding: 0.625rem 1.25rem;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.8125rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      cursor: pointer;
-      transition: border-color 0.2s ease, color 0.2s ease;
-    }
-    .cookie-btn-necessary:hover { border-color: #6b6560; color: #1c1c1a; }
+    /* ─── Coming soon ────────────────────────────── */
+    .cs-wrap { min-height: calc(100svh - 72px); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem; }
+    .cs-pill { display: inline-block; background: var(--c-matcha-l, #e8f0e9); color: var(--c-matcha); font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.5rem 1.25rem; border-radius: 999px; margin-bottom: 2.25rem; }
 
-    /* Scroll reveal */
-    .reveal {
+    /* ─── Footer ─────────────────────────────────── */
+    footer { background: var(--c-ink); color: #fff; padding: 6rem 0 3rem; }
+    .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 5rem; }
+    .foot-brand img { height: 44px; width: auto; object-fit: contain; margin-bottom: 1.75rem; opacity: 0.9; }
+    .foot-brand p { font-size: 0.9rem; color: rgba(255,255,255,0.45); line-height: 1.75; max-width: 260px; }
+    .foot-h { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 1.5rem; }
+    .foot-link { display: block; font-size: 0.9375rem; color: rgba(255,255,255,0.55); text-decoration: none; margin-bottom: 0.875rem; cursor: pointer; transition: color 0.15s ease, padding-left 0.2s var(--ease-out-expo); }
+    .foot-link:hover { color: #fff; padding-left: 0.375rem; }
+    .foot-hours-big { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; color: #fff; line-height: 1; margin-bottom: 0.375rem; }
+    .foot-hours-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-matcha); margin-bottom: 1rem; }
+    .soc { display: flex; gap: 0.625rem; }
+    .soc-a {
+      width: 42px; height: 42px; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      border: 1.5px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.55);
+      font-size: 0.75rem; font-weight: 800; text-decoration: none;
+      transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+    }
+    .soc-a:hover { border-color: rgba(255,255,255,0.5); color: #fff; background: rgba(255,255,255,0.08); }
+    .foot-bot { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .foot-copy { font-size: 0.8125rem; color: rgba(255,255,255,0.25); }
+    .foot-power { font-size: 0.8125rem; color: rgba(255,255,255,0.25); text-decoration: none; transition: color 0.15s ease; }
+    .foot-power:hover { color: rgba(255,255,255,0.5); }
+
+    /* ─── Cookie ─────────────────────────────────── */
+    #cookie {
+      position: fixed; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; max-width: 600px;
+      z-index: 200; background: #fff; border-radius: 16px;
+      border: 1px solid var(--c-border);
+      box-shadow: 0 8px 48px rgba(0,0,0,0.14);
+      padding: 1.5rem 1.75rem;
+      transition: opacity 0.3s ease, transform 0.3s var(--ease-out-expo);
+    }
+    #cookie.hidden { opacity: 0; transform: translateY(10px); pointer-events: none; }
+    .cookie-title { font-size: 0.9375rem; font-weight: 700; color: var(--c-ink); margin-bottom: 0.5rem; }
+    .cookie-body { font-size: 0.8125rem; color: #6b6560; line-height: 1.65; margin-bottom: 1.25rem; }
+    .cookie-btns { display: flex; gap: 0.75rem; }
+    .ck-accept { flex: 1; background: var(--c-matcha); color: #fff; border: none; border-radius: 999px; padding: 0.75rem; font-family: inherit; font-size: 0.8125rem; font-weight: 700; cursor: pointer; transition: background 0.2s ease; }
+    .ck-accept:hover { background: #2e5039; }
+    .ck-nec { flex: 1; background: transparent; color: #6b6560; border: 1.5px solid var(--c-border); border-radius: 999px; padding: 0.75rem; font-family: inherit; font-size: 0.8125rem; font-weight: 600; cursor: pointer; transition: border-color 0.2s ease, color 0.2s ease; }
+    .ck-nec:hover { border-color: #6b6560; color: var(--c-ink); }
+
+    /* ─── Reveal animations ──────────────────────── */
+    [data-r] {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transition: opacity 0.75s var(--ease-out-expo), transform 0.75s var(--ease-out-expo);
     }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
+    [data-r="up"]    { transform: translateY(32px); }
+    [data-r="left"]  { transform: translateX(-32px); }
+    [data-r="right"] { transform: translateX(32px); }
+    [data-r="scale"] { transform: scale(0.94); }
+    [data-r].in { opacity: 1; transform: none; }
+    [data-delay="100"] { transition-delay: 0.1s; }
+    [data-delay="200"] { transition-delay: 0.2s; }
+    [data-delay="300"] { transition-delay: 0.3s; }
+    [data-delay="400"] { transition-delay: 0.4s; }
+    [data-delay="500"] { transition-delay: 0.5s; }
 
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .nav-left, .nav-right { display: none; }
-      .hamburger { display: flex; }
-      .nav-inner { grid-template-columns: auto 1fr auto; }
-      .nav-logo { justify-content: flex-start; }
+    /* ─── Map ────────────────────────────────────── */
+    .map-frame { width: 100%; height: 380px; border: none; border-radius: 16px; display: block; }
+
+    /* ─── Responsive ─────────────────────────────── */
+    @media (max-width: 1100px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img-col { height: 400px; position: relative; }
+      .about-text-col { padding: 4rem 2.5rem; }
+      .foot-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+      .loc-info-grid { grid-template-columns: 1fr; gap: 3rem; }
+    }
+    @media (max-width: 900px) {
+      .restaurant-cards { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      .stats-row .stat-item:nth-child(2) { border-right: none; }
+      .stats-row .stat-item:nth-child(3) { border-top: 1px solid var(--c-border); grid-column: 1 / -1; border-right: none; }
+      .gallery-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: auto; gap: 0.5rem; }
+      .gal-item:nth-child(1) { grid-column: 1 / 3; grid-row: 1; height: 240px; }
+      .gal-item:nth-child(2) { grid-column: 1; grid-row: 2; height: 200px; }
+      .gal-item:nth-child(3) { grid-column: 2; grid-row: 2; height: 200px; }
+      .gal-item:nth-child(4) { grid-column: 1; grid-row: 3; height: 200px; }
+      .gal-item:nth-child(5) { grid-column: 2; grid-row: 3; height: 200px; }
+      .f-row { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
-      .section-pad { padding: 5rem 0; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      #cookie-banner { flex-direction: column; align-items: flex-start; }
-      .cookie-buttons { width: 100%; }
-      .cookie-btn-accept, .cookie-btn-necessary { flex: 1; text-align: center; }
-    }
-    @media (max-width: 480px) {
-      .gallery-grid { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+      .nav-group { display: none; }
+      .hamburger { display: flex; }
+      .nav-wrap { grid-template-columns: auto 1fr auto; }
+      .nav-logo { justify-content: flex-start; }
+      .hero-content { padding: 0 2rem 4rem; flex-direction: column; align-items: flex-start; }
+      .hero-aside { align-items: flex-start; }
+      .hero-title { font-size: clamp(3.5rem, 13vw, 6rem); }
+      .loc-hero-content { padding: 0 2rem; }
+      .foot-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .wrap, .wrap-sm, .wrap-lg { padding: 0 1.5rem; }
+      .sec { padding: 5rem 0; }
+      .form-card { padding: 2rem 1.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════════
-       NAVIGATION
-  ═══════════════════════════════════════════ -->
-  <nav id="navbar" role="navigation" aria-label="Huvudnavigation">
-    <div class="nav-inner">
-      <!-- Left links -->
-      <div class="nav-left">
-        <a class="nav-link active" data-page="hem" role="button" tabindex="0">Hem</a>
-        <a class="nav-link" data-page="giftcard" role="button" tabindex="0">Giftcard</a>
-        <a class="nav-link" data-page="event" role="button" tabindex="0">Event</a>
-        <a class="nav-link" data-page="jobb" role="button" tabindex="0">Jobb</a>
-        <a class="nav-link" data-page="brunch" role="button" tabindex="0">Brunch</a>
-      </div>
+<!-- Page fade overlay -->
+<div id="page-fade"></div>
 
-      <!-- Logo -->
-      <div class="nav-logo">
-        <a data-page="hem" style="cursor:pointer;" role="link" tabindex="0">
-          <img
-            src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png"
-            alt="Fluffy House Stockholm"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-          />
-          <span style="display:none; font-weight:800; font-size:1.1rem; letter-spacing:-0.02em; color:#1c1c1a;">Fluffy House</span>
-        </a>
-      </div>
-
-      <!-- Right links -->
-      <div class="nav-right">
-        <a class="nav-link" data-page="collaboration" role="button" tabindex="0">Collab</a>
-        <a class="nav-link nav-link-ext" id="meny-link" href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener">Meny</a>
-        <a class="nav-link" data-page="kontakt" role="button" tabindex="0">Kontakt</a>
-        <a class="nav-link" data-page="hitta" role="button" tabindex="0">Hitta oss</a>
-      </div>
-
-      <!-- Mobile hamburger -->
-      <button class="hamburger" id="hamburger" aria-label="Öppna meny" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+<!-- ═══════════ NAV ═══════════ -->
+<nav id="nav">
+  <div class="nav-wrap">
+    <div class="nav-group">
+      <a class="nav-a active" data-pg="hem">Hem</a>
+      <a class="nav-a" data-pg="restauranger">Restauranger</a>
+      <a class="nav-a" data-pg="giftcard">Giftcard</a>
+      <a class="nav-a" data-pg="event">Event</a>
+      <a class="nav-a" data-pg="jobb">Jobb</a>
     </div>
 
-    <!-- Mobile menu -->
-    <div id="mobile-menu" role="menu">
-      <a class="mobile-nav-link active" data-page="hem" role="menuitem" tabindex="0">Hem</a>
-      <a class="mobile-nav-link" data-page="giftcard" role="menuitem" tabindex="0">Giftcard</a>
-      <a class="mobile-nav-link" data-page="event" role="menuitem" tabindex="0">Event</a>
-      <a class="mobile-nav-link" data-page="jobb" role="menuitem" tabindex="0">Jobb</a>
-      <a class="mobile-nav-link" data-page="brunch" role="menuitem" tabindex="0">Brunch</a>
-      <a class="mobile-nav-link" data-page="collaboration" role="menuitem" tabindex="0">Collab</a>
-      <a class="mobile-nav-link nav-link-ext" href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" role="menuitem" tabindex="0">Meny</a>
-      <a class="mobile-nav-link" data-page="kontakt" role="menuitem" tabindex="0">Kontakt</a>
-      <a class="mobile-nav-link" data-page="hitta" role="menuitem" tabindex="0">Hitta oss</a>
+    <div class="nav-logo">
+      <span data-pg="hem" style="cursor:pointer;">
+        <img class="logo-dark" src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png" alt="Fluffy House" onerror="this.parentElement.innerHTML='<span style=\'font-weight:800;font-size:1rem;letter-spacing:-0.02em;color:var(--c-ink)\'>Fluffy House</span>'" />
+        <img class="logo-light" src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd02f35d1b410f47979f27.png" alt="Fluffy House" onerror="this.parentElement.innerHTML='<span style=\'font-weight:800;font-size:1rem;letter-spacing:-0.02em;color:#fff\'>Fluffy House</span>'" />
+      </span>
     </div>
-  </nav>
+
+    <div class="nav-group nav-right">
+      <a class="nav-a" data-pg="brunch">Brunch</a>
+      <a class="nav-a" data-pg="collaboration">Collab</a>
+      <a class="nav-a nav-a-ext" href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener">Meny <span class="ext-arrow">↗</span></a>
+      <a class="nav-a" data-pg="kontakt">Kontakt</a>
+    </div>
+
+    <button class="hamburger" id="ham" aria-label="Meny" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div id="mob-menu">
+    <div class="mob-menu-inner">
+      <a class="mob-a active" data-pg="hem">Hem</a>
+      <a class="mob-a" data-pg="restauranger">Restauranger</a>
+      <a class="mob-a" data-pg="giftcard">Giftcard</a>
+      <a class="mob-a" data-pg="event">Event</a>
+      <a class="mob-a" data-pg="jobb">Jobb</a>
+      <a class="mob-a" data-pg="brunch">Brunch</a>
+      <a class="mob-a" data-pg="collaboration">Collab</a>
+      <a class="mob-a" href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener">Meny ↗</a>
+      <a class="mob-a" data-pg="kontakt">Kontakt</a>
+    </div>
+  </div>
+</nav>
 
 
-  <!-- ═══════════════════════════════════════════
-       SIDA 1: HEM
-  ═══════════════════════════════════════════ -->
-  <section id="page-hem" class="page-section active" style="padding-top:72px;">
+<!-- ══════════════════════════════════════════════════════════
+     STARTSIDA
+══════════════════════════════════════════════════════════ -->
+<div id="pg-hem" class="pg on">
 
-    <!-- Hero -->
-    <div class="hero" style="margin-top: -72px; padding-top: 72px;">
-      <div class="hero-bg" id="hero-bg"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <p class="hero-label">Stockholm · Kungsholmen</p>
-        <h1 class="hero-title">Fluffy House</h1>
-        <p class="hero-subtitle">Japanska fluffy pancakes &amp; matcha — en upplevelse för alla sinnen</p>
-        <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn-white">
-          Beställ online
-        </a>
+  <!-- Hero -->
+  <div class="hero" style="margin-top:72px; height: calc(100svh - 72px);">
+    <div class="hero-img loaded" id="hero-bg-home"></div>
+    <div class="hero-grad"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-label">Stockholm · Uppsala · Sedan 2024</p>
+        <h1 class="hero-title">Fluffy<br>House</h1>
+        <p class="hero-sub">Japanska fluffy pancakes och äkta matcha — en upplevelse utan motstycke i Sverige.</p>
+        <div class="hero-actions">
+          <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn btn-white">Beställ online</a>
+          <button class="btn btn-outline-white" data-pg="restauranger">Hitta oss</button>
+        </div>
       </div>
-      <p class="hero-address">Sankt Eriksgatan 44 — Stockholm</p>
-    </div>
-
-    <!-- Om oss -->
-    <div class="section-pad" style="background-color: #faf8f4;">
-      <div class="section-container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
-          <div class="reveal">
-            <p class="label" style="margin-bottom: 1rem;">Om oss</p>
-            <h2 class="display-md" style="color: #1c1c1a; margin-bottom: 1.75rem;">Fluffy House</h2>
-            <p class="body-lg" style="margin-bottom: 1.25rem;">
-              På Fluffyhouse serverar vi inte bara våra berömda fluffiga pannkakor – vi erbjuder även äkta japansk matcha i olika unika smaker. Smaka klassisk matcha men också spännande japanska varianter som matcha jordgubb eller matcha mango.
-            </p>
-            <p class="body-lg" style="margin-bottom: 2.5rem;">
-              Matcha är mer än bara te – det är en del av den japanska kulturen. Hos oss kan du njuta av både klassisk matcha latte och kreativa matcha-desserter. Den unika smaken av matcha harmoniserar perfekt med våra pannkakor och vår glass, och ger en upplevelse som är både frisk, djup och uppiggande.
-            </p>
-            <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn-primary">Beställ online</a>
-          </div>
-          <div class="reveal reveal-delay-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
-            <img
-              src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df1a443570053b09cd535.jpg"
-              alt="Matcha latte i solkatt"
-              style="width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:12px; box-shadow: 0 4px 20px rgba(60,40,10,0.08);"
-            />
-            <img
-              src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e0c707fea07.jpg"
-              alt="Iced matcha"
-              style="width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:12px; margin-top: 2rem; box-shadow: 0 4px 20px rgba(60,40,10,0.08);"
-            />
-          </div>
+      <div class="hero-aside">
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          <span class="hero-pill-text">Öppet idag · 10:00–20:00</span>
+        </div>
+        <div class="hero-pill">
+          <span class="hero-pill-dot" style="background:#ffd36e;animation:none;"></span>
+          <span class="hero-pill-text">Ny enhet: Uppsala ✦</span>
         </div>
       </div>
     </div>
-
-    <!-- USP -->
-    <div class="section-pad" style="background-color: #f2ede5;">
-      <div class="section-container" style="text-align: center; max-width: 720px;">
-        <div class="reveal">
-          <p class="label" style="margin-bottom: 1rem;">Sveriges första</p>
-          <h2 class="display-md" style="color: #1c1c1a; margin-bottom: 1.75rem;">Fluffiga Pannkakor i Stockholm</h2>
-          <p class="body-lg" style="margin-bottom: 2.5rem;">
-            Fluffyhouse är det första caféet i Sverige som serverar äkta japanska fluffy pancakes – de luftiga och mjuka pannkakorna som tagit världen med storm. Med sitt lätta, molnliknande utseende och unika smakupplevelse är de mer än bara pannkakor – de är en upplevelse.
-          </p>
-          <button class="btn-primary" data-page="hitta">Våra Caféer</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Galleri -->
-    <div class="section-pad" style="background-color: #faf8f4;">
-      <div class="section-container">
-        <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
-          <p class="label" style="margin-bottom: 0.75rem;">Galleri</p>
-          <h2 class="display-md" style="color: #1c1c1a;">Se våra skapelser</h2>
-        </div>
-        <div class="gallery-grid reveal reveal-delay-1">
-          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg" alt="Fluffy pancakes med jordgubbar" loading="lazy" />
-          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e0c707fea07.jpg" alt="Iced matcha med Fluffy House-logga" loading="lazy" />
-          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df1a443570053b09cd535.jpg" alt="Matcha latte i solkatt" loading="lazy" />
-          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/6913555ebf6977494fe57d04.jpg" alt="Isbitar i matcha close-up" loading="lazy" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <div id="footer-hem"></div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       SIDA 2: GIFTCARD
-  ═══════════════════════════════════════════ -->
-  <section id="page-giftcard" class="page-section" style="padding-top:72px;">
-
-    <!-- Hero lite -->
-    <div style="background-color: #1c1c1a; padding: 7rem 2rem 5rem; text-align:center;">
-      <p class="label" style="color: rgba(255,255,255,0.5); margin-bottom: 1rem;">Presentkort</p>
-      <h1 class="display-lg" style="color:#ffffff; margin-bottom: 1.5rem;">Ge bort något Fluffy</h1>
-      <p style="font-size:1.125rem; color:rgba(255,255,255,0.7); max-width:500px; margin: 0 auto 2.5rem; line-height:1.75;">
-        Överraska någon med ett presentkort till Fluffy House och dela upplevelsen av Japans bästa pannkakor.
-      </p>
-      <a href="https://cards.getgifted.com/gift/fluffyhouse/d586198d-a2e1-4f3b-a80c-f3262f12e5ec" target="_blank" rel="noopener" class="btn-white">
-        Beställ presentkort
-      </a>
-    </div>
-
-    <!-- USP text -->
-    <div class="section-pad" style="background-color: #f2ede5;">
-      <div class="section-container" style="text-align:center; max-width:720px;">
-        <p class="label" style="margin-bottom: 1rem;">Sveriges första</p>
-        <h2 class="display-md" style="color: #1c1c1a; margin-bottom: 1.75rem;">Fluffiga Pannkakor i Stockholm</h2>
-        <p class="body-lg" style="margin-bottom: 2.5rem;">
-          Fluffyhouse är det första caféet i Sverige som serverar äkta japanska fluffy pancakes – de luftiga och mjuka pannkakorna som tagit världen med storm. Med sitt lätta, molnliknande utseende och unika smakupplevelse är de mer än bara pannkakor – de är en upplevelse.
-        </p>
-        <a href="https://cards.getgifted.com/gift/fluffyhouse/d586198d-a2e1-4f3b-a80c-f3262f12e5ec" target="_blank" rel="noopener" class="btn-primary">Beställ presentkort</a>
-      </div>
-    </div>
-
-    <!-- Galleri -->
-    <div class="section-pad" style="background-color: #faf8f4;">
-      <div class="section-container">
-        <div style="text-align:center; margin-bottom:3rem;">
-          <p class="label" style="margin-bottom: 0.75rem;">Galleri</p>
-          <h2 class="display-md" style="color: #1c1c1a;">Se våra skapelser</h2>
-        </div>
-        <div class="gallery-grid">
-          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg" alt="Fluffy pancakes med jordgubbar" loading="lazy" />
-          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e0c707fea07.jpg" alt="Iced matcha" loading="lazy" />
-          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df1a443570053b09cd535.jpg" alt="Matcha latte" loading="lazy" />
-          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/6913555ebf6977494fe57d04.jpg" alt="Isbitar i matcha" loading="lazy" />
-        </div>
-      </div>
-    </div>
-
-    <div id="footer-giftcard"></div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       SIDA 3: EVENT (Coming Soon)
-  ═══════════════════════════════════════════ -->
-  <section id="page-event" class="page-section" style="padding-top:72px;">
-    <div class="coming-soon-wrap">
-      <img
-        src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png"
-        alt="Fluffy House"
-        style="height:60px; margin-bottom:3rem; opacity:0.3;"
-        onerror="this.style.display='none'"
-      />
-      <div class="coming-soon-pill">Kommer snart</div>
-      <h1 class="display-lg" style="color: #1c1c1a; margin-bottom: 1.25rem;">Coming Soon</h1>
-      <p class="body-lg" style="max-width: 500px; margin: 0 auto 2.5rem;">
-        You will soon be able to book your events at Fluffy House.
-      </p>
-      <button class="btn-secondary" data-page="hem">← Back to homepage</button>
-    </div>
-    <div id="footer-event"></div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       SIDA 4: JOBB
-  ═══════════════════════════════════════════ -->
-  <section id="page-jobb" class="page-section" style="padding-top:72px;">
-    <div class="section-pad" style="background-color: #faf8f4;">
-      <div class="section-container" style="max-width: 680px;">
-        <p class="label" style="margin-bottom: 1rem;">Lediga tjänster</p>
-        <h1 class="display-lg" style="color: #1c1c1a; margin-bottom: 0.75rem;">Fluffy Jobs</h1>
-        <p class="display-sm" style="color: #3a6147; font-weight:600; margin-bottom: 2.5rem; letter-spacing: 0.05em; text-transform:uppercase; font-size:0.875rem;">Sök jobb här</p>
-
-        <div class="card" style="padding: 2.5rem;">
-          <form id="jobb-form" novalidate>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
-              <div class="form-group">
-                <label class="form-label" for="jobb-namn">Namn</label>
-                <input class="form-input" type="text" id="jobb-namn" name="namn" placeholder="Ditt fullständiga namn" autocomplete="name" required />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="jobb-email">E-post</label>
-                <input class="form-input" type="email" id="jobb-email" name="email" placeholder="din@email.se" autocomplete="email" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="jobb-meddelande">Meddelande</label>
-              <textarea class="form-input" id="jobb-meddelande" name="meddelande" placeholder="Berätta lite om dig själv och varför du vill jobba hos oss..." required></textarea>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="jobb-cv">Ladda upp CV</label>
-              <input class="form-input" type="file" id="jobb-cv" name="cv" accept=".pdf,.doc,.docx" style="padding: 0.625rem 1rem; cursor:pointer;" />
-            </div>
-            <div class="form-checkbox-row">
-              <input class="form-checkbox" type="checkbox" id="jobb-gdpr" name="gdpr" required />
-              <label class="form-checkbox-label" for="jobb-gdpr">
-                Jag accepterar villkoren för lagring och hantering av personuppgifter.
-              </label>
-            </div>
-            <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Skicka ansökan</button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div id="footer-jobb"></div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       SIDA 5: BRUNCH (Coming Soon)
-  ═══════════════════════════════════════════ -->
-  <section id="page-brunch" class="page-section" style="padding-top:72px;">
-    <div class="coming-soon-wrap">
-      <img
-        src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png"
-        alt="Fluffy House"
-        style="height:60px; margin-bottom:3rem; opacity:0.3;"
-        onerror="this.style.display='none'"
-      />
-      <div class="coming-soon-pill">Kommer snart</div>
-      <h1 class="display-lg" style="color: #1c1c1a; margin-bottom: 0.75rem;">Coming Soon</h1>
-      <p class="display-sm" style="color: #3a6147; font-size:1rem; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; margin-bottom: 1.25rem;">Brunch</p>
-      <p class="body-lg" style="max-width: 460px; margin: 0 auto 2.5rem;">
-        Vi arbetar på något fantastiskt. Håll utkik!
-      </p>
-      <button class="btn-secondary" data-page="hem">← Back to homepage</button>
-    </div>
-    <div id="footer-brunch"></div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       SIDA 6: COLLABORATION
-  ═══════════════════════════════════════════ -->
-  <section id="page-collaboration" class="page-section" style="padding-top:72px;">
-    <div class="section-pad" style="background-color: #faf8f4;">
-      <div class="section-container" style="max-width: 720px;">
-        <p class="label" style="margin-bottom: 1rem;">Partnership</p>
-        <h1 class="display-lg" style="color: #1c1c1a; margin-bottom: 0.75rem;">Join the Fluffy House Family</h1>
-        <p class="display-sm" style="color: #3a6147; font-weight:600; margin-bottom: 1.5rem; font-size:1rem;">Fluffy House is growing</p>
-        <p class="body-lg" style="margin-bottom: 0.75rem;">And now we're inviting businesses to join our journey!</p>
-        <p class="body-lg" style="margin-bottom: 0.75rem;">
-          Want to serve our signature Japanese pancakes and create an unforgettable experience for your guests? Fill out the form below, and we'll get in touch with more information about partnership opportunities.
-        </p>
-        <p class="body-lg" style="margin-bottom: 3rem;">
-          Together, we'll spread Fluffy House across Sweden – one pancake at a time.
-        </p>
-
-        <div class="card" style="padding: 2.5rem;">
-          <form id="collab-form" novalidate>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
-              <div class="form-group">
-                <label class="form-label" for="collab-name">Name</label>
-                <input class="form-input" type="text" id="collab-name" name="name" placeholder="Your full name" autocomplete="name" required />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="collab-email">Email</label>
-                <input class="form-input" type="email" id="collab-email" name="email" placeholder="you@company.com" autocomplete="email" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="collab-company">Company</label>
-              <input class="form-input" type="text" id="collab-company" name="company" placeholder="Your company name" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="collab-message">Message</label>
-              <textarea class="form-input" id="collab-message" name="message" placeholder="Tell us about your business and how you'd like to collaborate..." required></textarea>
-            </div>
-            <div class="form-checkbox-row">
-              <input class="form-checkbox" type="checkbox" id="collab-gdpr" name="gdpr" required />
-              <label class="form-checkbox-label" for="collab-gdpr">
-                I accept the terms for the storage and handling of personal data.
-              </label>
-            </div>
-            <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Send</button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div id="footer-collaboration"></div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       SIDA 7 (Meny = extern länk, hanteras i JS)
-  ═══════════════════════════════════════════ -->
-
-
-  <!-- ═══════════════════════════════════════════
-       SIDA 8: KONTAKT
-  ═══════════════════════════════════════════ -->
-  <section id="page-kontakt" class="page-section" style="padding-top:72px;">
-    <div class="section-pad" style="background-color: #faf8f4;">
-      <div class="section-container" style="max-width: 680px;">
-        <p class="label" style="margin-bottom: 1rem;">Vi hör av oss</p>
-        <h1 class="display-lg" style="color: #1c1c1a; margin-bottom: 0.75rem;">Kontakta Oss</h1>
-        <p class="display-sm" style="color: #3a6147; font-weight:600; margin-bottom: 1.5rem; font-size:1rem;">Har du frågor?</p>
-        <p class="body-lg" style="margin-bottom: 3rem;">
-          Skicka in dina meddelanden till oss här så hör vi av oss till dig inom kort.
-        </p>
-
-        <div class="card" style="padding: 2.5rem;">
-          <form id="kontakt-form" novalidate>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
-              <div class="form-group">
-                <label class="form-label" for="kontakt-namn">Namn</label>
-                <input class="form-input" type="text" id="kontakt-namn" name="namn" placeholder="Ditt namn" autocomplete="name" required />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="kontakt-email">E-post</label>
-                <input class="form-input" type="email" id="kontakt-email" name="email" placeholder="din@email.se" autocomplete="email" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="kontakt-meddelande">Meddelande</label>
-              <textarea class="form-input" id="kontakt-meddelande" name="meddelande" placeholder="Ditt meddelande..." required></textarea>
-            </div>
-            <div class="form-checkbox-row">
-              <input class="form-checkbox" type="checkbox" id="kontakt-gdpr" name="gdpr" required />
-              <label class="form-checkbox-label" for="kontakt-gdpr">
-                I accept the terms for the storage and handling of personal data.
-              </label>
-            </div>
-            <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Skicka</button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div id="footer-kontakt"></div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       SIDA 9: HITTA OSS
-  ═══════════════════════════════════════════ -->
-  <section id="page-hitta" class="page-section" style="padding-top:72px;">
-    <div class="section-pad" style="background-color: #faf8f4;">
-      <div class="section-container" style="max-width: 900px;">
-        <p class="label" style="margin-bottom: 1rem;">Besök oss</p>
-        <h1 class="display-lg" style="color: #1c1c1a; margin-bottom: 2rem;">Hitta oss</h1>
-
-        <!-- Location card -->
-        <div class="card" style="margin-bottom: 2rem; overflow:hidden;">
-          <div style="padding: 2rem 2rem 0;">
-            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem;">
-              <div>
-                <h2 class="display-sm" style="color: #1c1c1a; margin-bottom: 0.5rem;">Fluffy House Stockholm</h2>
-                <p class="body-md" style="margin-bottom:0.25rem;">Sankt Eriksgatan 44, 112 34 Stockholm</p>
-                <p class="body-md">Kungsholmen · Nära Fridhemsplan (ca 200 m)</p>
-              </div>
-              <div style="text-align:right; flex-shrink:0;">
-                <p class="label" style="margin-bottom:0.25rem;">Öppettider</p>
-                <p style="font-size:1rem; font-weight:700; color:#1c1c1a;">Alla dagar</p>
-                <p style="font-size:1.125rem; font-weight:800; color:#3a6147; letter-spacing:-0.01em;">10:00 – 20:00</p>
-              </div>
-            </div>
-          </div>
-          <iframe
-            class="map-iframe"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035.0!2d18.0244!3d59.3328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d5e8c4eeae3%3A0x0!2sSankt%20Eriksgatan%2044%2C%20112%2034%20Stockholm!5e0!3m2!1ssv!2sse!4v1700000000000!5m2!1ssv!2sse"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Fluffy House Stockholm på kartan"
-            style="border-radius:0 0 16px 16px;"
-          ></iframe>
-        </div>
-
-        <!-- Uppsala teaser -->
-        <div style="background: #e8f0e9; border: 1px solid #c8dfc9; border-radius: 16px; padding: 2rem; display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap;">
-          <div style="flex:1; min-width:200px;">
-            <p class="label" style="margin-bottom:0.5rem;">Kommande</p>
-            <h3 class="display-sm" style="color:#1c1c1a; margin-bottom:0.5rem;">Fluffy House Uppsala</h3>
-            <p class="body-md">Planeras öppna våren 2026. Håll utkik!</p>
-          </div>
-          <div style="background:#3a6147; color:#fff; border-radius:9999px; padding:0.5rem 1.25rem; font-size:0.8125rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; white-space:nowrap;">
-            Våren 2026
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="footer-hitta"></div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       FOOTER TEMPLATE (injected via JS)
-  ═══════════════════════════════════════════ -->
-  <template id="footer-template">
-    <footer>
-      <div style="border-top: 1px solid rgba(255,255,255,0.08); padding: 5rem 2rem 3rem;">
-        <div style="max-width: 1100px; margin: 0 auto;">
-
-          <!-- Logo -->
-          <div style="text-align:center; margin-bottom:4rem;">
-            <img
-              src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd02f35d1b410f47979f27.png"
-              alt="Fluffy House"
-              style="height:56px; width:auto; object-fit:contain;"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-            />
-            <span style="display:none; font-weight:800; font-size:1.5rem; color:#fff;">Fluffy House</span>
-          </div>
-
-          <!-- Columns -->
-          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-bottom: 4rem;">
-            <!-- Nav -->
-            <div>
-              <p class="footer-label">Navigering</p>
-              <a class="footer-link" data-page="hitta">Hitta oss</a>
-              <a class="footer-link" data-page="brunch">Brunch</a>
-              <a class="footer-link" data-page="event">Event</a>
-              <a class="footer-link" data-page="jobb">Jobba med oss</a>
-              <a class="footer-link" data-page="kontakt">Kontakt</a>
-            </div>
-            <!-- Öppettider -->
-            <div style="text-align:center;">
-              <p class="footer-label">Öppettider</p>
-              <p style="color:rgba(255,255,255,0.8); font-size:0.875rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:0.5rem;">Alla Dagar</p>
-              <p style="color:#ffffff; font-size:1.75rem; font-weight:800; letter-spacing:-0.02em;">10:00–20:00</p>
-            </div>
-            <!-- Sociala medier -->
-            <div style="text-align:right;">
-              <p class="footer-label">Följ oss</p>
-              <div style="display:flex; gap:0.75rem; justify-content:flex-end; margin-bottom:1rem;">
-                <a class="social-icon" href="https://www.instagram.com/fluffyhouse_sweden/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-                <a class="social-icon" href="https://www.tiktok.com/@fluffy.house.swed" target="_blank" rel="noopener" aria-label="TikTok">TK</a>
-                <a class="social-icon" href="https://www.facebook.com/profile.php?id=61579297283770" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
-              </div>
-              <p style="color:rgba(255,255,255,0.5); font-size:0.8125rem;">@fluffyhouse_sweden</p>
-            </div>
-          </div>
-
-          <!-- Bottom -->
-          <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 2rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-            <p style="color:rgba(255,255,255,0.35); font-size:0.8125rem;">© Fluffy House</p>
-            <a href="https://synsnumedia.se" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.35); font-size:0.8125rem; text-decoration:none; transition: color 0.15s ease;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">
-              Powered By Syns Nu
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </template>
-
-
-  <!-- ═══════════════════════════════════════════
-       COOKIE BANNER
-  ═══════════════════════════════════════════ -->
-  <div id="cookie-banner" role="dialog" aria-label="Cookie-inställningar" aria-live="polite">
-    <p class="cookie-text">
-      <strong style="color:#1c1c1a;">Vi använder cookies</strong> och andra tekniker för att anpassa din upplevelse, visa annonser och utföra analyser. Vi använder inte cookies eller andra tekniker för dessa ändamål om du inte accepterar dem.
-    </p>
-    <div class="cookie-buttons">
-      <button class="cookie-btn-necessary" id="cookie-necessary">Acceptera nödvändiga</button>
-      <button class="cookie-btn-accept" id="cookie-accept">Acceptera alla</button>
+    <div class="hero-scroll">
+      <span class="hero-scroll-text">Scrolla</span>
+      <div class="hero-scroll-line"></div>
     </div>
   </div>
 
+  <!-- Ticker -->
+  <div class="intro-strip">
+    <div class="ticker-track" id="ticker">
+      <span class="ticker-item"><span class="ticker-dot"></span>Japanska Fluffy Pancakes</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Äkta Matcha</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Kungsholmen, Stockholm</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Nu i Uppsala</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Beställ Online</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Öppet Alla Dagar 10–20</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Japanska Fluffy Pancakes</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Äkta Matcha</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Kungsholmen, Stockholm</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Nu i Uppsala</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Beställ Online</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Öppet Alla Dagar 10–20</span>
+    </div>
+  </div>
 
-  <!-- ═══════════════════════════════════════════
-       JAVASCRIPT
-  ═══════════════════════════════════════════ -->
-  <script>
-    // ── SPA Navigation ──────────────────────────────
-    const pages = ['hem', 'giftcard', 'event', 'jobb', 'brunch', 'collaboration', 'kontakt', 'hitta'];
-    let currentPage = 'hem';
+  <!-- Stats -->
+  <div class="wrap" style="padding-top:0; padding-bottom:0;">
+    <div class="stats-row">
+      <div class="stat-item" data-r="up"><div class="stat-num">2</div><div class="stat-label">Enheter i Sverige</div></div>
+      <div class="stat-item" data-r="up" data-delay="150"><div class="stat-num">9</div><div class="stat-label">Pannkaksvarianter</div></div>
+      <div class="stat-item" data-r="up" data-delay="300"><div class="stat-num">1st</div><div class="stat-label">I Sverige med äkta Fluffy</div></div>
+    </div>
+  </div>
 
-    function navigateTo(page) {
-      if (!pages.includes(page)) return;
-      if (page === currentPage) return;
+  <!-- About -->
+  <div class="about-grid">
+    <div class="about-img-col">
+      <div class="about-img"></div>
+    </div>
+    <div class="about-text-col">
+      <div class="label-bar" data-r="up">
+        <span class="t-label">Om oss</span>
+      </div>
+      <h2 class="t-h2" style="margin-bottom:1.75rem;" data-r="up" data-delay="100">Det bästa från Japan — i hjärtat av Stockholm</h2>
+      <p class="t-body" style="margin-bottom:1.25rem;" data-r="up" data-delay="200">
+        På Fluffy House serverar vi inte bara våra berömda fluffiga pannkakor – vi erbjuder äkta japansk matcha i unika smaker. Smaka klassisk matcha men också spännande varianter som matcha jordgubb eller matcha mango.
+      </p>
+      <p class="t-body" style="margin-bottom:2.75rem;" data-r="up" data-delay="250">
+        Matcha är mer än bara te – det är en del av den japanska kulturen. Den unika smaken harmoniserar perfekt med våra pannkakor och ger en upplevelse som är frisk, djup och uppiggande.
+      </p>
+      <div style="display:flex; gap:0.875rem; flex-wrap:wrap;" data-r="up" data-delay="350">
+        <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn btn-green">Beställ online</a>
+        <button class="btn btn-outline" data-pg="restauranger">Hitta oss</button>
+      </div>
+    </div>
+  </div>
 
-      // Hide current
-      document.getElementById('page-' + currentPage)?.classList.remove('active');
+  <!-- USP -->
+  <div style="background: var(--c-cream2); padding: 7rem 0;">
+    <div class="wrap-sm" style="text-align:center;">
+      <p class="t-label" style="margin-bottom:1.25rem;" data-r="up">Sveriges första</p>
+      <h2 class="t-h1" style="margin-bottom:2rem; color:var(--c-ink);" data-r="up" data-delay="100">Fluffiga pannkakor i Stockholm</h2>
+      <p class="t-body" style="margin-bottom:3rem; max-width:620px; margin-left:auto; margin-right:auto;" data-r="up" data-delay="200">
+        Fluffy House är det första caféet i Sverige som serverar äkta japanska fluffy pancakes — de luftiga soufflé-pannkakorna som tagit världen med storm. Mer än pannkakor — en upplevelse.
+      </p>
+      <button class="btn btn-green" data-pg="restauranger" data-r="up" data-delay="300">Våra Caféer</button>
+    </div>
+  </div>
 
-      // Show new
-      const newSection = document.getElementById('page-' + page);
-      if (newSection) {
-        newSection.classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'instant' });
-      }
+  <!-- Gallery -->
+  <div class="sec">
+    <div class="wrap">
+      <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; margin-bottom:2.5rem; flex-wrap:wrap;">
+        <div>
+          <p class="t-label" style="margin-bottom:0.75rem;" data-r="up">Galleri</p>
+          <h2 class="t-h2" style="color:var(--c-ink);" data-r="up" data-delay="100">Se våra skapelser</h2>
+        </div>
+        <a href="https://www.instagram.com/fluffyhouse_sweden/" target="_blank" rel="noopener" class="btn btn-outline" data-r="up" data-delay="200">Instagram ↗</a>
+      </div>
+      <div class="gallery-mosaic" data-r="up" data-delay="150">
+        <div class="gal-item"><img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg" alt="Fluffy pancakes" loading="lazy" /></div>
+        <div class="gal-item"><img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e0c707fea07.jpg" alt="Iced matcha" loading="lazy" /></div>
+        <div class="gal-item"><img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df1a443570053b09cd535.jpg" alt="Matcha latte" loading="lazy" /></div>
+        <div class="gal-item"><img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/6913555ebf6977494fe57d04.jpg" alt="Isbitar matcha" loading="lazy" /></div>
+        <div class="gal-item"><img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/6913555d10d6933f64f0a36a.jpg" alt="Pannkakor" loading="lazy" /></div>
+      </div>
+    </div>
+  </div>
 
-      currentPage = page;
-      updateNavActive(page);
-      closeMobileMenu();
-    }
+  <div id="foot-hem"></div>
+</div>
 
-    function updateNavActive(page) {
-      document.querySelectorAll('.nav-link[data-page], .mobile-nav-link[data-page]').forEach(el => {
-        el.classList.toggle('active', el.dataset.page === page);
-      });
-    }
 
-    // Click delegation for all [data-page] elements
-    document.addEventListener('click', (e) => {
-      const target = e.target.closest('[data-page]');
-      if (target && target.dataset.page) {
-        e.preventDefault();
-        navigateTo(target.dataset.page);
-      }
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        const target = e.target.closest('[data-page]');
-        if (target && target.dataset.page) {
-          e.preventDefault();
-          navigateTo(target.dataset.page);
-        }
-      }
-    });
+<!-- ══════════════════════════════════════════════════════════
+     RESTAURANGER
+══════════════════════════════════════════════════════════ -->
+<div id="pg-restauranger" class="pg" style="padding-top:72px;">
+  <div class="sec">
+    <div class="wrap">
+      <div style="text-align:center; margin-bottom:4rem;">
+        <p class="t-label" style="margin-bottom:1rem;" data-r="up">Våra enheter</p>
+        <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:1.25rem;" data-r="up" data-delay="100">Restauranger</h1>
+        <p class="t-body" style="max-width:520px; margin:0 auto;" data-r="up" data-delay="200">Hitta din närmaste Fluffy House. Nu öppna i Stockholm och Uppsala.</p>
+      </div>
 
-    // ── Mobile menu ──────────────────────────────────
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
+      <div class="restaurant-cards">
+        <!-- Kungsholmen -->
+        <div class="rest-card rest-card-k" data-r="up" data-delay="100" style="cursor:pointer;" onclick="navigate('kungsholmen')">
+          <div class="rest-card-img"></div>
+          <div class="rest-card-grad"></div>
+          <div class="rest-card-body">
+            <div class="rest-card-badge"><span class="rest-badge-dot"></span> Öppet nu</div>
+            <h2 class="rest-card-name">Fluffy House<br>Kungsholmen</h2>
+            <p class="rest-card-addr">Sankt Eriksgatan 44 · Stockholm</p>
+            <div class="rest-card-meta">
+              <span class="rest-card-hours">10:00 – 20:00 · Alla dagar</span>
+              <span class="rest-card-cta">Utforska →</span>
+            </div>
+          </div>
+        </div>
 
-    hamburger.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-expanded', isOpen);
-    });
+        <!-- Uppsala -->
+        <div class="rest-card rest-card-u" data-r="up" data-delay="200" style="cursor:pointer;" onclick="navigate('uppsala')">
+          <div class="rest-card-img"></div>
+          <div class="rest-card-grad"></div>
+          <div class="rest-card-body">
+            <div class="rest-card-badge" style="background:rgba(255,211,110,0.18); border-color:rgba(255,211,110,0.3);">
+              <span class="rest-badge-dot" style="background:#ffd36e;animation:none;"></span> Ny öppning
+            </div>
+            <h2 class="rest-card-name">Fluffy House<br>Uppsala</h2>
+            <p class="rest-card-addr">Uppsala, Sverige</p>
+            <div class="rest-card-meta">
+              <span class="rest-card-hours">10:00 – 20:00 · Alla dagar</span>
+              <span class="rest-card-cta">Utforska →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="foot-restauranger"></div>
+</div>
 
-    function closeMobileMenu() {
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-    }
 
-    // ── Navbar scroll ────────────────────────────────
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 20);
-    }, { passive: true });
+<!-- ══════════════════════════════════════════════════════════
+     KUNGSHOLMEN
+══════════════════════════════════════════════════════════ -->
+<div id="pg-kungsholmen" class="pg" style="padding-top:72px;">
 
-    // ── Footer injection ─────────────────────────────
-    function injectFooters() {
-      const template = document.getElementById('footer-template');
-      const slots = document.querySelectorAll('[id^="footer-"]');
-      slots.forEach(slot => {
-        const clone = template.content.cloneNode(true);
-        slot.appendChild(clone);
-      });
-    }
-    injectFooters();
+  <div class="loc-hero">
+    <div class="loc-hero-img loaded" style="background-image: url('https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg');"></div>
+    <div class="loc-hero-grad"></div>
+    <div class="loc-hero-content">
+      <p style="font-size:0.6875rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:0.875rem;">Fluffy House · Stockholm</p>
+      <h1 class="t-h1" style="color:#fff; margin-bottom:1rem;">Kungsholmen</h1>
+      <div style="display:flex; gap:0.875rem; flex-wrap:wrap;">
+        <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn btn-white">Beställ online</a>
+        <button class="btn btn-outline-white" data-pg="restauranger">← Alla restauranger</button>
+      </div>
+    </div>
+  </div>
 
-    // ── Hero image animation ─────────────────────────
-    const heroBg = document.getElementById('hero-bg');
-    if (heroBg) {
-      const img = new Image();
-      img.src = 'https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg';
-      img.onload = () => heroBg.classList.add('loaded');
-    }
+  <div class="sec">
+    <div class="wrap">
+      <div class="loc-info-grid">
+        <div>
+          <p class="t-label" style="margin-bottom:1rem;" data-r="up">Om restaurangen</p>
+          <h2 class="t-h2" style="margin-bottom:1.75rem;" data-r="up" data-delay="100">Vår första enhet — hjärtat av Kungsholmen</h2>
+          <p class="t-body" style="margin-bottom:1.25rem;" data-r="up" data-delay="200">
+            Det var här allt startade. Fluffy House Kungsholmen öppnade den 10 oktober 2024 och är det allra första stället i Sverige att servera äkta japanska fluffy pancakes.
+          </p>
+          <p class="t-body" style="margin-bottom:2.5rem;" data-r="up" data-delay="250">
+            Beläget på Sankt Eriksgatan 44, bara 200 meter från Fridhemsplan, är caféet lätt att nå med tunnelbana. Välkommen in och upplev matcha och soufflé-pannkakor som du aldrig smakat dem förut.
+          </p>
 
-    // ── Scroll reveal ────────────────────────────────
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
+          <div style="margin-bottom:3rem;" data-r="up" data-delay="300">
+            <iframe class="map-frame"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035.2!2d18.0244!3d59.3328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d5e8c4eeae3%3A0x0!2sSankt%20Eriksgatan%2044%2C%20112%2034%20Stockholm!5e0!3m2!1ssv!2sse!4v1700000000000!5m2!1ssv!2sse"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Fluffy House Kungsholmen"
+            ></iframe>
+          </div>
+        </div>
 
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        <div data-r="right" data-delay="200">
+          <div class="info-card">
+            <div style="display:flex; align-items:center; gap:0.625rem; margin-bottom:1.5rem;">
+              <span style="width:8px;height:8px;border-radius:50%;background:#6ee49c;animation:pulse 2s ease infinite;flex-shrink:0;display:inline-block;"></span>
+              <span style="font-size:0.8125rem; font-weight:700; color:var(--c-matcha);">Öppet nu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Adress</span>
+              <span class="info-val">Sankt Eriksgatan 44<br>112 34 Stockholm</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Öppettider</span>
+              <span class="info-val">Alla dagar<br>10:00–20:00</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Tunnelbana</span>
+              <span class="info-val">Fridhemsplan<br>ca 200 m</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Öppnade</span>
+              <span class="info-val">10 oktober 2024</span>
+            </div>
+            <div style="padding-top:1.5rem; display:flex; flex-direction:column; gap:0.75rem;">
+              <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn btn-green" style="justify-content:center;">Beställ online</a>
+              <a href="https://maps.google.com/?q=Sankt+Eriksgatan+44+Stockholm" target="_blank" rel="noopener" class="btn btn-outline" style="justify-content:center;">Vägbeskrivning ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    // ── Cookie banner ────────────────────────────────
-    const cookieBanner = document.getElementById('cookie-banner');
-    function hideCookie() {
-      cookieBanner.classList.add('hidden');
-      localStorage.setItem('fluffy-cookie-accepted', '1');
-    }
-    if (localStorage.getItem('fluffy-cookie-accepted')) {
-      cookieBanner.classList.add('hidden');
-    }
-    document.getElementById('cookie-accept').addEventListener('click', hideCookie);
-    document.getElementById('cookie-necessary').addEventListener('click', hideCookie);
+  <div id="foot-kungsholmen"></div>
+</div>
 
-    // ── Form submit (no-op demo) ─────────────────────
-    ['jobb-form', 'collab-form', 'kontakt-form'].forEach(id => {
-      const form = document.getElementById(id);
-      if (!form) return;
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const btn = form.querySelector('button[type="submit"]');
-        const orig = btn.textContent;
-        btn.textContent = '✓ Skickat!';
-        btn.style.background = '#2e5039';
-        setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 3000);
-      });
-    });
-  </script>
+
+<!-- ══════════════════════════════════════════════════════════
+     UPPSALA
+══════════════════════════════════════════════════════════ -->
+<div id="pg-uppsala" class="pg" style="padding-top:72px;">
+
+  <div class="loc-hero">
+    <div class="loc-hero-img loaded" style="background-image: url('https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/6913555d10d6933f64f0a36a.jpg');"></div>
+    <div class="loc-hero-grad"></div>
+    <div class="loc-hero-content">
+      <p style="font-size:0.6875rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:0.875rem;">Fluffy House · Uppsala</p>
+      <h1 class="t-h1" style="color:#fff; margin-bottom:1rem;">Uppsala</h1>
+      <div style="display:flex; gap:0.875rem; flex-wrap:wrap;">
+        <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn btn-white">Beställ online</a>
+        <button class="btn btn-outline-white" data-pg="restauranger">← Alla restauranger</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="wrap">
+      <div class="loc-info-grid">
+        <div>
+          <div style="display:inline-flex; align-items:center; gap:0.625rem; background:#fffbec; border:1px solid #ffd36e; border-radius:999px; padding:0.5rem 1.125rem; margin-bottom:2rem;" data-r="up">
+            <span style="width:6px;height:6px;border-radius:50%;background:#f5a623;flex-shrink:0;display:inline-block;"></span>
+            <span style="font-size:0.6875rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#b07d10;">Ny öppning</span>
+          </div>
+          <h2 class="t-h2" style="margin-bottom:1.75rem;" data-r="up" data-delay="100">Fluffy House öppnar i Uppsala!</h2>
+          <p class="t-body" style="margin-bottom:1.25rem;" data-r="up" data-delay="200">
+            Vi är otroligt glada att kunna meddela att Fluffy House nu är öppet i Uppsala! Bolaget Fluffy House Uppsala AB är redan registrerat och vi tar med oss hela konceptet — japanska fluffy pancakes och äkta matcha — till en ny stad.
+          </p>
+          <p class="t-body" style="margin-bottom:2.5rem;" data-r="up" data-delay="250">
+            Mer information om exakt adress och öppningsdetaljer kommer inom kort. Följ oss på Instagram för de senaste nyheterna.
+          </p>
+
+          <div style="display:flex; gap:0.875rem; flex-wrap:wrap;" data-r="up" data-delay="300">
+            <a href="https://www.instagram.com/fluffyhouse_sweden/" target="_blank" rel="noopener" class="btn btn-green">Följ oss på Instagram ↗</a>
+            <button class="btn btn-outline" data-pg="kontakt">Kontakta oss</button>
+          </div>
+        </div>
+
+        <div data-r="right" data-delay="200">
+          <div class="info-card">
+            <div style="display:flex; align-items:center; gap:0.625rem; margin-bottom:1.5rem;">
+              <span style="width:8px;height:8px;border-radius:50%;background:#ffd36e;flex-shrink:0;display:inline-block;"></span>
+              <span style="font-size:0.8125rem; font-weight:700; color:#b07d10;">Ny enhet</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Stad</span>
+              <span class="info-val">Uppsala, Sverige</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Adress</span>
+              <span class="info-val">Meddelas snart</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Öppettider</span>
+              <span class="info-val">Alla dagar<br>10:00–20:00</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Status</span>
+              <span class="info-val" style="color:var(--c-matcha);">Nu öppen!</span>
+            </div>
+            <div style="padding-top:1.5rem; display:flex; flex-direction:column; gap:0.75rem;">
+              <a href="https://www.instagram.com/fluffyhouse_sweden/" target="_blank" rel="noopener" class="btn btn-green" style="justify-content:center;">Instagram ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="foot-uppsala"></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     GIFTCARD
+══════════════════════════════════════════════════════════ -->
+<div id="pg-giftcard" class="pg" style="padding-top:72px;">
+  <div style="background: var(--c-ink); padding: 7rem 0 5rem; text-align:center;">
+    <div class="wrap-sm">
+      <p class="t-label" style="color:rgba(255,255,255,0.4); margin-bottom:1.25rem;" data-r="up">Presentkort</p>
+      <h1 class="t-h1" style="color:#fff; margin-bottom:1.5rem;" data-r="up" data-delay="100">Ge bort något Fluffy</h1>
+      <p class="t-body" style="color:rgba(255,255,255,0.6); max-width:480px; margin:0 auto 3rem;" data-r="up" data-delay="200">Överraska någon med en upplevelse de aldrig glömmer — äkta japanska fluffy pancakes och matcha.</p>
+      <a href="https://cards.getgifted.com/gift/fluffyhouse/d586198d-a2e1-4f3b-a80c-f3262f12e5ec" target="_blank" rel="noopener" class="btn btn-white" data-r="up" data-delay="300">Beställ presentkort ↗</a>
+    </div>
+  </div>
+  <div style="background: var(--c-cream2); padding: 7rem 0;">
+    <div class="wrap-sm" style="text-align:center;">
+      <p class="t-label" style="margin-bottom:1rem;">Sveriges första</p>
+      <h2 class="t-h2" style="color:var(--c-ink); margin-bottom:1.75rem;">Fluffiga pannkakor i Stockholm</h2>
+      <p class="t-body" style="margin-bottom:3rem;">Fluffy House är det första caféet i Sverige som serverar äkta japanska fluffy pancakes — de luftiga soufflé-pannkakorna som tagit världen med storm.</p>
+      <a href="https://cards.getgifted.com/gift/fluffyhouse/d586198d-a2e1-4f3b-a80c-f3262f12e5ec" target="_blank" rel="noopener" class="btn btn-green">Beställ presentkort</a>
+    </div>
+  </div>
+  <div id="foot-giftcard"></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     EVENT
+══════════════════════════════════════════════════════════ -->
+<div id="pg-event" class="pg" style="padding-top:72px;">
+  <div class="cs-wrap">
+    <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png" alt="Fluffy House" style="height:52px;margin-bottom:3rem;opacity:0.25;" onerror="this.style.display='none'" />
+    <div class="cs-pill">Kommer snart</div>
+    <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:1.25rem;">Event</h1>
+    <p class="t-body" style="max-width:460px; margin:0 auto 2.5rem;">You will soon be able to book your events at Fluffy House.</p>
+    <button class="btn btn-outline" data-pg="hem">← Tillbaka till startsidan</button>
+  </div>
+  <div id="foot-event"></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     JOBB
+══════════════════════════════════════════════════════════ -->
+<div id="pg-jobb" class="pg" style="padding-top:72px;">
+  <div class="sec">
+    <div class="wrap-sm">
+      <p class="t-label" style="margin-bottom:1rem;">Lediga tjänster</p>
+      <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:0.75rem;">Fluffy Jobs</h1>
+      <p class="t-body" style="margin-bottom:3.5rem;">Vill du jobba i ett unikt café med Japans bästa pannkakor? Skicka in din ansökan!</p>
+      <div class="form-card">
+        <form id="jobb-form" novalidate>
+          <div class="f-row">
+            <div class="f-group"><label class="f-label" for="j-namn">Namn</label><input class="f-input" type="text" id="j-namn" placeholder="Ditt fullständiga namn" required /></div>
+            <div class="f-group"><label class="f-label" for="j-email">E-post</label><input class="f-input" type="email" id="j-email" placeholder="din@email.se" required /></div>
+          </div>
+          <div class="f-group"><label class="f-label" for="j-msg">Meddelande</label><textarea class="f-input" id="j-msg" placeholder="Berätta om dig själv..." required></textarea></div>
+          <div class="f-group"><label class="f-label" for="j-cv">Ladda upp CV</label><input class="f-input" type="file" id="j-cv" accept=".pdf,.doc,.docx" style="cursor:pointer;" /></div>
+          <div class="f-check-row"><input class="f-check" type="checkbox" id="j-gdpr" required /><label class="f-check-label" for="j-gdpr">Jag accepterar villkoren för lagring och hantering av personuppgifter.</label></div>
+          <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;">Skicka ansökan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="foot-jobb"></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     BRUNCH
+══════════════════════════════════════════════════════════ -->
+<div id="pg-brunch" class="pg" style="padding-top:72px;">
+  <div class="cs-wrap">
+    <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png" alt="Fluffy House" style="height:52px;margin-bottom:3rem;opacity:0.25;" onerror="this.style.display='none'" />
+    <div class="cs-pill">Kommer snart</div>
+    <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:0.75rem;">Brunch</h1>
+    <p class="t-body" style="max-width:400px; margin:0 auto 2.5rem;">Vi arbetar på något fantastiskt — håll utkik!</p>
+    <button class="btn btn-outline" data-pg="hem">← Tillbaka till startsidan</button>
+  </div>
+  <div id="foot-brunch"></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     COLLABORATION
+══════════════════════════════════════════════════════════ -->
+<div id="pg-collaboration" class="pg" style="padding-top:72px;">
+  <div class="sec">
+    <div class="wrap-sm">
+      <p class="t-label" style="margin-bottom:1rem;">Partnership</p>
+      <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:0.75rem;">Join the Fluffy House Family</h1>
+      <p class="t-body" style="margin-bottom:0.75rem; font-size:1.125rem; color:#3a6147; font-weight:600;">Fluffy House is growing</p>
+      <p class="t-body" style="margin-bottom:0.75rem;">And now we're inviting businesses to join our journey! Want to serve our signature Japanese pancakes and create an unforgettable experience for your guests?</p>
+      <p class="t-body" style="margin-bottom:3.5rem;">Together, we'll spread Fluffy House across Sweden – one pancake at a time.</p>
+      <div class="form-card">
+        <form id="collab-form" novalidate>
+          <div class="f-row">
+            <div class="f-group"><label class="f-label" for="c-name">Name</label><input class="f-input" type="text" id="c-name" placeholder="Your full name" required /></div>
+            <div class="f-group"><label class="f-label" for="c-email">Email</label><input class="f-input" type="email" id="c-email" placeholder="you@company.com" required /></div>
+          </div>
+          <div class="f-group"><label class="f-label" for="c-company">Company</label><input class="f-input" type="text" id="c-company" placeholder="Your company name" required /></div>
+          <div class="f-group"><label class="f-label" for="c-msg">Message</label><textarea class="f-input" id="c-msg" placeholder="Tell us about your business..." required></textarea></div>
+          <div class="f-check-row"><input class="f-check" type="checkbox" id="c-gdpr" required /><label class="f-check-label" for="c-gdpr">I accept the terms for the storage and handling of personal data.</label></div>
+          <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="foot-collaboration"></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     KONTAKT
+══════════════════════════════════════════════════════════ -->
+<div id="pg-kontakt" class="pg" style="padding-top:72px;">
+  <div class="sec">
+    <div class="wrap-sm">
+      <p class="t-label" style="margin-bottom:1rem;">Kontakt</p>
+      <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:0.75rem;">Kontakta Oss</h1>
+      <p class="t-body" style="margin-bottom:3.5rem;">Skicka in ditt meddelande här så hör vi av oss inom kort.</p>
+      <div class="form-card">
+        <form id="kontakt-form" novalidate>
+          <div class="f-row">
+            <div class="f-group"><label class="f-label" for="k-namn">Namn</label><input class="f-input" type="text" id="k-namn" placeholder="Ditt namn" required /></div>
+            <div class="f-group"><label class="f-label" for="k-email">E-post</label><input class="f-input" type="email" id="k-email" placeholder="din@email.se" required /></div>
+          </div>
+          <div class="f-group"><label class="f-label" for="k-msg">Meddelande</label><textarea class="f-input" id="k-msg" placeholder="Ditt meddelande..." required></textarea></div>
+          <div class="f-check-row"><input class="f-check" type="checkbox" id="k-gdpr" required /><label class="f-check-label" for="k-gdpr">I accept the terms for the storage and handling of personal data.</label></div>
+          <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;">Skicka</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="foot-kontakt"></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER TEMPLATE
+══════════════════════════════════════════════════════════ -->
+<template id="foot-tpl">
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd02f35d1b410f47979f27.png" alt="Fluffy House" onerror="this.outerHTML='<div style=\'font-weight:800;font-size:1.25rem;color:#fff;margin-bottom:1.75rem;\'>Fluffy House</div>'" />
+          <p>Japanska fluffy pancakes och äkta matcha — en upplevelse utan motstycke i Sverige.</p>
+        </div>
+        <div>
+          <p class="foot-h">Navigering</p>
+          <a class="foot-link" data-pg="hem">Hem</a>
+          <a class="foot-link" data-pg="restauranger">Restauranger</a>
+          <a class="foot-link" data-pg="event">Event</a>
+          <a class="foot-link" data-pg="jobb">Jobba med oss</a>
+          <a class="foot-link" data-pg="kontakt">Kontakt</a>
+        </div>
+        <div>
+          <p class="foot-h">Öppettider</p>
+          <p class="foot-hours-label">Alla dagar</p>
+          <p class="foot-hours-big">10:00–20:00</p>
+        </div>
+        <div>
+          <p class="foot-h">Följ oss</p>
+          <div class="soc" style="margin-bottom:1.25rem;">
+            <a class="soc-a" href="https://www.instagram.com/fluffyhouse_sweden/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            <a class="soc-a" href="https://www.tiktok.com/@fluffy.house.swed" target="_blank" rel="noopener" aria-label="TikTok">TK</a>
+            <a class="soc-a" href="https://www.facebook.com/profile.php?id=61579297283770" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+          </div>
+          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.3);">@fluffyhouse_sweden</p>
+        </div>
+      </div>
+      <div class="foot-bot">
+        <p class="foot-copy">© Fluffy House Stockholm AB</p>
+        <a class="foot-power" href="https://synsnumedia.se" target="_blank" rel="noopener">Powered By Syns Nu</a>
+      </div>
+    </div>
+  </footer>
+</template>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     COOKIE
+══════════════════════════════════════════════════════════ -->
+<div id="cookie" class="hidden" role="dialog" aria-label="Cookies">
+  <p class="cookie-title">Vi använder cookies</p>
+  <p class="cookie-body">Vi använder cookies och andra tekniker för att anpassa din upplevelse och utföra analyser. Vi använder dem inte utan ditt samtycke.</p>
+  <div class="cookie-btns">
+    <button class="ck-nec" id="ck-nec">Acceptera nödvändiga</button>
+    <button class="ck-accept" id="ck-ok">Acceptera alla</button>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════════════════════ -->
+<script>
+// ─── Page navigation ──────────────────────────────────────
+const ALL_PAGES = ['hem','restauranger','kungsholmen','uppsala','giftcard','event','jobb','brunch','collaboration','kontakt'];
+let current = 'hem';
+let transitioning = false;
+const fade = document.getElementById('page-fade');
+const nav  = document.getElementById('nav');
+
+function navigate(pg) {
+  if (!ALL_PAGES.includes(pg) || pg === current || transitioning) return;
+  transitioning = true;
+
+  fade.classList.add('show');
+  setTimeout(() => {
+    document.getElementById('pg-' + current)?.classList.remove('on');
+    document.getElementById('pg-' + pg)?.classList.add('on');
+    current = pg;
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    updateNav(pg);
+    initReveal();
+    updateHeroNav();
+
+    setTimeout(() => {
+      fade.classList.remove('show');
+      transitioning = false;
+    }, 80);
+  }, 160);
+}
+
+function updateNav(pg) {
+  document.querySelectorAll('.nav-a[data-pg], .mob-a[data-pg]').forEach(el => {
+    el.classList.toggle('active', el.dataset.pg === pg);
+  });
+}
+
+function updateHeroNav() {
+  const isHem = current === 'hem';
+  const scrolled = window.scrollY > 40;
+  if (isHem && !scrolled) {
+    nav.classList.add('hero-mode');
+    nav.classList.remove('solid');
+  } else {
+    nav.classList.remove('hero-mode');
+    nav.classList.add('solid');
+  }
+}
+
+// Click delegation for [data-pg]
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-pg]');
+  if (t?.dataset.pg) { e.preventDefault(); navigate(t.dataset.pg); }
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    const t = e.target.closest('[data-pg]');
+    if (t?.dataset.pg) { e.preventDefault(); navigate(t.dataset.pg); }
+  }
+});
+
+// Also handle onclick="navigate(...)" calls
+window.navigate = navigate;
+
+// ─── Hamburger ────────────────────────────────────────────
+const ham = document.getElementById('ham');
+const mob = document.getElementById('mob-menu');
+ham.addEventListener('click', () => {
+  const open = mob.classList.toggle('open');
+  ham.classList.toggle('open', open);
+  ham.setAttribute('aria-expanded', open);
+});
+function closeMob() { mob.classList.remove('open'); ham.classList.remove('open'); ham.setAttribute('aria-expanded', 'false'); }
+document.addEventListener('click', e => { if (!mob.contains(e.target) && !ham.contains(e.target)) closeMob(); });
+
+// ─── Navbar scroll ────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY > 40;
+  if (current === 'hem') {
+    nav.classList.toggle('hero-mode', !scrolled);
+    nav.classList.toggle('solid', scrolled);
+  } else {
+    nav.classList.remove('hero-mode');
+    nav.classList.add('solid');
+  }
+}, { passive: true });
+
+// Init hero mode on load
+nav.classList.add('hero-mode');
+
+// ─── Footer injection ─────────────────────────────────────
+const footTpl = document.getElementById('foot-tpl');
+document.querySelectorAll('[id^="foot-"]').forEach(slot => {
+  if (slot.id === 'foot-tpl') return;
+  slot.appendChild(footTpl.content.cloneNode(true));
+});
+
+// ─── Scroll reveal ────────────────────────────────────────
+let revealObserver;
+function initReveal() {
+  if (revealObserver) revealObserver.disconnect();
+  revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObserver.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('#pg-' + current + ' [data-r]').forEach(el => {
+    el.classList.remove('in');
+    revealObserver.observe(el);
+  });
+}
+initReveal();
+
+// ─── Cookie ───────────────────────────────────────────────
+const ck = document.getElementById('cookie');
+if (!localStorage.getItem('fh-cookie')) {
+  setTimeout(() => ck.classList.remove('hidden'), 1200);
+}
+function dismissCookie() { ck.classList.add('hidden'); localStorage.setItem('fh-cookie', '1'); }
+document.getElementById('ck-ok').addEventListener('click', dismissCookie);
+document.getElementById('ck-nec').addEventListener('click', dismissCookie);
+
+// ─── Forms ───────────────────────────────────────────────
+['jobb-form','collab-form','kontakt-form'].forEach(id => {
+  const f = document.getElementById(id);
+  if (!f) return;
+  f.addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = f.querySelector('button[type="submit"]');
+    const orig = btn.textContent;
+    btn.textContent = '✓ Skickat!';
+    btn.style.background = '#2e5039';
+    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 3000);
+  });
+});
+</script>
 </body>
 </html>
