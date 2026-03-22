@@ -1288,8 +1288,7 @@ document.querySelectorAll('[id^="foot-"]').forEach(slot => {
   if (slot.id === 'foot-tpl') return;
   slot.appendChild(footTpl.content.cloneNode(true));
 });
-// Apply saved language after footer clones are in DOM
-applyLang(currentLang);
+// (applyLang called below after i18n is defined)
 
 // ─── Scroll reveal ────────────────────────────────────────
 let revealObserver;
@@ -1581,6 +1580,9 @@ function setupForm(formId, subject) {
 setupForm('jobb-form',    'Jobbansökan – Fluffy House');
 setupForm('collab-form',  'Collaboration Inquiry – Fluffy House');
 setupForm('kontakt-form', 'Kontaktformulär – Fluffy House');
+
+// Apply saved language now that everything is defined
+applyLang(currentLang);
 </script>
 </body>
 </html>
