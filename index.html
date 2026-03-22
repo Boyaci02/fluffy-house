@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fluffy House Stockholm — Japanska Fluffy Pancakes & Matcha</title>
+  <meta name="description" content="Fluffy House – det första caféet i Sverige med äkta japanska fluffy pancakes och matcha. Sankt Eriksgatan 44, Kungsholmen, Stockholm." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#faf8f4',
+            'cream-dark': '#f2ede5',
+            matcha: '#3a6147',
+            'matcha-light': '#e8f0e9',
+            'matcha-hover': '#2e5039',
+            strawberry: '#d4556a',
+            gold: '#b89860',
+            'ink': '#1c1c1a',
+            'ink-mid': '#6b6560',
+            'border-warm': '#e5dfd5',
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            tightest: '-0.03em',
+            tight: '-0.02em',
+            button: '0.05em',
+          },
+          lineHeight: {
+            body: '1.75',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    /* Base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: #faf8f4;
+      color: #1c1c1a;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Typography scale */
+    .display-xl {
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+    .display-lg {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+    .display-md {
+      font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .display-sm {
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+    .body-lg {
+      font-size: 1.125rem;
+      font-weight: 400;
+      line-height: 1.75;
+      color: #6b6560;
+    }
+    .body-md {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.75;
+      color: #6b6560;
+    }
+    .label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #3a6147;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: #3a6147;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.875rem 2rem;
+      border-radius: 9999px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 20px rgba(58, 97, 71, 0.25);
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      background-color: #2e5039;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 28px rgba(58, 97, 71, 0.35);
+    }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:focus-visible {
+      outline: 3px solid #3a6147;
+      outline-offset: 3px;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: transparent;
+      color: #3a6147;
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.875rem 2rem;
+      border-radius: 9999px;
+      border: 2px solid #3a6147;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+      text-decoration: none;
+    }
+    .btn-secondary:hover {
+      background-color: #3a6147;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+    .btn-secondary:active { transform: translateY(0); }
+    .btn-secondary:focus-visible {
+      outline: 3px solid #3a6147;
+      outline-offset: 3px;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: #ffffff;
+      color: #1c1c1a;
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.875rem 2rem;
+      border-radius: 9999px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      text-decoration: none;
+    }
+    .btn-white:hover {
+      background-color: #f0f0ee;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+    }
+    .btn-white:active { transform: translateY(0); }
+
+    /* Navigation */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(250, 248, 244, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    #navbar.scrolled {
+      border-color: #e5dfd5;
+      box-shadow: 0 2px 20px rgba(60, 40, 10, 0.07);
+    }
+    .nav-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      height: 72px;
+    }
+    .nav-left, .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .nav-right { justify-content: flex-end; }
+    .nav-logo { display: flex; align-items: center; justify-content: center; }
+    .nav-logo img { height: 40px; width: auto; object-fit: contain; }
+    .nav-link {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #1c1c1a;
+      text-decoration: none;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      transition: color 0.15s ease, background-color 0.15s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .nav-link:hover { color: #3a6147; background-color: #e8f0e9; }
+    .nav-link.active { color: #3a6147; }
+    .nav-link-ext::after { content: '↗'; font-size: 0.7rem; margin-left: 2px; opacity: 0.6; }
+
+    /* Mobile nav */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #1c1c1a;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    #mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: #faf8f4;
+      border-bottom: 1px solid #e5dfd5;
+      z-index: 99;
+      padding: 1rem 2rem 1.5rem;
+      box-shadow: 0 8px 32px rgba(60,40,10,0.1);
+    }
+    #mobile-menu.open { display: block; }
+    .mobile-nav-link {
+      display: block;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #1c1c1a;
+      text-decoration: none;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #e5dfd5;
+      cursor: pointer;
+      transition: color 0.15s ease;
+    }
+    .mobile-nav-link:last-child { border-bottom: none; }
+    .mobile-nav-link:hover, .mobile-nav-link.active { color: #3a6147; }
+
+    /* Page sections */
+    .page-section {
+      display: none;
+      min-height: 100vh;
+    }
+    .page-section.active { display: block; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg');
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.05);
+      transition: transform 8s ease;
+    }
+    .hero-bg.loaded { transform: scale(1); }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.2) 0%,
+        rgba(0,0,0,0.45) 50%,
+        rgba(0,0,0,0.65) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 2rem;
+      max-width: 800px;
+    }
+    .hero-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 1.5rem;
+    }
+    .hero-title {
+      font-size: clamp(3.5rem, 10vw, 7.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.375rem);
+      font-weight: 400;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 2.5rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-address {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Sections */
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .section-pad { padding: 7rem 0; }
+    .section-pad-sm { padding: 5rem 0; }
+
+    /* Gallery grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 4px 20px rgba(60,40,10,0.08);
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 40px rgba(60,40,10,0.16);
+    }
+
+    /* Form styles */
+    .form-group { margin-bottom: 1.5rem; }
+    .form-label {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #1c1c1a;
+      margin-bottom: 0.5rem;
+    }
+    .form-input {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      background: #ffffff;
+      border: 1.5px solid #e5dfd5;
+      border-radius: 10px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1rem;
+      color: #1c1c1a;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      outline: none;
+    }
+    .form-input::placeholder { color: #aaa49e; }
+    .form-input:focus {
+      border-color: #3a6147;
+      box-shadow: 0 0 0 3px rgba(58, 97, 71, 0.12);
+    }
+    textarea.form-input { resize: vertical; min-height: 140px; }
+    .form-checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .form-checkbox {
+      width: 18px;
+      height: 18px;
+      accent-color: #3a6147;
+      flex-shrink: 0;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+    .form-checkbox-label {
+      font-size: 0.875rem;
+      color: #6b6560;
+      line-height: 1.5;
+    }
+
+    /* Card */
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid #e5dfd5;
+      box-shadow: 0 4px 24px rgba(60,40,10,0.06);
+      overflow: hidden;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1c1c1a;
+      color: #ffffff;
+    }
+    .footer-link {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      font-weight: 400;
+      transition: color 0.15s ease;
+      cursor: pointer;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+    .footer-link:hover { color: #ffffff; }
+    .footer-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 1.25rem;
+    }
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+    }
+    .social-icon:hover {
+      border-color: rgba(255,255,255,0.6);
+      color: #ffffff;
+      background-color: rgba(255,255,255,0.08);
+    }
+    .social-icon:focus-visible {
+      outline: 2px solid rgba(255,255,255,0.5);
+      outline-offset: 2px;
+    }
+
+    /* Coming soon page */
+    .coming-soon-wrap {
+      min-height: calc(100vh - 72px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: #faf8f4;
+    }
+    .coming-soon-pill {
+      display: inline-block;
+      background: #e8f0e9;
+      color: #3a6147;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.375rem 1rem;
+      border-radius: 9999px;
+      margin-bottom: 2rem;
+    }
+
+    /* Maps iframe */
+    .map-iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(60,40,10,0.08);
+    }
+
+    /* Cookie banner */
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: #ffffff;
+      border-top: 1px solid #e5dfd5;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      box-shadow: 0 -8px 32px rgba(60,40,10,0.1);
+    }
+    #cookie-banner.hidden { display: none; }
+    .cookie-text {
+      font-size: 0.875rem;
+      color: #6b6560;
+      line-height: 1.6;
+      flex: 1;
+      min-width: 0;
+    }
+    .cookie-buttons { display: flex; gap: 0.75rem; flex-shrink: 0; }
+    .cookie-btn-accept {
+      background: #3a6147;
+      color: #fff;
+      border: none;
+      border-radius: 9999px;
+      padding: 0.625rem 1.25rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    .cookie-btn-accept:hover { background: #2e5039; }
+    .cookie-btn-necessary {
+      background: transparent;
+      color: #6b6560;
+      border: 1.5px solid #e5dfd5;
+      border-radius: 9999px;
+      padding: 0.625rem 1.25rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+    .cookie-btn-necessary:hover { border-color: #6b6560; color: #1c1c1a; }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .nav-left, .nav-right { display: none; }
+      .hamburger { display: flex; }
+      .nav-inner { grid-template-columns: auto 1fr auto; }
+      .nav-logo { justify-content: flex-start; }
+    }
+    @media (max-width: 768px) {
+      .section-pad { padding: 5rem 0; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      #cookie-banner { flex-direction: column; align-items: flex-start; }
+      .cookie-buttons { width: 100%; }
+      .cookie-btn-accept, .cookie-btn-necessary { flex: 1; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Huvudnavigation">
+    <div class="nav-inner">
+      <!-- Left links -->
+      <div class="nav-left">
+        <a class="nav-link active" data-page="hem" role="button" tabindex="0">Hem</a>
+        <a class="nav-link" data-page="giftcard" role="button" tabindex="0">Giftcard</a>
+        <a class="nav-link" data-page="event" role="button" tabindex="0">Event</a>
+        <a class="nav-link" data-page="jobb" role="button" tabindex="0">Jobb</a>
+        <a class="nav-link" data-page="brunch" role="button" tabindex="0">Brunch</a>
+      </div>
+
+      <!-- Logo -->
+      <div class="nav-logo">
+        <a data-page="hem" style="cursor:pointer;" role="link" tabindex="0">
+          <img
+            src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png"
+            alt="Fluffy House Stockholm"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+          />
+          <span style="display:none; font-weight:800; font-size:1.1rem; letter-spacing:-0.02em; color:#1c1c1a;">Fluffy House</span>
+        </a>
+      </div>
+
+      <!-- Right links -->
+      <div class="nav-right">
+        <a class="nav-link" data-page="collaboration" role="button" tabindex="0">Collab</a>
+        <a class="nav-link nav-link-ext" id="meny-link" href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener">Meny</a>
+        <a class="nav-link" data-page="kontakt" role="button" tabindex="0">Kontakt</a>
+        <a class="nav-link" data-page="hitta" role="button" tabindex="0">Hitta oss</a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Öppna meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" role="menu">
+      <a class="mobile-nav-link active" data-page="hem" role="menuitem" tabindex="0">Hem</a>
+      <a class="mobile-nav-link" data-page="giftcard" role="menuitem" tabindex="0">Giftcard</a>
+      <a class="mobile-nav-link" data-page="event" role="menuitem" tabindex="0">Event</a>
+      <a class="mobile-nav-link" data-page="jobb" role="menuitem" tabindex="0">Jobb</a>
+      <a class="mobile-nav-link" data-page="brunch" role="menuitem" tabindex="0">Brunch</a>
+      <a class="mobile-nav-link" data-page="collaboration" role="menuitem" tabindex="0">Collab</a>
+      <a class="mobile-nav-link nav-link-ext" href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" role="menuitem" tabindex="0">Meny</a>
+      <a class="mobile-nav-link" data-page="kontakt" role="menuitem" tabindex="0">Kontakt</a>
+      <a class="mobile-nav-link" data-page="hitta" role="menuitem" tabindex="0">Hitta oss</a>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════
+       SIDA 1: HEM
+  ═══════════════════════════════════════════ -->
+  <section id="page-hem" class="page-section active" style="padding-top:72px;">
+
+    <!-- Hero -->
+    <div class="hero" style="margin-top: -72px; padding-top: 72px;">
+      <div class="hero-bg" id="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-label">Stockholm · Kungsholmen</p>
+        <h1 class="hero-title">Fluffy House</h1>
+        <p class="hero-subtitle">Japanska fluffy pancakes &amp; matcha — en upplevelse för alla sinnen</p>
+        <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn-white">
+          Beställ online
+        </a>
+      </div>
+      <p class="hero-address">Sankt Eriksgatan 44 — Stockholm</p>
+    </div>
+
+    <!-- Om oss -->
+    <div class="section-pad" style="background-color: #faf8f4;">
+      <div class="section-container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
+          <div class="reveal">
+            <p class="label" style="margin-bottom: 1rem;">Om oss</p>
+            <h2 class="display-md" style="color: #1c1c1a; margin-bottom: 1.75rem;">Fluffy House</h2>
+            <p class="body-lg" style="margin-bottom: 1.25rem;">
+              På Fluffyhouse serverar vi inte bara våra berömda fluffiga pannkakor – vi erbjuder även äkta japansk matcha i olika unika smaker. Smaka klassisk matcha men också spännande japanska varianter som matcha jordgubb eller matcha mango.
+            </p>
+            <p class="body-lg" style="margin-bottom: 2.5rem;">
+              Matcha är mer än bara te – det är en del av den japanska kulturen. Hos oss kan du njuta av både klassisk matcha latte och kreativa matcha-desserter. Den unika smaken av matcha harmoniserar perfekt med våra pannkakor och vår glass, och ger en upplevelse som är både frisk, djup och uppiggande.
+            </p>
+            <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="btn-primary">Beställ online</a>
+          </div>
+          <div class="reveal reveal-delay-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+            <img
+              src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df1a443570053b09cd535.jpg"
+              alt="Matcha latte i solkatt"
+              style="width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:12px; box-shadow: 0 4px 20px rgba(60,40,10,0.08);"
+            />
+            <img
+              src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e0c707fea07.jpg"
+              alt="Iced matcha"
+              style="width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:12px; margin-top: 2rem; box-shadow: 0 4px 20px rgba(60,40,10,0.08);"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- USP -->
+    <div class="section-pad" style="background-color: #f2ede5;">
+      <div class="section-container" style="text-align: center; max-width: 720px;">
+        <div class="reveal">
+          <p class="label" style="margin-bottom: 1rem;">Sveriges första</p>
+          <h2 class="display-md" style="color: #1c1c1a; margin-bottom: 1.75rem;">Fluffiga Pannkakor i Stockholm</h2>
+          <p class="body-lg" style="margin-bottom: 2.5rem;">
+            Fluffyhouse är det första caféet i Sverige som serverar äkta japanska fluffy pancakes – de luftiga och mjuka pannkakorna som tagit världen med storm. Med sitt lätta, molnliknande utseende och unika smakupplevelse är de mer än bara pannkakor – de är en upplevelse.
+          </p>
+          <button class="btn-primary" data-page="hitta">Våra Caféer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Galleri -->
+    <div class="section-pad" style="background-color: #faf8f4;">
+      <div class="section-container">
+        <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
+          <p class="label" style="margin-bottom: 0.75rem;">Galleri</p>
+          <h2 class="display-md" style="color: #1c1c1a;">Se våra skapelser</h2>
+        </div>
+        <div class="gallery-grid reveal reveal-delay-1">
+          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg" alt="Fluffy pancakes med jordgubbar" loading="lazy" />
+          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e0c707fea07.jpg" alt="Iced matcha med Fluffy House-logga" loading="lazy" />
+          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df1a443570053b09cd535.jpg" alt="Matcha latte i solkatt" loading="lazy" />
+          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/6913555ebf6977494fe57d04.jpg" alt="Isbitar i matcha close-up" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-hem"></div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SIDA 2: GIFTCARD
+  ═══════════════════════════════════════════ -->
+  <section id="page-giftcard" class="page-section" style="padding-top:72px;">
+
+    <!-- Hero lite -->
+    <div style="background-color: #1c1c1a; padding: 7rem 2rem 5rem; text-align:center;">
+      <p class="label" style="color: rgba(255,255,255,0.5); margin-bottom: 1rem;">Presentkort</p>
+      <h1 class="display-lg" style="color:#ffffff; margin-bottom: 1.5rem;">Ge bort något Fluffy</h1>
+      <p style="font-size:1.125rem; color:rgba(255,255,255,0.7); max-width:500px; margin: 0 auto 2.5rem; line-height:1.75;">
+        Överraska någon med ett presentkort till Fluffy House och dela upplevelsen av Japans bästa pannkakor.
+      </p>
+      <a href="https://cards.getgifted.com/gift/fluffyhouse/d586198d-a2e1-4f3b-a80c-f3262f12e5ec" target="_blank" rel="noopener" class="btn-white">
+        Beställ presentkort
+      </a>
+    </div>
+
+    <!-- USP text -->
+    <div class="section-pad" style="background-color: #f2ede5;">
+      <div class="section-container" style="text-align:center; max-width:720px;">
+        <p class="label" style="margin-bottom: 1rem;">Sveriges första</p>
+        <h2 class="display-md" style="color: #1c1c1a; margin-bottom: 1.75rem;">Fluffiga Pannkakor i Stockholm</h2>
+        <p class="body-lg" style="margin-bottom: 2.5rem;">
+          Fluffyhouse är det första caféet i Sverige som serverar äkta japanska fluffy pancakes – de luftiga och mjuka pannkakorna som tagit världen med storm. Med sitt lätta, molnliknande utseende och unika smakupplevelse är de mer än bara pannkakor – de är en upplevelse.
+        </p>
+        <a href="https://cards.getgifted.com/gift/fluffyhouse/d586198d-a2e1-4f3b-a80c-f3262f12e5ec" target="_blank" rel="noopener" class="btn-primary">Beställ presentkort</a>
+      </div>
+    </div>
+
+    <!-- Galleri -->
+    <div class="section-pad" style="background-color: #faf8f4;">
+      <div class="section-container">
+        <div style="text-align:center; margin-bottom:3rem;">
+          <p class="label" style="margin-bottom: 0.75rem;">Galleri</p>
+          <h2 class="display-md" style="color: #1c1c1a;">Se våra skapelser</h2>
+        </div>
+        <div class="gallery-grid">
+          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg" alt="Fluffy pancakes med jordgubbar" loading="lazy" />
+          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e0c707fea07.jpg" alt="Iced matcha" loading="lazy" />
+          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df1a443570053b09cd535.jpg" alt="Matcha latte" loading="lazy" />
+          <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/6913555ebf6977494fe57d04.jpg" alt="Isbitar i matcha" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-giftcard"></div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SIDA 3: EVENT (Coming Soon)
+  ═══════════════════════════════════════════ -->
+  <section id="page-event" class="page-section" style="padding-top:72px;">
+    <div class="coming-soon-wrap">
+      <img
+        src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png"
+        alt="Fluffy House"
+        style="height:60px; margin-bottom:3rem; opacity:0.3;"
+        onerror="this.style.display='none'"
+      />
+      <div class="coming-soon-pill">Kommer snart</div>
+      <h1 class="display-lg" style="color: #1c1c1a; margin-bottom: 1.25rem;">Coming Soon</h1>
+      <p class="body-lg" style="max-width: 500px; margin: 0 auto 2.5rem;">
+        You will soon be able to book your events at Fluffy House.
+      </p>
+      <button class="btn-secondary" data-page="hem">← Back to homepage</button>
+    </div>
+    <div id="footer-event"></div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SIDA 4: JOBB
+  ═══════════════════════════════════════════ -->
+  <section id="page-jobb" class="page-section" style="padding-top:72px;">
+    <div class="section-pad" style="background-color: #faf8f4;">
+      <div class="section-container" style="max-width: 680px;">
+        <p class="label" style="margin-bottom: 1rem;">Lediga tjänster</p>
+        <h1 class="display-lg" style="color: #1c1c1a; margin-bottom: 0.75rem;">Fluffy Jobs</h1>
+        <p class="display-sm" style="color: #3a6147; font-weight:600; margin-bottom: 2.5rem; letter-spacing: 0.05em; text-transform:uppercase; font-size:0.875rem;">Sök jobb här</p>
+
+        <div class="card" style="padding: 2.5rem;">
+          <form id="jobb-form" novalidate>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
+              <div class="form-group">
+                <label class="form-label" for="jobb-namn">Namn</label>
+                <input class="form-input" type="text" id="jobb-namn" name="namn" placeholder="Ditt fullständiga namn" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="jobb-email">E-post</label>
+                <input class="form-input" type="email" id="jobb-email" name="email" placeholder="din@email.se" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="jobb-meddelande">Meddelande</label>
+              <textarea class="form-input" id="jobb-meddelande" name="meddelande" placeholder="Berätta lite om dig själv och varför du vill jobba hos oss..." required></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="jobb-cv">Ladda upp CV</label>
+              <input class="form-input" type="file" id="jobb-cv" name="cv" accept=".pdf,.doc,.docx" style="padding: 0.625rem 1rem; cursor:pointer;" />
+            </div>
+            <div class="form-checkbox-row">
+              <input class="form-checkbox" type="checkbox" id="jobb-gdpr" name="gdpr" required />
+              <label class="form-checkbox-label" for="jobb-gdpr">
+                Jag accepterar villkoren för lagring och hantering av personuppgifter.
+              </label>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Skicka ansökan</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="footer-jobb"></div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SIDA 5: BRUNCH (Coming Soon)
+  ═══════════════════════════════════════════ -->
+  <section id="page-brunch" class="page-section" style="padding-top:72px;">
+    <div class="coming-soon-wrap">
+      <img
+        src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png"
+        alt="Fluffy House"
+        style="height:60px; margin-bottom:3rem; opacity:0.3;"
+        onerror="this.style.display='none'"
+      />
+      <div class="coming-soon-pill">Kommer snart</div>
+      <h1 class="display-lg" style="color: #1c1c1a; margin-bottom: 0.75rem;">Coming Soon</h1>
+      <p class="display-sm" style="color: #3a6147; font-size:1rem; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; margin-bottom: 1.25rem;">Brunch</p>
+      <p class="body-lg" style="max-width: 460px; margin: 0 auto 2.5rem;">
+        Vi arbetar på något fantastiskt. Håll utkik!
+      </p>
+      <button class="btn-secondary" data-page="hem">← Back to homepage</button>
+    </div>
+    <div id="footer-brunch"></div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SIDA 6: COLLABORATION
+  ═══════════════════════════════════════════ -->
+  <section id="page-collaboration" class="page-section" style="padding-top:72px;">
+    <div class="section-pad" style="background-color: #faf8f4;">
+      <div class="section-container" style="max-width: 720px;">
+        <p class="label" style="margin-bottom: 1rem;">Partnership</p>
+        <h1 class="display-lg" style="color: #1c1c1a; margin-bottom: 0.75rem;">Join the Fluffy House Family</h1>
+        <p class="display-sm" style="color: #3a6147; font-weight:600; margin-bottom: 1.5rem; font-size:1rem;">Fluffy House is growing</p>
+        <p class="body-lg" style="margin-bottom: 0.75rem;">And now we're inviting businesses to join our journey!</p>
+        <p class="body-lg" style="margin-bottom: 0.75rem;">
+          Want to serve our signature Japanese pancakes and create an unforgettable experience for your guests? Fill out the form below, and we'll get in touch with more information about partnership opportunities.
+        </p>
+        <p class="body-lg" style="margin-bottom: 3rem;">
+          Together, we'll spread Fluffy House across Sweden – one pancake at a time.
+        </p>
+
+        <div class="card" style="padding: 2.5rem;">
+          <form id="collab-form" novalidate>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
+              <div class="form-group">
+                <label class="form-label" for="collab-name">Name</label>
+                <input class="form-input" type="text" id="collab-name" name="name" placeholder="Your full name" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="collab-email">Email</label>
+                <input class="form-input" type="email" id="collab-email" name="email" placeholder="you@company.com" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="collab-company">Company</label>
+              <input class="form-input" type="text" id="collab-company" name="company" placeholder="Your company name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="collab-message">Message</label>
+              <textarea class="form-input" id="collab-message" name="message" placeholder="Tell us about your business and how you'd like to collaborate..." required></textarea>
+            </div>
+            <div class="form-checkbox-row">
+              <input class="form-checkbox" type="checkbox" id="collab-gdpr" name="gdpr" required />
+              <label class="form-checkbox-label" for="collab-gdpr">
+                I accept the terms for the storage and handling of personal data.
+              </label>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="footer-collaboration"></div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SIDA 7 (Meny = extern länk, hanteras i JS)
+  ═══════════════════════════════════════════ -->
+
+
+  <!-- ═══════════════════════════════════════════
+       SIDA 8: KONTAKT
+  ═══════════════════════════════════════════ -->
+  <section id="page-kontakt" class="page-section" style="padding-top:72px;">
+    <div class="section-pad" style="background-color: #faf8f4;">
+      <div class="section-container" style="max-width: 680px;">
+        <p class="label" style="margin-bottom: 1rem;">Vi hör av oss</p>
+        <h1 class="display-lg" style="color: #1c1c1a; margin-bottom: 0.75rem;">Kontakta Oss</h1>
+        <p class="display-sm" style="color: #3a6147; font-weight:600; margin-bottom: 1.5rem; font-size:1rem;">Har du frågor?</p>
+        <p class="body-lg" style="margin-bottom: 3rem;">
+          Skicka in dina meddelanden till oss här så hör vi av oss till dig inom kort.
+        </p>
+
+        <div class="card" style="padding: 2.5rem;">
+          <form id="kontakt-form" novalidate>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
+              <div class="form-group">
+                <label class="form-label" for="kontakt-namn">Namn</label>
+                <input class="form-input" type="text" id="kontakt-namn" name="namn" placeholder="Ditt namn" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="kontakt-email">E-post</label>
+                <input class="form-input" type="email" id="kontakt-email" name="email" placeholder="din@email.se" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="kontakt-meddelande">Meddelande</label>
+              <textarea class="form-input" id="kontakt-meddelande" name="meddelande" placeholder="Ditt meddelande..." required></textarea>
+            </div>
+            <div class="form-checkbox-row">
+              <input class="form-checkbox" type="checkbox" id="kontakt-gdpr" name="gdpr" required />
+              <label class="form-checkbox-label" for="kontakt-gdpr">
+                I accept the terms for the storage and handling of personal data.
+              </label>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Skicka</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="footer-kontakt"></div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SIDA 9: HITTA OSS
+  ═══════════════════════════════════════════ -->
+  <section id="page-hitta" class="page-section" style="padding-top:72px;">
+    <div class="section-pad" style="background-color: #faf8f4;">
+      <div class="section-container" style="max-width: 900px;">
+        <p class="label" style="margin-bottom: 1rem;">Besök oss</p>
+        <h1 class="display-lg" style="color: #1c1c1a; margin-bottom: 2rem;">Hitta oss</h1>
+
+        <!-- Location card -->
+        <div class="card" style="margin-bottom: 2rem; overflow:hidden;">
+          <div style="padding: 2rem 2rem 0;">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+              <div>
+                <h2 class="display-sm" style="color: #1c1c1a; margin-bottom: 0.5rem;">Fluffy House Stockholm</h2>
+                <p class="body-md" style="margin-bottom:0.25rem;">Sankt Eriksgatan 44, 112 34 Stockholm</p>
+                <p class="body-md">Kungsholmen · Nära Fridhemsplan (ca 200 m)</p>
+              </div>
+              <div style="text-align:right; flex-shrink:0;">
+                <p class="label" style="margin-bottom:0.25rem;">Öppettider</p>
+                <p style="font-size:1rem; font-weight:700; color:#1c1c1a;">Alla dagar</p>
+                <p style="font-size:1.125rem; font-weight:800; color:#3a6147; letter-spacing:-0.01em;">10:00 – 20:00</p>
+              </div>
+            </div>
+          </div>
+          <iframe
+            class="map-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035.0!2d18.0244!3d59.3328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d5e8c4eeae3%3A0x0!2sSankt%20Eriksgatan%2044%2C%20112%2034%20Stockholm!5e0!3m2!1ssv!2sse!4v1700000000000!5m2!1ssv!2sse"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Fluffy House Stockholm på kartan"
+            style="border-radius:0 0 16px 16px;"
+          ></iframe>
+        </div>
+
+        <!-- Uppsala teaser -->
+        <div style="background: #e8f0e9; border: 1px solid #c8dfc9; border-radius: 16px; padding: 2rem; display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap;">
+          <div style="flex:1; min-width:200px;">
+            <p class="label" style="margin-bottom:0.5rem;">Kommande</p>
+            <h3 class="display-sm" style="color:#1c1c1a; margin-bottom:0.5rem;">Fluffy House Uppsala</h3>
+            <p class="body-md">Planeras öppna våren 2026. Håll utkik!</p>
+          </div>
+          <div style="background:#3a6147; color:#fff; border-radius:9999px; padding:0.5rem 1.25rem; font-size:0.8125rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; white-space:nowrap;">
+            Våren 2026
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer-hitta"></div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER TEMPLATE (injected via JS)
+  ═══════════════════════════════════════════ -->
+  <template id="footer-template">
+    <footer>
+      <div style="border-top: 1px solid rgba(255,255,255,0.08); padding: 5rem 2rem 3rem;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+
+          <!-- Logo -->
+          <div style="text-align:center; margin-bottom:4rem;">
+            <img
+              src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd02f35d1b410f47979f27.png"
+              alt="Fluffy House"
+              style="height:56px; width:auto; object-fit:contain;"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <span style="display:none; font-weight:800; font-size:1.5rem; color:#fff;">Fluffy House</span>
+          </div>
+
+          <!-- Columns -->
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-bottom: 4rem;">
+            <!-- Nav -->
+            <div>
+              <p class="footer-label">Navigering</p>
+              <a class="footer-link" data-page="hitta">Hitta oss</a>
+              <a class="footer-link" data-page="brunch">Brunch</a>
+              <a class="footer-link" data-page="event">Event</a>
+              <a class="footer-link" data-page="jobb">Jobba med oss</a>
+              <a class="footer-link" data-page="kontakt">Kontakt</a>
+            </div>
+            <!-- Öppettider -->
+            <div style="text-align:center;">
+              <p class="footer-label">Öppettider</p>
+              <p style="color:rgba(255,255,255,0.8); font-size:0.875rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:0.5rem;">Alla Dagar</p>
+              <p style="color:#ffffff; font-size:1.75rem; font-weight:800; letter-spacing:-0.02em;">10:00–20:00</p>
+            </div>
+            <!-- Sociala medier -->
+            <div style="text-align:right;">
+              <p class="footer-label">Följ oss</p>
+              <div style="display:flex; gap:0.75rem; justify-content:flex-end; margin-bottom:1rem;">
+                <a class="social-icon" href="https://www.instagram.com/fluffyhouse_sweden/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+                <a class="social-icon" href="https://www.tiktok.com/@fluffy.house.swed" target="_blank" rel="noopener" aria-label="TikTok">TK</a>
+                <a class="social-icon" href="https://www.facebook.com/profile.php?id=61579297283770" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+              </div>
+              <p style="color:rgba(255,255,255,0.5); font-size:0.8125rem;">@fluffyhouse_sweden</p>
+            </div>
+          </div>
+
+          <!-- Bottom -->
+          <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 2rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+            <p style="color:rgba(255,255,255,0.35); font-size:0.8125rem;">© Fluffy House</p>
+            <a href="https://synsnumedia.se" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.35); font-size:0.8125rem; text-decoration:none; transition: color 0.15s ease;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">
+              Powered By Syns Nu
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </template>
+
+
+  <!-- ═══════════════════════════════════════════
+       COOKIE BANNER
+  ═══════════════════════════════════════════ -->
+  <div id="cookie-banner" role="dialog" aria-label="Cookie-inställningar" aria-live="polite">
+    <p class="cookie-text">
+      <strong style="color:#1c1c1a;">Vi använder cookies</strong> och andra tekniker för att anpassa din upplevelse, visa annonser och utföra analyser. Vi använder inte cookies eller andra tekniker för dessa ändamål om du inte accepterar dem.
+    </p>
+    <div class="cookie-buttons">
+      <button class="cookie-btn-necessary" id="cookie-necessary">Acceptera nödvändiga</button>
+      <button class="cookie-btn-accept" id="cookie-accept">Acceptera alla</button>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════
+       JAVASCRIPT
+  ═══════════════════════════════════════════ -->
+  <script>
+    // ── SPA Navigation ──────────────────────────────
+    const pages = ['hem', 'giftcard', 'event', 'jobb', 'brunch', 'collaboration', 'kontakt', 'hitta'];
+    let currentPage = 'hem';
+
+    function navigateTo(page) {
+      if (!pages.includes(page)) return;
+      if (page === currentPage) return;
+
+      // Hide current
+      document.getElementById('page-' + currentPage)?.classList.remove('active');
+
+      // Show new
+      const newSection = document.getElementById('page-' + page);
+      if (newSection) {
+        newSection.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
+
+      currentPage = page;
+      updateNavActive(page);
+      closeMobileMenu();
+    }
+
+    function updateNavActive(page) {
+      document.querySelectorAll('.nav-link[data-page], .mobile-nav-link[data-page]').forEach(el => {
+        el.classList.toggle('active', el.dataset.page === page);
+      });
+    }
+
+    // Click delegation for all [data-page] elements
+    document.addEventListener('click', (e) => {
+      const target = e.target.closest('[data-page]');
+      if (target && target.dataset.page) {
+        e.preventDefault();
+        navigateTo(target.dataset.page);
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        const target = e.target.closest('[data-page]');
+        if (target && target.dataset.page) {
+          e.preventDefault();
+          navigateTo(target.dataset.page);
+        }
+      }
+    });
+
+    // ── Mobile menu ──────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    // ── Navbar scroll ────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ── Footer injection ─────────────────────────────
+    function injectFooters() {
+      const template = document.getElementById('footer-template');
+      const slots = document.querySelectorAll('[id^="footer-"]');
+      slots.forEach(slot => {
+        const clone = template.content.cloneNode(true);
+        slot.appendChild(clone);
+      });
+    }
+    injectFooters();
+
+    // ── Hero image animation ─────────────────────────
+    const heroBg = document.getElementById('hero-bg');
+    if (heroBg) {
+      const img = new Image();
+      img.src = 'https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg';
+      img.onload = () => heroBg.classList.add('loaded');
+    }
+
+    // ── Scroll reveal ────────────────────────────────
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ── Cookie banner ────────────────────────────────
+    const cookieBanner = document.getElementById('cookie-banner');
+    function hideCookie() {
+      cookieBanner.classList.add('hidden');
+      localStorage.setItem('fluffy-cookie-accepted', '1');
+    }
+    if (localStorage.getItem('fluffy-cookie-accepted')) {
+      cookieBanner.classList.add('hidden');
+    }
+    document.getElementById('cookie-accept').addEventListener('click', hideCookie);
+    document.getElementById('cookie-necessary').addEventListener('click', hideCookie);
+
+    // ── Form submit (no-op demo) ─────────────────────
+    ['jobb-form', 'collab-form', 'kontakt-form'].forEach(id => {
+      const form = document.getElementById(id);
+      if (!form) return;
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        const orig = btn.textContent;
+        btn.textContent = '✓ Skickat!';
+        btn.style.background = '#2e5039';
+        setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 3000);
+      });
+    });
+  </script>
+</body>
+</html>
