@@ -838,7 +838,7 @@
           <div class="rest-card-img"></div>
           <div class="rest-card-grad"></div>
           <div class="rest-card-body">
-            <div class="rest-card-badge"><span class="rest-badge-dot"></span> <span data-i18n="rest.open">Öppet nu</span></div>
+            <div class="rest-card-badge" id="badge-k"><span class="rest-badge-dot" id="dot-badge-k"></span> <span id="label-badge-k" data-i18n="rest.open">Öppet nu</span></div>
             <h2 class="rest-card-name">Fluffy House<br>Kungsholmen</h2>
             <p class="rest-card-addr">Sankt Eriksgatan 44 · Stockholm</p>
             <div class="rest-card-meta">
@@ -853,8 +853,8 @@
           <div class="rest-card-img"></div>
           <div class="rest-card-grad"></div>
           <div class="rest-card-body">
-            <div class="rest-card-badge">
-              <span class="rest-badge-dot"></span> <span data-i18n="rest.open">Öppet nu</span>
+            <div class="rest-card-badge" id="badge-u">
+              <span class="rest-badge-dot" id="dot-badge-u"></span> <span id="label-badge-u" data-i18n="rest.open">Öppet nu</span>
             </div>
             <h2 class="rest-card-name">Fluffy House<br>Uppsala</h2>
             <p class="rest-card-addr">Uppsala, Sverige</p>
@@ -914,8 +914,8 @@
         <div data-r="right" data-delay="200">
           <div class="info-card">
             <div style="display:flex; align-items:center; gap:0.625rem; margin-bottom:1.5rem;">
-              <span style="width:8px;height:8px;border-radius:50%;background:#6ee49c;animation:pulse 2s ease infinite;flex-shrink:0;display:inline-block;"></span>
-              <span style="font-size:0.8125rem; font-weight:700; color:var(--c-matcha);">Öppet nu</span>
+              <span id="dot-k" style="width:8px;height:8px;border-radius:50%;background:#6ee49c;animation:pulse 2s ease infinite;flex-shrink:0;display:inline-block;"></span>
+              <span id="label-k" style="font-size:0.8125rem; font-weight:700; color:var(--c-matcha);">Öppet nu</span>
             </div>
             <div class="info-row">
               <span class="info-key">Adress</span>
@@ -970,8 +970,8 @@
       <div class="loc-info-grid">
         <div>
           <div style="display:inline-flex; align-items:center; gap:0.625rem; background:#e8f0e9; border:1px solid #b8d8c0; border-radius:999px; padding:0.5rem 1.125rem; margin-bottom:2rem;" data-r="up">
-            <span style="width:6px;height:6px;border-radius:50%;background:#6ee49c;flex-shrink:0;display:inline-block;animation:pulse 2s ease infinite;"></span>
-            <span style="font-size:0.6875rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--c-matcha);">Öppet nu</span>
+            <span id="dot-u-pill" style="width:6px;height:6px;border-radius:50%;background:#6ee49c;flex-shrink:0;display:inline-block;animation:pulse 2s ease infinite;"></span>
+            <span id="label-u-pill" style="font-size:0.6875rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--c-matcha);">Öppet nu</span>
           </div>
           <h2 class="t-h2" style="margin-bottom:1.75rem;" data-r="up" data-delay="100" data-i18n="loc.u.h2">Fluffy House Uppsala, nu öppet!</h2>
           <p class="t-body" style="margin-bottom:1.25rem;" data-r="up" data-delay="200" data-i18n="loc.u.p1">
@@ -990,8 +990,8 @@
         <div data-r="right" data-delay="200">
           <div class="info-card">
             <div style="display:flex; align-items:center; gap:0.625rem; margin-bottom:1.5rem;">
-              <span style="width:8px;height:8px;border-radius:50%;background:#6ee49c;flex-shrink:0;display:inline-block;animation:pulse 2s ease infinite;"></span>
-              <span style="font-size:0.8125rem; font-weight:700; color:var(--c-matcha);">Öppet nu</span>
+              <span id="dot-u" style="width:8px;height:8px;border-radius:50%;background:#6ee49c;flex-shrink:0;display:inline-block;animation:pulse 2s ease infinite;"></span>
+              <span id="label-u" style="font-size:0.8125rem; font-weight:700; color:var(--c-matcha);">Öppet nu</span>
             </div>
             <div class="info-row">
               <span class="info-key">Stad</span>
@@ -1007,7 +1007,7 @@
             </div>
             <div class="info-row">
               <span class="info-key">Status</span>
-              <span class="info-val" style="color:var(--c-matcha); font-weight:700;">Nu öppen ✓</span>
+              <span id="status-u" class="info-val" style="color:var(--c-matcha); font-weight:700;">Nu öppen ✓</span>
             </div>
             <div style="padding-top:1.5rem; display:flex; flex-direction:column; gap:0.75rem;">
               <a href="https://qopla.com/restaurant/fluffy-house---uppsala/qNdwa4z9Ja/order" target="_blank" rel="noopener" class="btn btn-green" style="justify-content:center;">Beställ online</a>
@@ -1078,7 +1078,7 @@
             <div class="f-group"><label class="f-label" for="j-email">E-post</label><input class="f-input" type="email" id="j-email" placeholder="din@email.se" required /></div>
           </div>
           <div class="f-group"><label class="f-label" for="j-msg">Meddelande</label><textarea class="f-input" id="j-msg" placeholder="Berätta om dig själv..." required></textarea></div>
-          <div class="f-group"><label class="f-label" for="j-cv">Ladda upp CV</label><input class="f-input" type="file" id="j-cv" accept=".pdf,.doc,.docx" style="cursor:pointer;" /></div>
+          <div class="f-group"><p class="f-label" style="margin-bottom:0.5rem;">CV</p><p style="font-size:0.9rem;opacity:0.75;">Bifoga ditt CV direkt i e-posten till <a href="mailto:info@fluffyhouse.se" style="color:inherit;">info@fluffyhouse.se</a></p></div>
           <div class="f-check-row"><input class="f-check" type="checkbox" id="j-gdpr" required /><label class="f-check-label" for="j-gdpr">Jag accepterar villkoren för lagring och hantering av personuppgifter.</label></div>
           <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;">Skicka ansökan</button>
         </form>
@@ -1601,7 +1601,7 @@ document.addEventListener('click', e => {
 // ─── Forms (Formspree) ────────────────────────────────────
 // To activate: create a free account at formspree.io, create a form pointing
 // to info@fluffyhouse.se, then replace YOUR_FORM_ID with the form ID (e.g. xbljoryz).
-const FORMSPREE_ID = 'YOUR_FORM_ID';
+const FORMSPREE_ID = 'xgopoqao';
 
 function setupForm(formId, subject) {
   const f = document.getElementById(formId);
@@ -1635,6 +1635,47 @@ function setupForm(formId, subject) {
 setupForm('jobb-form',    'Jobbansökan – Fluffy House');
 setupForm('collab-form',  'Collaboration Inquiry – Fluffy House');
 setupForm('kontakt-form', 'Kontaktformulär – Fluffy House');
+
+// ─── Dynamisk öppet/stängt ────────────────────────────────
+function updateOpenStatus() {
+  const now = new Date();
+  const swe = new Date(now.toLocaleString('sv-SE', { timeZone: 'Europe/Stockholm' }));
+  const mins = swe.getHours() * 60 + swe.getMinutes();
+  const openFrom = 10 * 60;
+  const isOpenK  = mins >= openFrom && mins < 20 * 60;
+  const isOpenU  = mins >= openFrom && mins < 19 * 60;
+
+  function setStatus(dotId, labelId, isOpen) {
+    const dot   = document.getElementById(dotId);
+    const label = document.getElementById(labelId);
+    if (!dot || !label) return;
+    if (isOpen) {
+      dot.style.background  = '#6ee49c';
+      dot.style.animation   = 'pulse 2s ease infinite';
+      label.textContent     = 'Öppet nu';
+      label.style.color     = 'var(--c-matcha)';
+    } else {
+      dot.style.background  = '#aaa';
+      dot.style.animation   = 'none';
+      label.textContent     = 'Stängt';
+      label.style.color     = '#888';
+    }
+  }
+
+  setStatus('dot-badge-k', 'label-badge-k', isOpenK);
+  setStatus('dot-k',       'label-k',       isOpenK);
+  setStatus('dot-badge-u', 'label-badge-u', isOpenU);
+  setStatus('dot-u-pill',  'label-u-pill',  isOpenU);
+  setStatus('dot-u',       'label-u',       isOpenU);
+
+  const statusU = document.getElementById('status-u');
+  if (statusU) {
+    statusU.textContent = isOpenU ? 'Nu öppen ✓' : 'Stängt';
+    statusU.style.color = isOpenU ? 'var(--c-matcha)' : '#888';
+  }
+}
+updateOpenStatus();
+setInterval(updateOpenStatus, 60_000);
 
 // Apply saved language now that everything is defined
 applyLang(currentLang);
