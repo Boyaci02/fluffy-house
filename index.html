@@ -841,7 +841,7 @@
           <div class="rest-card-img"></div>
           <div class="rest-card-grad"></div>
           <div class="rest-card-body">
-            <div class="rest-card-badge" id="badge-k"><span class="rest-badge-dot" id="dot-badge-k"></span> <span id="label-badge-k" data-i18n="rest.open">Öppet nu</span></div>
+            <div class="rest-card-badge" id="badge-k"><span class="rest-badge-dot" id="dot-badge-k"></span> <span id="label-badge-k">Öppet nu</span></div>
             <h2 class="rest-card-name">Fluffy House<br>Kungsholmen</h2>
             <p class="rest-card-addr">Sankt Eriksgatan 44 · Stockholm</p>
             <div class="rest-card-meta">
@@ -857,10 +857,10 @@
           <div class="rest-card-grad"></div>
           <div class="rest-card-body">
             <div class="rest-card-badge" id="badge-u">
-              <span class="rest-badge-dot" id="dot-badge-u"></span> <span id="label-badge-u" data-i18n="rest.open">Öppet nu</span>
+              <span class="rest-badge-dot" id="dot-badge-u"></span> <span id="label-badge-u">Öppet nu</span>
             </div>
             <h2 class="rest-card-name">Fluffy House<br>Uppsala</h2>
-            <p class="rest-card-addr">Uppsala, Sverige</p>
+            <p class="rest-card-addr">Dragarbrunnsgatan 50C · Uppsala</p>
             <div class="rest-card-meta">
               <span class="rest-card-hours">10:00–19:00 · Alla dagar</span>
               <span class="rest-card-cta" data-i18n="rest.cta">Utforska →</span>
@@ -981,7 +981,7 @@
             Vi har tagit med oss hela Fluffy House-konceptet till Uppsala, äkta japanska fluffy pancakes och matcha i en ny stad. Välkommen att uppleva det fluffigaste caféet i Sverige, nu även i Uppsala.
           </p>
           <p class="t-body" style="margin-bottom:2.5rem;" data-r="up" data-delay="250" data-i18n="loc.u.p2">
-            Öppet alla dagar 10:00–20:00. Följ oss på Instagram för de senaste uppdateringarna om vår Uppsala-enhet.
+            Öppet alla dagar 10:00–19:00. Följ oss på Instagram för de senaste uppdateringarna om vår Uppsala-enhet.
           </p>
 
           <div style="display:flex; gap:0.875rem; flex-wrap:wrap;" data-r="up" data-delay="300">
@@ -997,8 +997,8 @@
               <span id="label-u" style="font-size:0.8125rem; font-weight:700; color:var(--c-matcha);">Öppet nu</span>
             </div>
             <div class="info-row">
-              <span class="info-key">Stad</span>
-              <span class="info-val">Uppsala, Sverige</span>
+              <span class="info-key">Adress</span>
+              <span class="info-val">Dragarbrunnsgatan 50C<br>Uppsala</span>
             </div>
             <div class="info-row">
               <span class="info-key">Öppettider</span>
@@ -1588,6 +1588,7 @@ langBtn.addEventListener('click', e => {
 document.querySelectorAll('.lang-opt').forEach(opt => {
   opt.addEventListener('click', () => {
     applyLang(opt.dataset.lang);
+    if (typeof updateOpenStatus === 'function') updateOpenStatus();
     langDd.classList.remove('open');
     langBtn.classList.remove('open');
     langBtn.setAttribute('aria-expanded', 'false');
@@ -1671,17 +1672,25 @@ function updateOpenStatus() {
   setStatus('dot-u-pill',  'label-u-pill',  isOpenU);
   setStatus('dot-u',       'label-u',       isOpenU);
 
+  // Update pill container background for Uppsala
+  const pillU = document.querySelector('[data-r="up"] > #dot-u-pill')?.parentElement
+             || document.getElementById('dot-u-pill')?.parentElement;
+  if (pillU) {
+    pillU.style.background = isOpenU ? '#e8f0e9' : '#f0e8e8';
+    pillU.style.borderColor = isOpenU ? '#b8d8c0' : '#d8b8b8';
+  }
+
   const statusU = document.getElementById('status-u');
   if (statusU) {
     statusU.textContent = isOpenU ? 'Nu öppen ✓' : 'Stängt';
-    statusU.style.color = isOpenU ? 'var(--c-matcha)' : '#888';
+    statusU.style.color = isOpenU ? 'var(--c-matcha)' : '#c44';
   }
 }
+// Apply saved language first, then update open/closed status
+// (status must run AFTER i18n so it overrides badge text correctly)
+applyLang(currentLang);
 updateOpenStatus();
 setInterval(updateOpenStatus, 60_000);
-
-// Apply saved language now that everything is defined
-applyLang(currentLang);
 </script>
 </body>
 </html>
