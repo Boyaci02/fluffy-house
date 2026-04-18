@@ -389,6 +389,23 @@
     .rest-card:hover .rest-card-img { transform: scale(1.06); }
     .rest-card-k .rest-card-img { background-image: url('https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg'); }
     .rest-card-u .rest-card-img { background-image: url('https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/6913555d10d6933f64f0a36a.jpg'); }
+    .rest-card-mos { grid-column: 1 / -1; min-height: 380px; cursor: default; }
+    .rest-card-mos:hover { transform: none; box-shadow: none; }
+    .rest-card-mos .rest-card-img {
+      background-image: url('https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg');
+      filter: blur(8px) brightness(0.5); transform: scale(1.05);
+    }
+    .rest-card-mos .rest-card-grad { background: rgba(0,0,0,0.35); }
+    .rest-card-mos .rest-card-body {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      inset: 0; padding: 3rem; text-align: center;
+    }
+    .rest-card-coming {
+      display: inline-block; font-size: 0.6875rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 999px; padding: 0.375rem 1rem; margin-bottom: 1.25rem;
+    }
     .rest-card-grad {
       position: absolute; inset: 0;
       background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.2) 55%, rgba(0,0,0,0) 100%);
@@ -865,6 +882,17 @@
               <span class="rest-card-hours">10:00–19:00 · Alla dagar</span>
               <span class="rest-card-cta" data-i18n="rest.cta">Utforska →</span>
             </div>
+          </div>
+        </div>
+
+        <!-- Mall of Scandinavia – Coming Soon -->
+        <div class="rest-card rest-card-mos" data-r="up" data-delay="300">
+          <div class="rest-card-img"></div>
+          <div class="rest-card-grad"></div>
+          <div class="rest-card-body">
+            <span class="rest-card-coming">Coming soon</span>
+            <h2 class="rest-card-name">Fluffy House<br>Mall of Scandinavia</h2>
+            <p class="rest-card-addr">Solna · Stockholm</p>
           </div>
         </div>
       </div>
