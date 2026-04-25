@@ -1103,14 +1103,14 @@
       <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:0.75rem;" data-i18n="jobb.h1">Fluffy Jobs</h1>
       <p class="t-body" style="margin-bottom:3.5rem;" data-i18n="jobb.body">Vill du jobba i ett unikt café med Japans bästa pannkakor? Skicka in din ansökan!</p>
       <div class="form-card">
-        <form id="jobb-form" novalidate>
+        <form id="jobb-form" method="POST" action="https://formspree.io/f/xgopoqao" novalidate>
           <div class="f-row">
-            <div class="f-group"><label class="f-label" for="j-namn">Namn</label><input class="f-input" type="text" id="j-namn" placeholder="Ditt fullständiga namn" required /></div>
-            <div class="f-group"><label class="f-label" for="j-email">E-post</label><input class="f-input" type="email" id="j-email" placeholder="din@email.se" required /></div>
+            <div class="f-group"><label class="f-label" for="j-namn">Namn</label><input class="f-input" type="text" id="j-namn" name="namn" placeholder="Ditt fullständiga namn" required /></div>
+            <div class="f-group"><label class="f-label" for="j-email">E-post</label><input class="f-input" type="email" id="j-email" name="email" placeholder="din@email.se" required /></div>
           </div>
-          <div class="f-group"><label class="f-label" for="j-msg">Meddelande</label><textarea class="f-input" id="j-msg" placeholder="Berätta om dig själv..." required></textarea></div>
+          <div class="f-group"><label class="f-label" for="j-msg">Meddelande</label><textarea class="f-input" id="j-msg" name="meddelande" placeholder="Berätta om dig själv..." required></textarea></div>
           <div class="f-group"><p class="f-label" style="margin-bottom:0.5rem;">CV</p><p style="font-size:0.9rem;opacity:0.75;">Bifoga ditt CV direkt i e-posten till <a href="mailto:info@fluffyhouse.se" style="color:inherit;">info@fluffyhouse.se</a></p></div>
-          <div class="f-check-row"><input class="f-check" type="checkbox" id="j-gdpr" required /><label class="f-check-label" for="j-gdpr">Jag accepterar villkoren för lagring och hantering av personuppgifter.</label></div>
+          <div class="f-check-row"><input class="f-check" type="checkbox" id="j-gdpr" name="gdpr" required /><label class="f-check-label" for="j-gdpr">Jag accepterar villkoren för lagring och hantering av personuppgifter.</label></div>
           <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;">Skicka ansökan</button>
         </form>
       </div>
@@ -1147,14 +1147,14 @@
       <p class="t-body" style="margin-bottom:0.75rem;">And now we're inviting businesses to join our journey! Want to serve our signature Japanese pancakes and create an unforgettable experience for your guests?</p>
       <p class="t-body" style="margin-bottom:3.5rem;">Together, we'll spread Fluffy House across Sweden, one pancake at a time.</p>
       <div class="form-card">
-        <form id="collab-form" novalidate>
+        <form id="collab-form" method="POST" action="https://formspree.io/f/xgopoqao" novalidate>
           <div class="f-row">
-            <div class="f-group"><label class="f-label" for="c-name">Name</label><input class="f-input" type="text" id="c-name" placeholder="Your full name" required /></div>
-            <div class="f-group"><label class="f-label" for="c-email">Email</label><input class="f-input" type="email" id="c-email" placeholder="you@company.com" required /></div>
+            <div class="f-group"><label class="f-label" for="c-name">Name</label><input class="f-input" type="text" id="c-name" name="name" placeholder="Your full name" required /></div>
+            <div class="f-group"><label class="f-label" for="c-email">Email</label><input class="f-input" type="email" id="c-email" name="email" placeholder="you@company.com" required /></div>
           </div>
-          <div class="f-group"><label class="f-label" for="c-company">Company</label><input class="f-input" type="text" id="c-company" placeholder="Your company name" required /></div>
-          <div class="f-group"><label class="f-label" for="c-msg">Message</label><textarea class="f-input" id="c-msg" placeholder="Tell us about your business..." required></textarea></div>
-          <div class="f-check-row"><input class="f-check" type="checkbox" id="c-gdpr" required /><label class="f-check-label" for="c-gdpr">I accept the terms for the storage and handling of personal data.</label></div>
+          <div class="f-group"><label class="f-label" for="c-company">Company</label><input class="f-input" type="text" id="c-company" name="company" placeholder="Your company name" required /></div>
+          <div class="f-group"><label class="f-label" for="c-msg">Message</label><textarea class="f-input" id="c-msg" name="message" placeholder="Tell us about your business..." required></textarea></div>
+          <div class="f-check-row"><input class="f-check" type="checkbox" id="c-gdpr" name="gdpr" required /><label class="f-check-label" for="c-gdpr">I accept the terms for the storage and handling of personal data.</label></div>
           <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;">Send</button>
         </form>
       </div>
@@ -1174,13 +1174,13 @@
       <h1 class="t-h1" style="color:var(--c-ink); margin-bottom:0.75rem;" data-i18n="kontakt.h1">Kontakta Oss</h1>
       <p class="t-body" style="margin-bottom:3.5rem;" data-i18n="kontakt.body">Skicka in ditt meddelande här så hör vi av oss inom kort.</p>
       <div class="form-card">
-        <form id="kontakt-form" novalidate>
+        <form id="kontakt-form" method="POST" action="https://formspree.io/f/xgopoqao" novalidate>
           <div class="f-row">
-            <div class="f-group"><label class="f-label" for="k-namn">Namn</label><input class="f-input" type="text" id="k-namn" placeholder="Ditt namn" required /></div>
-            <div class="f-group"><label class="f-label" for="k-email">E-post</label><input class="f-input" type="email" id="k-email" placeholder="din@email.se" required /></div>
+            <div class="f-group"><label class="f-label" for="k-namn">Namn</label><input class="f-input" type="text" id="k-namn" name="namn" placeholder="Ditt namn" required /></div>
+            <div class="f-group"><label class="f-label" for="k-email">E-post</label><input class="f-input" type="email" id="k-email" name="email" placeholder="din@email.se" required /></div>
           </div>
-          <div class="f-group"><label class="f-label" for="k-msg">Meddelande</label><textarea class="f-input" id="k-msg" placeholder="Ditt meddelande..." required></textarea></div>
-          <div class="f-check-row"><input class="f-check" type="checkbox" id="k-gdpr" required /><label class="f-check-label" for="k-gdpr">I accept the terms for the storage and handling of personal data.</label></div>
+          <div class="f-group"><label class="f-label" for="k-msg">Meddelande</label><textarea class="f-input" id="k-msg" name="meddelande" placeholder="Ditt meddelande..." required></textarea></div>
+          <div class="f-check-row"><input class="f-check" type="checkbox" id="k-gdpr" name="gdpr" required /><label class="f-check-label" for="k-gdpr">I accept the terms for the storage and handling of personal data.</label></div>
           <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;">Skicka</button>
         </form>
       </div>
