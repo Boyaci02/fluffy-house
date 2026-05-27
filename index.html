@@ -665,9 +665,10 @@
   #bingsu-pop.launched p.bingsu-post{display:block}
   #bingsu-pop.launched a.bingsu-post{display:inline-block}
   @media(max-width:640px){
-    .bingsu-card{grid-template-columns:1fr;max-width:380px}
-    .bingsu-card .pic{min-height:200px}
-    .bingsu-card .body{padding:28px 24px}
+    #bingsu-pop{align-items:flex-start;overflow-y:auto}
+    .bingsu-card{grid-template-columns:1fr;max-width:360px;margin:auto}
+    .bingsu-card .pic{aspect-ratio:1/1;min-height:0;background-size:cover} /* kvadratisk bild → hela glassen syns */
+    .bingsu-card .body{padding:24px 24px 26px}
     .bingsu-card h3{font-size:1.4rem}
   }
 </style>
