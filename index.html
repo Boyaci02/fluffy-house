@@ -428,24 +428,6 @@
     .rest-card-addr { font-size: 0.875rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; }
     .rest-card-meta { display: flex; align-items: center; justify-content: space-between; }
     .rest-card-hours { font-size: 0.875rem; font-weight: 600; color: rgba(255,255,255,0.75); }
-    .rest-card-mid {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: rgba(207, 225, 154, 0.16);
-      border: 1px solid rgba(207, 225, 154, 0.32);
-      color: rgba(255,255,255,0.92);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      padding: 5px 11px;
-      border-radius: 999px;
-      margin: 0 0 14px;
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-    }
-    .rest-card-mid svg { color: #cfe19a; flex-shrink: 0; }
-    .rest-card-mid strong { font-weight: 700; }
     .rest-card-cta {
       display: inline-flex; align-items: center; gap: 0.5rem;
       background: rgba(255,255,255,0.15); backdrop-filter: blur(8px);
@@ -680,28 +662,6 @@
   .bingsu-cta:hover{background:#2e5039;transform:translateY(-2px)}
   .bingsu-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border:none;border-radius:999px;background:rgba(255,255,255,.85);color:var(--c-ink);font-size:1.25rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s ease}
   .bingsu-close:hover{background:#fff}
-  /* Midsommar slim top banner */
-  #midsommar-bar{position:fixed;top:0;left:0;right:0;z-index:2900;background:#3a5039;color:#f4f6e8;font-size:.82rem;letter-spacing:.01em;box-shadow:0 2px 12px rgba(0,0,0,.08);transform:translateY(-110%);transition:transform .42s var(--ease-out-expo)}
-  #midsommar-bar.visible{transform:none}
-  .mid-bar-inner{max-width:1280px;margin:0 auto;padding:9px 44px;display:flex;align-items:center;justify-content:center;gap:14px;position:relative}
-  .mid-bar-ico{flex-shrink:0;color:#cfe19a;display:block}
-  .mid-bar-text{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 18px;min-width:0}
-  .mid-bar-label{font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.7rem;color:#cfe19a}
-  .mid-bar-times{color:#fff}
-  .mid-bar-times strong{font-weight:700;color:#fff}
-  .mid-bar-loc{color:rgba(244,246,232,.7);font-size:.76rem}
-  .mid-bar-close{position:absolute;top:50%;right:12px;transform:translateY(-50%);width:28px;height:28px;padding:0;border:none;border-radius:999px;background:rgba(255,255,255,.12);color:#f4f6e8;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s ease}
-  .mid-bar-close:hover{background:rgba(255,255,255,.22)}
-  .mid-bar-close svg{display:block}
-  /* When banner is visible push the fixed nav down */
-  body.has-mid-bar #nav{margin-top:38px}
-  @media (max-width:760px){
-    .mid-bar-inner{padding:8px 44px;gap:10px}
-    .mid-bar-text{gap:4px 12px;font-size:.78rem}
-    .mid-bar-label{font-size:.62rem}
-    .mid-bar-loc{display:none}
-    body.has-mid-bar #nav{margin-top:62px}
-  }
   .bingsu-post{display:none} /* default (pre-fas): dölj post-element */
   #bingsu-pop.launched .bingsu-pre{display:none}
   #bingsu-pop.launched p.bingsu-post{display:block}
@@ -731,21 +691,6 @@
       <button class="bingsu-cta bingsu-pre" id="bingsu-ok" data-i18n="bingsu.close">Vad kul!</button>
       <a class="bingsu-cta bingsu-post" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" data-i18n="bingsu.order">Beställ online</a>
     </div>
-  </div>
-</div>
-
-<!-- ═══════════ MIDSOMMAR-BANNER (slim, sticky top) ═══════════ -->
-<div id="midsommar-bar" role="region" aria-label="Midsommar öppettider 2026">
-  <div class="mid-bar-inner">
-    <svg class="mid-bar-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 4.5V2M12 22v-2.5M4.5 12H2M22 12h-2.5M6.7 6.7L5 5M19 19l-1.7-1.7M6.7 17.3L5 19M19 5l-1.7 1.7"/></svg>
-    <div class="mid-bar-text">
-      <span class="mid-bar-label">Midsommarhelgen 2026</span>
-      <span class="mid-bar-times"><strong>Afton</strong> 10–15 · <strong>Dagen</strong> 11–17</span>
-      <span class="mid-bar-loc">Kungsholmen &amp; Uppsala</span>
-    </div>
-    <button class="mid-bar-close" id="mid-bar-x" aria-label="Stäng midsommar-banner">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
-    </button>
   </div>
 </div>
 
@@ -948,10 +893,6 @@
             <div class="rest-card-badge" id="badge-k"><span class="rest-badge-dot" id="dot-badge-k"></span> <span id="label-badge-k">Öppet nu</span></div>
             <h2 class="rest-card-name">Fluffy House<br>Kungsholmen</h2>
             <p class="rest-card-addr">Sankt Eriksgatan 44 · Stockholm</p>
-            <div class="rest-card-mid" data-mid-chip>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 4.5V2M12 22v-2.5M4.5 12H2M22 12h-2.5M6.7 6.7L5 5M19 19l-1.7-1.7M6.7 17.3L5 19M19 5l-1.7 1.7"/></svg>
-              Midsommar · <strong>19/6</strong> 10–15 · <strong>20/6</strong> 11–17
-            </div>
             <div class="rest-card-meta">
               <span class="rest-card-hours">10:00–20:00 · Alla dagar</span>
               <span class="rest-card-cta" data-i18n="rest.cta">Utforska →</span>
@@ -969,10 +910,6 @@
             </div>
             <h2 class="rest-card-name">Fluffy House<br>Uppsala</h2>
             <p class="rest-card-addr">Dragarbrunnsgatan 50C · Uppsala</p>
-            <div class="rest-card-mid" data-mid-chip>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 4.5V2M12 22v-2.5M4.5 12H2M22 12h-2.5M6.7 6.7L5 5M19 19l-1.7-1.7M6.7 17.3L5 19M19 5l-1.7 1.7"/></svg>
-              Midsommar · <strong>19/6</strong> 10–15 · <strong>20/6</strong> 11–17
-            </div>
             <div class="rest-card-meta">
               <span class="rest-card-hours">10:00–19:00 · Alla dagar</span>
               <span class="rest-card-cta" data-i18n="rest.cta">Utforska →</span>
@@ -1051,15 +988,7 @@
               <span class="info-key">Öppettider</span>
               <span class="info-val">Alla dagar<br>10:00–20:00</span>
             </div>
-            <div class="midsommar-notice" style="background:#f4f6e8;border:1px solid #d6dba8;border-radius:14px;padding:1rem 1.125rem;display:flex;gap:0.875rem;align-items:flex-start;margin:0.75rem 0">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6b7239" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:1px"><circle cx="12" cy="12" r="2.5"/><path d="M12 4.5V2M12 22v-2.5M4.5 12H2M22 12h-2.5M6.7 6.7L5 5M19 19l-1.7-1.7M6.7 17.3L5 19M19 5l-1.7 1.7"/></svg>
-              <div style="flex:1;min-width:0">
-                <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6b7239;margin:0 0 0.5rem">Midsommarhelgen 2026</p>
-                <p style="font-size:0.875rem;color:#3a3f1f;line-height:1.5;margin:0 0 0.25rem"><strong>Midsommarafton</strong> · 10:00–15:00</p>
-                <p style="font-size:0.875rem;color:#3a3f1f;line-height:1.5;margin:0"><strong>Midsommardagen</strong> · 11:00–17:00</p>
-              </div>
-            </div>
-            <div class="info-row">
+<div class="info-row">
               <span class="info-key">Tunnelbana</span>
               <span class="info-val">Fridhemsplan<br>ca 200 m</span>
             </div>
@@ -1135,15 +1064,7 @@
               <span class="info-key">Öppettider</span>
               <span class="info-val">Alla dagar<br>10:00–19:00</span>
             </div>
-            <div class="midsommar-notice" style="background:#f4f6e8;border:1px solid #d6dba8;border-radius:14px;padding:1rem 1.125rem;display:flex;gap:0.875rem;align-items:flex-start;margin:0.75rem 0">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6b7239" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:1px"><circle cx="12" cy="12" r="2.5"/><path d="M12 4.5V2M12 22v-2.5M4.5 12H2M22 12h-2.5M6.7 6.7L5 5M19 19l-1.7-1.7M6.7 17.3L5 19M19 5l-1.7 1.7"/></svg>
-              <div style="flex:1;min-width:0">
-                <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6b7239;margin:0 0 0.5rem">Midsommarhelgen 2026</p>
-                <p style="font-size:0.875rem;color:#3a3f1f;line-height:1.5;margin:0 0 0.25rem"><strong>Midsommarafton</strong> · 10:00–15:00</p>
-                <p style="font-size:0.875rem;color:#3a3f1f;line-height:1.5;margin:0"><strong>Midsommardagen</strong> · 11:00–17:00</p>
-              </div>
-            </div>
-            <div class="info-row">
+<div class="info-row">
               <span class="info-key">Sista best. pannkakor</span>
               <span class="info-val">18:30</span>
             </div>
@@ -1904,33 +1825,6 @@ setInterval(updateOpenStatus, 60_000);
   if (orderLink) orderLink.addEventListener('click', close);
 })();
 
-// ─── Midsommar slim top-banner + card chips ──────────────────
-(function () {
-  var now = new Date();
-  var hideAfter = new Date(2026, 5, 22); // 22 juni 2026 — helgen är över
-  var expired = now >= hideAfter;
-
-  // Auto-remove the location card chips after midsommar
-  if (expired) {
-    document.querySelectorAll('[data-mid-chip]').forEach(function (el) { el.remove(); });
-  }
-
-  var bar = document.getElementById('midsommar-bar');
-  if (!bar) return;
-  if (expired) return;
-  if (localStorage.getItem('fh-mid-2026')) return; // permanent dismissed
-
-  document.body.classList.add('has-mid-bar');
-  requestAnimationFrame(function () { bar.classList.add('visible'); });
-
-  document.getElementById('mid-bar-x').addEventListener('click', function () {
-    bar.classList.remove('visible');
-    document.body.classList.remove('has-mid-bar');
-    localStorage.setItem('fh-mid-2026', '1');
-    // Wait for slide-out then nuke from layout
-    setTimeout(function () { bar.style.display = 'none'; }, 450);
-  });
-})();
 </script>
 </body>
 </html>
