@@ -1426,6 +1426,9 @@ function navigate(pg) {
   if (!ALL_PAGES.includes(pg) || pg === current || transitioning) return;
   transitioning = true;
 
+  // Close the mobile drawer if it's open
+  if (typeof closeMob === 'function') closeMob();
+
   fade.classList.add('show');
   setTimeout(() => {
     document.getElementById('pg-' + current)?.classList.remove('on');
