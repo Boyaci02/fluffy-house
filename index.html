@@ -428,6 +428,24 @@
     .rest-card-addr { font-size: 0.875rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; }
     .rest-card-meta { display: flex; align-items: center; justify-content: space-between; }
     .rest-card-hours { font-size: 0.875rem; font-weight: 600; color: rgba(255,255,255,0.75); }
+    .rest-card-mid {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(207, 225, 154, 0.16);
+      border: 1px solid rgba(207, 225, 154, 0.32);
+      color: rgba(255,255,255,0.92);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      padding: 5px 11px;
+      border-radius: 999px;
+      margin: 0 0 14px;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+    .rest-card-mid svg { color: #cfe19a; flex-shrink: 0; }
+    .rest-card-mid strong { font-weight: 700; }
     .rest-card-cta {
       display: inline-flex; align-items: center; gap: 0.5rem;
       background: rgba(255,255,255,0.15); backdrop-filter: blur(8px);
@@ -939,6 +957,10 @@
             <div class="rest-card-badge" id="badge-k"><span class="rest-badge-dot" id="dot-badge-k"></span> <span id="label-badge-k">Öppet nu</span></div>
             <h2 class="rest-card-name">Fluffy House<br>Kungsholmen</h2>
             <p class="rest-card-addr">Sankt Eriksgatan 44 · Stockholm</p>
+            <div class="rest-card-mid" data-mid-chip>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 4.5V2M12 22v-2.5M4.5 12H2M22 12h-2.5M6.7 6.7L5 5M19 19l-1.7-1.7M6.7 17.3L5 19M19 5l-1.7 1.7"/></svg>
+              Midsommar · <strong>19/6</strong> 10–15 · <strong>20/6</strong> 11–17
+            </div>
             <div class="rest-card-meta">
               <span class="rest-card-hours">10:00–20:00 · Alla dagar</span>
               <span class="rest-card-cta" data-i18n="rest.cta">Utforska →</span>
@@ -956,6 +978,10 @@
             </div>
             <h2 class="rest-card-name">Fluffy House<br>Uppsala</h2>
             <p class="rest-card-addr">Dragarbrunnsgatan 50C · Uppsala</p>
+            <div class="rest-card-mid" data-mid-chip>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 4.5V2M12 22v-2.5M4.5 12H2M22 12h-2.5M6.7 6.7L5 5M19 19l-1.7-1.7M6.7 17.3L5 19M19 5l-1.7 1.7"/></svg>
+              Midsommar · <strong>19/6</strong> 10–15 · <strong>20/6</strong> 11–17
+            </div>
             <div class="rest-card-meta">
               <span class="rest-card-hours">10:00–19:00 · Alla dagar</span>
               <span class="rest-card-cta" data-i18n="rest.cta">Utforska →</span>
@@ -1884,13 +1910,20 @@ setInterval(updateOpenStatus, 60_000);
   if (orderLink) orderLink.addEventListener('click', close);
 })();
 
-// ─── Midsommar slim top-banner ──────────────────────────────
+// ─── Midsommar slim top-banner + card chips ──────────────────
 (function () {
-  var bar = document.getElementById('midsommar-bar');
-  if (!bar) return;
   var now = new Date();
   var hideAfter = new Date(2026, 5, 22); // 22 juni 2026 — helgen är över
-  if (now >= hideAfter) return;
+  var expired = now >= hideAfter;
+
+  // Auto-remove the location card chips after midsommar
+  if (expired) {
+    document.querySelectorAll('[data-mid-chip]').forEach(function (el) { el.remove(); });
+  }
+
+  var bar = document.getElementById('midsommar-bar');
+  if (!bar) return;
+  if (expired) return;
   if (localStorage.getItem('fh-mid-2026')) return; // permanent dismissed
 
   document.body.classList.add('has-mid-bar');
