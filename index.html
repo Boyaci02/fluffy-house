@@ -1868,10 +1868,9 @@ setInterval(updateOpenStatus, 60_000);
   var end    = new Date(2026, 6, 1);   // sluta visa efter 1 juli 2026
   if (now >= end) return;
   if (now >= launch) pop.classList.add('launched'); // växla till "Finns nu / Beställ online"
-  if (sessionStorage.getItem('fh-bingsu')) return;   // visa en gång per session
 
   function open()  { pop.classList.add('open'); }
-  function close() { pop.classList.remove('open'); sessionStorage.setItem('fh-bingsu', '1'); }
+  function close() { pop.classList.remove('open'); }
 
   var t = setTimeout(open, 1200);
   document.getElementById('bingsu-x').addEventListener('click', close);
