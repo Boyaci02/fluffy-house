@@ -681,23 +681,25 @@
   /* Midsommar slim top banner */
   #midsommar-bar{position:fixed;top:0;left:0;right:0;z-index:2900;background:#3a5039;color:#f4f6e8;font-size:.82rem;letter-spacing:.01em;box-shadow:0 2px 12px rgba(0,0,0,.08);transform:translateY(-110%);transition:transform .42s var(--ease-out-expo)}
   #midsommar-bar.visible{transform:none}
-  .mid-bar-inner{max-width:1280px;margin:0 auto;padding:9px 56px;display:flex;align-items:center;justify-content:center;gap:14px;position:relative}
-  .mid-bar-ico{flex-shrink:0;color:#cfe19a}
-  .mid-bar-text{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:8px 18px;min-width:0}
+  .mid-bar-inner{max-width:1280px;margin:0 auto;padding:9px 44px;display:flex;align-items:center;justify-content:center;gap:14px;position:relative}
+  .mid-bar-ico{flex-shrink:0;color:#cfe19a;display:block}
+  .mid-bar-text{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 18px;min-width:0}
   .mid-bar-label{font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.7rem;color:#cfe19a}
   .mid-bar-times{color:#fff}
   .mid-bar-times strong{font-weight:700;color:#fff}
   .mid-bar-loc{color:rgba(244,246,232,.7);font-size:.76rem}
-  .mid-bar-close{position:absolute;top:50%;right:14px;transform:translateY(-50%);width:28px;height:28px;border:none;border-radius:999px;background:rgba(255,255,255,.12);color:#f4f6e8;font-size:1.1rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s ease}
+  .mid-bar-close{position:absolute;top:50%;right:12px;transform:translateY(-50%);width:28px;height:28px;padding:0;border:none;border-radius:999px;background:rgba(255,255,255,.12);color:#f4f6e8;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s ease}
   .mid-bar-close:hover{background:rgba(255,255,255,.22)}
+  .mid-bar-close svg{display:block}
   /* When banner is visible push the fixed nav down */
   body.has-mid-bar #nav{margin-top:38px}
   @media (max-width:760px){
-    .mid-bar-inner{padding:8px 44px;gap:10px}
-    .mid-bar-text{gap:4px 12px;font-size:.78rem}
+    .mid-bar-inner{padding:8px 38px;gap:8px}
+    .mid-bar-text{gap:3px 10px;font-size:.78rem;flex-wrap:nowrap}
     .mid-bar-label{font-size:.62rem}
     .mid-bar-loc{display:none}
-    body.has-mid-bar #nav{margin-top:62px}
+    .mid-bar-close{right:8px;width:24px;height:24px}
+    body.has-mid-bar #nav{margin-top:46px}
   }
   .bingsu-post{display:none} /* default (pre-fas): dölj post-element */
   #bingsu-pop.launched .bingsu-pre{display:none}
@@ -736,7 +738,9 @@
       <span class="mid-bar-times"><strong>Afton</strong> 10–15 · <strong>Dagen</strong> 11–17</span>
       <span class="mid-bar-loc">Kungsholmen &amp; Uppsala</span>
     </div>
-    <button class="mid-bar-close" id="mid-bar-x" aria-label="Stäng midsommar-banner">&times;</button>
+    <button class="mid-bar-close" id="mid-bar-x" aria-label="Stäng midsommar-banner">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
   </div>
 </div>
 
