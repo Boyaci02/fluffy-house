@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Fluffy House — Skärm 1</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="../assets/bingsu.jpg" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{
+      width:100%;height:100%;
+      background:#000;overflow:hidden;
+      cursor:none;
+    }
+    #screen{
+      position:fixed;inset:0;
+      width:100vw;height:100vh;
+      width:100dvw;height:100dvh;
+      background:#000;
+    }
+    #screen video{
+      width:100%;height:100%;
+      object-fit:cover;          /* täcker hela skärmen, beskär vid behov */
+      display:block;
+    }
+    /* Klick-för-att-starta-overlay om webbläsaren blockerar autoplay */
+    #tap{
+      position:fixed;inset:0;z-index:10;
+      display:none;
+      align-items:center;justify-content:center;
+      background:#000;color:#fff;cursor:pointer;
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+      font-size:clamp(16px,2.4vw,24px);font-weight:600;letter-spacing:.01em;
+    }
+    #tap.show{display:flex}
+  </style>
+</head>
+<body>
+  <div id="screen">
+    <video id="vid" autoplay muted loop playsinline preload="auto"
+           poster="poster.jpg" disablepictureinpicture>
+      <source src="skarm-1.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div id="tap" aria-hidden="true">Tryck för att starta</div>
+
+  <script>
+    (function () {
+      var v = document.getElementById('vid');
+      var tap = document.getElementById('tap');
+
+      function play() {
+        var p = v.play();
+        if (p && p.catch) {
+          p.then(function () { tap.classList.remove('show'); })
+           .catch(function () { tap.classList.add('show'); });
+        }
+      }
+
+      // Starta direkt + säkerställ uppspelning
+      play();
+      v.addEventListener('canplay', play, { once: true });
+
+      // Manuell start om autoplay blockeras
+      tap.addEventListener('click', function () { v.muted = true; play(); });
+      document.addEventListener('click', function () { if (v.paused) play(); });
+
+      // Håll videon igång på signage-skärmar (återstarta om den pausar)
+      v.addEventListener('pause', function () { setTimeout(play, 300); });
+      // Vid flik-återkomst: spela igen
+      document.addEventListener('visibilitychange', function () {
+        if (!document.hidden && v.paused) play();
+      });
+    })();
+  </script>
+</body>
+</html>
