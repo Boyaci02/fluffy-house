@@ -18,12 +18,14 @@
       position:fixed;inset:0;
       width:100vw;height:100vh;
       width:100dvw;height:100dvh;
-      background:#000;
+      /* Posterbild som bakgrund → aldrig svart, även om videon inte startar */
+      background:#000 url("poster.jpg") center center / cover no-repeat;
     }
     #screen video{
       width:100%;height:100%;
       object-fit:cover;          /* täcker hela skärmen, beskär vid behov */
       display:block;
+      background:transparent;
     }
     /* Klick-för-att-starta-overlay om webbläsaren blockerar autoplay */
     #tap{
@@ -53,24 +55,33 @@
       var tap = document.getElementById('tap');
 
       function play() {
+        v.muted = true;                 // krävs för autoplay
+        v.setAttribute('muted', '');
         var p = v.play();
-        if (p && p.catch) {
+        if (p && p.then) {
           p.then(function () { tap.classList.remove('show'); })
            .catch(function () { tap.classList.add('show'); });
         }
       }
 
-      // Starta direkt + säkerställ uppspelning
+      // Starta direkt + flera försök allteftersom datan kommer
       play();
-      v.addEventListener('canplay', play, { once: true });
+      v.addEventListener('loadeddata', play);
+      v.addEventListener('canplay', play);
 
-      // Manuell start om autoplay blockeras
-      tap.addEventListener('click', function () { v.muted = true; play(); });
-      document.addEventListener('click', function () { if (v.paused) play(); });
+      // Visa start-knappen om videon fortfarande är pausad efter 1,8 s
+      setTimeout(function () { if (v.paused) tap.classList.add('show'); }, 1800);
+
+      // Manuell start vid klick/touch var som helst på skärmen
+      function userStart() { play(); }
+      tap.addEventListener('click', userStart);
+      document.addEventListener('click', userStart);
+      document.addEventListener('touchstart', userStart, { passive: true });
 
       // Håll videon igång på signage-skärmar (återstarta om den pausar)
       v.addEventListener('pause', function () { setTimeout(play, 300); });
-      // Vid flik-återkomst: spela igen
+      v.addEventListener('ended', play);   // extra säkerhet utöver loop
+      // Vid flik-/skärm-återkomst: spela igen
       document.addEventListener('visibilitychange', function () {
         if (!document.hidden && v.paused) play();
       });
