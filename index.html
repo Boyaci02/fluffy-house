@@ -663,6 +663,25 @@
   .bingsu-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border:none;border-radius:999px;background:rgba(255,255,255,.85);color:var(--c-ink);font-size:1.25rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s ease}
   .bingsu-close:hover{background:#fff}
   .bingsu-post{display:none} /* default (pre-fas): dölj post-element */
+  /* Glutenfri slim top banner (samma design som midsommar) */
+  #gf-bar{position:fixed;top:0;left:0;right:0;z-index:2900;background:#3a5039;color:#f4f6e8;font-size:.82rem;letter-spacing:.01em;box-shadow:0 2px 12px rgba(0,0,0,.08);transform:translateY(-110%);transition:transform .42s var(--ease-out-expo)}
+  #gf-bar.visible{transform:none}
+  .gf-bar-inner{max-width:1280px;margin:0 auto;padding:9px 44px;display:flex;align-items:center;justify-content:center;gap:14px;position:relative}
+  .gf-bar-ico{flex-shrink:0;color:#cfe19a;display:block}
+  .gf-bar-text{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 14px;min-width:0}
+  .gf-bar-label{font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.7rem;color:#cfe19a}
+  .gf-bar-msg{color:#fff}
+  .gf-bar-close{position:absolute;top:50%;right:12px;transform:translateY(-50%);width:28px;height:28px;padding:0;border:none;border-radius:999px;background:rgba(255,255,255,.12);color:#f4f6e8;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s ease}
+  .gf-bar-close:hover{background:rgba(255,255,255,.22)}
+  .gf-bar-close svg{display:block}
+  /* When banner is visible push the fixed nav down */
+  body.has-gf-bar #nav{margin-top:38px}
+  @media (max-width:760px){
+    .gf-bar-inner{padding:8px 44px;gap:10px}
+    .gf-bar-text{gap:4px 12px;font-size:.78rem}
+    .gf-bar-label{font-size:.62rem}
+    body.has-gf-bar #nav{margin-top:62px}
+  }
   #bingsu-pop.launched .bingsu-pre{display:none}
   #bingsu-pop.launched p.bingsu-post{display:block}
   #bingsu-pop.launched a.bingsu-post{display:inline-block}
@@ -691,6 +710,20 @@
       <button class="bingsu-cta bingsu-pre" id="bingsu-ok" data-i18n="bingsu.close">Vad kul!</button>
       <a class="bingsu-cta bingsu-post" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" data-i18n="bingsu.order">Beställ online</a>
     </div>
+  </div>
+</div>
+
+<!-- ═══════════ GLUTENFRI-BANNER (slim, sticky top) ═══════════ -->
+<div id="gf-bar" role="region" aria-label="Glutenfria pannkakor">
+  <div class="gf-bar-inner">
+    <svg class="gf-bar-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><path d="M12 11c0-2.2-1.5-3.7-3.5-4 0 2.2 1.5 3.7 3.5 4Z"/><path d="M12 11c0-2.2 1.5-3.7 3.5-4 0 2.2-1.5 3.7-3.5 4Z"/><path d="M12 16c0-2.2-1.5-3.7-3.5-4 0 2.2 1.5 3.7 3.5 4Z"/><path d="M12 16c0-2.2 1.5-3.7 3.5-4 0 2.2-1.5 3.7-3.5 4Z"/><path d="M12 7c0-2.2-1.5-3.7-3.5-4 0 2.2 1.5 3.7 3.5 4Z"/><path d="M12 7c0-2.2 1.5-3.7 3.5-4 0 2.2-1.5 3.7-3.5 4Z"/></svg>
+    <div class="gf-bar-text">
+      <span class="gf-bar-label" data-i18n="gfbar.label">Glutenfritt</span>
+      <span class="gf-bar-msg" data-i18n="gfbar.text">Alla våra pannkakor går att få glutenfria</span>
+    </div>
+    <button class="gf-bar-close" id="gf-bar-x" aria-label="Stäng banner">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
   </div>
 </div>
 
@@ -1512,7 +1545,7 @@ const T = {
     'cs.pill':'Kommer snart','event.h1':'Event',
     'event.body':'You will soon be able to book your events at Fluffy House.',
     'event.back':'← Tillbaka till startsidan',
-    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffiga japanska pannkakor – välj mellan lax och avocado.','brunch.served':'Alla dagar 10–20 · Fluffy House Kungsholmen','brunch.lax.name':'Lax Pannkaka','brunch.lax.desc':'Fluffig japansk pannkaka med rökt lax, pocherat ägg och fräsch sallad.','brunch.avo.name':'Avocado Pannkaka','brunch.avo.desc':'Fluffig japansk pannkaka med krämig avocado, pocherat ägg och fräsch sallad.','brunch.order':'Se hela menyn','brunch.uppsala':'Just nu serveras brunch endast på Kungsholmen – kommer snart till Uppsala också.',
+    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffiga japanska pannkakor – välj mellan lax och avocado.','brunch.served':'Alla dagar 10–20 · Fluffy House Kungsholmen','brunch.lax.name':'Lax Pannkaka','brunch.lax.desc':'Fluffig japansk pannkaka med rökt lax, pocherat ägg och fräsch sallad.','brunch.avo.name':'Avocado Pannkaka','brunch.avo.desc':'Fluffig japansk pannkaka med krämig avocado, pocherat ägg och fräsch sallad.','brunch.order':'Se hela menyn','brunch.uppsala':'Just nu serveras brunch endast på Kungsholmen – kommer snart till Uppsala också.','gfbar.label':'Glutenfritt','gfbar.text':'Alla våra pannkakor går att få glutenfria',
     'jobb.label':'Lediga tjänster','jobb.h1':'Fluffy Jobs',
     'jobb.body':'Vill du jobba i ett unikt café med Japans bästa pannkakor? Skicka in din ansökan!',
     'kontakt.label':'Kontakt','kontakt.h1':'Kontakta Oss',
@@ -1558,7 +1591,7 @@ const T = {
     'cs.pill':'Coming soon','event.h1':'Event',
     'event.body':'You will soon be able to book your events at Fluffy House.',
     'event.back':'← Back to home',
-    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffy Japanese pancakes – choose between salmon and avocado.','brunch.served':'Every day 10–20 · Fluffy House Kungsholmen','brunch.lax.name':'Salmon Pancake','brunch.lax.desc':'Fluffy Japanese pancakes with smoked salmon, poached egg and a fresh salad.','brunch.avo.name':'Avocado Pancake','brunch.avo.desc':'Fluffy Japanese pancakes with creamy avocado, poached egg and a fresh salad.','brunch.order':'See full menu','brunch.uppsala':'Brunch is currently served only at Kungsholmen – coming soon to Uppsala too.',
+    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffy Japanese pancakes – choose between salmon and avocado.','brunch.served':'Every day 10–20 · Fluffy House Kungsholmen','brunch.lax.name':'Salmon Pancake','brunch.lax.desc':'Fluffy Japanese pancakes with smoked salmon, poached egg and a fresh salad.','brunch.avo.name':'Avocado Pancake','brunch.avo.desc':'Fluffy Japanese pancakes with creamy avocado, poached egg and a fresh salad.','brunch.order':'See full menu','brunch.uppsala':'Brunch is currently served only at Kungsholmen – coming soon to Uppsala too.','gfbar.label':'Gluten-free','gfbar.text':'All our pancakes can be made gluten-free',
     'jobb.label':'Open positions','jobb.h1':'Fluffy Jobs',
     'jobb.body':'Want to work in a unique café with Japan\'s best pancakes? Send in your application!',
     'kontakt.label':'Contact','kontakt.h1':'Contact Us',
@@ -1604,7 +1637,7 @@ const T = {
     'cs.pill':'Kommer snart','event.h1':'Event',
     'event.body':'Du vil snart kunne booke dine events hos Fluffy House.',
     'event.back':'← Tilbage til forsiden',
-    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffige japanske pandekager – vælg mellem laks og avocado.','brunch.served':'Alle dage 10–20 · Fluffy House Kungsholmen','brunch.lax.name':'Laks Pandekage','brunch.lax.desc':'Fluffig japansk pandekage med røget laks, pocheret æg og frisk salat.','brunch.avo.name':'Avocado Pandekage','brunch.avo.desc':'Fluffig japansk pandekage med cremet avocado, pocheret æg og frisk salat.','brunch.order':'Se hele menuen','brunch.uppsala':'Brunch serveres lige nu kun på Kungsholmen – kommer snart til Uppsala også.',
+    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffige japanske pandekager – vælg mellem laks og avocado.','brunch.served':'Alle dage 10–20 · Fluffy House Kungsholmen','brunch.lax.name':'Laks Pandekage','brunch.lax.desc':'Fluffig japansk pandekage med røget laks, pocheret æg og frisk salat.','brunch.avo.name':'Avocado Pandekage','brunch.avo.desc':'Fluffig japansk pandekage med cremet avocado, pocheret æg og frisk salat.','brunch.order':'Se hele menuen','brunch.uppsala':'Brunch serveres lige nu kun på Kungsholmen – kommer snart til Uppsala også.','gfbar.label':'Glutenfri','gfbar.text':'Alle vores pandekager kan fås glutenfri',
     'jobb.label':'Ledige stillinger','jobb.h1':'Fluffy Jobs',
     'jobb.body':'Vil du arbejde i en unik café med Japans bedste pandekager? Send din ansøgning!',
     'kontakt.label':'Kontakt','kontakt.h1':'Kontakt Os',
@@ -1650,7 +1683,7 @@ const T = {
     'cs.pill':'Kommer snart','event.h1':'Event',
     'event.body':'Du vil snart kunne booke dine arrangementer hos Fluffy House.',
     'event.back':'← Tilbake til forsiden',
-    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffige japanske pannekaker – velg mellom laks og avocado.','brunch.served':'Alle dager 10–20 · Fluffy House Kungsholmen','brunch.lax.name':'Laks Pannekake','brunch.lax.desc':'Fluffig japansk pannekake med røkt laks, posjert egg og frisk salat.','brunch.avo.name':'Avocado Pannekake','brunch.avo.desc':'Fluffig japansk pannekake med kremet avocado, posjert egg og frisk salat.','brunch.order':'Se hele menyen','brunch.uppsala':'Brunch serveres akkurat nå kun på Kungsholmen – kommer snart til Uppsala også.',
+    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffige japanske pannekaker – velg mellom laks og avocado.','brunch.served':'Alle dager 10–20 · Fluffy House Kungsholmen','brunch.lax.name':'Laks Pannekake','brunch.lax.desc':'Fluffig japansk pannekake med røkt laks, posjert egg og frisk salat.','brunch.avo.name':'Avocado Pannekake','brunch.avo.desc':'Fluffig japansk pannekake med kremet avocado, posjert egg og frisk salat.','brunch.order':'Se hele menyen','brunch.uppsala':'Brunch serveres akkurat nå kun på Kungsholmen – kommer snart til Uppsala også.','gfbar.label':'Glutenfri','gfbar.text':'Alle pannekakene våre kan fås glutenfrie',
     'jobb.label':'Ledige stillinger','jobb.h1':'Fluffy Jobs',
     'jobb.body':'Vil du jobbe i en unik kafé med Japans beste pannekaker? Send inn søknaden din!',
     'kontakt.label':'Kontakt','kontakt.h1':'Kontakt Oss',
@@ -1823,6 +1856,23 @@ setInterval(updateOpenStatus, 60_000);
   });
   var orderLink = pop.querySelector('a.bingsu-post');
   if (orderLink) orderLink.addEventListener('click', close);
+})();
+
+// ─── Glutenfri slim top-banner ───────────────────────────────
+(function () {
+  var bar = document.getElementById('gf-bar');
+  if (!bar) return;
+  if (localStorage.getItem('fh-gf')) return; // permanent dismissed
+
+  document.body.classList.add('has-gf-bar');
+  requestAnimationFrame(function () { bar.classList.add('visible'); });
+
+  document.getElementById('gf-bar-x').addEventListener('click', function () {
+    bar.classList.remove('visible');
+    document.body.classList.remove('has-gf-bar');
+    localStorage.setItem('fh-gf', '1');
+    setTimeout(function () { bar.style.display = 'none'; }, 450);
+  });
 })();
 
 </script>
