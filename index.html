@@ -650,7 +650,7 @@
   #bingsu-pop.open{display:flex;opacity:1}
   .bingsu-card{position:relative;width:100%;max-width:760px;background:var(--c-cream);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 30px 80px rgba(28,28,26,.3);transform:translateY(18px) scale(.98);transition:transform .45s var(--ease-out-expo)}
   #bingsu-pop.open .bingsu-card{transform:none}
-  .bingsu-card .pic{background:#fff url('/assets/bingsu.jpg') center/cover no-repeat;min-height:300px}
+  .bingsu-card .pic{background:#fff url('/assets/brunch-2.jpg') center/cover no-repeat;min-height:300px}
   .bingsu-card .body{padding:38px 34px;display:flex;flex-direction:column;align-items:flex-start}
   .bingsu-badge{display:inline-block;background:var(--c-matcha);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 13px;border-radius:999px}
   .bingsu-card h3{font-size:1.7rem;line-height:1.12;color:var(--c-ink);margin:16px 0 8px;font-weight:800;letter-spacing:-.02em}
@@ -696,19 +696,17 @@
 <div id="bingsu-pop" role="dialog" aria-modal="true" aria-labelledby="bingsu-title">
   <div class="bingsu-card">
     <button class="bingsu-close" id="bingsu-x" aria-label="Stäng">&times;</button>
-    <div class="pic" role="img" aria-label="Jordgubbsbingsu"></div>
+    <div class="pic" role="img" aria-label="Brunch hos Fluffy House"></div>
     <div class="body">
       <span class="bingsu-badge" data-i18n="bingsu.badge">Nyhet</span>
-      <h3 id="bingsu-title" data-i18n="bingsu.title">Bingsu kommer till Uppsala</h3>
-      <p class="bingsu-date bingsu-pre" data-i18n="bingsu.pre">Premiär 9 juni</p>
-      <p class="bingsu-date bingsu-post" data-i18n="bingsu.post">Finns nu i Uppsala!</p>
+      <h3 id="bingsu-title" data-i18n="bingsu.title">Nu finns brunch i Uppsala</h3>
+      <p class="bingsu-date" data-i18n="bingsu.date">Fluffiga japanska pannkakor – alla dagar</p>
       <span class="bingsu-loc">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         Fluffy House Uppsala
       </span>
-      <p class="bingsu-text" data-i18n="bingsu.text">Krämig koreansk shaved ice – nu även hos Fluffy House Uppsala. En svalkande sommarnyhet.</p>
-      <button class="bingsu-cta bingsu-pre" id="bingsu-ok" data-i18n="bingsu.close">Vad kul!</button>
-      <a class="bingsu-cta bingsu-post" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" data-i18n="bingsu.order">Beställ online</a>
+      <p class="bingsu-text" data-i18n="bingsu.text">Våra fluffiga japanska brunch-pannkakor finns nu även hos Fluffy House Uppsala. Välkommen in!</p>
+      <a class="bingsu-cta" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" data-i18n="bingsu.order">Beställ online</a>
     </div>
   </div>
 </div>
@@ -1511,7 +1509,7 @@ document.getElementById('ck-nec').addEventListener('click', dismissCookie);
 // ─── i18n ────────────────────────────────────────────────
 const T = {
   sv: {
-    'bingsu.badge':'Nyhet','bingsu.title':'Bingsu kommer till Uppsala','bingsu.pre':'Premiär 9 juni','bingsu.post':'Finns nu i Uppsala!','bingsu.text':'Krämig koreansk shaved ice – nu även hos Fluffy House Uppsala. En svalkande sommarnyhet.','bingsu.close':'Vad kul!','bingsu.order':'Beställ online',
+    'bingsu.badge':'Nyhet','bingsu.title':'Nu finns brunch i Uppsala','bingsu.date':'Fluffiga japanska pannkakor – alla dagar','bingsu.text':'Våra fluffiga japanska brunch-pannkakor finns nu även hos Fluffy House Uppsala. Välkommen in!','bingsu.order':'Beställ online',
     'nav.hem':'Hem','nav.restauranger':'Restauranger','nav.giftcard':'Giftcard',
     'nav.event':'Event','nav.jobb':'Jobb','nav.brunch':'Brunch','nav.collab':'Collab',
     'nav.meny':'Meny','nav.kontakt':'Kontakt',
@@ -1545,7 +1543,7 @@ const T = {
     'cs.pill':'Kommer snart','event.h1':'Event',
     'event.body':'You will soon be able to book your events at Fluffy House.',
     'event.back':'← Tillbaka till startsidan',
-    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffiga japanska pannkakor – välj mellan lax och avocado.','brunch.served':'Alla dagar 10–20 · Fluffy House Kungsholmen','brunch.lax.name':'Lax Pannkaka','brunch.lax.desc':'Fluffig japansk pannkaka med rökt lax, pocherat ägg och fräsch sallad.','brunch.avo.name':'Avocado Pannkaka','brunch.avo.desc':'Fluffig japansk pannkaka med krämig avocado, pocherat ägg och fräsch sallad.','brunch.order':'Se hela menyn','brunch.uppsala':'Just nu serveras brunch endast på Kungsholmen – kommer snart till Uppsala också.','gfbar.label':'Glutenfritt','gfbar.text':'Alla våra pannkakor går att få glutenfria',
+    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffiga japanska pannkakor – välj mellan lax och avocado.','brunch.served':'Alla dagar 10–20 · Kungsholmen & Uppsala','brunch.lax.name':'Lax Pannkaka','brunch.lax.desc':'Fluffig japansk pannkaka med rökt lax, pocherat ägg och fräsch sallad.','brunch.avo.name':'Avocado Pannkaka','brunch.avo.desc':'Fluffig japansk pannkaka med krämig avocado, pocherat ägg och fräsch sallad.','brunch.order':'Se hela menyn','brunch.uppsala':'Brunch serveras nu på både Kungsholmen och Uppsala.','gfbar.label':'Glutenfritt','gfbar.text':'Alla våra pannkakor går att få glutenfria',
     'jobb.label':'Lediga tjänster','jobb.h1':'Fluffy Jobs',
     'jobb.body':'Vill du jobba i ett unikt café med Japans bästa pannkakor? Skicka in din ansökan!',
     'kontakt.label':'Kontakt','kontakt.h1':'Kontakta Oss',
@@ -1557,7 +1555,7 @@ const T = {
     'form.sending':'Skickar…','form.sent':'✓ Skickat!','form.error':'⚠ Försök igen',
   },
   en: {
-    'bingsu.badge':'New','bingsu.title':'Bingsu is coming to Uppsala','bingsu.pre':'Launching June 9','bingsu.post':'Available now in Uppsala!','bingsu.text':'Creamy Korean shaved ice – now at Fluffy House Uppsala too. A refreshing summer treat.','bingsu.close':"Can't wait!",'bingsu.order':'Order online',
+    'bingsu.badge':'New','bingsu.title':'Brunch is now in Uppsala','bingsu.date':'Fluffy Japanese pancakes – every day','bingsu.text':'Our fluffy Japanese brunch pancakes are now at Fluffy House Uppsala too. Come on in!','bingsu.order':'Order online',
     'nav.hem':'Home','nav.restauranger':'Restaurants','nav.giftcard':'Gift Card',
     'nav.event':'Event','nav.jobb':'Jobs','nav.brunch':'Brunch','nav.collab':'Collab',
     'nav.meny':'Menu','nav.kontakt':'Contact',
@@ -1591,7 +1589,7 @@ const T = {
     'cs.pill':'Coming soon','event.h1':'Event',
     'event.body':'You will soon be able to book your events at Fluffy House.',
     'event.back':'← Back to home',
-    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffy Japanese pancakes – choose between salmon and avocado.','brunch.served':'Every day 10–20 · Fluffy House Kungsholmen','brunch.lax.name':'Salmon Pancake','brunch.lax.desc':'Fluffy Japanese pancakes with smoked salmon, poached egg and a fresh salad.','brunch.avo.name':'Avocado Pancake','brunch.avo.desc':'Fluffy Japanese pancakes with creamy avocado, poached egg and a fresh salad.','brunch.order':'See full menu','brunch.uppsala':'Brunch is currently served only at Kungsholmen – coming soon to Uppsala too.','gfbar.label':'Gluten-free','gfbar.text':'All our pancakes can be made gluten-free',
+    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffy Japanese pancakes – choose between salmon and avocado.','brunch.served':'Every day 10–20 · Kungsholmen & Uppsala','brunch.lax.name':'Salmon Pancake','brunch.lax.desc':'Fluffy Japanese pancakes with smoked salmon, poached egg and a fresh salad.','brunch.avo.name':'Avocado Pancake','brunch.avo.desc':'Fluffy Japanese pancakes with creamy avocado, poached egg and a fresh salad.','brunch.order':'See full menu','brunch.uppsala':'Brunch is now served at both Kungsholmen and Uppsala.','gfbar.label':'Gluten-free','gfbar.text':'All our pancakes can be made gluten-free',
     'jobb.label':'Open positions','jobb.h1':'Fluffy Jobs',
     'jobb.body':'Want to work in a unique café with Japan\'s best pancakes? Send in your application!',
     'kontakt.label':'Contact','kontakt.h1':'Contact Us',
@@ -1603,7 +1601,7 @@ const T = {
     'form.sending':'Sending…','form.sent':'✓ Sent!','form.error':'⚠ Try again',
   },
   da: {
-    'bingsu.badge':'Nyhed','bingsu.title':'Bingsu kommer til Uppsala','bingsu.pre':'Premiere 9. juni','bingsu.post':'Fås nu i Uppsala!','bingsu.text':'Cremet koreansk shaved ice – nu også hos Fluffy House Uppsala. En forfriskende sommernyhed.','bingsu.close':'Hvor sjovt!','bingsu.order':'Bestil online',
+    'bingsu.badge':'Nyhed','bingsu.title':'Nu er der brunch i Uppsala','bingsu.date':'Fluffy japanske pandekager – hver dag','bingsu.text':'Vores fluffy japanske brunch-pandekager fås nu også hos Fluffy House Uppsala. Velkommen ind!','bingsu.order':'Bestil online',
     'nav.hem':'Hjem','nav.restauranger':'Restauranter','nav.giftcard':'Gavekort',
     'nav.event':'Event','nav.jobb':'Job','nav.brunch':'Brunch','nav.collab':'Samarbeid',
     'nav.meny':'Menu','nav.kontakt':'Kontakt',
@@ -1637,7 +1635,7 @@ const T = {
     'cs.pill':'Kommer snart','event.h1':'Event',
     'event.body':'Du vil snart kunne booke dine events hos Fluffy House.',
     'event.back':'← Tilbage til forsiden',
-    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffige japanske pandekager – vælg mellem laks og avocado.','brunch.served':'Alle dage 10–20 · Fluffy House Kungsholmen','brunch.lax.name':'Laks Pandekage','brunch.lax.desc':'Fluffig japansk pandekage med røget laks, pocheret æg og frisk salat.','brunch.avo.name':'Avocado Pandekage','brunch.avo.desc':'Fluffig japansk pandekage med cremet avocado, pocheret æg og frisk salat.','brunch.order':'Se hele menuen','brunch.uppsala':'Brunch serveres lige nu kun på Kungsholmen – kommer snart til Uppsala også.','gfbar.label':'Glutenfri','gfbar.text':'Alle vores pandekager kan fås glutenfri',
+    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffige japanske pandekager – vælg mellem laks og avocado.','brunch.served':'Alle dage 10–20 · Kungsholmen & Uppsala','brunch.lax.name':'Laks Pandekage','brunch.lax.desc':'Fluffig japansk pandekage med røget laks, pocheret æg og frisk salat.','brunch.avo.name':'Avocado Pandekage','brunch.avo.desc':'Fluffig japansk pandekage med cremet avocado, pocheret æg og frisk salat.','brunch.order':'Se hele menuen','brunch.uppsala':'Brunch serveres nu på både Kungsholmen og Uppsala.','gfbar.label':'Glutenfri','gfbar.text':'Alle vores pandekager kan fås glutenfri',
     'jobb.label':'Ledige stillinger','jobb.h1':'Fluffy Jobs',
     'jobb.body':'Vil du arbejde i en unik café med Japans bedste pandekager? Send din ansøgning!',
     'kontakt.label':'Kontakt','kontakt.h1':'Kontakt Os',
@@ -1649,7 +1647,7 @@ const T = {
     'form.sending':'Sender…','form.sent':'✓ Sendt!','form.error':'⚠ Prøv igen',
   },
   no: {
-    'bingsu.badge':'Nyhet','bingsu.title':'Bingsu kommer til Uppsala','bingsu.pre':'Premiere 9. juni','bingsu.post':'Fås nå i Uppsala!','bingsu.text':'Kremet koreansk shaved ice – nå også hos Fluffy House Uppsala. En forfriskende sommernyhet.','bingsu.close':'Så gøy!','bingsu.order':'Bestill online',
+    'bingsu.badge':'Nyhet','bingsu.title':'Nå finnes brunch i Uppsala','bingsu.date':'Fluffy japanske pannekaker – hver dag','bingsu.text':'Våre fluffy japanske brunsj-pannekaker finnes nå også hos Fluffy House Uppsala. Velkommen inn!','bingsu.order':'Bestill online',
     'nav.hem':'Hjem','nav.restauranger':'Restauranter','nav.giftcard':'Gavekort',
     'nav.event':'Event','nav.jobb':'Jobb','nav.brunch':'Brunch','nav.collab':'Samarbeid',
     'nav.meny':'Meny','nav.kontakt':'Kontakt',
@@ -1683,7 +1681,7 @@ const T = {
     'cs.pill':'Kommer snart','event.h1':'Event',
     'event.body':'Du vil snart kunne booke dine arrangementer hos Fluffy House.',
     'event.back':'← Tilbake til forsiden',
-    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffige japanske pannekaker – velg mellom laks og avocado.','brunch.served':'Alle dager 10–20 · Fluffy House Kungsholmen','brunch.lax.name':'Laks Pannekake','brunch.lax.desc':'Fluffig japansk pannekake med røkt laks, posjert egg og frisk salat.','brunch.avo.name':'Avocado Pannekake','brunch.avo.desc':'Fluffig japansk pannekake med kremet avocado, posjert egg og frisk salat.','brunch.order':'Se hele menyen','brunch.uppsala':'Brunch serveres akkurat nå kun på Kungsholmen – kommer snart til Uppsala også.','gfbar.label':'Glutenfri','gfbar.text':'Alle pannekakene våre kan fås glutenfrie',
+    'brunch.label':'Brunch','brunch.h1':'All Day Brunch','brunch.body':'Fluffige japanske pannekaker – velg mellom laks og avocado.','brunch.served':'Alle dager 10–20 · Kungsholmen & Uppsala','brunch.lax.name':'Laks Pannekake','brunch.lax.desc':'Fluffig japansk pannekake med røkt laks, posjert egg og frisk salat.','brunch.avo.name':'Avocado Pannekake','brunch.avo.desc':'Fluffig japansk pannekake med kremet avocado, posjert egg og frisk salat.','brunch.order':'Se hele menyen','brunch.uppsala':'Brunch serveres nå på både Kungsholmen og Uppsala.','gfbar.label':'Glutenfri','gfbar.text':'Alle pannekakene våre kan fås glutenfrie',
     'jobb.label':'Ledige stillinger','jobb.h1':'Fluffy Jobs',
     'jobb.body':'Vil du jobbe i en unik kafé med Japans beste pannekaker? Send inn søknaden din!',
     'kontakt.label':'Kontakt','kontakt.h1':'Kontakt Oss',
@@ -1833,28 +1831,21 @@ applyLang(currentLang);
 updateOpenStatus();
 setInterval(updateOpenStatus, 60_000);
 
-// ─── Bingsu lanserings-popup ──────────────────────────────
+// ─── Brunch Uppsala lanserings-popup ──────────────────────────────
 (function () {
   var pop = document.getElementById('bingsu-pop');
   if (!pop) return;
-  var now = new Date();
-  var launch = new Date(2026, 5, 9);   // 9 juni 2026 — bingsu-premiär Uppsala (månad 5 = juni)
-  var end    = new Date(2026, 6, 1);   // sluta visa efter 1 juli 2026
-  if (now >= end) return;
-  if (now >= launch) pop.classList.add('launched'); // växla till "Finns nu / Beställ online"
 
   function open()  { pop.classList.add('open'); }
   function close() { pop.classList.remove('open'); }
 
   var t = setTimeout(open, 1200);
   document.getElementById('bingsu-x').addEventListener('click', close);
-  var ok = document.getElementById('bingsu-ok');
-  if (ok) ok.addEventListener('click', close);
   pop.addEventListener('click', function (e) { if (e.target === pop) close(); });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && pop.classList.contains('open')) close();
   });
-  var orderLink = pop.querySelector('a.bingsu-post');
+  var orderLink = pop.querySelector('a.bingsu-cta');
   if (orderLink) orderLink.addEventListener('click', close);
 })();
 
