@@ -844,13 +844,19 @@
       <div id="mid-hours-home" style="max-width:720px; margin:0 auto; background:#eef3e9; border:1px solid #c9ddc4; border-radius:18px; padding:2rem;" data-r="up" data-delay="100">
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.75rem 3rem; text-align:left;">
           <div>
-            <p style="font-size:0.7rem; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--c-matcha); margin-bottom:0.85rem;">Kungsholmen</p>
+            <p style="display:flex; align-items:center; gap:0.55rem; margin-bottom:0.85rem;">
+              <span style="font-size:0.95rem; font-weight:800; color:var(--c-ink);">Kungsholmen</span>
+              <span style="font-size:0.6rem; font-weight:800; letter-spacing:0.07em; text-transform:uppercase; color:#1f7a3d; background:#dff0e2; border-radius:999px; padding:0.2rem 0.55rem;">Öppet</span>
+            </p>
             <p style="font-size:1rem; color:var(--c-ink); margin-bottom:0.45rem;">Midsommarafton <strong>19/6</strong> · 10:00–15:00</p>
             <p style="font-size:1rem; color:var(--c-ink);">Midsommardagen <strong>20/6</strong> · 11:00–17:00</p>
           </div>
           <div>
-            <p style="font-size:0.7rem; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--c-matcha); margin-bottom:0.85rem;">Uppsala</p>
-            <p style="font-size:1rem; color:var(--c-ink);">Stängt under midsommarhelgen</p>
+            <p style="display:flex; align-items:center; gap:0.55rem; margin-bottom:0.85rem;">
+              <span style="font-size:0.95rem; font-weight:800; color:var(--c-ink);">Uppsala</span>
+              <span style="font-size:0.6rem; font-weight:800; letter-spacing:0.07em; text-transform:uppercase; color:#9a3434; background:#f3dede; border-radius:999px; padding:0.2rem 0.55rem;">Stängt</span>
+            </p>
+            <p style="font-size:1rem; color:#6b6560;">Stängt under hela midsommarhelgen</p>
           </div>
         </div>
       </div>
@@ -1894,8 +1900,8 @@ setInterval(updateOpenStatus, 60_000);
     bar.setAttribute('aria-label', 'Midsommar öppettider 2026');
     var lbl = bar.querySelector('.gf-bar-label');
     var msg = bar.querySelector('.gf-bar-msg');
-    if (lbl) { lbl.removeAttribute('data-i18n'); lbl.textContent = 'Midsommarhelgen'; }
-    if (msg) { msg.removeAttribute('data-i18n'); msg.innerHTML = 'Midsommarafton 19/6 <strong>10–15</strong> · Midsommardagen 20/6 <strong>11–17</strong>'; }
+    if (lbl) { lbl.removeAttribute('data-i18n'); lbl.textContent = 'Midsommar · Kungsholmen'; }
+    if (msg) { msg.removeAttribute('data-i18n'); msg.innerHTML = 'Öppet 19/6 <strong>10–15</strong> · 20/6 <strong>11–17</strong> · Uppsala stängt'; }
   }
 
   document.body.classList.add('has-gf-bar');
