@@ -835,31 +835,16 @@
     </div>
   </div>
 
-  <!-- Öppettider -->
-  <div class="sec" style="padding-top:4.5rem; padding-bottom:1rem;">
+  <!-- Midsommarhelgen-notis (datumstyrd 15–22 juni — hela sektionen visas bara då) -->
+  <div class="sec" id="mid-section" style="display:none; padding-top:4.5rem; padding-bottom:1rem;">
     <div class="wrap-sm" style="text-align:center;">
-      <p class="t-label" style="margin-bottom:0.9rem;" data-r="up">Öppettider</p>
+      <p class="t-label" style="margin-bottom:0.9rem;" data-r="up">Midsommarhelgen</p>
       <h2 class="t-h2" style="margin-bottom:2.25rem; color:var(--c-ink);" data-r="up" data-delay="100">Välkommen in till oss</h2>
 
-      <!-- Midsommar (datumstyrt 15–22 juni) -->
-      <div id="mid-hours-home" style="display:none; max-width:640px; margin:0 auto 2.25rem; background:#eef3e9; border:1px solid #c9ddc4; border-radius:18px; padding:1.5rem 1.75rem;" data-r="up">
-        <p style="font-size:0.7rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--c-matcha); margin-bottom:0.85rem;">Midsommarhelgen</p>
-        <div style="display:flex; gap:0.9rem 2.5rem; flex-wrap:wrap; justify-content:center; font-size:1rem; color:var(--c-ink);">
+      <div id="mid-hours-home" style="max-width:640px; margin:0 auto; background:#eef3e9; border:1px solid #c9ddc4; border-radius:18px; padding:1.75rem;" data-r="up" data-delay="100">
+        <div style="display:flex; gap:1rem 2.5rem; flex-wrap:wrap; justify-content:center; font-size:1.0625rem; color:var(--c-ink);">
           <span>Midsommarafton <strong>19/6</strong>&nbsp;&nbsp;10:00–15:00</span>
           <span>Midsommardagen <strong>20/6</strong>&nbsp;&nbsp;11:00–17:00</span>
-        </div>
-      </div>
-
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1.25rem; text-align:left;" data-r="up" data-delay="150">
-        <div style="background:#fff; border:1px solid #ece7e0; border-radius:18px; padding:1.6rem 1.75rem;">
-          <h3 style="font-size:1.15rem; font-weight:800; letter-spacing:-0.01em; color:var(--c-ink); margin-bottom:0.35rem;">Kungsholmen</h3>
-          <p style="font-size:0.85rem; color:#8a847c; margin-bottom:1rem;">Sankt Eriksgatan 44 · Stockholm</p>
-          <p style="font-size:1rem; color:var(--c-ink);">Alla dagar&nbsp;&nbsp;<strong>10:00–20:00</strong></p>
-        </div>
-        <div style="background:#fff; border:1px solid #ece7e0; border-radius:18px; padding:1.6rem 1.75rem;">
-          <h3 style="font-size:1.15rem; font-weight:800; letter-spacing:-0.01em; color:var(--c-ink); margin-bottom:0.35rem;">Uppsala</h3>
-          <p style="font-size:0.85rem; color:#8a847c; margin-bottom:1rem;">Dragarbrunnsgatan 50C · Uppsala</p>
-          <p style="font-size:1rem; color:var(--c-ink);">Alla dagar&nbsp;&nbsp;<strong>10:00–19:00</strong></p>
         </div>
       </div>
     </div>
@@ -1922,7 +1907,7 @@ setInterval(updateOpenStatus, 60_000);
   var now = new Date();
   var isMid = now >= new Date(2026, 5, 15) && now < new Date(2026, 5, 22);
   if (!isMid) return;
-  ['mid-hours-home', 'mid-row-k', 'mid-row-u'].forEach(function (id) {
+  ['mid-section', 'mid-row-k', 'mid-row-u'].forEach(function (id) {
     var el = document.getElementById(id);
     if (el) el.style.display = '';
   });
