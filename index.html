@@ -1849,11 +1849,24 @@ setInterval(updateOpenStatus, 60_000);
   if (orderLink) orderLink.addEventListener('click', close);
 })();
 
-// ─── Glutenfri slim top-banner ───────────────────────────────
+// ─── Slim top-banner: midsommaröppettider (datumstyrt) annars glutenfri ───
 (function () {
   var bar = document.getElementById('gf-bar');
   if (!bar) return;
-  if (localStorage.getItem('fh-gf')) return; // permanent dismissed
+
+  // Midsommar 2026: visa öppettider i bannern t.o.m. 21 juni, dölj efter (helgen över 22/6)
+  var now = new Date();
+  var isMid = now >= new Date(2026, 5, 15) && now < new Date(2026, 5, 22);
+  var dismissKey = isMid ? 'fh-mid26' : 'fh-gf';
+  if (localStorage.getItem(dismissKey)) return; // permanent dismissed
+
+  if (isMid) {
+    bar.setAttribute('aria-label', 'Midsommar öppettider 2026');
+    var lbl = bar.querySelector('.gf-bar-label');
+    var msg = bar.querySelector('.gf-bar-msg');
+    if (lbl) { lbl.removeAttribute('data-i18n'); lbl.textContent = 'Midsommarhelgen'; }
+    if (msg) { msg.removeAttribute('data-i18n'); msg.innerHTML = 'Midsommarafton 19/6 <strong>10–15</strong> · Midsommardagen 20/6 <strong>11–17</strong>'; }
+  }
 
   document.body.classList.add('has-gf-bar');
   requestAnimationFrame(function () { bar.classList.add('visible'); });
@@ -1861,7 +1874,7 @@ setInterval(updateOpenStatus, 60_000);
   document.getElementById('gf-bar-x').addEventListener('click', function () {
     bar.classList.remove('visible');
     document.body.classList.remove('has-gf-bar');
-    localStorage.setItem('fh-gf', '1');
+    localStorage.setItem(dismissKey, '1');
     setTimeout(function () { bar.style.display = 'none'; }, 450);
   });
 })();
