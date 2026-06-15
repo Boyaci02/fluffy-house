@@ -666,7 +666,7 @@
   /* Glutenfri slim top banner (samma design som midsommar) */
   #gf-bar{position:fixed;top:0;left:0;right:0;z-index:2900;background:#3a5039;color:#f4f6e8;font-size:.82rem;letter-spacing:.01em;box-shadow:0 2px 12px rgba(0,0,0,.08);transform:translateY(-110%);transition:transform .42s var(--ease-out-expo)}
   #gf-bar.visible{transform:none}
-  .gf-bar-inner{max-width:1280px;margin:0 auto;padding:9px 44px;display:flex;align-items:center;justify-content:center;gap:14px;position:relative}
+  .gf-bar-inner{max-width:1280px;margin:0 auto;padding:9px 20px;display:flex;align-items:center;justify-content:center;gap:14px;position:relative}
   .gf-bar-ico{flex-shrink:0;color:#cfe19a;display:block}
   .gf-bar-text{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 14px;min-width:0}
   .gf-bar-label{font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.7rem;color:#cfe19a}
@@ -677,7 +677,7 @@
   /* When banner is visible push the fixed nav down */
   body.has-gf-bar #nav{margin-top:38px}
   @media (max-width:760px){
-    .gf-bar-inner{padding:8px 44px;gap:10px}
+    .gf-bar-inner{padding:8px 14px;gap:8px}
     .gf-bar-text{gap:4px 12px;font-size:.78rem}
     .gf-bar-label{font-size:.62rem}
     body.has-gf-bar #nav{margin-top:62px}
@@ -685,6 +685,22 @@
   #bingsu-pop.launched .bingsu-pre{display:none}
   #bingsu-pop.launched p.bingsu-post{display:block}
   #bingsu-pop.launched a.bingsu-post{display:inline-block}
+  /* Midsommar-popup (datumstyrd) */
+  #mid-pop{position:fixed;inset:0;z-index:3000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(28,28,26,.55);backdrop-filter:blur(4px);opacity:0;transition:opacity .35s var(--ease-out-expo)}
+  #mid-pop.open{display:flex;opacity:1}
+  .mid-pop-card{position:relative;width:100%;max-width:520px;background:var(--c-cream);border-radius:24px;padding:40px 36px 34px;box-shadow:0 30px 80px rgba(28,28,26,.3);transform:translateY(18px) scale(.98);transition:transform .45s var(--ease-out-expo);text-align:center}
+  #mid-pop.open .mid-pop-card{transform:none}
+  .mid-pop-badge{display:inline-block;background:var(--c-matcha);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 13px;border-radius:999px}
+  .mid-pop-card h3{font-size:1.55rem;line-height:1.15;color:var(--c-ink);margin:15px 0 24px;font-weight:800;letter-spacing:-.02em}
+  .mid-pop-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 2rem;text-align:left;margin-bottom:28px}
+  .mid-pop-grid p{font-size:.95rem;color:var(--c-ink);margin-bottom:.4rem}
+  .mid-pop-grid p.dim{color:#6b6560}
+  .mid-pop-loc{display:flex;align-items:center;gap:.5rem;margin-bottom:.7rem}
+  .mid-pop-loc b{font-size:.95rem;font-weight:800;color:var(--c-ink)}
+  .mid-pop-pill{font-size:.58rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:.2rem .55rem}
+  .mid-pop-pill.open{color:#1f7a3d;background:#dff0e2}
+  .mid-pop-pill.closed{color:#9a3434;background:#f3dede}
+  @media(max-width:560px){.mid-pop-grid{grid-template-columns:1fr;gap:1.1rem}.mid-pop-card{max-width:360px;padding:30px 24px 28px}.mid-pop-card h3{font-size:1.3rem}}
   @media(max-width:640px){
     #bingsu-pop{align-items:flex-start;overflow-y:auto}
     .bingsu-card{grid-template-columns:1fr;max-width:360px;margin:auto}
@@ -711,17 +727,34 @@
   </div>
 </div>
 
+<!-- ═══════════ MIDSOMMAR-POPUP (datumstyrd 15–22 juni) ═══════════ -->
+<div id="mid-pop" role="dialog" aria-modal="true" aria-labelledby="mid-pop-title">
+  <div class="mid-pop-card">
+    <button class="bingsu-close" id="mid-pop-x" aria-label="Stäng">&times;</button>
+    <span class="mid-pop-badge">Midsommar</span>
+    <h3 id="mid-pop-title">Öppettider i midsommar</h3>
+    <div class="mid-pop-grid">
+      <div>
+        <p class="mid-pop-loc"><b>Kungsholmen</b><span class="mid-pop-pill open">Öppet</span></p>
+        <p>Midsommarafton <strong>19/6</strong> · 10:00–15:00</p>
+        <p>Midsommardagen <strong>20/6</strong> · 11:00–17:00</p>
+      </div>
+      <div>
+        <p class="mid-pop-loc"><b>Uppsala</b><span class="mid-pop-pill closed">Stängt</span></p>
+        <p class="dim">Stängt under hela midsommarhelgen</p>
+      </div>
+    </div>
+    <a class="bingsu-cta" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener">Beställ online</a>
+  </div>
+</div>
+
 <!-- ═══════════ GLUTENFRI-BANNER (slim, sticky top) ═══════════ -->
 <div id="gf-bar" role="region" aria-label="Glutenfria pannkakor">
   <div class="gf-bar-inner">
-    <svg class="gf-bar-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><path d="M12 11c0-2.2-1.5-3.7-3.5-4 0 2.2 1.5 3.7 3.5 4Z"/><path d="M12 11c0-2.2 1.5-3.7 3.5-4 0 2.2-1.5 3.7-3.5 4Z"/><path d="M12 16c0-2.2-1.5-3.7-3.5-4 0 2.2 1.5 3.7 3.5 4Z"/><path d="M12 16c0-2.2 1.5-3.7 3.5-4 0 2.2-1.5 3.7-3.5 4Z"/><path d="M12 7c0-2.2-1.5-3.7-3.5-4 0 2.2 1.5 3.7 3.5 4Z"/><path d="M12 7c0-2.2 1.5-3.7 3.5-4 0 2.2-1.5 3.7-3.5 4Z"/></svg>
     <div class="gf-bar-text">
       <span class="gf-bar-label" data-i18n="gfbar.label">Glutenfritt</span>
       <span class="gf-bar-msg" data-i18n="gfbar.text">Alla våra pannkakor går att få glutenfria</span>
     </div>
-    <button class="gf-bar-close" id="gf-bar-x" aria-label="Stäng banner">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
-    </button>
   </div>
 </div>
 
@@ -1867,16 +1900,20 @@ applyLang(currentLang);
 updateOpenStatus();
 setInterval(updateOpenStatus, 60_000);
 
-// ─── Brunch Uppsala lanserings-popup ──────────────────────────────
+// ─── Popup: midsommar (datumstyrt 15–22 juni) annars brunch Uppsala-lansering ───
 (function () {
-  var pop = document.getElementById('bingsu-pop');
+  var now = new Date();
+  var isMid = now >= new Date(2026, 5, 15) && now < new Date(2026, 5, 22);
+  // Under midsommar pausas brunch-popupen och midsommar-popupen visas istället.
+  var pop = document.getElementById(isMid ? 'mid-pop' : 'bingsu-pop');
   if (!pop) return;
 
   function open()  { pop.classList.add('open'); }
   function close() { pop.classList.remove('open'); }
 
-  var t = setTimeout(open, 1200);
-  document.getElementById('bingsu-x').addEventListener('click', close);
+  setTimeout(open, 1200);
+  var x = pop.querySelector(isMid ? '#mid-pop-x' : '#bingsu-x');
+  if (x) x.addEventListener('click', close);
   pop.addEventListener('click', function (e) { if (e.target === pop) close(); });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && pop.classList.contains('open')) close();
@@ -1890,11 +1927,10 @@ setInterval(updateOpenStatus, 60_000);
   var bar = document.getElementById('gf-bar');
   if (!bar) return;
 
-  // Midsommar 2026: visa öppettider i bannern t.o.m. 21 juni, dölj efter (helgen över 22/6)
+  // Midsommar 2026: visa öppettider i bannern 15–22 juni, glutenfri-meddelande annars.
+  // Ingen stäng-knapp längre (kan inte döljas) — så ingen råkar missa midsommar-infon.
   var now = new Date();
   var isMid = now >= new Date(2026, 5, 15) && now < new Date(2026, 5, 22);
-  var dismissKey = isMid ? 'fh-mid26' : 'fh-gf';
-  if (localStorage.getItem(dismissKey)) return; // permanent dismissed
 
   if (isMid) {
     bar.setAttribute('aria-label', 'Midsommar öppettider 2026');
@@ -1906,13 +1942,6 @@ setInterval(updateOpenStatus, 60_000);
 
   document.body.classList.add('has-gf-bar');
   requestAnimationFrame(function () { bar.classList.add('visible'); });
-
-  document.getElementById('gf-bar-x').addEventListener('click', function () {
-    bar.classList.remove('visible');
-    document.body.classList.remove('has-gf-bar');
-    localStorage.setItem(dismissKey, '1');
-    setTimeout(function () { bar.style.display = 'none'; }, 450);
-  });
 })();
 
 // ─── Midsommaröppettider: startsidans sektion + restaurangsidornas info-kort (datumstyrt 15–22 juni) ───
