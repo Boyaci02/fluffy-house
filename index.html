@@ -650,7 +650,7 @@
   #bingsu-pop.open{display:flex;opacity:1}
   .bingsu-card{position:relative;width:100%;max-width:760px;background:var(--c-cream);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 30px 80px rgba(28,28,26,.3);transform:translateY(18px) scale(.98);transition:transform .45s var(--ease-out-expo)}
   #bingsu-pop.open .bingsu-card{transform:none}
-  .bingsu-card .pic{background:#fff url('/assets/brunch-2.jpg') center/cover no-repeat;min-height:300px}
+  .bingsu-card .pic{background:#fff url('/assets/kids-menu.jpg') center/cover no-repeat;min-height:300px}
   .bingsu-card .body{padding:38px 34px;display:flex;flex-direction:column;align-items:flex-start}
   .bingsu-badge{display:inline-block;background:var(--c-matcha);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 13px;border-radius:999px}
   .bingsu-card h3{font-size:1.7rem;line-height:1.12;color:var(--c-ink);margin:16px 0 8px;font-weight:800;letter-spacing:-.02em}
@@ -712,16 +712,16 @@
 <div id="bingsu-pop" role="dialog" aria-modal="true" aria-labelledby="bingsu-title">
   <div class="bingsu-card">
     <button class="bingsu-close" id="bingsu-x" aria-label="Stäng">&times;</button>
-    <div class="pic" role="img" aria-label="Brunch hos Fluffy House"></div>
+    <div class="pic" role="img" aria-label="Barnmeny hos Fluffy House"></div>
     <div class="body">
       <span class="bingsu-badge" data-i18n="bingsu.badge">Nyhet</span>
-      <h3 id="bingsu-title" data-i18n="bingsu.title">Nu finns brunch i Uppsala</h3>
-      <p class="bingsu-date" data-i18n="bingsu.date">Fluffiga japanska pannkakor – alla dagar</p>
+      <h3 id="bingsu-title" data-i18n="bingsu.title">Nu finns en barnmeny</h3>
+      <p class="bingsu-date" data-i18n="bingsu.date">En fluffig pannkaka + dryck</p>
       <span class="bingsu-loc">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Fluffy House Uppsala
+        <span data-i18n="bingsu.loc">Kungsholmen &amp; Uppsala</span>
       </span>
-      <p class="bingsu-text" data-i18n="bingsu.text">Våra fluffiga japanska brunch-pannkakor finns nu även hos Fluffy House Uppsala. Välkommen in!</p>
+      <p class="bingsu-text" data-i18n="bingsu.text">Nu får de små sin egen meny. Samma fluffiga soufflépannkakor som ni älskar, i perfekt storlek för de minsta gästerna. Från 99 kr.</p>
       <a class="bingsu-cta" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" data-i18n="bingsu.order">Beställ online</a>
     </div>
   </div>
@@ -1578,7 +1578,7 @@ document.getElementById('ck-nec').addEventListener('click', dismissCookie);
 // ─── i18n ────────────────────────────────────────────────
 const T = {
   sv: {
-    'bingsu.badge':'Nyhet','bingsu.title':'Nu finns brunch i Uppsala','bingsu.date':'Fluffiga japanska pannkakor – alla dagar','bingsu.text':'Våra fluffiga japanska brunch-pannkakor finns nu även hos Fluffy House Uppsala. Välkommen in!','bingsu.order':'Beställ online',
+    'bingsu.badge':'Nyhet','bingsu.title':'Nu finns en barnmeny','bingsu.date':'En fluffig pannkaka + dryck','bingsu.loc':'Kungsholmen & Uppsala','bingsu.text':'Nu får de små sin egen meny. Samma fluffiga soufflépannkakor som ni älskar, i perfekt storlek för de minsta gästerna. Från 99 kr.','bingsu.order':'Beställ online',
     'nav.hem':'Hem','nav.restauranger':'Restauranger','nav.giftcard':'Giftcard',
     'nav.event':'Event','nav.jobb':'Jobb','nav.brunch':'Brunch','nav.collab':'Collab',
     'nav.meny':'Meny','nav.kontakt':'Kontakt',
@@ -1624,7 +1624,7 @@ const T = {
     'form.sending':'Skickar…','form.sent':'✓ Skickat!','form.error':'⚠ Försök igen',
   },
   en: {
-    'bingsu.badge':'New','bingsu.title':'Brunch is now in Uppsala','bingsu.date':'Fluffy Japanese pancakes – every day','bingsu.text':'Our fluffy Japanese brunch pancakes are now at Fluffy House Uppsala too. Come on in!','bingsu.order':'Order online',
+    'bingsu.badge':'New','bingsu.title':'A kids menu is here','bingsu.date':'One fluffy pancake + a drink','bingsu.loc':'Kungsholmen & Uppsala','bingsu.text':'Now the little ones get their own menu. The same fluffy soufflé pancakes you love, in the perfect size for our smallest guests. From 99 kr.','bingsu.order':'Order online',
     'nav.hem':'Home','nav.restauranger':'Restaurants','nav.giftcard':'Gift Card',
     'nav.event':'Event','nav.jobb':'Jobs','nav.brunch':'Brunch','nav.collab':'Collab',
     'nav.meny':'Menu','nav.kontakt':'Contact',
@@ -1670,7 +1670,7 @@ const T = {
     'form.sending':'Sending…','form.sent':'✓ Sent!','form.error':'⚠ Try again',
   },
   da: {
-    'bingsu.badge':'Nyhed','bingsu.title':'Nu er der brunch i Uppsala','bingsu.date':'Fluffy japanske pandekager – hver dag','bingsu.text':'Vores fluffy japanske brunch-pandekager fås nu også hos Fluffy House Uppsala. Velkommen ind!','bingsu.order':'Bestil online',
+    'bingsu.badge':'Nyhed','bingsu.title':'Nu er der en børnemenu','bingsu.date':'En fluffy pandekage + drikkevare','bingsu.loc':'Kungsholmen & Uppsala','bingsu.text':'Nu får de små deres egen menu. De samme fluffy soufflépandekager, som I elsker, i perfekt størrelse til de mindste gæster. Fra 99 kr.','bingsu.order':'Bestil online',
     'nav.hem':'Hjem','nav.restauranger':'Restauranter','nav.giftcard':'Gavekort',
     'nav.event':'Event','nav.jobb':'Job','nav.brunch':'Brunch','nav.collab':'Samarbeid',
     'nav.meny':'Menu','nav.kontakt':'Kontakt',
@@ -1716,7 +1716,7 @@ const T = {
     'form.sending':'Sender…','form.sent':'✓ Sendt!','form.error':'⚠ Prøv igen',
   },
   no: {
-    'bingsu.badge':'Nyhet','bingsu.title':'Nå finnes brunch i Uppsala','bingsu.date':'Fluffy japanske pannekaker – hver dag','bingsu.text':'Våre fluffy japanske brunsj-pannekaker finnes nå også hos Fluffy House Uppsala. Velkommen inn!','bingsu.order':'Bestill online',
+    'bingsu.badge':'Nyhet','bingsu.title':'Nå finnes en barnemeny','bingsu.date':'En fluffy pannekake + drikke','bingsu.loc':'Kungsholmen & Uppsala','bingsu.text':'Nå får de små sin egen meny. De samme fluffy soufflépannekakene som dere elsker, i perfekt størrelse for de minste gjestene. Fra 99 kr.','bingsu.order':'Bestill online',
     'nav.hem':'Hjem','nav.restauranger':'Restauranter','nav.giftcard':'Gavekort',
     'nav.event':'Event','nav.jobb':'Jobb','nav.brunch':'Brunch','nav.collab':'Samarbeid',
     'nav.meny':'Meny','nav.kontakt':'Kontakt',
