@@ -43,11 +43,33 @@
       --c-ink: #1c1c1a;
       --c-matcha: #3a6147;
       --c-border: #e2dbd0;
+      --bar-h: 40px;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+    /* Leveransbanner högst upp (Uber Eats) */
+    #deliverybar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: var(--bar-h);
+      display: flex; align-items: center; justify-content: center; gap: 0.85rem;
+      background: #06C167; color: #fff; padding: 0 1rem;
+      font-size: 0.85rem; font-weight: 600; text-align: center;
+    }
+    #deliverybar .db-txt { display: inline-flex; align-items: center; gap: 0.45rem; }
+    #deliverybar .db-txt svg { width: 15px; height: 15px; }
+    #deliverybar .db-cta {
+      display: inline-flex; align-items: center; gap: 0.3rem; cursor: pointer;
+      background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.45);
+      border-radius: 999px; padding: 0.28rem 0.85rem; color: #fff; text-decoration: none;
+      font-weight: 700; white-space: nowrap; transition: background 0.2s ease;
+    }
+    #deliverybar .db-cta:hover { background: rgba(255,255,255,0.32); }
+    @media (max-width: 560px) {
+      #deliverybar { font-size: 0.76rem; gap: 0.5rem; }
+      #deliverybar .db-long { display: none; }
+    }
     body {
+      padding-top: var(--bar-h);
       font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
       background: var(--c-cream);
       color: var(--c-ink);
@@ -86,7 +108,7 @@
 
     /* ─── Nav ────────────────────────────────────── */
     #nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: var(--bar-h); left: 0; right: 0; z-index: 100;
       height: 72px;
       transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
     }
@@ -648,6 +670,10 @@
   <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"a7dd702056977481b01f1b73f00c16b0"})});</script>
 </head>
 <body>
+<div id="deliverybar">
+  <span class="db-txt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg><span><span class="db-long" data-i18n="bar.pre">Nu kan du </span><span data-i18n="bar.delivery">beställa hem via Uber Eats</span></span></span>
+  <a class="db-cta" onclick="navigate('restauranger')"><span data-i18n="bar.cta">Beställ hem</span> →</a>
+</div>
 
 <!-- Page fade overlay -->
 <div id="page-fade"></div>
@@ -1613,6 +1639,7 @@ const T = {
     'rest.label':'Våra enheter','rest.h1':'Restauranger',
     'rest.body':'Hitta din närmaste Fluffy House. Nu öppna i Stockholm och Uppsala.',
     'rest.open':'Öppet nu','rest.cta':'Utforska →','rest.uber':'Beställ hem via Uber Eats',
+    'bar.pre':'Nu kan du ','bar.delivery':'beställa hem via Uber Eats','bar.cta':'Beställ hem',
     'loc.k.label':'Om restaurangen','loc.k.h2':'Vår första enhet, hjärtat av Kungsholmen',
     'loc.k.p1':'Det var här allt startade. Fluffy House Kungsholmen öppnade den 10 oktober 2024 och är det allra första stället i Sverige att servera äkta japanska fluffy pancakes.',
     'loc.k.p2':'Beläget på Sankt Eriksgatan 44, bara 200 meter från Fridhemsplan, är caféet lätt att nå med tunnelbana. Välkommen in och upplev matcha och soufflé-pannkakor som du aldrig smakat dem förut.',
@@ -1659,6 +1686,7 @@ const T = {
     'rest.label':'Our locations','rest.h1':'Restaurants',
     'rest.body':'Find your nearest Fluffy House. Now open in Stockholm and Uppsala.',
     'rest.open':'Open now','rest.cta':'Explore →','rest.uber':'Order delivery on Uber Eats',
+    'bar.pre':'You can now ','bar.delivery':'order delivery on Uber Eats','bar.cta':'Order now',
     'loc.k.label':'About the restaurant','loc.k.h2':'Our first location, heart of Kungsholmen',
     'loc.k.p1':'This is where it all started. Fluffy House Kungsholmen opened on 10 October 2024 and is the very first place in Sweden to serve authentic Japanese fluffy pancakes.',
     'loc.k.p2':'Located at Sankt Eriksgatan 44, just 200 metres from Fridhemsplan, the café is easy to reach by metro. Come in and experience matcha and soufflé pancakes like you\'ve never tasted them before.',
@@ -1705,6 +1733,7 @@ const T = {
     'rest.label':'Vores enheder','rest.h1':'Restauranter',
     'rest.body':'Find din nærmeste Fluffy House. Nu åbent i Stockholm og Uppsala.',
     'rest.open':'Åbent nu','rest.cta':'Udforsk →','rest.uber':'Bestil hjem via Uber Eats',
+    'bar.pre':'Du kan nu ','bar.delivery':'bestille hjem via Uber Eats','bar.cta':'Bestil hjem',
     'loc.k.label':'Om restauranten','loc.k.h2':'Vores første enhed, hjertet af Kungsholmen',
     'loc.k.p1':'Det var her, det hele startede. Fluffy House Kungsholmen åbnede den 10. oktober 2024 og er det første sted i Sverige, der serverer ægte japanske fluffy pandekager.',
     'loc.k.p2':'Beliggende på Sankt Eriksgatan 44, kun 200 meter fra Fridhemsplan, er caféen nem at nå med metro. Kom ind og oplev matcha og soufflé-pandekager som du aldrig har smagt dem før.',
@@ -1751,6 +1780,7 @@ const T = {
     'rest.label':'Våre enheter','rest.h1':'Restauranter',
     'rest.body':'Finn din nærmeste Fluffy House. Nå åpent i Stockholm og Uppsala.',
     'rest.open':'Åpent nå','rest.cta':'Utforsk →','rest.uber':'Bestill hjem via Uber Eats',
+    'bar.pre':'Du kan nå ','bar.delivery':'bestille hjem via Uber Eats','bar.cta':'Bestill hjem',
     'loc.k.label':'Om restauranten','loc.k.h2':'Vår første enhet, hjertet av Kungsholmen',
     'loc.k.p1':'Det var her alt startet. Fluffy House Kungsholmen åpnet 10. oktober 2024 og er det aller første stedet i Sverige som serverer ekte japanske fluffy pannekaker.',
     'loc.k.p2':'Plassert på Sankt Eriksgatan 44, bare 200 meter fra Fridhemsplan, er kaféen lett å nå med T-bane. Kom inn og opplev matcha og soufflé-pannekaker som du aldri har smakt dem før.',
