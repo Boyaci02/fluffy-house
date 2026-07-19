@@ -438,6 +438,14 @@
       transition: background 0.2s ease, border-color 0.2s ease;
     }
     .rest-card-cta:hover { background: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.4); }
+    .rest-card-uber {
+      display: inline-flex; align-items: center; gap: 0.45rem; margin-top: 0.9rem;
+      background: #06C167; border-radius: 999px; padding: 0.6rem 1.2rem;
+      font-size: 0.82rem; font-weight: 700; color: #fff; text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .rest-card-uber:hover { background: #05a658; transform: translateY(-2px); }
+    .rest-card-uber svg { width: 15px; height: 15px; }
 
     /* ─── Location page ──────────────────────────── */
     .loc-hero { position: relative; height: 60vh; min-height: 400px; overflow: hidden; }
@@ -989,6 +997,7 @@
               <span class="rest-card-hours">10:00–20:00 · Alla dagar</span>
               <span class="rest-card-cta" data-i18n="rest.cta">Utforska →</span>
             </div>
+            <a href="https://www.ubereats.com/se/store/fluffy-house/snFxT9NHVTW0rmKPqABJJQ?diningMode=DELIVERY&sc=SEARCH_SUGGESTION" target="_blank" rel="noopener" class="rest-card-uber" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg><span data-i18n="rest.uber">Beställ hem via Uber Eats</span></a>
           </div>
         </div>
 
@@ -1006,6 +1015,7 @@
               <span class="rest-card-hours">10:00–19:00 · Alla dagar</span>
               <span class="rest-card-cta" data-i18n="rest.cta">Utforska →</span>
             </div>
+            <a href="https://www.ubereats.com/se/store/fluffy-house-uppsala/RF7c3ijVWYmhOUoePMK_pA?diningMode=DELIVERY&surfaceName=" target="_blank" rel="noopener" class="rest-card-uber" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg><span data-i18n="rest.uber">Beställ hem via Uber Eats</span></a>
           </div>
         </div>
 
@@ -1602,7 +1612,7 @@ const T = {
     'gallery.label':'Galleri','gallery.h2':'Se våra skapelser',
     'rest.label':'Våra enheter','rest.h1':'Restauranger',
     'rest.body':'Hitta din närmaste Fluffy House. Nu öppna i Stockholm och Uppsala.',
-    'rest.open':'Öppet nu','rest.cta':'Utforska →',
+    'rest.open':'Öppet nu','rest.cta':'Utforska →','rest.uber':'Beställ hem via Uber Eats',
     'loc.k.label':'Om restaurangen','loc.k.h2':'Vår första enhet, hjärtat av Kungsholmen',
     'loc.k.p1':'Det var här allt startade. Fluffy House Kungsholmen öppnade den 10 oktober 2024 och är det allra första stället i Sverige att servera äkta japanska fluffy pancakes.',
     'loc.k.p2':'Beläget på Sankt Eriksgatan 44, bara 200 meter från Fridhemsplan, är caféet lätt att nå med tunnelbana. Välkommen in och upplev matcha och soufflé-pannkakor som du aldrig smakat dem förut.',
@@ -1648,7 +1658,7 @@ const T = {
     'gallery.label':'Gallery','gallery.h2':'See our creations',
     'rest.label':'Our locations','rest.h1':'Restaurants',
     'rest.body':'Find your nearest Fluffy House. Now open in Stockholm and Uppsala.',
-    'rest.open':'Open now','rest.cta':'Explore →',
+    'rest.open':'Open now','rest.cta':'Explore →','rest.uber':'Order delivery on Uber Eats',
     'loc.k.label':'About the restaurant','loc.k.h2':'Our first location, heart of Kungsholmen',
     'loc.k.p1':'This is where it all started. Fluffy House Kungsholmen opened on 10 October 2024 and is the very first place in Sweden to serve authentic Japanese fluffy pancakes.',
     'loc.k.p2':'Located at Sankt Eriksgatan 44, just 200 metres from Fridhemsplan, the café is easy to reach by metro. Come in and experience matcha and soufflé pancakes like you\'ve never tasted them before.',
@@ -1694,7 +1704,7 @@ const T = {
     'gallery.label':'Galleri','gallery.h2':'Se vores kreationer',
     'rest.label':'Vores enheder','rest.h1':'Restauranter',
     'rest.body':'Find din nærmeste Fluffy House. Nu åbent i Stockholm og Uppsala.',
-    'rest.open':'Åbent nu','rest.cta':'Udforsk →',
+    'rest.open':'Åbent nu','rest.cta':'Udforsk →','rest.uber':'Bestil hjem via Uber Eats',
     'loc.k.label':'Om restauranten','loc.k.h2':'Vores første enhed, hjertet af Kungsholmen',
     'loc.k.p1':'Det var her, det hele startede. Fluffy House Kungsholmen åbnede den 10. oktober 2024 og er det første sted i Sverige, der serverer ægte japanske fluffy pandekager.',
     'loc.k.p2':'Beliggende på Sankt Eriksgatan 44, kun 200 meter fra Fridhemsplan, er caféen nem at nå med metro. Kom ind og oplev matcha og soufflé-pandekager som du aldrig har smagt dem før.',
@@ -1740,7 +1750,7 @@ const T = {
     'gallery.label':'Galleri','gallery.h2':'Se våre skapelser',
     'rest.label':'Våre enheter','rest.h1':'Restauranter',
     'rest.body':'Finn din nærmeste Fluffy House. Nå åpent i Stockholm og Uppsala.',
-    'rest.open':'Åpent nå','rest.cta':'Utforsk →',
+    'rest.open':'Åpent nå','rest.cta':'Utforsk →','rest.uber':'Bestill hjem via Uber Eats',
     'loc.k.label':'Om restauranten','loc.k.h2':'Vår første enhet, hjertet av Kungsholmen',
     'loc.k.p1':'Det var her alt startet. Fluffy House Kungsholmen åpnet 10. oktober 2024 og er det aller første stedet i Sverige som serverer ekte japanske fluffy pannekaker.',
     'loc.k.p2':'Plassert på Sankt Eriksgatan 44, bare 200 meter fra Fridhemsplan, er kaféen lett å nå med T-bane. Kom inn og opplev matcha og soufflé-pannekaker som du aldri har smakt dem før.',
