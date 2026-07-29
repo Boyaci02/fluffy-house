@@ -370,7 +370,7 @@
 
     /* ─── Stats row ──────────────────────────────── */
     .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--c-border); border-bottom: 1px solid var(--c-border); }
-    .stat-item { padding: 3rem 2.5rem; border-right: 1px solid var(--c-border); text-align: center; }
+    .stat-item { padding: 3rem 2.5rem; border-right: 1px solid var(--c-border); text-align: center; min-width: 0; }
     .stat-item:last-child { border-right: none; }
     .stat-num { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.03em; color: var(--c-ink); line-height: 1; margin-bottom: 0.5rem; }
     .stat-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-matcha); }
@@ -641,6 +641,7 @@
       .stats-row { grid-template-columns: 1fr 1fr; }
       .stats-row .stat-item:nth-child(2) { border-right: none; }
       .stats-row .stat-item:nth-child(3) { border-top: 1px solid var(--c-border); grid-column: 1 / -1; border-right: none; }
+      .stat-item { padding: 2.25rem 1.25rem; }
       .gallery-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: auto; gap: 0.5rem; }
       .gal-item:nth-child(1) { grid-column: 1 / 3; grid-row: 1; height: 240px; }
       .gal-item:nth-child(2) { grid-column: 1; grid-row: 2; height: 200px; }
@@ -958,6 +959,64 @@
       <div style="display:flex; gap:0.875rem; flex-wrap:wrap;" data-r="up" data-delay="350">
         <a href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" class="btn btn-green" data-i18n="btn.order">Beställ online</a>
         <button class="btn btn-outline" data-pg="restauranger" data-i18n="hero.find">Hitta oss</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drycker: Ube & Matcha -->
+  <style>
+    .dr-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px;margin:0 auto}
+    .dr-card{background:#fff;border:1px solid var(--c-border);border-radius:22px;padding:30px 30px 22px;box-shadow:0 10px 30px rgba(28,28,26,.05);position:relative;overflow:hidden}
+    .dr-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--c-matcha)}
+    .dr-card.ube::before{background:#7c5ca4}
+    .dr-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
+    .dr-cat{font-size:1.35rem;font-weight:800;color:var(--c-ink);letter-spacing:-.02em}
+    .dr-badge{background:var(--c-matcha-l,#e8f0e9);color:var(--c-matcha);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:5px 11px;border-radius:999px;white-space:nowrap}
+    .dr-badge.ube{background:#f1ebf7;color:#6b4d97}
+    .dr-sub{font-size:.85rem;line-height:1.5;color:#8a847e;margin-bottom:14px}
+    .dr-row{display:flex;align-items:baseline;gap:10px;padding:10px 0}
+    .dr-name{font-size:.97rem;font-weight:600;color:var(--c-ink)}
+    .dr-dots{flex:1;border-bottom:2px dotted var(--c-border);transform:translateY(-4px)}
+    .dr-price{font-size:.95rem;font-weight:800;color:var(--c-matcha);white-space:nowrap}
+    .dr-card.ube .dr-price{color:#6b4d97}
+    @media(max-width:720px){.dr-grid{grid-template-columns:1fr;max-width:420px}.dr-card{padding:24px 22px 18px}}
+  </style>
+  <div class="sec" id="meny">
+    <div class="wrap">
+      <div style="text-align:center; margin-bottom:3.25rem;">
+        <p class="t-label" style="margin-bottom:1rem;" data-r="up" data-i18n="drinks.label">Drycker</p>
+        <h2 class="t-h2" style="color:var(--c-ink); margin-bottom:1.25rem;" data-r="up" data-delay="100" data-i18n="drinks.h2">Ube är här, och all matcha för 79 kr</h2>
+        <p class="t-body" style="max-width:560px; margin:0 auto;" data-r="up" data-delay="200" data-i18n="drinks.body">Vi lanserar ube, den lila japanska sötpotatisen, som en egen dryckesserie. Samtidigt sänker vi priset på alla våra matchadrinkar. Allt för 79 kr.</p>
+      </div>
+      <div class="dr-grid">
+        <div class="dr-card ube" data-r="up" data-delay="100">
+          <div class="dr-head"><h3 class="dr-cat">Ube</h3><span class="dr-badge ube" data-i18n="drinks.new">Nyhet</span></div>
+          <p class="dr-sub" data-i18n="drinks.ube.sub">Krämig, lila och lätt nötig, gjord på japansk sötpotatis.</p>
+          <div class="dr-row"><span class="dr-name" data-i18n="drinks.ube.cold">Ube Latte (kall)</span><span class="dr-dots"></span><span class="dr-price">79 kr</span></div>
+          <div class="dr-row"><span class="dr-name" data-i18n="drinks.ube.warm">Ube Latte (varm)</span><span class="dr-dots"></span><span class="dr-price">79 kr</span></div>
+          <div class="dr-row"><span class="dr-name">Ube Matcha</span><span class="dr-dots"></span><span class="dr-price">79 kr</span></div>
+          <div class="dr-row"><span class="dr-name">Ube Coffee</span><span class="dr-dots"></span><span class="dr-price">79 kr</span></div>
+          <div class="dr-row"><span class="dr-name">Ube Coconut Frappe</span><span class="dr-dots"></span><span class="dr-price">79 kr</span></div>
+          <div class="dr-row"><span class="dr-name">Ube Strawberry</span><span class="dr-dots"></span><span class="dr-price">79 kr</span></div>
+        </div>
+        <div class="dr-card" data-r="up" data-delay="200">
+          <div class="dr-head"><h3 class="dr-cat">Matcha</h3><span class="dr-badge" data-i18n="drinks.newprice">Nytt pris</span></div>
+          <p class="dr-sub" data-i18n="drinks.matcha.sub">Äkta japansk matcha, klassisk eller med en twist.</p>
+          <div class="dr-row"><span class="dr-name">Matcha Latte</span><span class="dr-dots"></span><span class="dr-price">79 kr</span></div>
+          <div class="dr-row"><span class="dr-name">Matcha Oat Latte</span><span class="dr-dots"></span><span class="dr-price">79 kr</span></div>
+          <div class="dr-row"><span class="dr-name">Matcha Affogato</span><span class="dr-dots"></span><span class="dr-price">79 kr</span></div>
+          <div class="dr-row"><span class="dr-name">Matcha Espresso</span><span class="dr-dots"></span><span class="dr-price">79 kr</span></div>
+          <div class="dr-row"><span class="dr-name">Matcha Choco</span><span class="dr-dots"></span><span class="dr-price">79 kr</span></div>
+          <div class="dr-row"><span class="dr-name">Matcha Caramel</span><span class="dr-dots"></span><span class="dr-price">79 kr</span></div>
+          <div class="dr-row"><span class="dr-name">Matcha Strawberry</span><span class="dr-dots"></span><span class="dr-price">79 kr</span></div>
+          <div class="dr-row"><span class="dr-name">Matcha Mango</span><span class="dr-dots"></span><span class="dr-price">79 kr</span></div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:2.25rem;">
+        <span class="brunch-note" data-r="up" data-i18n="drinks.note">Gäller på båda våra caféer, Kungsholmen och Uppsala.</span>
+      </div>
+      <div style="text-align:center; margin-top:1.75rem;">
+        <a class="btn btn-green" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" data-r="up" data-i18n="btn.order">Beställ online</a>
       </div>
     </div>
   </div>
@@ -1632,6 +1691,7 @@ const T = {
     'about.label':'Om oss','about.h2':'Det bästa från Japan, i hjärtat av Stockholm',
     'about.p1':'På Fluffy House serverar vi inte bara våra berömda fluffiga pannkakor, vi erbjuder äkta japansk matcha i unika smaker. Smaka klassisk matcha men också spännande varianter som matcha jordgubb eller matcha mango.',
     'about.p2':'Matcha är mer än bara te, det är en del av den japanska kulturen. Den unika smaken harmoniserar perfekt med våra pannkakor och ger en upplevelse som är frisk, djup och uppiggande.',
+    'drinks.label':'Drycker','drinks.h2':'Ube är här, och all matcha för 79 kr','drinks.body':'Vi lanserar ube, den lila japanska sötpotatisen, som en egen dryckesserie. Samtidigt sänker vi priset på alla våra matchadrinkar. Allt för 79 kr.','drinks.new':'Nyhet','drinks.newprice':'Nytt pris','drinks.ube.sub':'Krämig, lila och lätt nötig, gjord på japansk sötpotatis.','drinks.matcha.sub':'Äkta japansk matcha, klassisk eller med en twist.','drinks.ube.cold':'Ube Latte (kall)','drinks.ube.warm':'Ube Latte (varm)','drinks.note':'Gäller på båda våra caféer, Kungsholmen och Uppsala.',
     'usp.label':'Sveriges första','usp.h2':'Fluffiga pannkakor i Stockholm',
     'usp.body':'Fluffy House är det första caféet i Sverige som serverar äkta japanska fluffy pancakes, de luftiga soufflé-pannkakorna som tagit världen med storm. Mer än pannkakor, en upplevelse.',
     'usp.cta':'Våra Caféer',
@@ -1679,6 +1739,7 @@ const T = {
     'about.label':'About us','about.h2':'The best of Japan, in the heart of Stockholm',
     'about.p1':'At Fluffy House we don\'t just serve our famous fluffy pancakes — we offer authentic Japanese matcha in unique flavours. Taste classic matcha as well as exciting variants like strawberry matcha or mango matcha.',
     'about.p2':'Matcha is more than just tea — it\'s part of Japanese culture. The unique flavour pairs perfectly with our pancakes and provides an experience that is fresh, deep and invigorating.',
+    'drinks.label':'Drinks','drinks.h2':'Ube is here, and all matcha is 79 kr','drinks.body':'We are launching ube, the purple Japanese sweet potato, as its own drink line. At the same time we have lowered the price on all our matcha drinks. Everything is 79 kr.','drinks.new':'New in','drinks.newprice':'New price','drinks.ube.sub':'Creamy, purple and slightly nutty, made from Japanese sweet potato.','drinks.matcha.sub':'Real Japanese matcha, classic or with a twist.','drinks.ube.cold':'Ube Latte (cold)','drinks.ube.warm':'Ube Latte (warm)','drinks.note':'Available at both our cafés, Kungsholmen and Uppsala.',
     'usp.label':'Sweden\'s first','usp.h2':'Fluffy Pancakes in Stockholm',
     'usp.body':'Fluffy House is the first café in Sweden to serve authentic Japanese fluffy pancakes — the light soufflé pancakes that have taken the world by storm. More than pancakes, an experience.',
     'usp.cta':'Our Cafés',
@@ -1726,6 +1787,7 @@ const T = {
     'about.label':'Om os','about.h2':'Det bedste fra Japan, i hjertet af Stockholm',
     'about.p1':'Hos Fluffy House serverer vi ikke bare vores berømte fluffy pandekager, vi tilbyder ægte japansk matcha i unikke smagsvarianter. Smag klassisk matcha, men også spændende varianter som jordbær-matcha eller mango-matcha.',
     'about.p2':'Matcha er mere end bare te, det er en del af den japanske kultur. Den unikke smag harmonerer perfekt med vores pandekager og giver en oplevelse, der er frisk, dyb og opkvikkende.',
+    'drinks.label':'Drikkevarer','drinks.h2':'Ube er her, og al matcha koster 79 kr','drinks.body':'Vi lancerer ube, den lilla japanske sødkartoffel, som sin egen drikkeserie. Samtidig sænker vi prisen på alle vores matchadrinks. Alt koster 79 kr.','drinks.new':'Nyhed','drinks.newprice':'Ny pris','drinks.ube.sub':'Cremet, lilla og let nøddeagtig, lavet på japansk sødkartoffel.','drinks.matcha.sub':'Ægte japansk matcha, klassisk eller med et twist.','drinks.ube.cold':'Ube Latte (kold)','drinks.ube.warm':'Ube Latte (varm)','drinks.note':'Gælder på begge vores caféer, Kungsholmen og Uppsala.',
     'usp.label':'Sveriges første','usp.h2':'Fluffy pandekager i Stockholm',
     'usp.body':'Fluffy House er den første café i Sverige, der serverer ægte japanske fluffy pandekager, de luftige soufflé-pandekager, der har taget verden med storm. Mere end pandekager, en oplevelse.',
     'usp.cta':'Vores Caféer',
@@ -1773,6 +1835,7 @@ const T = {
     'about.label':'Om oss','about.h2':'Det beste fra Japan, i hjertet av Stockholm',
     'about.p1':'På Fluffy House serverer vi ikke bare våre berømte fluffy pannekaker, vi tilbyr ekte japansk matcha i unike smaker. Smak klassisk matcha, men også spennende varianter som jordbær-matcha eller mango-matcha.',
     'about.p2':'Matcha er mer enn bare te, det er en del av den japanske kulturen. Den unike smaken harmonerer perfekt med pannekakene våre og gir en opplevelse som er frisk, dyp og oppkvikkende.',
+    'drinks.label':'Drikke','drinks.h2':'Ube er her, og all matcha koster 79 kr','drinks.body':'Vi lanserer ube, den lilla japanske søtpoteten, som en egen drikkeserie. Samtidig senker vi prisen på alle matchadrinkene våre. Alt koster 79 kr.','drinks.new':'Nyhet','drinks.newprice':'Ny pris','drinks.ube.sub':'Kremet, lilla og litt nøtteaktig, laget på japansk søtpotet.','drinks.matcha.sub':'Ekte japansk matcha, klassisk eller med en twist.','drinks.ube.cold':'Ube Latte (kald)','drinks.ube.warm':'Ube Latte (varm)','drinks.note':'Gjelder på begge kafeene våre, Kungsholmen og Uppsala.',
     'usp.label':'Sveriges første','usp.h2':'Fluffy pannekaker i Stockholm',
     'usp.body':'Fluffy House er den første kaféen i Sverige som serverer ekte japanske fluffy pannekaker, de luftige soufflé-pannekakene som har tatt verden med storm. Mer enn pannekaker, en opplevelse.',
     'usp.cta':'Våre Kaféer',
@@ -1995,6 +2058,20 @@ setInterval(updateOpenStatus, 60_000);
   });
 })();
 
+</script>
+<script>
+(function(){
+  var MAP={hero:["#hero","header",".hero"],om:["#om","#about",".about"],
+    meny:["#meny","#menu",".menu"],bilder:["#bilder","#galleri","#gallery",".gallery"],
+    kontakt:["#kontakt","#contact","footer"],stil:["body"],ovrigt:["body"]};
+  window.addEventListener("message",function(e){
+    var d=e.data||{}; if(d.type!=="granska-scroll") return;
+    var sels=MAP[d.section]||[]; for(var i=0;i<sels.length;i++){
+      var el=document.querySelector(sels[i]);
+      if(el){el.scrollIntoView({behavior:"smooth",block:"start"}); break;}
+    }
+  },false);
+})();
 </script>
 </body>
 </html>
