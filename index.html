@@ -799,7 +799,7 @@
     <div class="nav-group">
       <a class="nav-a active" data-pg="hem" data-i18n="nav.hem">Hem</a>
       <a class="nav-a" data-pg="restauranger" data-i18n="nav.restauranger">Restauranger</a>
-      <a class="nav-a" data-pg="giftcard" data-i18n="nav.giftcard">Giftcard</a>
+      <!-- <a class="nav-a" data-pg="giftcard" data-i18n="nav.giftcard">Giftcard</a> -->
       <a class="nav-a" data-pg="event" data-i18n="nav.event">Event</a>
       <a class="nav-a" data-pg="jobb" data-i18n="nav.jobb">Jobb</a>
     </div>
@@ -857,7 +857,7 @@
   <div class="mob-menu-inner">
     <a class="mob-a active" data-pg="hem" data-i18n="nav.hem">Hem</a>
     <a class="mob-a" data-pg="restauranger" data-i18n="nav.restauranger">Restauranger</a>
-    <a class="mob-a" data-pg="giftcard" data-i18n="nav.giftcard">Giftcard</a>
+    <!-- <a class="mob-a" data-pg="giftcard" data-i18n="nav.giftcard">Giftcard</a> -->
     <a class="mob-a" data-pg="event" data-i18n="nav.event">Event</a>
     <a class="mob-a" data-pg="jobb" data-i18n="nav.jobb">Jobb</a>
     <a class="mob-a" data-pg="brunch" data-i18n="nav.brunch">Brunch</a>
@@ -1223,6 +1223,7 @@
 </div>
 
 
+<!-- Presentkorten avvecklade 2026-08-08 på Lins begäran ("remove gift card operation on the website"). Sidan #pg-giftcard ligger kvar men går inte att nå från navigationen, och beställningsknapparna är borttagna så inga nya kort kan köpas. Ta bort kommentarerna nedan för att slå på det igen. -->
 <!-- ══════════════════════════════════════════════════════════
      GIFTCARD
 ══════════════════════════════════════════════════════════ -->
@@ -1232,7 +1233,7 @@
       <p class="t-label" style="color:rgba(255,255,255,0.4); margin-bottom:1.25rem;" data-r="up">Presentkort</p>
       <h1 class="t-h1" style="color:#fff; margin-bottom:1.5rem;" data-r="up" data-delay="100">Ge bort något Fluffy</h1>
       <p class="t-body" style="color:rgba(255,255,255,0.6); max-width:480px; margin:0 auto 3rem;" data-r="up" data-delay="200">Överraska någon med en upplevelse de aldrig glömmer, äkta japanska fluffy pancakes och matcha.</p>
-      <a href="https://cards.getgifted.com/gift/fluffyhouse/d586198d-a2e1-4f3b-a80c-f3262f12e5ec" target="_blank" rel="noopener" class="btn btn-white" data-r="up" data-delay="300">Beställ presentkort ↗</a>
+      <!-- <a href="https://cards.getgifted.com/gift/fluffyhouse/d586198d-a2e1-4f3b-a80c-f3262f12e5ec" target="_blank" rel="noopener" class="btn btn-white" data-r="up" data-delay="300">Beställ presentkort ↗</a> -->
     </div>
   </div>
   <div style="background: var(--c-cream2); padding: 7rem 0;">
@@ -1240,7 +1241,7 @@
       <p class="t-label" style="margin-bottom:1rem;">Sveriges första</p>
       <h2 class="t-h2" style="color:var(--c-ink); margin-bottom:1.75rem;">Fluffiga pannkakor i Stockholm</h2>
       <p class="t-body" style="margin-bottom:3rem;">Fluffy House är det första caféet i Sverige som serverar äkta japanska fluffy pancakes, de luftiga soufflé-pannkakorna som tagit världen med storm.</p>
-      <a href="https://cards.getgifted.com/gift/fluffyhouse/d586198d-a2e1-4f3b-a80c-f3262f12e5ec" target="_blank" rel="noopener" class="btn btn-green">Beställ presentkort</a>
+      <!-- <a href="https://cards.getgifted.com/gift/fluffyhouse/d586198d-a2e1-4f3b-a80c-f3262f12e5ec" target="_blank" rel="noopener" class="btn btn-green">Beställ presentkort</a> -->
     </div>
   </div>
   <div id="foot-giftcard"></div>
@@ -1423,7 +1424,7 @@
           <p class="foot-h" data-i18n="foot.nav.h">Navigering</p>
           <a class="foot-link" data-pg="hem" data-i18n="nav.hem">Hem</a>
           <a class="foot-link" data-pg="restauranger" data-i18n="nav.restauranger">Restauranger</a>
-          <a class="foot-link" data-pg="giftcard" data-i18n="nav.giftcard">Giftcard</a>
+          <!-- <a class="foot-link" data-pg="giftcard" data-i18n="nav.giftcard">Giftcard</a> -->
           <a class="foot-link" data-pg="event" data-i18n="nav.event">Event</a>
           <a class="foot-link" data-pg="jobb" data-i18n="foot.nav.jobb">Jobba med oss</a>
           <a class="foot-link" data-pg="kontakt" data-i18n="nav.kontakt">Kontakt</a>
@@ -1474,7 +1475,7 @@
 ══════════════════════════════════════════════════════════ -->
 <script>
 // ─── Page navigation ──────────────────────────────────────
-const ALL_PAGES = ['hem','restauranger','kungsholmen','uppsala','giftcard','event','jobb','brunch','collaboration','kontakt'];
+const ALL_PAGES = ['hem','restauranger','kungsholmen','uppsala','event','jobb','brunch','collaboration','kontakt'];  // 'giftcard' urplockad 2026-08-08
 let current = 'hem';
 let transitioning = false;
 const fade = document.getElementById('page-fade');
