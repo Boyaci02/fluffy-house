@@ -1021,7 +1021,7 @@
             <h2 class="rest-card-name">Fluffy House<br>Kungsholmen</h2>
             <p class="rest-card-addr">Sankt Eriksgatan 44 · Stockholm</p>
             <div class="rest-card-meta">
-              <span class="rest-card-hours">10:00–20:00 · Alla dagar</span>
+              <span class="rest-card-hours">10:00–20:00 · Alla dagar<br><span style="font-weight:500; font-size:0.8125rem;">Sista beställning: pannkakor 19:30 · drycker 20:00</span></span>
               <span class="rest-card-cta" data-i18n="rest.cta">Utforska →</span>
             </div>
             <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="rest-card-uber" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg><span data-i18n="rest.uber">Beställ online</span></a>
@@ -1039,7 +1039,7 @@
             <h2 class="rest-card-name">Fluffy House<br>Uppsala</h2>
             <p class="rest-card-addr">Dragarbrunnsgatan 50C · Uppsala</p>
             <div class="rest-card-meta">
-              <span class="rest-card-hours">10:00–19:00 · Alla dagar</span>
+              <span class="rest-card-hours">10:00–19:00 · Alla dagar<br><span style="font-weight:500; font-size:0.8125rem;">Sista beställning: pannkakor 18:30 · drycker 19:00</span></span>
               <span class="rest-card-cta" data-i18n="rest.cta">Utforska →</span>
             </div>
             <a href="https://qopla.com/restaurant/fluffy-house---uppsala/qNdwa4z9Ja/order" target="_blank" rel="noopener" class="rest-card-uber" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg><span data-i18n="rest.uber">Beställ online</span></a>
@@ -1116,6 +1116,10 @@
             <div class="info-row">
               <span class="info-key">Öppettider</span>
               <span class="info-val">Alla dagar<br>10:00–20:00</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Sista beställning</span>
+              <span class="info-val">Pannkakor 19:30<br>Drycker 20:00</span>
             </div>
             <div class="info-row mid-row" id="mid-row-k" style="display:none;">
               <span class="info-key" style="color:var(--c-matcha);">Midsommar</span>
@@ -1202,8 +1206,8 @@
               <span class="info-val">Stängt under<br>midsommarhelgen</span>
             </div>
 <div class="info-row">
-              <span class="info-key">Sista best. pannkakor</span>
-              <span class="info-val">18:30</span>
+              <span class="info-key">Sista beställning</span>
+              <span class="info-val">Pannkakor 18:30<br>Drycker 19:00</span>
             </div>
             <div class="info-row">
               <span class="info-key">Status</span>
@@ -1647,7 +1651,7 @@ const T = {
     'loc.k.p2':'Beläget på Sankt Eriksgatan 44, bara 200 meter från Fridhemsplan, är caféet lätt att nå med tunnelbana. Välkommen in och upplev matcha och soufflé-pannkakor som du aldrig smakat dem förut.',
     'loc.u.h2':'Fluffy House Uppsala, nu öppet!',
     'loc.u.p1':'Vi har tagit med oss hela Fluffy House-konceptet till Uppsala, äkta japanska fluffy pancakes och matcha i en ny stad. Välkommen att uppleva det fluffigaste caféet i Sverige, nu även i Uppsala.',
-    'loc.u.p2':'Öppet alla dagar 10:00–19:00 (sista beställning pannkakor 18:30). Följ oss på Instagram för de senaste uppdateringarna om vår Uppsala-enhet.',
+    'loc.u.p2':'Öppet alla dagar 10:00–19:00 (sista beställning pannkakor 18:30, drycker 19:00). Följ oss på Instagram för de senaste uppdateringarna om vår Uppsala-enhet.',
     'cs.pill':'Kommer snart','event.h1':'Event',
     'event.body':'You will soon be able to book your events at Fluffy House.',
     'event.back':'← Tillbaka till startsidan',
@@ -1694,7 +1698,7 @@ const T = {
     'loc.k.p2':'Located at Sankt Eriksgatan 44, just 200 metres from Fridhemsplan, the café is easy to reach by metro. Come in and experience matcha and soufflé pancakes like you\'ve never tasted them before.',
     'loc.u.h2':'Fluffy House Uppsala, now open!',
     'loc.u.p1':'We have brought the entire Fluffy House concept to Uppsala — authentic Japanese fluffy pancakes and matcha in a new city. Welcome to experience the fluffiest café in Sweden, now also in Uppsala.',
-    'loc.u.p2':'Open every day 10:00–19:00 (last order for pancakes 18:30). Follow us on Instagram for the latest updates about our Uppsala location.',
+    'loc.u.p2':'Open every day 10:00–19:00 (last order for pancakes 18:30, drinks 19:00). Follow us on Instagram for the latest updates about our Uppsala location.',
     'cs.pill':'Coming soon','event.h1':'Event',
     'event.body':'You will soon be able to book your events at Fluffy House.',
     'event.back':'← Back to home',
@@ -1741,7 +1745,7 @@ const T = {
     'loc.k.p2':'Beliggende på Sankt Eriksgatan 44, kun 200 meter fra Fridhemsplan, er caféen nem at nå med metro. Kom ind og oplev matcha og soufflé-pandekager som du aldrig har smagt dem før.',
     'loc.u.h2':'Fluffy House Uppsala, nu åbent!',
     'loc.u.p1':'Vi har taget hele Fluffy House-konceptet med til Uppsala, ægte japanske fluffy pandekager og matcha i en ny by. Velkommen til at opleve den fluffigste café i Sverige, nu også i Uppsala.',
-    'loc.u.p2':'Åbent alle dage 10:00–19:00 (sidste bestilling pandekager 18:30). Følg os på Instagram for de seneste opdateringer om vores Uppsala-enhed.',
+    'loc.u.p2':'Åbent alle dage 10:00–19:00 (sidste bestilling pandekager 18:30, drikkevarer 19:00). Følg os på Instagram for de seneste opdateringer om vores Uppsala-enhed.',
     'cs.pill':'Kommer snart','event.h1':'Event',
     'event.body':'Du vil snart kunne booke dine events hos Fluffy House.',
     'event.back':'← Tilbage til forsiden',
@@ -1788,7 +1792,7 @@ const T = {
     'loc.k.p2':'Plassert på Sankt Eriksgatan 44, bare 200 meter fra Fridhemsplan, er kaféen lett å nå med T-bane. Kom inn og opplev matcha og soufflé-pannekaker som du aldri har smakt dem før.',
     'loc.u.h2':'Fluffy House Uppsala, nå åpent!',
     'loc.u.p1':'Vi har tatt med oss hele Fluffy House-konseptet til Uppsala, ekte japanske fluffy pannekaker og matcha i en ny by. Velkommen til å oppleve den fluffigste kaféen i Sverige, nå også i Uppsala.',
-    'loc.u.p2':'Åpent alle dager 10:00–19:00 (siste bestilling pannekaker 18:30). Følg oss på Instagram for de siste oppdateringene om vår Uppsala-enhet.',
+    'loc.u.p2':'Åpent alle dager 10:00–19:00 (siste bestilling pannekaker 18:30, drikker 19:00). Følg oss på Instagram for de siste oppdateringene om vår Uppsala-enhet.',
     'cs.pill':'Kommer snart','event.h1':'Event',
     'event.body':'Du vil snart kunne booke dine arrangementer hos Fluffy House.',
     'event.back':'← Tilbake til forsiden',
