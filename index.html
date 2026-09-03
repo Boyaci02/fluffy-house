@@ -210,7 +210,7 @@
       display: flex; align-items: center;
       font-size: clamp(1.75rem, 9vw, 2.75rem);
       font-weight: 800; letter-spacing: -0.03em;
-      color: rgba(255,255,255,0.35);
+      color: rgba(255,255,255,0.92);
       text-decoration: none; padding: 0.6rem 0;
       cursor: pointer;
       opacity: 0; transform: translateY(18px);
@@ -218,8 +218,8 @@
                   opacity 0.45s var(--ease-out-expo),
                   transform 0.45s var(--ease-out-expo);
     }
-    .mob-a:hover { color: rgba(255,255,255,0.75); }
-    .mob-a.active { color: #fff; }
+    .mob-a:hover { color: #fff; }
+    .mob-a.active { color: #6ee49c; }
 
     /* Staggered entrance */
     #mob-menu.open .mob-a { opacity: 1; transform: none; }
@@ -242,12 +242,12 @@
       transition: opacity 0.4s ease 0.1s, transform 0.4s var(--ease-out-expo) 0.1s;
     }
     #mob-menu.open .mob-menu-footer { opacity: 1; transform: none; transition-delay: 0.42s; }
-    .mob-menu-footer p { font-size: 0.8125rem; color: rgba(255,255,255,0.3); }
+    .mob-menu-footer p { font-size: 0.8125rem; color: rgba(255,255,255,0.7); }
     .mob-soc { display: flex; gap: 0.625rem; }
     .mob-soc-a {
       width: 34px; height: 34px; border-radius: 50%;
       display: inline-flex; align-items: center; justify-content: center;
-      border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.4);
+      border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.75);
       text-decoration: none;
       transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
     }
