@@ -699,7 +699,7 @@
   .bingsu-close:hover{background:#fff}
   .bingsu-post{display:none} /* default (pre-fas): dölj post-element */
   /* Glutenfri slim top banner (samma design som midsommar) */
-  #gf-bar{position:fixed;top:0;left:0;right:0;z-index:2900;background:#3a5039;color:#f4f6e8;font-size:.82rem;letter-spacing:.01em;box-shadow:0 2px 12px rgba(0,0,0,.08);transform:translateY(-110%);transition:transform .42s var(--ease-out-expo)}
+  #gf-bar{position:fixed;top:var(--bar-h);left:0;right:0;z-index:2900;background:#3a5039;color:#f4f6e8;font-size:.82rem;letter-spacing:.01em;box-shadow:0 2px 12px rgba(0,0,0,.08);transform:translateY(calc(-100% - var(--bar-h)));transition:transform .42s var(--ease-out-expo)}
   #gf-bar.visible{transform:none}
   .gf-bar-inner{max-width:1280px;margin:0 auto;padding:9px 20px;display:flex;align-items:center;justify-content:center;gap:14px;position:relative}
   .gf-bar-ico{flex-shrink:0;color:#cfe19a;display:block}
@@ -710,12 +710,12 @@
   .gf-bar-close:hover{background:rgba(255,255,255,.22)}
   .gf-bar-close svg{display:block}
   /* When banner is visible push the fixed nav down */
-  body.has-gf-bar #nav{margin-top:38px}
+  body.has-gf-bar #nav{margin-top:var(--gf-h,38px)}
   @media (max-width:760px){
     .gf-bar-inner{padding:8px 14px;gap:8px}
     .gf-bar-text{gap:4px 12px;font-size:.78rem}
     .gf-bar-label{font-size:.62rem}
-    body.has-gf-bar #nav{margin-top:62px}
+    body.has-gf-bar #nav{margin-top:var(--gf-h,62px)}
   }
   #bingsu-pop.launched .bingsu-pre{display:none}
   #bingsu-pop.launched p.bingsu-post{display:block}
@@ -1988,6 +1988,18 @@ setInterval(updateOpenStatus, 60_000);
 
   document.body.classList.add('has-gf-bar');
   requestAnimationFrame(function () { bar.classList.add('visible'); });
+
+  /* Navet ligger under leveransbaren OCH banderollen. Höjden mäts i stället för
+     att gissas — annars blir det ett tomrum mellan banderollen och navet när
+     texten radbryts på en annan bredd (Emanuel 7/9: glapp på datavyn). */
+  function mat() {
+    var h = Math.round(bar.getBoundingClientRect().height);
+    if (h > 0) document.documentElement.style.setProperty('--gf-h', h + 'px');
+  }
+  mat();
+  requestAnimationFrame(mat);
+  window.addEventListener('resize', mat, { passive: true });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(mat);
 })();
 
 // ─── Midsommaröppettider: startsidans sektion + restaurangsidornas info-kort (datumstyrt 15–22 juni) ───
