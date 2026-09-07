@@ -55,15 +55,8 @@
       background: #06C167; color: #fff; padding: 0 1rem;
       font-size: 0.85rem; font-weight: 600; text-align: center;
     }
-    #deliverybar .db-txt { display: inline-flex; align-items: center; gap: 0.45rem; }
+    #deliverybar .db-txt { display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem; text-align: center; }
     #deliverybar .db-txt svg { width: 15px; height: 15px; }
-    #deliverybar .db-cta {
-      display: inline-flex; align-items: center; gap: 0.3rem; cursor: pointer;
-      background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.45);
-      border-radius: 999px; padding: 0.28rem 0.85rem; color: #fff; text-decoration: none;
-      font-weight: 700; white-space: nowrap; transition: background 0.2s ease;
-    }
-    #deliverybar .db-cta:hover { background: rgba(255,255,255,0.32); }
     @media (max-width: 560px) {
       #deliverybar { font-size: 0.76rem; gap: 0.5rem; }
       #deliverybar .db-long { display: none; }
@@ -673,7 +666,6 @@
 <body>
 <div id="deliverybar">
   <span class="db-txt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg><span><span class="db-long" data-i18n="bar.pre">Nu kan du </span><span data-i18n="bar.delivery">beställa hem via Uber Eats</span></span></span>
-  <a class="db-cta" onclick="navigate('restauranger')"><span data-i18n="bar.cta">Beställ hem</span> →</a>
 </div>
 
 <!-- Page fade overlay -->
