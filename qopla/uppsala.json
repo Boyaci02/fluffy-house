@@ -1,0 +1,5469 @@
+{
+ "shop": {
+  "id": "6949348c4b35d84cfc6020ec",
+  "publicId": "qNdwa4z9Ja",
+  "name": "Fluffy House - Uppsala",
+  "menuIds": [
+   "6a4e81a5129aca5e31b0bd53",
+   "6a464a36a4f7335d27563fc0",
+   "69c1148b0e542771ac2782b1",
+   "6a327c16c9937116ff8ee608",
+   "6a0eddc5641d301da1f38d8b"
+  ],
+  "organisationNumber": "5595410373",
+  "activeHours": [
+   {
+    "closed": false,
+    "date": null,
+    "dayOfWeek": "MONDAY",
+    "startingHour": "10:00",
+    "stoppingHour": "19:00"
+   },
+   {
+    "closed": false,
+    "date": null,
+    "dayOfWeek": "TUESDAY",
+    "startingHour": "10:00",
+    "stoppingHour": "19:00"
+   },
+   {
+    "closed": false,
+    "date": null,
+    "dayOfWeek": "WEDNESDAY",
+    "startingHour": "10:00",
+    "stoppingHour": "19:00"
+   },
+   {
+    "closed": false,
+    "date": null,
+    "dayOfWeek": "THURSDAY",
+    "startingHour": "10:00",
+    "stoppingHour": "18:45"
+   },
+   {
+    "closed": false,
+    "date": null,
+    "dayOfWeek": "FRIDAY",
+    "startingHour": "10:00",
+    "stoppingHour": "19:00"
+   },
+   {
+    "closed": false,
+    "date": null,
+    "dayOfWeek": "SATURDAY",
+    "startingHour": "10:00",
+    "stoppingHour": "19:00"
+   },
+   {
+    "closed": false,
+    "date": null,
+    "dayOfWeek": "SUNDAY",
+    "startingHour": "10:00",
+    "stoppingHour": "19:00"
+   }
+  ],
+  "contactInformation": {
+   "name": null,
+   "addressLine": "Dragarbrunnsgatan 50",
+   "postCode": 75321,
+   "city": "Uppsala",
+   "phoneNumber": "0",
+   "email": "info@fluffyhouse.se"
+  },
+  "settings": {
+   "onlineSettings": {
+    "enableOnlineOrders": true,
+    "onlineMenuIds": [
+     "6a327c16c9937116ff8ee608"
+    ],
+    "restaurantOnlineOrderUrl": "https://qopla.com/restaurant/fluffy-house-uppsala/qNdwa4z9Ja/order"
+   }
+  }
+ },
+ "menus": [
+  {
+   "id": "6a4e81a5129aca5e31b0bd53",
+   "name": "Express Meny - U",
+   "disabled": false,
+   "sortOrder": 0,
+   "menuProductCategories": [
+    {
+     "id": "22168869-9aea-4e11-827e-9bf5b14a225e",
+     "name": "Ube",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 0,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "391c084c-3808-4c11-998e-a737ce83768f",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "6a6b0dd899bd2139d1dd4850",
+        "name": "Ube Coconut Frappe",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/ube_coconut_frappe.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "8b0a04c2-17ff-4738-b9d7-f2d8ed3e72d9",
+     "name": "Bingsu",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 1,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Bingsu.png",
+     "menuProducts": [
+      {
+       "id": "b74c152c-0130-42eb-bed2-a110882859f2",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e628e98ff5352413c9868f",
+        "name": "Strawberry Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Jordgubb_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "4008e463-85d7-4f97-9d80-ad3181c5c4c9",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68e628eb7713591a68cbdcec",
+        "name": "Mango Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Mango_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "fffea441-955b-47f2-824b-689566b06527",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "6a2155b7e353fe7e1068495f",
+        "name": "Matcha Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "3f350fe5-f26c-4c11-b1d5-c1fd60fa4bef",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "6a2155c2e353fe7e1068496f",
+        "name": "Chocolate Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Chocklad_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "608668d2-e7d5-4afe-b211-efe277c61628",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "6a69bc699f4f91700f472111",
+        "name": "Ube Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image0__1_.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "efa26c10-44b3-4069-8b32-4ddad715b0f2",
+     "name": "Coffee & Tea",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 2,
+     "imageUrl": null,
+     "menuProducts": [],
+     "menuBundleProducts": [
+      {
+       "id": "c06e79f0-c2e1-45e3-9e81-1bedf4355cd2",
+       "price": null,
+       "sortOrder": 0,
+       "refBundleProduct": {
+        "id": "68e8abfd3371d6399e35f093",
+        "name": "Espresso",
+        "description": "",
+        "defaultPrice": 32.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Espresso.png"
+       }
+      },
+      {
+       "id": "c842c2fc-fc20-4c82-9103-e5be5f990789",
+       "price": null,
+       "sortOrder": 1,
+       "refBundleProduct": {
+        "id": "6a202888aae7b738f7e58fec",
+        "name": "Americano",
+        "description": "",
+        "defaultPrice": 45.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Americano.png"
+       }
+      },
+      {
+       "id": "2e5738ed-022f-4084-baaa-5a5f3ff28475",
+       "price": null,
+       "sortOrder": 2,
+       "refBundleProduct": {
+        "id": "6a202889de18a224dbe49a5d",
+        "name": "Caffe Latte",
+        "description": "",
+        "defaultPrice": 52.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Caffe_Latte.png"
+       }
+      },
+      {
+       "id": "f8c8598b-0954-4b18-a9a5-6171414810ed",
+       "price": null,
+       "sortOrder": 3,
+       "refBundleProduct": {
+        "id": "6a202889aae7b738f7e58fee",
+        "name": "Cappuccino",
+        "description": "",
+        "defaultPrice": 52.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Cappuccino.png"
+       }
+      },
+      {
+       "id": "ae83a372-0591-4ea9-9b6e-86d5c2afe863",
+       "price": null,
+       "sortOrder": 4,
+       "refBundleProduct": {
+        "id": "6a20288a7ccdbc7c9b85644c",
+        "name": "Fluffy Latte",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Fluffy_Latte.png"
+       }
+      },
+      {
+       "id": "fd2e926f-8dbe-45ae-bdbc-932da6469520",
+       "price": null,
+       "sortOrder": 5,
+       "refBundleProduct": {
+        "id": "6a20288bde18a224dbe49a5f",
+        "name": "Fluffy Caramel-Latte",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Fluffy_Caramel-Latte.png"
+       }
+      },
+      {
+       "id": "b41c42af-d0f7-45cd-b2e7-c97f874942f4",
+       "price": null,
+       "sortOrder": 6,
+       "refBundleProduct": {
+        "id": "6a20288cde18a224dbe49a61",
+        "name": "Fluffy Mocha",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Fluffy_Mocha__2_.png"
+       }
+      },
+      {
+       "id": "6b41ae0c-254f-4745-a66b-00b6bc5bc229",
+       "price": null,
+       "sortOrder": 7,
+       "refBundleProduct": {
+        "id": "6a20288d222187232bc60315",
+        "name": "Milk Tea",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/milk_tea_warm.jpg"
+       }
+      }
+     ]
+    },
+    {
+     "id": "00006d6d-aaf2-4bfa-9687-7af0a6d0bff4",
+     "name": "Matcha",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 3,
+     "imageUrl": null,
+     "menuProducts": [],
+     "menuBundleProducts": [
+      {
+       "id": "cf0705a6-0edc-4139-9505-6b5e40402bec",
+       "price": null,
+       "sortOrder": 0,
+       "refBundleProduct": {
+        "id": "6a2027558ead3e5dd6e4dbc8",
+        "name": "Matcha Affogato",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Affogato.png"
+       }
+      },
+      {
+       "id": "68f44737-6460-46bb-acb6-a8ea2316886f",
+       "price": null,
+       "sortOrder": 1,
+       "refBundleProduct": {
+        "id": "6a2027567349d84143950489",
+        "name": "Matcha Latte",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/mathca_ma.png"
+       }
+      },
+      {
+       "id": "2fde8754-7b4e-4025-9684-d25587416ca6",
+       "price": null,
+       "sortOrder": 2,
+       "refBundleProduct": {
+        "id": "6a2027577349d8414395048c",
+        "name": "Matcha Oat Latte",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Oat_Latte.png"
+       }
+      },
+      {
+       "id": "c06fba0a-83e8-45dd-9e9f-d724327c67db",
+       "price": null,
+       "sortOrder": 3,
+       "refBundleProduct": {
+        "id": "6a2027587349d8414395048e",
+        "name": "Matcha Espresso",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_LAtte.png"
+       }
+      },
+      {
+       "id": "ce8ededc-4171-41f6-ad56-d27743ceae7a",
+       "price": null,
+       "sortOrder": 4,
+       "refBundleProduct": {
+        "id": "6a20275928876f4f2d5de9ac",
+        "name": "Matcha Choco",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Espresso.png"
+       }
+      },
+      {
+       "id": "e1c9a31a-4eb9-4025-adb0-681755a1be43",
+       "price": null,
+       "sortOrder": 5,
+       "refBundleProduct": {
+        "id": "6a202759493c807a94bfbbdb",
+        "name": "Matcha Caramel",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Mango.png"
+       }
+      },
+      {
+       "id": "adb9a29a-0641-4005-9d91-8137ef8b2453",
+       "price": null,
+       "sortOrder": 6,
+       "refBundleProduct": {
+        "id": "6a20275a493c807a94bfbbdd",
+        "name": "Matcha Strawberry",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Strawberry.png"
+       }
+      },
+      {
+       "id": "695e45aa-7a76-4553-b5f2-328a8ebf46f5",
+       "price": null,
+       "sortOrder": 7,
+       "refBundleProduct": {
+        "id": "6a20275b28876f4f2d5de9b3",
+        "name": "Matcha Mango",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Mango.png"
+       }
+      }
+     ]
+    },
+    {
+     "id": "03bf56d8-d470-49c1-a8f9-83692ed73dae",
+     "name": "Soda",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 4,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/18.png",
+     "menuProducts": [
+      {
+       "id": "802fb625-6f25-4a66-a848-81e2419fd3da",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e628758ff5352413c9864a",
+        "name": "Strawberry Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Strawberry_soda.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "ebdc6a1a-f688-4295-bf70-cb07b53e3971",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68e6287a1eab3853c16a7973",
+        "name": "Mango Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Mango_Soda.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "e3cdb11c-aae5-40f9-ab15-162bc9faabfe",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "68e6287b5df9f4014f9f413b",
+        "name": "Lemon Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Lemon_Soda.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "5473ecd4-3a88-4ca5-94c9-f0279cd00da8",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "68e6287b63defc46ac088873",
+        "name": "Grapefruit Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Grapefruit_Soda.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "4b58593f-8b9a-41f3-93f6-83d927415949",
+     "name": "Smoothie",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 5,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/6.png",
+     "menuProducts": [
+      {
+       "id": "fec24cb8-f1eb-472d-b075-139272297163",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e628977713591a68cbdcaf",
+        "name": "Blueberry & Coconut",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Blueberry___Coconut.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "789f6ccb-f4c9-474a-8b06-bdf939370713",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68e6289879d2f93ddd2afb4c",
+        "name": "Strawberry & Mango",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Strawberry___Mango.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "e73e1516-7c6f-4796-a5c7-3e09022b01b3",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "68e62898e92435420170c8a4",
+        "name": "Avocado & Banana",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Avocado___Banana.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "db05ce73-6d7a-4838-9389-fded1e873a30",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "68e8ad593c327b50b79b76b7",
+        "name": "Coconut & Coffee",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Coconut___Coffee.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "9720eee4-97b1-41a9-9b44-cdb18f3e3337",
+     "name": "Souvenir",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 6,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "57cb0b49-91b3-4304-92b2-a5f296b50dcc",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "6909e10a79bdc31439595422",
+        "name": "Plate",
+        "description": "Fluffy House  Design Plate",
+        "defaultPrice": 248.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "eed5ae20-b997-430f-94c5-6356a27029ba",
+     "name": "Extra",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 7,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "f0667df1-9f1c-4b01-a2c8-c410451eb274",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "69cbc471577e7e520137b00e",
+        "name": "Matcha Drizzle",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "f0c17a7c-1aba-48e3-b053-3b12f8e50153",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "69cbc474577e7e520137b00f",
+        "name": "Chocolate Drizzle",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "4d62d728-247d-43ba-b6f9-c870a750c906",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "69cbc47429ba876c99940e24",
+        "name": "Caramel Drizzle",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "be4eb365-7d57-4ec9-962b-85690adff8dc",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "69cbc4758aefa56f49d1465d",
+        "name": "Strawberry Drizzle",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "1e28ed97-7ff8-49ce-b054-89fbc4409460",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "69cbc475d401402bf023dd85",
+        "name": "Vanilla Drizzle",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "dcf162a1-40b5-467a-bcda-63d576657e89",
+       "price": null,
+       "sortOrder": 5,
+       "refProduct": {
+        "id": "69cbc475bcec4a1083e24d50",
+        "name": "Mango Drizzle",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "3bce19d8-2c3a-4b9c-9aed-616f56f022fe",
+       "price": null,
+       "sortOrder": 6,
+       "refProduct": {
+        "id": "69cbc476bcec4a1083e24d52",
+        "name": "Vaniljglass",
+        "description": "",
+        "defaultPrice": 15.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "cb2cfffe-359b-4f6e-9c3d-b6e417a7ab8f",
+       "price": null,
+       "sortOrder": 7,
+       "refProduct": {
+        "id": "69cbc4768aefa56f49d1465f",
+        "name": "Chokladglass",
+        "description": "",
+        "defaultPrice": 15.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "56664a61-d16f-4f0c-a00e-32cebfc65774",
+       "price": null,
+       "sortOrder": 8,
+       "refProduct": {
+        "id": "69cbc477bcec4a1083e24d54",
+        "name": "Jordgubb",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "45d27206-8201-4dcf-9997-555f4d6169d5",
+       "price": null,
+       "sortOrder": 9,
+       "refProduct": {
+        "id": "69cbc4b45c77f74adcc4d7c5",
+        "name": "Mango",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "94ebf2c6-40d4-44f6-b9b5-322b0529fd98",
+       "price": null,
+       "sortOrder": 10,
+       "refProduct": {
+        "id": "69cbc4b5a612eb4a8183e3eb",
+        "name": "Vanilla Ice Cream",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "15cec1ff-2a7e-4ba5-8c00-cc60955160c6",
+       "price": null,
+       "sortOrder": 11,
+       "refProduct": {
+        "id": "69cbc4b5d5cb6126d5e70373",
+        "name": "Choco Ice Cream",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "e3bdb2dc-c20e-48d5-ac2c-62aaa9988477",
+       "price": null,
+       "sortOrder": 12,
+       "refProduct": {
+        "id": "69cbc4b5bcec4a1083e24d64",
+        "name": "Cream Cheese",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "14c239c6-6782-4275-8d83-67c6d78b00bb",
+       "price": null,
+       "sortOrder": 13,
+       "refProduct": {
+        "id": "69cbc4b66a82a559367d2289",
+        "name": "Matcha Grädde",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    }
+   ]
+  },
+  {
+   "id": "6a464a36a4f7335d27563fc0",
+   "name": "Delivery Meny",
+   "disabled": false,
+   "sortOrder": 0,
+   "menuProductCategories": [
+    {
+     "id": "3b03cd3c-1e09-41e7-98a8-77ea4b736d66",
+     "name": "Ube ",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 0,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "55ed557e-7cc3-431e-a34f-56a7078e1cc2",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "6a6b0dd899bd2139d1dd4850",
+        "name": "Ube Coconut Frappe",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/ube_coconut_frappe.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "8f8f0916-c812-44b6-9a77-92e7ec7af218",
+     "name": "Bingsu",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 1,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Bingsu.png",
+     "menuProducts": [
+      {
+       "id": "2ce57320-c3af-4f5d-afd3-e7fbe842d7b7",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e628e98ff5352413c9868f",
+        "name": "Strawberry Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Jordgubb_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "cdbf418a-c522-47ff-9ede-e0d677e5cb7a",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68e628eb7713591a68cbdcec",
+        "name": "Mango Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Mango_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "eae23bfd-650e-4b1d-a898-ec9342405e4b",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "6a2155b7e353fe7e1068495f",
+        "name": "Matcha Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "c1b8700f-d5bd-426e-9412-6dd2b04dbe8d",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "6a2155c2e353fe7e1068496f",
+        "name": "Chocolate Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Chocklad_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "0f08adb3-6e18-4372-b612-6eecf0b86bd3",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "6a69bc699f4f91700f472111",
+        "name": "Ube Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image0__1_.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "6d02eec8-f0d9-4558-b67f-f635418e7b2e",
+     "name": "Brunch",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 2,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "110f9ffc-8572-44b0-b4ad-a5de20ec0c93",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "69a5564950eea724060b1911",
+        "name": "Lax Souffle",
+        "description": "Sallad, ägg ,tomat och hollandaise dressing",
+        "defaultPrice": 229.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Salmon_Avocado_Souffle.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "5acb38c4-bc7d-4ea0-baba-40c65907cf7e",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "69a5564b7352663f2a231520",
+        "name": "Vegetarian Souffle",
+        "description": "Avokado, ägg, mix sallad, tomat, rödlök, balsamic dressing",
+        "defaultPrice": 189.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/81505aa83f05f5b1e1906bb118c1827e.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "60b36d64-24c5-4b67-ac28-0cf09ba37f18",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "6a327adade29811f4ddc3bc7",
+        "name": "Lax Souffle (Gluten Free)",
+        "description": "Sallad, ägg, tomat och hollandaise dressing",
+        "defaultPrice": 229.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Salmon_Avocado_Souffle.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "3f9d2b0e-ee6f-4896-8712-9fe8f885e66d",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "6a327adbbf0b3d642e5309b6",
+        "name": "Vegetarian Souffle (Gluten Free)",
+        "description": "Avokado, ägg, mix sallad, tomat, rödlök, balsamic dressing",
+        "defaultPrice": 189.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/81505aa83f05f5b1e1906bb118c1827e.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "1ff9666f-0dd1-45bc-866f-fa1469b6bea9",
+     "name": "Souffle Pancake",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 3,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Banana___Karamell.png",
+     "menuProducts": [
+      {
+       "id": "185541c0-a89c-441e-a0d9-3b9a158309d7",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "6a1d6db62fc13b3cffd7128a",
+        "name": "Nutella Pancake",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image0.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "9834ae22-ee2c-4d43-bdaa-9a26dffa45dc",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68bffb5398b30e3b4b922f28",
+        "name": "Matcha Holic",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Holic.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "6b15dcd7-cae1-40b4-afed-4a2bd117cb22",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "68e52f937bc65d6ebcbfba5e",
+        "name": "Classic Souffle",
+        "description": "",
+        "defaultPrice": 149.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Classic_Souffle.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "0fe8c02e-12d6-48e6-b31d-71e1fba60719",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "68e52f94f4dcfc076ef159ab",
+        "name": "Pistachio & Berries",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Pstachio___Berries_1.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "10bb8b11-8105-4a46-8296-ebfba96d39ad",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "68e52f94f4dcfc076ef159ac",
+        "name": "Sweet Mango",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Sweet_Mango.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "c542583c-8cd9-408d-8c44-3a1f83aa16e8",
+       "price": null,
+       "sortOrder": 5,
+       "refProduct": {
+        "id": "68e52f947826df74bf2be8b4",
+        "name": "Banana & Caramel",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Banana___Karamell.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "5732da51-6d43-4597-93b2-60bb68767810",
+       "price": null,
+       "sortOrder": 6,
+       "refProduct": {
+        "id": "68e52f95a0465b48cd462aa6",
+        "name": "Tiramisu",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/2c859e09ae7f8c2187f29a909bf9b75b.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "f1e72128-0d8c-4a0a-83a4-3fdb8f2fd918",
+       "price": null,
+       "sortOrder": 7,
+       "refProduct": {
+        "id": "68e52f952f23841dd1d0d885",
+        "name": "Very Strawberry",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Very_Strawberry.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "bdf6b0de-8d65-4f2c-b019-291cdf4ed885",
+     "name": "Souffle Pancake - Gluten Free",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 4,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "7a9dddd1-e7f2-4b66-b616-131a1d705d94",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "6a6b37fcaf2ffd1e980acbf6",
+        "name": "Nutella Pancake ( Gluten Free )",
+        "description": "",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image0.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "9e7b35e2-1476-4dec-a546-15ba7806c524",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "693afe1758da246b02dab676",
+        "name": "Matcha Holic (Gluten Free)",
+        "description": "Matcha holic",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Holic.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "36d9208a-c029-4f66-8305-a4ce4c090714",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "693afe180240691c2d4b2db7",
+        "name": "Classic Souffle (Gluten Free)",
+        "description": "Classic souffle",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Classic_Souffle.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "be90ea93-2d1b-4765-8ec3-05faa8595036",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "693afe19de967c423d1e8bc4",
+        "name": "Pistachio & Berries (Gluten Free)",
+        "description": "Pistachio & berries",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Pstachio___Berries_1.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "10c06bdd-f8b3-4e0f-83aa-738768dd8db9",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "693afe1a629014636ebaae22",
+        "name": "Sweet Mango (Gluten Free)",
+        "description": "Sweet mango",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Sweet_Mango.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "f91a2db8-bfce-41e1-9cf9-d31e30531d32",
+       "price": null,
+       "sortOrder": 5,
+       "refProduct": {
+        "id": "693afe1baf87ea11d0702600",
+        "name": "Banan & Karamell (Gluten Free)",
+        "description": "Banana brulee",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Banana___Karamell.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "b41648ee-8053-41d7-b2d2-a442bd4551a4",
+       "price": null,
+       "sortOrder": 6,
+       "refProduct": {
+        "id": "693afe1c403a2f3d949a0616",
+        "name": "Tiramisu (Gluten Free)",
+        "description": "Tiramisu",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/2c859e09ae7f8c2187f29a909bf9b75b.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "d76d51e1-8a1d-42bc-8518-1b98aff4f069",
+       "price": null,
+       "sortOrder": 7,
+       "refProduct": {
+        "id": "693afe1d6b5ae05bf718108d",
+        "name": "Very Strawberry (Gluten Free)",
+        "description": "Very strawberry",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Very_Strawberry.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "d86dc5ba-bb0b-4cd5-b46a-8034c89d66ca",
+     "name": "Golden Toast",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 5,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/lotus.png",
+     "menuProducts": [
+      {
+       "id": "ba325fbc-a32b-4352-81a0-afcb8a4f2725",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e5301b943cef6d491fba67",
+        "name": "Mango & Berries Toast",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Mango___Berries_Toast.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "f7c30aea-7105-4ef0-967a-10ea9ad23903",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68f0a82b1f718b1ebc7105f6",
+        "name": "Lotus Cream Cheese",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/lotus.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "8658485e-7f27-4042-9e68-01b09b4d1349",
+     "name": "Coffee & Tea",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 6,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "95576341-38d4-4e15-bf51-6f529f2fdf10",
+       "price": null,
+       "sortOrder": 7,
+       "refProduct": {
+        "id": "6a27cdeea364422293b2a800",
+        "name": "Green tea (hot)",
+        "description": "",
+        "defaultPrice": 45.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/green_tea.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": [
+      {
+       "id": "3a4fb93a-ea5c-4d78-b007-9a5da0fac7cd",
+       "price": null,
+       "sortOrder": 0,
+       "refBundleProduct": {
+        "id": "68e8abfd3371d6399e35f093",
+        "name": "Espresso",
+        "description": "",
+        "defaultPrice": 32.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Espresso.png"
+       }
+      },
+      {
+       "id": "9ea4e136-613c-4cfc-842c-797b23097a56",
+       "price": null,
+       "sortOrder": 1,
+       "refBundleProduct": {
+        "id": "6a202888aae7b738f7e58fec",
+        "name": "Americano",
+        "description": "",
+        "defaultPrice": 45.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Americano.png"
+       }
+      },
+      {
+       "id": "9445bee2-92f6-4f25-a06b-70169fcd3ffc",
+       "price": null,
+       "sortOrder": 2,
+       "refBundleProduct": {
+        "id": "6a202889de18a224dbe49a5d",
+        "name": "Caffe Latte",
+        "description": "",
+        "defaultPrice": 52.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Caffe_Latte.png"
+       }
+      },
+      {
+       "id": "bbe8403d-7ce9-4fa9-ba79-329dc7459f99",
+       "price": null,
+       "sortOrder": 3,
+       "refBundleProduct": {
+        "id": "6a202889aae7b738f7e58fee",
+        "name": "Cappuccino",
+        "description": "",
+        "defaultPrice": 52.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Cappuccino.png"
+       }
+      },
+      {
+       "id": "9df933bf-d24d-40fe-aa98-7038ded512a9",
+       "price": null,
+       "sortOrder": 4,
+       "refBundleProduct": {
+        "id": "6a20288a7ccdbc7c9b85644c",
+        "name": "Fluffy Latte",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Fluffy_Latte.png"
+       }
+      },
+      {
+       "id": "7de7b8cd-c65b-4fa6-b4a9-fbb1408caf9d",
+       "price": null,
+       "sortOrder": 5,
+       "refBundleProduct": {
+        "id": "6a20288bde18a224dbe49a5f",
+        "name": "Fluffy Caramel-Latte",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Fluffy_Caramel-Latte.png"
+       }
+      },
+      {
+       "id": "2a5c1b77-684c-4769-9b5c-4fe55857e694",
+       "price": null,
+       "sortOrder": 6,
+       "refBundleProduct": {
+        "id": "6a20288cde18a224dbe49a61",
+        "name": "Fluffy Mocha",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Fluffy_Mocha__2_.png"
+       }
+      },
+      {
+       "id": "2ed5162c-405b-489c-8678-fd293287212a",
+       "price": null,
+       "sortOrder": 8,
+       "refBundleProduct": {
+        "id": "6a20288d222187232bc60315",
+        "name": "Milk Tea",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/milk_tea_warm.jpg"
+       }
+      }
+     ]
+    },
+    {
+     "id": "119a31ef-3ab4-47df-96d6-68c7841ba4f9",
+     "name": "Matcha",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 7,
+     "imageUrl": null,
+     "menuProducts": [],
+     "menuBundleProducts": [
+      {
+       "id": "bc2834a7-f8c2-40a4-940e-1dd33d3e994c",
+       "price": null,
+       "sortOrder": 0,
+       "refBundleProduct": {
+        "id": "6a2027558ead3e5dd6e4dbc8",
+        "name": "Matcha Affogato",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Affogato.png"
+       }
+      },
+      {
+       "id": "f48cb59c-8732-4028-a379-814b89620080",
+       "price": null,
+       "sortOrder": 1,
+       "refBundleProduct": {
+        "id": "6a2027567349d84143950489",
+        "name": "Matcha Latte",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/mathca_ma.png"
+       }
+      },
+      {
+       "id": "fdc48e64-9860-401e-a19a-1c57f4dfe908",
+       "price": null,
+       "sortOrder": 2,
+       "refBundleProduct": {
+        "id": "6a2027577349d8414395048c",
+        "name": "Matcha Oat Latte",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Oat_Latte.png"
+       }
+      },
+      {
+       "id": "d69e6caf-63a5-4a35-be37-08a7a8d841fd",
+       "price": null,
+       "sortOrder": 3,
+       "refBundleProduct": {
+        "id": "6a2027587349d8414395048e",
+        "name": "Matcha Espresso",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_LAtte.png"
+       }
+      },
+      {
+       "id": "c5adf3a3-23e3-4472-b012-58b91869429b",
+       "price": null,
+       "sortOrder": 4,
+       "refBundleProduct": {
+        "id": "6a20275928876f4f2d5de9ac",
+        "name": "Matcha Choco",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Espresso.png"
+       }
+      },
+      {
+       "id": "ea45ca3c-82c9-4691-b0af-0d3642ac6636",
+       "price": null,
+       "sortOrder": 5,
+       "refBundleProduct": {
+        "id": "6a202759493c807a94bfbbdb",
+        "name": "Matcha Caramel",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Mango.png"
+       }
+      },
+      {
+       "id": "0bdaca30-2914-4a88-9e62-5ae3a04184a5",
+       "price": null,
+       "sortOrder": 6,
+       "refBundleProduct": {
+        "id": "6a20275a493c807a94bfbbdd",
+        "name": "Matcha Strawberry",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Strawberry.png"
+       }
+      },
+      {
+       "id": "691443eb-b911-47e3-85c3-9dc6ce206554",
+       "price": null,
+       "sortOrder": 7,
+       "refBundleProduct": {
+        "id": "6a20275b28876f4f2d5de9b3",
+        "name": "Matcha Mango",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Mango.png"
+       }
+      }
+     ]
+    },
+    {
+     "id": "d4c8e84e-7f50-49a2-8b0f-27b16d69cab5",
+     "name": "Soda",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 8,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/18.png",
+     "menuProducts": [
+      {
+       "id": "9468cb0c-f5a5-4e64-9206-f9c85e3cc5d5",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e628758ff5352413c9864a",
+        "name": "Strawberry Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Strawberry_soda.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "4dbd5caf-27e7-48d0-b4e5-e91bf67eef64",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68e6287a1eab3853c16a7973",
+        "name": "Mango Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Mango_Soda.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "91e4e3eb-3d83-4abd-8c96-3bafc21152b8",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "68e6287b5df9f4014f9f413b",
+        "name": "Lemon Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Lemon_Soda.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "979d862e-7a3a-423c-8963-0e97c4441eb4",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "68e6287b63defc46ac088873",
+        "name": "Grapefruit Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Grapefruit_Soda.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "676d691e-5258-4422-9139-ae9c47928b1c",
+     "name": "Smoothie",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 9,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/6.png",
+     "menuProducts": [
+      {
+       "id": "0fa71309-f249-4921-af60-697ecd56b4de",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e628977713591a68cbdcaf",
+        "name": "Blueberry & Coconut",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Blueberry___Coconut.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "00a453d2-9c23-4736-a072-dc5f3fe25465",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68e6289879d2f93ddd2afb4c",
+        "name": "Strawberry & Mango",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Strawberry___Mango.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "56a27b80-73c9-4bfc-9a61-3214e7423b74",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "68e62898e92435420170c8a4",
+        "name": "Avocado & Banana",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Avocado___Banana.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "a84df61e-a0a7-41f6-b33a-01f248a9c617",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "68e8ad593c327b50b79b76b7",
+        "name": "Coconut & Coffee",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Coconut___Coffee.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "fe223870-a635-486e-83d3-c19c2b721e55",
+     "name": "Souvenir",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 10,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "39f644e9-bb00-4542-b61e-db5adcbc770c",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "6909e10a79bdc31439595422",
+        "name": "Plate",
+        "description": "Fluffy House  Design Plate",
+        "defaultPrice": 248.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    }
+   ]
+  },
+  {
+   "id": "69c1148b0e542771ac2782b1",
+   "name": "Express Meny - U",
+   "disabled": false,
+   "sortOrder": 0,
+   "menuProductCategories": [
+    {
+     "id": "2ceed177-d2db-4577-9894-ba99f993d77e",
+     "name": "Ube Drinks",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 0,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "e70c33ca-0b7f-46a3-a636-ae911f9acb8e",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "6a6b0dd899bd2139d1dd4850",
+        "name": "Ube Coconut Frappe",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/ube_coconut_frappe.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": [
+      {
+       "id": "5ac125be-5524-41d1-b936-c2304c8b681e",
+       "price": null,
+       "sortOrder": 1,
+       "refBundleProduct": {
+        "id": "6a758f8c0dd33d4f1722c628",
+        "name": "Ube Strawberry",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/ube_starwberry.jpg"
+       }
+      },
+      {
+       "id": "d9491bf8-6947-4722-96b3-8fff1b4b27dd",
+       "price": null,
+       "sortOrder": 2,
+       "refBundleProduct": {
+        "id": "6a758f8efa2b4d65bc631b4e",
+        "name": "Ube Coffee",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/ube_coffee.jpg"
+       }
+      },
+      {
+       "id": "d3c22581-023c-4a3b-8af7-42d536eaabf5",
+       "price": null,
+       "sortOrder": 3,
+       "refBundleProduct": {
+        "id": "6a758f910713ed6efae47e9e",
+        "name": "Ube Matcha",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/ube_matcha.jpg"
+       }
+      },
+      {
+       "id": "ef6e77af-bcba-43bd-bee7-e7ed1d9bee9c",
+       "price": null,
+       "sortOrder": 4,
+       "refBundleProduct": {
+        "id": "6a758f940dd33d4f1722c62d",
+        "name": "Ube Latte Warm",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/ube_latte_warm.jpg"
+       }
+      },
+      {
+       "id": "ecd5f994-fdc1-471c-ad56-c259f96ba07a",
+       "price": null,
+       "sortOrder": 5,
+       "refBundleProduct": {
+        "id": "6a758f960dd33d4f1722c630",
+        "name": "Ube Latte Cold",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/ube_latte_cold.jpg"
+       }
+      }
+     ]
+    },
+    {
+     "id": "2f5ea98b-1809-4d76-94e7-926646964d6e",
+     "name": "Bingsu",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 1,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Bingsu.png",
+     "menuProducts": [
+      {
+       "id": "6ca11d96-a01b-4f96-bbc5-24f4ff351eac",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e628e98ff5352413c9868f",
+        "name": "Strawberry Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Jordgubb_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "0a42f26e-927f-4744-ae5b-efb8dddfde00",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68e628eb7713591a68cbdcec",
+        "name": "Mango Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Mango_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "0559db10-9f1e-45ae-9bde-e0b910fbfd18",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "6a2155b7e353fe7e1068495f",
+        "name": "Matcha Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "b987b80e-191c-4578-8876-09dfcff8f887",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "6a2155c2e353fe7e1068496f",
+        "name": "Chocolate Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Chocklad_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "da666d86-44b9-4886-90c3-fedaf8a553ad",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "6a69bc699f4f91700f472111",
+        "name": "Ube Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image0__1_.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "c3e7b495-ec54-47f3-b918-6f28cce12d73",
+     "name": "Souffle Pancake",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 2,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Banana___Karamell.png",
+     "menuProducts": [
+      {
+       "id": "64d59c60-eecb-4742-a65d-0e0b1ff311e6",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "6a1d6db62fc13b3cffd7128a",
+        "name": "Nutella Pancake",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image0.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "2f136c4e-d213-47ad-ba22-8bdcf6b7115a",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68bffb5398b30e3b4b922f28",
+        "name": "Matcha Holic",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Holic.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "5e4017f8-c037-4548-8693-d71157ad141b",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "68e52f937bc65d6ebcbfba5e",
+        "name": "Classic Souffle",
+        "description": "",
+        "defaultPrice": 149.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Classic_Souffle.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "cadea05b-1e53-4c8f-8c0e-dd7d0cfabe3b",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "68e52f94f4dcfc076ef159ab",
+        "name": "Pistachio & Berries",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Pstachio___Berries_1.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "66eb0d9f-e031-4c88-ad68-16a1e5c56d04",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "68e52f94f4dcfc076ef159ac",
+        "name": "Sweet Mango",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Sweet_Mango.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "2260eacc-391a-4c76-9665-25f25890cd63",
+       "price": null,
+       "sortOrder": 5,
+       "refProduct": {
+        "id": "68e52f947826df74bf2be8b4",
+        "name": "Banana & Caramel",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Banana___Karamell.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "e9cf3759-f323-40b5-bf3e-486680513e41",
+       "price": null,
+       "sortOrder": 6,
+       "refProduct": {
+        "id": "68e52f95a0465b48cd462aa6",
+        "name": "Tiramisu",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/2c859e09ae7f8c2187f29a909bf9b75b.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "04c427a5-2ad8-49a3-aa24-4aef335661fa",
+       "price": null,
+       "sortOrder": 7,
+       "refProduct": {
+        "id": "68e52f952f23841dd1d0d885",
+        "name": "Very Strawberry",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Very_Strawberry.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "0ee11769-fda5-40a5-972e-0c03ec969122",
+       "price": null,
+       "sortOrder": 8,
+       "refProduct": {
+        "id": "6a6b37fcaf2ffd1e980acbf6",
+        "name": "Nutella Pancake ( Gluten Free )",
+        "description": "",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image0.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "e6733cda-d309-47d0-8192-c8a1c4dc5b9c",
+       "price": null,
+       "sortOrder": 9,
+       "refProduct": {
+        "id": "693afe1758da246b02dab676",
+        "name": "Matcha Holic (Gluten Free)",
+        "description": "Matcha holic",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Holic.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "db112442-a72b-466c-b2ad-ba0bf1777158",
+       "price": 169.0,
+       "sortOrder": 10,
+       "refProduct": {
+        "id": "693afe180240691c2d4b2db7",
+        "name": "Classic Souffle (Gluten Free)",
+        "description": "Classic souffle",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Classic_Souffle.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "bb56f76f-e7b4-4bc6-adfa-ac97a07f130c",
+       "price": 169.0,
+       "sortOrder": 11,
+       "refProduct": {
+        "id": "693afe19de967c423d1e8bc4",
+        "name": "Pistachio & Berries (Gluten Free)",
+        "description": "Pistachio & berries",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Pstachio___Berries_1.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "148e0431-b797-416e-8174-ea8433fbb020",
+       "price": null,
+       "sortOrder": 12,
+       "refProduct": {
+        "id": "693afe1a629014636ebaae22",
+        "name": "Sweet Mango (Gluten Free)",
+        "description": "Sweet mango",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Sweet_Mango.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "b0f9486a-dfe3-4ade-bbd3-4a493f2f515b",
+       "price": null,
+       "sortOrder": 13,
+       "refProduct": {
+        "id": "693afe1baf87ea11d0702600",
+        "name": "Banan & Karamell (Gluten Free)",
+        "description": "Banana brulee",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Banana___Karamell.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "209cc468-7bd7-471e-b50e-d14078baef6c",
+       "price": null,
+       "sortOrder": 14,
+       "refProduct": {
+        "id": "693afe1c403a2f3d949a0616",
+        "name": "Tiramisu (Gluten Free)",
+        "description": "Tiramisu",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/2c859e09ae7f8c2187f29a909bf9b75b.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "ad89d250-2640-46d4-b1c5-d46b47f1690f",
+       "price": null,
+       "sortOrder": 15,
+       "refProduct": {
+        "id": "693afe1d6b5ae05bf718108d",
+        "name": "Very Strawberry (Gluten Free)",
+        "description": "Very strawberry",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Very_Strawberry.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "39306f5b-5494-4c76-a50d-5d2b6e09a70f",
+     "name": "Souffle Pancake - Gluten Free",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 3,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "1c58be98-00df-4a97-8f59-f055242544f8",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "6a6b37fcaf2ffd1e980acbf6",
+        "name": "Nutella Pancake ( Gluten Free )",
+        "description": "",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image0.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "c6f05163-d783-4e21-9f7c-1ef5b5a36eef",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "693afe1758da246b02dab676",
+        "name": "Matcha Holic (Gluten Free)",
+        "description": "Matcha holic",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Holic.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "aa86d77d-e010-4422-be9a-bc49091dca6d",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "693afe180240691c2d4b2db7",
+        "name": "Classic Souffle (Gluten Free)",
+        "description": "Classic souffle",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Classic_Souffle.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "5430766c-f845-4620-b546-bd8ae555c1c8",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "693afe19de967c423d1e8bc4",
+        "name": "Pistachio & Berries (Gluten Free)",
+        "description": "Pistachio & berries",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Pstachio___Berries_1.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "06e2941f-dbd9-40b9-aac7-c8a15f3d437b",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "693afe1a629014636ebaae22",
+        "name": "Sweet Mango (Gluten Free)",
+        "description": "Sweet mango",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Sweet_Mango.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "0f2755c6-50ff-4790-a053-0d1bcea4a032",
+       "price": null,
+       "sortOrder": 5,
+       "refProduct": {
+        "id": "693afe1baf87ea11d0702600",
+        "name": "Banan & Karamell (Gluten Free)",
+        "description": "Banana brulee",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Banana___Karamell.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "2d7d8f82-9ec7-4f49-8bf2-8a7f76862f3a",
+       "price": null,
+       "sortOrder": 6,
+       "refProduct": {
+        "id": "693afe1c403a2f3d949a0616",
+        "name": "Tiramisu (Gluten Free)",
+        "description": "Tiramisu",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/2c859e09ae7f8c2187f29a909bf9b75b.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "3d15eea1-a1a4-4e2d-9aa0-572e79589ab6",
+       "price": null,
+       "sortOrder": 7,
+       "refProduct": {
+        "id": "693afe1d6b5ae05bf718108d",
+        "name": "Very Strawberry (Gluten Free)",
+        "description": "Very strawberry",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Very_Strawberry.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "4c2153ad-12a5-4657-bc10-9143303ade04",
+     "name": "Kids Menu",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 4,
+     "imageUrl": null,
+     "menuProducts": [],
+     "menuBundleProducts": [
+      {
+       "id": "79f32395-5711-48da-a9db-212dd99c9e56",
+       "price": null,
+       "sortOrder": 0,
+       "refBundleProduct": {
+        "id": "6a4e02d40b47072d30be20a2",
+        "name": "Classic Souffle  - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/6_480.png"
+       }
+      },
+      {
+       "id": "7d71fc1d-17d7-4eb1-8db9-9f32631b30cc",
+       "price": null,
+       "sortOrder": 1,
+       "refBundleProduct": {
+        "id": "6a4e0415774bca58842c6a6e",
+        "name": "Banana & Caramel  - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/4_480.png"
+       }
+      },
+      {
+       "id": "0ea19c51-c197-441a-add9-5117eed357f2",
+       "price": null,
+       "sortOrder": 2,
+       "refBundleProduct": {
+        "id": "6a4e04150a1f0e110c0b0bbf",
+        "name": "Sweet Mango  - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/5_480.png"
+       }
+      },
+      {
+       "id": "2af3c18c-22db-4d34-8589-751b56ce4a7d",
+       "price": null,
+       "sortOrder": 3,
+       "refBundleProduct": {
+        "id": "6a4e0416f1649906e530597a",
+        "name": "Very Strawberry - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/2_480.png"
+       }
+      },
+      {
+       "id": "23460ccf-f4ee-4c71-9a15-40e73d34089e",
+       "price": null,
+       "sortOrder": 4,
+       "refBundleProduct": {
+        "id": "6a4e0416f71b704a98d1f554",
+        "name": "Pistachio & Berries - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/3_480.png"
+       }
+      },
+      {
+       "id": "32cea229-2a8c-4120-95c5-8c2be17769fd",
+       "price": null,
+       "sortOrder": 5,
+       "refBundleProduct": {
+        "id": "6a4e04173c40454759482893",
+        "name": "Nutella Pancake - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image_720.png"
+       }
+      },
+      {
+       "id": "277a654d-c356-4302-8001-9e4270bcf4fe",
+       "price": null,
+       "sortOrder": 6,
+       "refBundleProduct": {
+        "id": "6a4e24260a1f0e110c0b12c9",
+        "name": "Classic Souffle  - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/6_480.png"
+       }
+      },
+      {
+       "id": "0401347e-5c2b-4426-8664-5f1ed30fc794",
+       "price": null,
+       "sortOrder": 7,
+       "refBundleProduct": {
+        "id": "6a4e24278657b8089fa4eb54",
+        "name": "Banana & Caramel  - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/4_480.png"
+       }
+      },
+      {
+       "id": "1c401b4d-6cb4-4d64-b515-43811a6f3099",
+       "price": null,
+       "sortOrder": 8,
+       "refBundleProduct": {
+        "id": "6a4e24288657b8089fa4eb5f",
+        "name": "Sweet Mango  - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/5_480.png"
+       }
+      },
+      {
+       "id": "e4d88482-1c46-4f86-8425-566cc4fe2350",
+       "price": null,
+       "sortOrder": 9,
+       "refBundleProduct": {
+        "id": "6a4e242a312308561d568760",
+        "name": "Very Strawberry - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/2_480.png"
+       }
+      },
+      {
+       "id": "f55e2f99-72f9-463f-8458-1ba7928de219",
+       "price": null,
+       "sortOrder": 10,
+       "refBundleProduct": {
+        "id": "6a4e242c8657b8089fa4eb7f",
+        "name": "Pistachio & Berries - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/3_480.png"
+       }
+      },
+      {
+       "id": "c8bdb6c7-dc1a-4f3a-9413-3f1fe74fa37c",
+       "price": null,
+       "sortOrder": 11,
+       "refBundleProduct": {
+        "id": "6a4e242d7049ef70e46bbc0d",
+        "name": "Nutella Pancake - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image_720.png"
+       }
+      }
+     ]
+    },
+    {
+     "id": "7929e802-b1ba-40d1-86e7-6b89b5a83747",
+     "name": "Golden Toast",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 5,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/lotus.png",
+     "menuProducts": [
+      {
+       "id": "215cf7d2-6b76-446d-aa50-c91e589d88c9",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e5301b943cef6d491fba67",
+        "name": "Mango & Berries Toast",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Mango___Berries_Toast.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "2c498c8a-7269-4a76-8ec6-39ea535e3230",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68f0a82b1f718b1ebc7105f6",
+        "name": "Lotus Cream Cheese",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/lotus.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "5f0174d4-cac9-406d-9ae0-9895f419d828",
+     "name": "Coffee & Tea",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 6,
+     "imageUrl": null,
+     "menuProducts": [],
+     "menuBundleProducts": [
+      {
+       "id": "345c6846-d727-4eef-9986-368c6dee4fbc",
+       "price": null,
+       "sortOrder": 0,
+       "refBundleProduct": {
+        "id": "68e8abfd3371d6399e35f093",
+        "name": "Espresso",
+        "description": "",
+        "defaultPrice": 32.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Espresso.png"
+       }
+      },
+      {
+       "id": "b97bfde0-f927-4af7-9c9b-f20a4dbd9a0b",
+       "price": null,
+       "sortOrder": 1,
+       "refBundleProduct": {
+        "id": "6a202888aae7b738f7e58fec",
+        "name": "Americano",
+        "description": "",
+        "defaultPrice": 45.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Americano.png"
+       }
+      },
+      {
+       "id": "e2e8013d-f177-492d-9765-0b6e239fd064",
+       "price": null,
+       "sortOrder": 2,
+       "refBundleProduct": {
+        "id": "6a202889de18a224dbe49a5d",
+        "name": "Caffe Latte",
+        "description": "",
+        "defaultPrice": 52.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Caffe_Latte.png"
+       }
+      },
+      {
+       "id": "2eb6efe0-c8c2-433f-9b40-88857f5432ba",
+       "price": null,
+       "sortOrder": 3,
+       "refBundleProduct": {
+        "id": "6a202889aae7b738f7e58fee",
+        "name": "Cappuccino",
+        "description": "",
+        "defaultPrice": 52.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Cappuccino.png"
+       }
+      },
+      {
+       "id": "b7a597da-684e-417b-b2c9-6b2d958337a6",
+       "price": null,
+       "sortOrder": 4,
+       "refBundleProduct": {
+        "id": "6a20288a7ccdbc7c9b85644c",
+        "name": "Fluffy Latte",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Fluffy_Latte.png"
+       }
+      },
+      {
+       "id": "51915d62-1483-47e5-9a12-edac894a0d71",
+       "price": null,
+       "sortOrder": 5,
+       "refBundleProduct": {
+        "id": "6a20288bde18a224dbe49a5f",
+        "name": "Fluffy Caramel-Latte",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Fluffy_Caramel-Latte.png"
+       }
+      },
+      {
+       "id": "0cb33a3a-8a76-4c06-a20f-0e3801d1f2f3",
+       "price": null,
+       "sortOrder": 6,
+       "refBundleProduct": {
+        "id": "6a20288cde18a224dbe49a61",
+        "name": "Fluffy Mocha",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Fluffy_Mocha__2_.png"
+       }
+      },
+      {
+       "id": "b101b4cc-469b-47b5-ad11-7141a8561fbb",
+       "price": null,
+       "sortOrder": 7,
+       "refBundleProduct": {
+        "id": "6a20288d222187232bc60315",
+        "name": "Milk Tea",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/milk_tea_warm.jpg"
+       }
+      }
+     ]
+    },
+    {
+     "id": "768925cd-ba99-4b45-a9c2-b88c59a1956c",
+     "name": "Matcha",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 7,
+     "imageUrl": null,
+     "menuProducts": [],
+     "menuBundleProducts": [
+      {
+       "id": "94a982da-ffc7-48a3-bb3d-e641b7c69590",
+       "price": null,
+       "sortOrder": 0,
+       "refBundleProduct": {
+        "id": "6a2027558ead3e5dd6e4dbc8",
+        "name": "Matcha Affogato",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Affogato.png"
+       }
+      },
+      {
+       "id": "bc3c5e69-6a87-427b-a698-9d0a6ee96978",
+       "price": null,
+       "sortOrder": 1,
+       "refBundleProduct": {
+        "id": "6a2027567349d84143950489",
+        "name": "Matcha Latte",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/mathca_ma.png"
+       }
+      },
+      {
+       "id": "420015b2-b6b9-4f2b-b40d-c86e8f86c8bd",
+       "price": null,
+       "sortOrder": 2,
+       "refBundleProduct": {
+        "id": "6a2027577349d8414395048c",
+        "name": "Matcha Oat Latte",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Oat_Latte.png"
+       }
+      },
+      {
+       "id": "ff5e2e38-0155-4085-b991-eba29ff46923",
+       "price": null,
+       "sortOrder": 3,
+       "refBundleProduct": {
+        "id": "6a2027587349d8414395048e",
+        "name": "Matcha Espresso",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_LAtte.png"
+       }
+      },
+      {
+       "id": "a3a0237b-236d-42c3-8ba5-ca6f8e06003b",
+       "price": null,
+       "sortOrder": 4,
+       "refBundleProduct": {
+        "id": "6a20275928876f4f2d5de9ac",
+        "name": "Matcha Choco",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Espresso.png"
+       }
+      },
+      {
+       "id": "825beea9-538b-406f-a9bb-78968ff03c21",
+       "price": null,
+       "sortOrder": 5,
+       "refBundleProduct": {
+        "id": "6a202759493c807a94bfbbdb",
+        "name": "Matcha Caramel",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Mango.png"
+       }
+      },
+      {
+       "id": "d079e18f-efcf-4368-b842-0d262a83b2cf",
+       "price": null,
+       "sortOrder": 6,
+       "refBundleProduct": {
+        "id": "6a20275a493c807a94bfbbdd",
+        "name": "Matcha Strawberry",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Strawberry.png"
+       }
+      },
+      {
+       "id": "cec736cb-5fa6-45a7-a74d-bbc3334d8e02",
+       "price": null,
+       "sortOrder": 7,
+       "refBundleProduct": {
+        "id": "6a20275b28876f4f2d5de9b3",
+        "name": "Matcha Mango",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Mango.png"
+       }
+      }
+     ]
+    },
+    {
+     "id": "3e96ea4a-184a-4118-8a83-948701b97fa1",
+     "name": "Soda",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 8,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/18.png",
+     "menuProducts": [
+      {
+       "id": "cf19ebc5-b521-4eda-bd88-fc636440bbb1",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e628758ff5352413c9864a",
+        "name": "Strawberry Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Strawberry_soda.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "24fcc9b8-2e09-4436-97a4-30503f00c641",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68e6287a1eab3853c16a7973",
+        "name": "Mango Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Mango_Soda.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "91621121-81e0-4a20-adba-81022dc1e09e",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "68e6287b5df9f4014f9f413b",
+        "name": "Lemon Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Lemon_Soda.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "2c9af62f-e795-4840-b279-284ae0e91d4d",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "68e6287b63defc46ac088873",
+        "name": "Grapefruit Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Grapefruit_Soda.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "de176c64-1b66-4a0f-aebe-e8fe075b7a6a",
+     "name": "Smoothie",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 9,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/6.png",
+     "menuProducts": [
+      {
+       "id": "6d994cc7-5f18-43f0-8910-17ef7f4a2c50",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e628977713591a68cbdcaf",
+        "name": "Blueberry & Coconut",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Blueberry___Coconut.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "e130776a-851b-483a-ad22-11ccc7513a75",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68e6289879d2f93ddd2afb4c",
+        "name": "Strawberry & Mango",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Strawberry___Mango.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "60095866-4e37-4999-9ed2-867d463cc23b",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "68e62898e92435420170c8a4",
+        "name": "Avocado & Banana",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Avocado___Banana.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "1906111c-0f46-4870-9a22-7a4c561d1849",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "68e8ad593c327b50b79b76b7",
+        "name": "Coconut & Coffee",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Coconut___Coffee.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "53ce0cc1-3af6-4c8c-b2d7-9d37add93223",
+     "name": "Souvenir",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 10,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "76148154-1d4f-4b57-bf56-d59502692f0d",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "6909e10a79bdc31439595422",
+        "name": "Plate",
+        "description": "Fluffy House  Design Plate",
+        "defaultPrice": 248.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "d2ae17f2-f5ad-4436-ae3e-e3ea0fc8b1f4",
+     "name": "Extra",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 11,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "29ad165a-dc3b-4350-a7ec-0855e6cdbf8e",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "69cbc471577e7e520137b00e",
+        "name": "Matcha Drizzle",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "e389e2d7-b5c1-48a6-b8ab-4afa36e3f245",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "69cbc474577e7e520137b00f",
+        "name": "Chocolate Drizzle",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "1d744393-9604-4781-a3b2-3ae32f8b205f",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "69cbc47429ba876c99940e24",
+        "name": "Caramel Drizzle",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "ac53af0f-1f5b-493d-bd82-14e613df9c0b",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "69cbc4758aefa56f49d1465d",
+        "name": "Strawberry Drizzle",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "79895710-bbf9-45ee-b29c-8b79ae17de4c",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "69cbc475d401402bf023dd85",
+        "name": "Vanilla Drizzle",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "7deb2e82-52f9-48fb-8ea1-b738986b46c4",
+       "price": null,
+       "sortOrder": 5,
+       "refProduct": {
+        "id": "69cbc475bcec4a1083e24d50",
+        "name": "Mango Drizzle",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "84732345-3c14-46de-afee-e22e4b188b98",
+       "price": null,
+       "sortOrder": 6,
+       "refProduct": {
+        "id": "69cbc476bcec4a1083e24d52",
+        "name": "Vaniljglass",
+        "description": "",
+        "defaultPrice": 15.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "8db02578-0bba-4f44-8097-0fbc7b33c399",
+       "price": null,
+       "sortOrder": 7,
+       "refProduct": {
+        "id": "69cbc4768aefa56f49d1465f",
+        "name": "Chokladglass",
+        "description": "",
+        "defaultPrice": 15.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "afdf6e60-85ae-4c02-9348-bef30fe34504",
+       "price": null,
+       "sortOrder": 8,
+       "refProduct": {
+        "id": "69cbc477bcec4a1083e24d54",
+        "name": "Jordgubb",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "19f73ebf-9174-4082-a849-905245f90bc8",
+       "price": null,
+       "sortOrder": 9,
+       "refProduct": {
+        "id": "69cbc4b45c77f74adcc4d7c5",
+        "name": "Mango",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "a4cb8c84-1350-46eb-ab83-56ec96ffc800",
+       "price": null,
+       "sortOrder": 10,
+       "refProduct": {
+        "id": "69cbc4b5a612eb4a8183e3eb",
+        "name": "Vanilla Ice Cream",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "3d2b7048-c763-491a-bb80-4dcb0c2cd688",
+       "price": null,
+       "sortOrder": 11,
+       "refProduct": {
+        "id": "69cbc4b5d5cb6126d5e70373",
+        "name": "Choco Ice Cream",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "5f08e608-3b56-48b7-ac59-b7fa4164d259",
+       "price": null,
+       "sortOrder": 12,
+       "refProduct": {
+        "id": "69cbc4b5bcec4a1083e24d64",
+        "name": "Cream Cheese",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      },
+      {
+       "id": "73c47a9c-adff-423c-8a2b-ab054edfc782",
+       "price": null,
+       "sortOrder": 13,
+       "refProduct": {
+        "id": "69cbc4b66a82a559367d2289",
+        "name": "Matcha Grädde",
+        "description": "",
+        "defaultPrice": 20.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    }
+   ]
+  },
+  {
+   "id": "6a327c16c9937116ff8ee608",
+   "name": "Meny",
+   "disabled": false,
+   "sortOrder": 0,
+   "menuProductCategories": [
+    {
+     "id": "25a99389-addf-480c-89d7-c48e62a2274a",
+     "name": "Ube ",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 0,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "abf40e31-fdd8-4999-84bb-e935085c750c",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "6a6b0dd899bd2139d1dd4850",
+        "name": "Ube Coconut Frappe",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/ube_coconut_frappe.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "9e87698d-fa82-4477-9877-c63948dd2151",
+     "name": "Bingsu",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 1,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Bingsu.png",
+     "menuProducts": [
+      {
+       "id": "1d9ee371-0be4-4ca9-9eaa-f6ff62a25737",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e628e98ff5352413c9868f",
+        "name": "Strawberry Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Jordgubb_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "e4ff9575-36c9-4f24-9217-478bd7e0a739",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68e628eb7713591a68cbdcec",
+        "name": "Mango Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Mango_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "f4b4754d-0e9d-421a-ba0e-18508de07138",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "6a2155b7e353fe7e1068495f",
+        "name": "Matcha Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "ef456850-77d2-4b14-be78-1d12c44f4996",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "6a2155c2e353fe7e1068496f",
+        "name": "Chocolate Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Chocklad_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "c33c7a9f-9946-4903-91bd-c7ce1408eb43",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "6a69bc699f4f91700f472111",
+        "name": "Ube Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image0__1_.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "fe5466e1-20dc-4afa-8bf2-c37b31fd1584",
+     "name": "Brunch",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 2,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "a50e5bc2-756a-4172-82cb-cf8936895cac",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "69a5564950eea724060b1911",
+        "name": "Lax Souffle",
+        "description": "Sallad, ägg ,tomat och hollandaise dressing",
+        "defaultPrice": 229.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Salmon_Avocado_Souffle.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "dbb20bd2-114b-4e1e-a29c-7e548407f45a",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "69a5564b7352663f2a231520",
+        "name": "Vegetarian Souffle",
+        "description": "Avokado, ägg, mix sallad, tomat, rödlök, balsamic dressing",
+        "defaultPrice": 189.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/81505aa83f05f5b1e1906bb118c1827e.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "87f4b7c8-ba73-46fb-93ad-7f2d79941533",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "6a327adade29811f4ddc3bc7",
+        "name": "Lax Souffle (Gluten Free)",
+        "description": "Sallad, ägg, tomat och hollandaise dressing",
+        "defaultPrice": 229.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Salmon_Avocado_Souffle.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "359da81b-dc25-467f-81d7-5ff83d848bc6",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "6a327adbbf0b3d642e5309b6",
+        "name": "Vegetarian Souffle (Gluten Free)",
+        "description": "Avokado, ägg, mix sallad, tomat, rödlök, balsamic dressing",
+        "defaultPrice": 189.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/81505aa83f05f5b1e1906bb118c1827e.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "9babfa01-3af0-4238-acbd-db156aac51f0",
+     "name": "Souffle Pancake",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 3,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Banana___Karamell.png",
+     "menuProducts": [
+      {
+       "id": "4e4a6a07-62a3-4289-aa6e-8eec39dc667d",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "6a1d6db62fc13b3cffd7128a",
+        "name": "Nutella Pancake",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image0.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "f4211af6-c890-455c-946f-0f3c83733f9c",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68bffb5398b30e3b4b922f28",
+        "name": "Matcha Holic",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Holic.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "793167de-0e44-4375-95a4-7b43de6e4986",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "68e52f937bc65d6ebcbfba5e",
+        "name": "Classic Souffle",
+        "description": "",
+        "defaultPrice": 149.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Classic_Souffle.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "dba9284d-edc0-4263-8d19-e37492cebf91",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "68e52f94f4dcfc076ef159ab",
+        "name": "Pistachio & Berries",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Pstachio___Berries_1.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "c0b43905-33e8-464c-a415-c375740ab359",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "68e52f94f4dcfc076ef159ac",
+        "name": "Sweet Mango",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Sweet_Mango.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "456be2e9-f0f5-4b4a-a05f-a70fa6387f35",
+       "price": null,
+       "sortOrder": 5,
+       "refProduct": {
+        "id": "68e52f947826df74bf2be8b4",
+        "name": "Banana & Caramel",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Banana___Karamell.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "f50c6a85-ddb2-49b5-aa32-0f4033ec743a",
+       "price": null,
+       "sortOrder": 6,
+       "refProduct": {
+        "id": "68e52f95a0465b48cd462aa6",
+        "name": "Tiramisu",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/2c859e09ae7f8c2187f29a909bf9b75b.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "eeef7b31-b890-4d40-b3db-e336124aa83e",
+       "price": null,
+       "sortOrder": 7,
+       "refProduct": {
+        "id": "68e52f952f23841dd1d0d885",
+        "name": "Very Strawberry",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Very_Strawberry.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "0c0c80ac-7343-4ceb-9114-55ab909b5f39",
+     "name": "Souffle Pancake - Gluten Free",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 4,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "4d0cd3e2-58b4-47f3-bd83-e2238ddf7b91",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "6a6b37fcaf2ffd1e980acbf6",
+        "name": "Nutella Pancake ( Gluten Free )",
+        "description": "",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image0.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "355327c4-4314-444d-8718-d0cf5d0abbe5",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "693afe1758da246b02dab676",
+        "name": "Matcha Holic (Gluten Free)",
+        "description": "Matcha holic",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Holic.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "b86633b3-b9bc-4fcb-b805-af5a408e4ad1",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "693afe180240691c2d4b2db7",
+        "name": "Classic Souffle (Gluten Free)",
+        "description": "Classic souffle",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Classic_Souffle.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "6d254070-2ba7-4233-a3f5-768246893ff3",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "693afe19de967c423d1e8bc4",
+        "name": "Pistachio & Berries (Gluten Free)",
+        "description": "Pistachio & berries",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Pstachio___Berries_1.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "8a48fb3c-9c8c-40a2-9b10-1c9b54ded857",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "693afe1a629014636ebaae22",
+        "name": "Sweet Mango (Gluten Free)",
+        "description": "Sweet mango",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Sweet_Mango.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "be549ac0-6743-4979-a1dd-7350136da49f",
+       "price": null,
+       "sortOrder": 5,
+       "refProduct": {
+        "id": "693afe1baf87ea11d0702600",
+        "name": "Banan & Karamell (Gluten Free)",
+        "description": "Banana brulee",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Banana___Karamell.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "bc4e8b8f-dc67-4e1c-890a-18d5eb71f825",
+       "price": null,
+       "sortOrder": 6,
+       "refProduct": {
+        "id": "693afe1c403a2f3d949a0616",
+        "name": "Tiramisu (Gluten Free)",
+        "description": "Tiramisu",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/2c859e09ae7f8c2187f29a909bf9b75b.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "3d705b50-0f16-4106-918f-98a0e61da2c0",
+       "price": null,
+       "sortOrder": 7,
+       "refProduct": {
+        "id": "693afe1d6b5ae05bf718108d",
+        "name": "Very Strawberry (Gluten Free)",
+        "description": "Very strawberry",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Very_Strawberry.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "31c56f61-15f4-4052-82e5-924dc7330bce",
+     "name": "Kids Menu",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 5,
+     "imageUrl": null,
+     "menuProducts": [],
+     "menuBundleProducts": [
+      {
+       "id": "2d1c8a9e-5766-4e79-a2f7-3d71219941f8",
+       "price": null,
+       "sortOrder": 0,
+       "refBundleProduct": {
+        "id": "6a4e02d40b47072d30be20a2",
+        "name": "Classic Souffle  - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/6_480.png"
+       }
+      },
+      {
+       "id": "68f7f0a5-50b0-47c6-b34d-412254d395e3",
+       "price": null,
+       "sortOrder": 1,
+       "refBundleProduct": {
+        "id": "6a4e0415774bca58842c6a6e",
+        "name": "Banana & Caramel  - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/4_480.png"
+       }
+      },
+      {
+       "id": "8cb9b05c-c5fe-48f6-80ea-592980d73b88",
+       "price": null,
+       "sortOrder": 2,
+       "refBundleProduct": {
+        "id": "6a4e04150a1f0e110c0b0bbf",
+        "name": "Sweet Mango  - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/5_480.png"
+       }
+      },
+      {
+       "id": "cc34901a-b813-4a15-ad70-60d17e1d86ef",
+       "price": null,
+       "sortOrder": 3,
+       "refBundleProduct": {
+        "id": "6a4e0416f1649906e530597a",
+        "name": "Very Strawberry - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/2_480.png"
+       }
+      },
+      {
+       "id": "aaf3f810-506a-45b9-ab3d-51d7297f3fcf",
+       "price": null,
+       "sortOrder": 4,
+       "refBundleProduct": {
+        "id": "6a4e0416f71b704a98d1f554",
+        "name": "Pistachio & Berries - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/3_480.png"
+       }
+      },
+      {
+       "id": "902021d7-b5c1-4079-9baf-248f0d97098c",
+       "price": null,
+       "sortOrder": 5,
+       "refBundleProduct": {
+        "id": "6a4e04173c40454759482893",
+        "name": "Nutella Pancake - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image_720.png"
+       }
+      },
+      {
+       "id": "b2bd61db-3674-401d-b850-0198b0924e84",
+       "price": null,
+       "sortOrder": 6,
+       "refBundleProduct": {
+        "id": "6a4e24260a1f0e110c0b12c9",
+        "name": "Classic Souffle  - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/6_480.png"
+       }
+      },
+      {
+       "id": "e73aef4e-b4a1-4f8f-8f8c-ed428e60c4c7",
+       "price": null,
+       "sortOrder": 7,
+       "refBundleProduct": {
+        "id": "6a4e24278657b8089fa4eb54",
+        "name": "Banana & Caramel  - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/4_480.png"
+       }
+      },
+      {
+       "id": "fa58677d-a57c-465b-a320-48f72f627c06",
+       "price": null,
+       "sortOrder": 8,
+       "refBundleProduct": {
+        "id": "6a4e24288657b8089fa4eb5f",
+        "name": "Sweet Mango  - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/5_480.png"
+       }
+      },
+      {
+       "id": "33fa734b-33f8-47f2-903f-11eb11b50911",
+       "price": null,
+       "sortOrder": 9,
+       "refBundleProduct": {
+        "id": "6a4e242a312308561d568760",
+        "name": "Very Strawberry - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/2_480.png"
+       }
+      },
+      {
+       "id": "d5ef5b5e-ef64-4ee7-9b3b-c24b89c4e3e9",
+       "price": null,
+       "sortOrder": 10,
+       "refBundleProduct": {
+        "id": "6a4e242c8657b8089fa4eb7f",
+        "name": "Pistachio & Berries - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/3_480.png"
+       }
+      },
+      {
+       "id": "eefa1ca8-0f1a-4597-96c5-3423c387c052",
+       "price": null,
+       "sortOrder": 11,
+       "refBundleProduct": {
+        "id": "6a4e242d7049ef70e46bbc0d",
+        "name": "Nutella Pancake - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image_720.png"
+       }
+      }
+     ]
+    },
+    {
+     "id": "f2288b45-f25e-443d-b6d4-c2a3ae37ff59",
+     "name": "Golden Toast",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 6,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/lotus.png",
+     "menuProducts": [
+      {
+       "id": "6778bd78-867e-451d-9c36-80072bbb7fa0",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e5301b943cef6d491fba67",
+        "name": "Mango & Berries Toast",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Mango___Berries_Toast.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "9ff183e1-e57f-4f16-b187-3910523cbd5e",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68f0a82b1f718b1ebc7105f6",
+        "name": "Lotus Cream Cheese",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/lotus.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "8affc0a5-1df8-4a08-a1b8-ff31eee07411",
+     "name": "Coffee & Tea",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 7,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "bcba80ef-aed2-495b-b1aa-1f4082ed2062",
+       "price": null,
+       "sortOrder": 7,
+       "refProduct": {
+        "id": "6a27cdeea364422293b2a800",
+        "name": "Green tea (hot)",
+        "description": "",
+        "defaultPrice": 45.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/green_tea.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": [
+      {
+       "id": "534a8d54-bf18-4c0d-9ead-624d60016212",
+       "price": null,
+       "sortOrder": 0,
+       "refBundleProduct": {
+        "id": "68e8abfd3371d6399e35f093",
+        "name": "Espresso",
+        "description": "",
+        "defaultPrice": 32.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Espresso.png"
+       }
+      },
+      {
+       "id": "616550af-60e3-41d1-a933-335d6da625c3",
+       "price": null,
+       "sortOrder": 1,
+       "refBundleProduct": {
+        "id": "6a202888aae7b738f7e58fec",
+        "name": "Americano",
+        "description": "",
+        "defaultPrice": 45.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Americano.png"
+       }
+      },
+      {
+       "id": "bee6f410-34c7-4522-983c-d72d9da991d5",
+       "price": null,
+       "sortOrder": 2,
+       "refBundleProduct": {
+        "id": "6a202889de18a224dbe49a5d",
+        "name": "Caffe Latte",
+        "description": "",
+        "defaultPrice": 52.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Caffe_Latte.png"
+       }
+      },
+      {
+       "id": "8febdae2-ed19-47e7-b526-fad2f4753b5b",
+       "price": null,
+       "sortOrder": 3,
+       "refBundleProduct": {
+        "id": "6a202889aae7b738f7e58fee",
+        "name": "Cappuccino",
+        "description": "",
+        "defaultPrice": 52.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Cappuccino.png"
+       }
+      },
+      {
+       "id": "d7b37a8e-bcaf-4215-b946-b38a6bd477ae",
+       "price": null,
+       "sortOrder": 4,
+       "refBundleProduct": {
+        "id": "6a20288a7ccdbc7c9b85644c",
+        "name": "Fluffy Latte",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Fluffy_Latte.png"
+       }
+      },
+      {
+       "id": "40145675-5c12-42c6-907e-7dc97cc130ce",
+       "price": null,
+       "sortOrder": 5,
+       "refBundleProduct": {
+        "id": "6a20288bde18a224dbe49a5f",
+        "name": "Fluffy Caramel-Latte",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Fluffy_Caramel-Latte.png"
+       }
+      },
+      {
+       "id": "0df63b06-8792-447c-90dd-dcfe6e392015",
+       "price": null,
+       "sortOrder": 6,
+       "refBundleProduct": {
+        "id": "6a20288cde18a224dbe49a61",
+        "name": "Fluffy Mocha",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Fluffy_Mocha__2_.png"
+       }
+      },
+      {
+       "id": "b61845bb-5376-42a0-b3d2-6f0b43c3b196",
+       "price": null,
+       "sortOrder": 8,
+       "refBundleProduct": {
+        "id": "6a20288d222187232bc60315",
+        "name": "Milk Tea",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/milk_tea_warm.jpg"
+       }
+      }
+     ]
+    },
+    {
+     "id": "21024879-0623-47ff-8dcc-227990dd951d",
+     "name": "Matcha",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 8,
+     "imageUrl": null,
+     "menuProducts": [],
+     "menuBundleProducts": [
+      {
+       "id": "a1c81877-b875-4f07-a81c-dae3672ccf9e",
+       "price": null,
+       "sortOrder": 0,
+       "refBundleProduct": {
+        "id": "6a2027558ead3e5dd6e4dbc8",
+        "name": "Matcha Affogato",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Affogato.png"
+       }
+      },
+      {
+       "id": "8c64b9dd-fb15-4d97-9a4d-1618e6fc5786",
+       "price": null,
+       "sortOrder": 1,
+       "refBundleProduct": {
+        "id": "6a2027567349d84143950489",
+        "name": "Matcha Latte",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/mathca_ma.png"
+       }
+      },
+      {
+       "id": "38216f13-b554-4d3d-b93f-48a8571065de",
+       "price": null,
+       "sortOrder": 2,
+       "refBundleProduct": {
+        "id": "6a2027577349d8414395048c",
+        "name": "Matcha Oat Latte",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Oat_Latte.png"
+       }
+      },
+      {
+       "id": "ed0ab086-15b1-4fe2-a115-39ff9fb29966",
+       "price": null,
+       "sortOrder": 3,
+       "refBundleProduct": {
+        "id": "6a2027587349d8414395048e",
+        "name": "Matcha Espresso",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_LAtte.png"
+       }
+      },
+      {
+       "id": "80305df2-3a4a-4523-a0b9-552427de5899",
+       "price": null,
+       "sortOrder": 4,
+       "refBundleProduct": {
+        "id": "6a20275928876f4f2d5de9ac",
+        "name": "Matcha Choco",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Espresso.png"
+       }
+      },
+      {
+       "id": "bed3d0aa-7acb-4e1d-8d02-9e2cc71f5f4c",
+       "price": null,
+       "sortOrder": 5,
+       "refBundleProduct": {
+        "id": "6a202759493c807a94bfbbdb",
+        "name": "Matcha Caramel",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Mango.png"
+       }
+      },
+      {
+       "id": "ba50368f-5237-4823-9173-c8a904947d5e",
+       "price": null,
+       "sortOrder": 6,
+       "refBundleProduct": {
+        "id": "6a20275a493c807a94bfbbdd",
+        "name": "Matcha Strawberry",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Strawberry.png"
+       }
+      },
+      {
+       "id": "1aa0e5e8-a90a-4601-89d9-9e5d19961240",
+       "price": null,
+       "sortOrder": 7,
+       "refBundleProduct": {
+        "id": "6a20275b28876f4f2d5de9b3",
+        "name": "Matcha Mango",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Mango.png"
+       }
+      }
+     ]
+    },
+    {
+     "id": "f7a6f01b-b3bb-4c8c-a534-c54a76b1ca39",
+     "name": "Soda",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 9,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/18.png",
+     "menuProducts": [
+      {
+       "id": "9bb9c69d-dd4e-42d5-8cda-dd7c307172fd",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e628758ff5352413c9864a",
+        "name": "Strawberry Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Strawberry_soda.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "9756efb0-bee2-462f-aaf6-f207a749bad8",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68e6287a1eab3853c16a7973",
+        "name": "Mango Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Mango_Soda.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "75008b04-a837-46bd-82c6-13b92deeff3e",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "68e6287b5df9f4014f9f413b",
+        "name": "Lemon Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Lemon_Soda.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "018bd54c-7421-48cd-a703-5d0ac8266819",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "68e6287b63defc46ac088873",
+        "name": "Grapefruit Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Grapefruit_Soda.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "0fa7ba9b-c469-4477-a5f2-ca715fe749a0",
+     "name": "Smoothie",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 10,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/6.png",
+     "menuProducts": [
+      {
+       "id": "0f5ed722-937f-4fa2-837e-328bbb414e6f",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e628977713591a68cbdcaf",
+        "name": "Blueberry & Coconut",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Blueberry___Coconut.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "a31457ae-2cae-4abe-82da-63716fba7a6b",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68e6289879d2f93ddd2afb4c",
+        "name": "Strawberry & Mango",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Strawberry___Mango.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "0c898a03-a3a7-49b3-9b44-dfa9dbbbca69",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "68e62898e92435420170c8a4",
+        "name": "Avocado & Banana",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Avocado___Banana.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "1bc5b13a-632f-4a41-859f-a505f47e5a24",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "68e8ad593c327b50b79b76b7",
+        "name": "Coconut & Coffee",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Coconut___Coffee.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "2b23ca97-92be-42c4-8a97-d136da621509",
+     "name": "Souvenir",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 11,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "871e200d-82d4-4b1a-86a5-d4f4aad8a092",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "6909e10a79bdc31439595422",
+        "name": "Plate",
+        "description": "Fluffy House  Design Plate",
+        "defaultPrice": 248.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    }
+   ]
+  },
+  {
+   "id": "6a0eddc5641d301da1f38d8b",
+   "name": "Meny  Brunch",
+   "disabled": false,
+   "sortOrder": 0,
+   "menuProductCategories": [
+    {
+     "id": "7be2d14b-699f-41c9-b3b0-f9de64ff9fcd",
+     "name": "Ube ",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 0,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "c0242fc7-75d5-49b4-af85-98060a6e5982",
+       "price": null,
+       "sortOrder": 5,
+       "refProduct": {
+        "id": "6a6b0dd899bd2139d1dd4850",
+        "name": "Ube Coconut Frappe",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/ube_coconut_frappe.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": [
+      {
+       "id": "f2c71c70-f27f-4e71-8a94-b4b6130a14a3",
+       "price": null,
+       "sortOrder": 0,
+       "refBundleProduct": {
+        "id": "6a758f940dd33d4f1722c62d",
+        "name": "Ube Latte Warm",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/ube_latte_warm.jpg"
+       }
+      },
+      {
+       "id": "b0cbaf35-590e-4767-bc9c-c0b46f35a2a2",
+       "price": null,
+       "sortOrder": 1,
+       "refBundleProduct": {
+        "id": "6a758f960dd33d4f1722c630",
+        "name": "Ube Latte Cold",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/ube_latte_cold.jpg"
+       }
+      },
+      {
+       "id": "05fc9b54-fbb4-4a69-a270-20dc9550b05a",
+       "price": null,
+       "sortOrder": 2,
+       "refBundleProduct": {
+        "id": "6a758f910713ed6efae47e9e",
+        "name": "Ube Matcha",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/ube_matcha.jpg"
+       }
+      },
+      {
+       "id": "47cd3b0f-98e5-4a60-9a99-29aea71dedad",
+       "price": null,
+       "sortOrder": 3,
+       "refBundleProduct": {
+        "id": "6a758f8efa2b4d65bc631b4e",
+        "name": "Ube Coffee",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/ube_coffee.jpg"
+       }
+      },
+      {
+       "id": "6cca381f-f6c8-441e-a666-66b76dc9f518",
+       "price": null,
+       "sortOrder": 4,
+       "refBundleProduct": {
+        "id": "6a758f8c0dd33d4f1722c628",
+        "name": "Ube Strawberry",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/ube_starwberry.jpg"
+       }
+      }
+     ]
+    },
+    {
+     "id": "ae9c0749-ed0b-4cfe-be35-4ccf38ae3c8b",
+     "name": "Bingsu",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 1,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Bingsu.png",
+     "menuProducts": [
+      {
+       "id": "67bbd287-bf61-4804-a40b-a6ccff52a358",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e628e98ff5352413c9868f",
+        "name": "Strawberry Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Jordgubb_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "c872e898-339a-4501-b35e-45ed81b21ca2",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68e628eb7713591a68cbdcec",
+        "name": "Mango Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Mango_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "8661d8c8-c678-4872-a26f-a492551890a9",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "6a2155b7e353fe7e1068495f",
+        "name": "Matcha Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "8115cbf6-7079-47e2-ae51-16cd2c770369",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "6a2155c2e353fe7e1068496f",
+        "name": "Chocolate Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Chocklad_Bingsu.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "80e85819-0d68-4f02-810d-c7391fba31ba",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "6a69bc699f4f91700f472111",
+        "name": "Ube Bingsu",
+        "description": "",
+        "defaultPrice": 89.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image0__1_.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "efe7f0da-f4f3-45d1-974e-48f560fa73b0",
+     "name": "Brunch",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 2,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "5719b9d9-0fc0-457f-98e8-a672f74e99a8",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "69a5564950eea724060b1911",
+        "name": "Lax Souffle",
+        "description": "Sallad, ägg ,tomat och hollandaise dressing",
+        "defaultPrice": 229.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Salmon_Avocado_Souffle.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "580601e0-fde4-409b-9f6f-d66bd6d2af51",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "69a5564b7352663f2a231520",
+        "name": "Vegetarian Souffle",
+        "description": "Avokado, ägg, mix sallad, tomat, rödlök, balsamic dressing",
+        "defaultPrice": 189.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/81505aa83f05f5b1e1906bb118c1827e.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "f74b9330-a6ec-439f-9e39-4ee86915ca16",
+       "price": 239.0,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "6a327adade29811f4ddc3bc7",
+        "name": "Lax Souffle (Gluten Free)",
+        "description": "Sallad, ägg, tomat och hollandaise dressing",
+        "defaultPrice": 229.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Salmon_Avocado_Souffle.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "27deb8b7-cf37-44dc-9c44-ca34ed44722a",
+       "price": 199.0,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "6a327adbbf0b3d642e5309b6",
+        "name": "Vegetarian Souffle (Gluten Free)",
+        "description": "Avokado, ägg, mix sallad, tomat, rödlök, balsamic dressing",
+        "defaultPrice": 189.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/81505aa83f05f5b1e1906bb118c1827e.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "0f11a6be-cbc2-4fef-bc1b-09cf7256f57e",
+     "name": "Souffle Pancake",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 3,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Banana___Karamell.png",
+     "menuProducts": [
+      {
+       "id": "b7d5ea59-7f3d-489d-8d13-5bc4de6fb75c",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "6a1d6db62fc13b3cffd7128a",
+        "name": "Nutella Pancake",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image0.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "22a42e0a-c9cd-48d0-848e-7743b24def7b",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68bffb5398b30e3b4b922f28",
+        "name": "Matcha Holic",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Holic.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "35adb97d-70c8-4f7e-bec7-faedfa087381",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "68e52f937bc65d6ebcbfba5e",
+        "name": "Classic Souffle",
+        "description": "",
+        "defaultPrice": 149.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Classic_Souffle.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "bd84077d-1de6-4185-9bf2-e585e9b455b7",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "68e52f94f4dcfc076ef159ab",
+        "name": "Pistachio & Berries",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Pstachio___Berries_1.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "9b032473-ea0d-40d6-95e9-9bd7b4f2f71f",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "68e52f94f4dcfc076ef159ac",
+        "name": "Sweet Mango",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Sweet_Mango.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "282af61a-6b74-4ecf-9e6c-06592b58187c",
+       "price": null,
+       "sortOrder": 5,
+       "refProduct": {
+        "id": "68e52f947826df74bf2be8b4",
+        "name": "Banana & Caramel",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Banana___Karamell.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "fc6219a9-2ed3-4b2f-ab9e-a85a143fca2b",
+       "price": null,
+       "sortOrder": 6,
+       "refProduct": {
+        "id": "68e52f95a0465b48cd462aa6",
+        "name": "Tiramisu",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/2c859e09ae7f8c2187f29a909bf9b75b.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "4b80814b-82f5-4695-99c1-032868152855",
+       "price": null,
+       "sortOrder": 7,
+       "refProduct": {
+        "id": "68e52f952f23841dd1d0d885",
+        "name": "Very Strawberry",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Very_Strawberry.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "4fc054d4-dcc1-442e-9b40-691125cddef2",
+     "name": "Souffle Pancake - Gluten Free",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 4,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "63abca56-ea01-4a83-bab7-23358a0b5709",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "6a6b37fcaf2ffd1e980acbf6",
+        "name": "Nutella Pancake ( Gluten Free )",
+        "description": "",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image0.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "0d4db64c-cadd-4cb4-a252-f690bd988a32",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "693afe1758da246b02dab676",
+        "name": "Matcha Holic (Gluten Free)",
+        "description": "Matcha holic",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Holic.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "47e8c6f3-5d2f-452b-926c-087745a43f6a",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "693afe180240691c2d4b2db7",
+        "name": "Classic Souffle (Gluten Free)",
+        "description": "Classic souffle",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Classic_Souffle.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "09470555-9755-4471-a746-ae1a6257bb98",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "693afe19de967c423d1e8bc4",
+        "name": "Pistachio & Berries (Gluten Free)",
+        "description": "Pistachio & berries",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Pstachio___Berries_1.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "1d0d8b65-2ad0-4887-bee3-180b4fea1082",
+       "price": null,
+       "sortOrder": 4,
+       "refProduct": {
+        "id": "693afe1a629014636ebaae22",
+        "name": "Sweet Mango (Gluten Free)",
+        "description": "Sweet mango",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Sweet_Mango.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "93ff9185-128b-4515-9fa5-1c1be43fa01a",
+       "price": null,
+       "sortOrder": 5,
+       "refProduct": {
+        "id": "693afe1baf87ea11d0702600",
+        "name": "Banan & Karamell (Gluten Free)",
+        "description": "Banana brulee",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Banana___Karamell.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "84f74605-3766-4f98-a5b2-f69cf895db13",
+       "price": null,
+       "sortOrder": 6,
+       "refProduct": {
+        "id": "693afe1c403a2f3d949a0616",
+        "name": "Tiramisu (Gluten Free)",
+        "description": "Tiramisu",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/2c859e09ae7f8c2187f29a909bf9b75b.jpg",
+        "allergens": []
+       }
+      },
+      {
+       "id": "36acf286-26d8-45ab-a976-bb6266e5496f",
+       "price": null,
+       "sortOrder": 7,
+       "refProduct": {
+        "id": "693afe1d6b5ae05bf718108d",
+        "name": "Very Strawberry (Gluten Free)",
+        "description": "Very strawberry",
+        "defaultPrice": 169.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Very_Strawberry.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "866fa728-dd8d-4ad5-8ffc-e0e4fc1e29e1",
+     "name": "Kids Menu",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 5,
+     "imageUrl": null,
+     "menuProducts": [],
+     "menuBundleProducts": [
+      {
+       "id": "e9f7be16-d618-43d5-abba-6606023a2e04",
+       "price": null,
+       "sortOrder": 0,
+       "refBundleProduct": {
+        "id": "6a4e02d40b47072d30be20a2",
+        "name": "Classic Souffle  - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/6_480.png"
+       }
+      },
+      {
+       "id": "541b4f7d-7622-4cf8-b053-fcf0603f5cf7",
+       "price": null,
+       "sortOrder": 1,
+       "refBundleProduct": {
+        "id": "6a4e0415774bca58842c6a6e",
+        "name": "Banana & Caramel  - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/4_480.png"
+       }
+      },
+      {
+       "id": "e3706cbf-43a5-4498-9da3-baa89040890d",
+       "price": null,
+       "sortOrder": 2,
+       "refBundleProduct": {
+        "id": "6a4e04150a1f0e110c0b0bbf",
+        "name": "Sweet Mango  - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/5_480.png"
+       }
+      },
+      {
+       "id": "6a466160-3d48-43df-b226-2229f1a1d522",
+       "price": null,
+       "sortOrder": 3,
+       "refBundleProduct": {
+        "id": "6a4e0416f1649906e530597a",
+        "name": "Very Strawberry - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/2_480.png"
+       }
+      },
+      {
+       "id": "5954f2a8-46b8-488b-aee2-7c06aa3058ac",
+       "price": null,
+       "sortOrder": 4,
+       "refBundleProduct": {
+        "id": "6a4e0416f71b704a98d1f554",
+        "name": "Pistachio & Berries - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/3_480.png"
+       }
+      },
+      {
+       "id": "7427e833-2791-46b4-9f92-9f9d0885a918",
+       "price": null,
+       "sortOrder": 5,
+       "refBundleProduct": {
+        "id": "6a4e04173c40454759482893",
+        "name": "Nutella Pancake - Kids",
+        "description": "",
+        "defaultPrice": 99.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image_720.png"
+       }
+      },
+      {
+       "id": "63678087-fe0a-48d2-84f1-bb5b71cd559c",
+       "price": null,
+       "sortOrder": 6,
+       "refBundleProduct": {
+        "id": "6a4e24260a1f0e110c0b12c9",
+        "name": "Classic Souffle  - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/6_480.png"
+       }
+      },
+      {
+       "id": "81fa8c73-0170-44f3-9f6a-4ffea81be735",
+       "price": null,
+       "sortOrder": 7,
+       "refBundleProduct": {
+        "id": "6a4e24278657b8089fa4eb54",
+        "name": "Banana & Caramel  - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/4_480.png"
+       }
+      },
+      {
+       "id": "e10a2ad2-4595-4a84-baf2-eca5c472d10c",
+       "price": null,
+       "sortOrder": 8,
+       "refBundleProduct": {
+        "id": "6a4e24288657b8089fa4eb5f",
+        "name": "Sweet Mango  - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/5_480.png"
+       }
+      },
+      {
+       "id": "1044bb95-f960-49e7-b697-3bf7346c5e2d",
+       "price": null,
+       "sortOrder": 9,
+       "refBundleProduct": {
+        "id": "6a4e242a312308561d568760",
+        "name": "Very Strawberry - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/2_480.png"
+       }
+      },
+      {
+       "id": "1a9f774b-72c4-4873-bfed-b38672297238",
+       "price": null,
+       "sortOrder": 10,
+       "refBundleProduct": {
+        "id": "6a4e242c8657b8089fa4eb7f",
+        "name": "Pistachio & Berries - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/3_480.png"
+       }
+      },
+      {
+       "id": "3e9fd0eb-21f7-4804-97f7-8b636cce0880",
+       "price": null,
+       "sortOrder": 11,
+       "refBundleProduct": {
+        "id": "6a4e242d7049ef70e46bbc0d",
+        "name": "Nutella Pancake - Kids (Gluten Free)",
+        "description": "",
+        "defaultPrice": 109.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/image_720.png"
+       }
+      }
+     ]
+    },
+    {
+     "id": "d68d45c2-805c-48fa-96db-c56e833626b7",
+     "name": "Golden Toast",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 6,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/lotus.png",
+     "menuProducts": [
+      {
+       "id": "a7912c38-12ce-4f18-9980-2362302406f8",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e5301b943cef6d491fba67",
+        "name": "Mango & Berries Toast",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Mango___Berries_Toast.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "0e9ebb37-1633-49a9-b581-870e5a56eae6",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68f0a82b1f718b1ebc7105f6",
+        "name": "Lotus Cream Cheese",
+        "description": "",
+        "defaultPrice": 159.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/lotus.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "8e3b0485-604b-4721-87fd-a3a9af1c2c47",
+     "name": "Coffee & Tea",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 7,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "a1379063-0714-45d3-a966-902a0afe0226",
+       "price": null,
+       "sortOrder": 7,
+       "refProduct": {
+        "id": "6a27cdeea364422293b2a800",
+        "name": "Green tea (hot)",
+        "description": "",
+        "defaultPrice": 45.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/green_tea.jpg",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": [
+      {
+       "id": "6ca5f6df-cb84-405a-991a-963e1c5ba8c6",
+       "price": null,
+       "sortOrder": 0,
+       "refBundleProduct": {
+        "id": "68e8abfd3371d6399e35f093",
+        "name": "Espresso",
+        "description": "",
+        "defaultPrice": 32.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Espresso.png"
+       }
+      },
+      {
+       "id": "03825f0e-2517-472a-a30e-201d97f204d8",
+       "price": null,
+       "sortOrder": 1,
+       "refBundleProduct": {
+        "id": "6a202888aae7b738f7e58fec",
+        "name": "Americano",
+        "description": "",
+        "defaultPrice": 45.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Americano.png"
+       }
+      },
+      {
+       "id": "5eff3627-5214-4c81-84bb-e62f0e79592a",
+       "price": null,
+       "sortOrder": 2,
+       "refBundleProduct": {
+        "id": "6a202889de18a224dbe49a5d",
+        "name": "Caffe Latte",
+        "description": "",
+        "defaultPrice": 52.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Caffe_Latte.png"
+       }
+      },
+      {
+       "id": "6cca4e24-40a0-4184-8a65-0325e6ae6260",
+       "price": null,
+       "sortOrder": 3,
+       "refBundleProduct": {
+        "id": "6a202889aae7b738f7e58fee",
+        "name": "Cappuccino",
+        "description": "",
+        "defaultPrice": 52.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Cappuccino.png"
+       }
+      },
+      {
+       "id": "9a5cee0a-8714-4454-aff3-43ef58779a3c",
+       "price": null,
+       "sortOrder": 4,
+       "refBundleProduct": {
+        "id": "6a20288a7ccdbc7c9b85644c",
+        "name": "Fluffy Latte",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Fluffy_Latte.png"
+       }
+      },
+      {
+       "id": "4bc14a2a-ec9d-4272-bf50-75c93858e6d0",
+       "price": null,
+       "sortOrder": 5,
+       "refBundleProduct": {
+        "id": "6a20288bde18a224dbe49a5f",
+        "name": "Fluffy Caramel-Latte",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Fluffy_Caramel-Latte.png"
+       }
+      },
+      {
+       "id": "fa1e85df-6a0b-4e21-bc5f-d1ef13a2e60b",
+       "price": null,
+       "sortOrder": 6,
+       "refBundleProduct": {
+        "id": "6a20288cde18a224dbe49a61",
+        "name": "Fluffy Mocha",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Fluffy_Mocha__2_.png"
+       }
+      },
+      {
+       "id": "f1ecccab-fa92-4495-afd4-923f665c82a0",
+       "price": null,
+       "sortOrder": 8,
+       "refBundleProduct": {
+        "id": "6a20288d222187232bc60315",
+        "name": "Milk Tea",
+        "description": "",
+        "defaultPrice": 58.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/milk_tea_warm.jpg"
+       }
+      }
+     ]
+    },
+    {
+     "id": "61d9ed60-a3c2-4348-bce6-837d45772d65",
+     "name": "Matcha",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 8,
+     "imageUrl": null,
+     "menuProducts": [],
+     "menuBundleProducts": [
+      {
+       "id": "721acf6b-a50d-4f2d-8372-ebada7ff5af4",
+       "price": null,
+       "sortOrder": 0,
+       "refBundleProduct": {
+        "id": "6a2027558ead3e5dd6e4dbc8",
+        "name": "Matcha Affogato",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Affogato.png"
+       }
+      },
+      {
+       "id": "970afcf8-8678-4d40-919f-37411d9964fd",
+       "price": null,
+       "sortOrder": 1,
+       "refBundleProduct": {
+        "id": "6a2027567349d84143950489",
+        "name": "Matcha Latte",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/mathca_ma.png"
+       }
+      },
+      {
+       "id": "01ffaa5e-0ad3-4018-befe-9036772125a1",
+       "price": null,
+       "sortOrder": 2,
+       "refBundleProduct": {
+        "id": "6a2027577349d8414395048c",
+        "name": "Matcha Oat Latte",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Oat_Latte.png"
+       }
+      },
+      {
+       "id": "7f458e9d-c87c-4856-bf4d-bb55f4e08d63",
+       "price": null,
+       "sortOrder": 3,
+       "refBundleProduct": {
+        "id": "6a2027587349d8414395048e",
+        "name": "Matcha Espresso",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_LAtte.png"
+       }
+      },
+      {
+       "id": "db4bb46f-3b40-434c-8492-8909f70f1061",
+       "price": null,
+       "sortOrder": 4,
+       "refBundleProduct": {
+        "id": "6a20275928876f4f2d5de9ac",
+        "name": "Matcha Choco",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Espresso.png"
+       }
+      },
+      {
+       "id": "596ee666-4cdb-4c60-8f17-f16a38af3c05",
+       "price": null,
+       "sortOrder": 5,
+       "refBundleProduct": {
+        "id": "6a202759493c807a94bfbbdb",
+        "name": "Matcha Caramel",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Mango.png"
+       }
+      },
+      {
+       "id": "5a016849-a314-421d-9108-1cec175f0fab",
+       "price": null,
+       "sortOrder": 6,
+       "refBundleProduct": {
+        "id": "6a20275a493c807a94bfbbdd",
+        "name": "Matcha Strawberry",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Strawberry.png"
+       }
+      },
+      {
+       "id": "56d2dc44-6009-4f05-8208-692957b4cf8f",
+       "price": null,
+       "sortOrder": 7,
+       "refBundleProduct": {
+        "id": "6a20275b28876f4f2d5de9b3",
+        "name": "Matcha Mango",
+        "description": "",
+        "defaultPrice": 79.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Matcha_Mango.png"
+       }
+      }
+     ]
+    },
+    {
+     "id": "ed38c709-1417-4c50-a993-c7220e9fe95b",
+     "name": "Soda",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 9,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/18.png",
+     "menuProducts": [
+      {
+       "id": "19f82b6e-0f9e-4ced-b818-bc98f196e812",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e628758ff5352413c9864a",
+        "name": "Strawberry Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Strawberry_soda.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "a76140e5-dd7d-401b-abe3-ffe6d091ed7d",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68e6287a1eab3853c16a7973",
+        "name": "Mango Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Mango_Soda.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "3124b3b2-b574-4a13-b59b-d9e126d732c3",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "68e6287b5df9f4014f9f413b",
+        "name": "Lemon Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Lemon_Soda.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "6c0ca795-d117-451b-ad25-33670e365bea",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "68e6287b63defc46ac088873",
+        "name": "Grapefruit Soda",
+        "description": "",
+        "defaultPrice": 56.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Grapefruit_Soda.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "d222cef7-0e2d-4517-8c42-bbf5a41d6390",
+     "name": "Smoothie",
+     "description": "",
+     "disabled": false,
+     "sortOrder": 10,
+     "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/6.png",
+     "menuProducts": [
+      {
+       "id": "fdff7d5a-126f-4836-b957-b730ef0fd7fa",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "68e628977713591a68cbdcaf",
+        "name": "Blueberry & Coconut",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Blueberry___Coconut.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "2fb92fb3-3da9-4145-971e-bad198452815",
+       "price": null,
+       "sortOrder": 1,
+       "refProduct": {
+        "id": "68e6289879d2f93ddd2afb4c",
+        "name": "Strawberry & Mango",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Strawberry___Mango.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "3f149993-a146-49fe-855a-20db17038943",
+       "price": null,
+       "sortOrder": 2,
+       "refProduct": {
+        "id": "68e62898e92435420170c8a4",
+        "name": "Avocado & Banana",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Avocado___Banana.png",
+        "allergens": []
+       }
+      },
+      {
+       "id": "d1049166-37c5-4359-b3f6-c55254fe5c85",
+       "price": null,
+       "sortOrder": 3,
+       "refProduct": {
+        "id": "68e8ad593c327b50b79b76b7",
+        "name": "Coconut & Coffee",
+        "description": "",
+        "defaultPrice": 62.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/qopla/68baa1f16080fe6d828311e9/Gallery/medium/Coconut___Coffee.png",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    },
+    {
+     "id": "d62b8907-6b92-4663-a808-78e111276947",
+     "name": "Souvenir",
+     "description": null,
+     "disabled": false,
+     "sortOrder": 11,
+     "imageUrl": null,
+     "menuProducts": [
+      {
+       "id": "660ba636-5c5f-4937-bc7f-559ac2ed6a6d",
+       "price": null,
+       "sortOrder": 0,
+       "refProduct": {
+        "id": "6909e10a79bdc31439595422",
+        "name": "Plate",
+        "description": "Fluffy House  Design Plate",
+        "defaultPrice": 248.0,
+        "disabled": false,
+        "deleted": false,
+        "imageUrl": "",
+        "allergens": []
+       }
+      }
+     ],
+     "menuBundleProducts": []
+    }
+   ]
+  }
+ ]
+}

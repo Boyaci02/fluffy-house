@@ -659,6 +659,79 @@
       .sec { padding: 5rem 0; }
       .form-card { padding: 2rem 1.5rem; }
     }
+    /* ── Menysidan ───────────────────────────────────────────
+       Rätterna kommer ur Qopla. Layouten är en enda spalt med
+       prickad ledlinje mellan rätt och pris, som en tryckt meny. */
+    .meny-head { text-align: center; margin-bottom: 3rem; }
+    .meny-head .t-label { margin-bottom: 1rem; }
+    .meny-head .t-h1 { color: var(--c-ink); margin-bottom: 1.25rem; }
+    .meny-head .t-body { max-width: 540px; margin: 0 auto; }
+    .meny-varning {
+      font-size: 0.875rem; color: #6b6560; margin-top: 0.75rem;
+    }
+    .meny-cta { margin-top: 2rem; }
+
+    /* Kategoriraden klistrar under navet och scrollar i sidled på mobil. */
+    .meny-chips {
+      position: sticky; top: calc(var(--bar-h) + var(--gf-h, 38px) + 72px); z-index: 40;
+      display: flex; gap: 0.5rem; overflow-x: auto; scrollbar-width: none;
+      padding: 0.875rem 0; margin-bottom: 2.5rem;
+      background: var(--c-cream); border-bottom: 1px solid var(--c-border);
+    }
+    .meny-chips::-webkit-scrollbar { display: none; }
+    .meny-chip {
+      flex: 0 0 auto; min-height: 44px; padding: 0 1.125rem;
+      border-radius: 999px; border: 1px solid var(--c-border); background: #fff;
+      font-family: inherit; font-size: 0.875rem; font-weight: 600; color: #4a4845;
+      cursor: pointer; transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+    .meny-chip:hover { border-color: var(--c-matcha); color: var(--c-matcha); }
+    .meny-chip.active { background: var(--c-matcha); border-color: var(--c-matcha); color: #fff; }
+
+    .meny-block { margin-bottom: 3.5rem; }
+    .meny-h2 {
+      font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; color: var(--c-ink);
+      padding-bottom: 0.75rem; border-bottom: 1px solid var(--c-border); margin-bottom: 1.25rem;
+    }
+    .meny-notis { font-size: 0.875rem; color: #6b6560; margin: -0.5rem 0 1.25rem; }
+    .meny-lista { list-style: none; display: flex; flex-direction: column; gap: 1.125rem; }
+    .meny-topp { display: flex; align-items: baseline; gap: 0.625rem; }
+    .meny-namn { font-size: 1.0625rem; font-weight: 600; color: var(--c-ink); }
+    .meny-linje {
+      flex: 1; height: 1px; min-width: 1.5rem;
+      background-image: linear-gradient(to right, var(--c-border) 40%, transparent 40%);
+      background-size: 6px 1px; background-repeat: repeat-x;
+    }
+    .meny-pris { font-size: 1.0625rem; font-weight: 700; color: var(--c-matcha); white-space: nowrap; }
+    .meny-desc { font-size: 0.9375rem; color: #6b6560; line-height: 1.6; margin-top: 0.25rem; max-width: 34rem; }
+    .meny-slut { text-align: center; padding-top: 1rem; border-top: 1px solid var(--c-border); }
+    .meny-slut .meny-notis { margin: 1.5rem auto 1.75rem; max-width: 30rem; }
+
+    /* Beställ-knappen i toppbaren, alltid synlig. */
+    .nav-order {
+      display: inline-flex; align-items: center; min-height: 40px; padding: 0 1.125rem;
+      border-radius: 999px; background: var(--c-matcha); color: #fff;
+      font-size: 0.875rem; font-weight: 700; text-decoration: none; white-space: nowrap;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .nav-order:hover { background: #2e4d38; transform: translateY(-1px); }
+    #nav.hero-mode .nav-order { background: #fff; color: var(--c-ink); }
+    #nav.hero-mode .nav-order:hover { background: rgba(255,255,255,0.85); }
+    @media (max-width: 1100px) {
+      .nav-order { min-height: 36px; padding: 0 0.875rem; font-size: 0.8125rem; }
+      .nav-order .nav-order-lang { display: none; }
+    }
+    @media (max-width: 400px) {
+      .nav-order { padding: 0 0.75rem; }
+      #lang-code { display: none; }
+    }
+
+    /* Från 1100 px ryms alla kategorier på en rad: låt dem radbrytas i stället
+       för att ligga i en sidled-scroll ingen ser slutet på. */
+    @media (min-width: 1100px) {
+      .meny-chips { flex-wrap: wrap; overflow-x: visible; }
+    }
+
   </style>
   <!-- Metricool Analytics -->
   <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"a7dd702056977481b01f1b73f00c16b0"})});</script>
@@ -807,9 +880,11 @@
       <div class="nav-group nav-right">
         <a class="nav-a" data-pg="brunch" data-i18n="nav.brunch">Brunch</a>
         <a class="nav-a" data-pg="collaboration" data-i18n="nav.collab">Collab</a>
-        <a class="nav-a nav-a-ext" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener"><span data-i18n="nav.meny">Meny</span> <span class="ext-arrow">↗</span></a>
+        <a class="nav-a" data-pg="meny" data-i18n="nav.meny">Meny</a>
         <a class="nav-a" data-pg="kontakt" data-i18n="nav.kontakt">Kontakt</a>
       </div>
+
+      <a class="nav-order" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener"><span data-i18n="btn.order.kort">Beställ</span><span class="nav-order-lang">&nbsp;</span><span class="nav-order-lang" data-i18n="btn.order.suffix">online</span></a>
 
       <!-- Language picker -->
       <div class="lang-picker" id="lang-picker">
@@ -854,7 +929,7 @@
     <a class="mob-a" data-pg="jobb" data-i18n="nav.jobb">Jobb</a>
     <a class="mob-a" data-pg="brunch" data-i18n="nav.brunch">Brunch</a>
     <a class="mob-a" data-pg="collaboration" data-i18n="nav.collab">Collab</a>
-    <a class="mob-a" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener"><span data-i18n="nav.meny">Meny</span> ↗</a>
+    <a class="mob-a" data-pg="meny" data-i18n="nav.meny">Meny</a>
     <a class="mob-a" data-pg="kontakt" data-i18n="nav.kontakt">Kontakt</a>
   </div>
   <div class="mob-menu-footer">
@@ -1343,6 +1418,272 @@
 
 
 <!-- ══════════════════════════════════════════════════════════
+     MENY — rätter och priser ur Qopla (uttag 7 sep 2026,
+     shop Fluffy House - St:Eriksgatan, meny "Meny"). Inget pris
+     skrivs för hand: ändras menyn i kassan hämtas den om.
+══════════════════════════════════════════════════════════ -->
+<div id="pg-meny" class="pg" style="padding-top:72px;">
+  <div class="sec">
+    <div class="wrap-sm">
+      <div class="meny-head">
+        <p class="t-label" data-r="up" data-i18n="meny.label">Meny</p>
+        <h1 class="t-h1" data-r="up" data-delay="100" data-i18n="meny.h1">Allt vi serverar</h1>
+        <p class="t-body" data-r="up" data-delay="200" data-i18n="meny.body">Soufflépannkakor som bakas på beställning, matcha vispad för hand och drycker vi gör själva.</p>
+        <p class="meny-varning" data-r="up" data-delay="250" data-i18n="meny.varning">Utbudet kan variera mellan våra enheter.</p>
+        <a class="btn btn-green meny-cta" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" data-r="up" data-delay="300" data-i18n="btn.order">Beställ online</a>
+      </div>
+
+      <div class="meny-chips" id="meny-chips" role="tablist" aria-label="Kategorier">
+        <button class="meny-chip" data-mkat="pancakes" data-i18n="meny.kat.pancakes">Souffle Pancakes</button>
+        <button class="meny-chip" data-mkat="toast" data-i18n="meny.kat.toast">Golden Toast</button>
+        <button class="meny-chip" data-mkat="brunch" data-i18n="meny.kat.brunch">Brunch</button>
+        <button class="meny-chip" data-mkat="kids" data-i18n="meny.kat.kids">Fluffy Kids</button>
+        <button class="meny-chip" data-mkat="bingsu" data-i18n="meny.kat.bingsu">Bingsu</button>
+        <button class="meny-chip" data-mkat="ube" data-i18n="meny.kat.ube">Ube</button>
+        <button class="meny-chip" data-mkat="matcha" data-i18n="meny.kat.matcha">Matcha</button>
+        <button class="meny-chip" data-mkat="kaffe" data-i18n="meny.kat.kaffe">Kaffe &amp; Te</button>
+        <button class="meny-chip" data-mkat="smoothie" data-i18n="meny.kat.smoothie">Smoothie</button>
+        <button class="meny-chip" data-mkat="soda" data-i18n="meny.kat.soda">Soda</button>
+      </div>
+
+      <section class="meny-block" id="mkat-pancakes">
+        <h2 class="meny-h2" data-i18n="meny.kat.pancakes">Souffle Pancakes</h2>
+        <p class="meny-notis" data-i18n="meny.not.gf"></p>
+        <ul class="meny-lista">
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Nutella Pancake</span><span class="meny-linje"></span><span class="meny-pris">159 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Matcha Holic</span><span class="meny-linje"></span><span class="meny-pris">159 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Classic Souffle</span><span class="meny-linje"></span><span class="meny-pris">149 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Pistachio &amp; Berries</span><span class="meny-linje"></span><span class="meny-pris">159 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Sweet Mango</span><span class="meny-linje"></span><span class="meny-pris">159 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Banana &amp; Caramel</span><span class="meny-linje"></span><span class="meny-pris">159 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Tiramisu</span><span class="meny-linje"></span><span class="meny-pris">159 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Very Strawberry</span><span class="meny-linje"></span><span class="meny-pris">159 kr</span></div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="meny-block" id="mkat-toast">
+        <h2 class="meny-h2" data-i18n="meny.kat.toast">Golden Toast</h2>
+        <ul class="meny-lista">
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Mango &amp; Berries Toast</span><span class="meny-linje"></span><span class="meny-pris">159 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Lotus Cream Cheese</span><span class="meny-linje"></span><span class="meny-pris">159 kr</span></div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="meny-block" id="mkat-brunch">
+        <h2 class="meny-h2" data-i18n="meny.kat.brunch">Brunch</h2>
+        <p class="meny-notis" data-i18n="meny.not.brunch"></p>
+        <ul class="meny-lista">
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Lax Souffle</span><span class="meny-linje"></span><span class="meny-pris">229 kr</span></div>
+            <p class="meny-desc">Sallad, ägg ,tomat och hollandaise dressing</p>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Vegetarian Souffle</span><span class="meny-linje"></span><span class="meny-pris">189 kr</span></div>
+            <p class="meny-desc">Avokado, ägg, mix sallad, tomat, rödlök, balsamic dressing</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="meny-block" id="mkat-kids">
+        <h2 class="meny-h2" data-i18n="meny.kat.kids">Fluffy Kids</h2>
+        <p class="meny-notis" data-i18n="meny.not.kids"></p>
+        <ul class="meny-lista">
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Classic Souffle</span><span class="meny-linje"></span><span class="meny-pris">99 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Banana &amp; Caramel</span><span class="meny-linje"></span><span class="meny-pris">99 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Sweet Mango</span><span class="meny-linje"></span><span class="meny-pris">99 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Very Strawberry</span><span class="meny-linje"></span><span class="meny-pris">99 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Pistachio &amp; Berries</span><span class="meny-linje"></span><span class="meny-pris">99 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Nutella Pancake</span><span class="meny-linje"></span><span class="meny-pris">99 kr</span></div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="meny-block" id="mkat-bingsu">
+        <h2 class="meny-h2" data-i18n="meny.kat.bingsu">Bingsu</h2>
+        <ul class="meny-lista">
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Ube Bingsu</span><span class="meny-linje"></span><span class="meny-pris">89 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Strawberry Bingsu</span><span class="meny-linje"></span><span class="meny-pris">89 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Mango Bingsu</span><span class="meny-linje"></span><span class="meny-pris">89 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Matcha Bingsu</span><span class="meny-linje"></span><span class="meny-pris">89 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Chocolate Bingsu</span><span class="meny-linje"></span><span class="meny-pris">89 kr</span></div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="meny-block" id="mkat-ube">
+        <h2 class="meny-h2" data-i18n="meny.kat.ube">Ube</h2>
+        <p class="meny-notis" data-i18n="meny.not.ube"></p>
+        <ul class="meny-lista">
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Ube Coconut Frappe</span><span class="meny-linje"></span><span class="meny-pris">79 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Ube Strawberry</span><span class="meny-linje"></span><span class="meny-pris">79 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Ube Coffee</span><span class="meny-linje"></span><span class="meny-pris">79 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Ube Matcha</span><span class="meny-linje"></span><span class="meny-pris">79 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Ube Latte Warm</span><span class="meny-linje"></span><span class="meny-pris">79 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Ube Latte Cold</span><span class="meny-linje"></span><span class="meny-pris">79 kr</span></div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="meny-block" id="mkat-matcha">
+        <h2 class="meny-h2" data-i18n="meny.kat.matcha">Matcha</h2>
+        <ul class="meny-lista">
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Matcha Affogato</span><span class="meny-linje"></span><span class="meny-pris">79 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Matcha Latte</span><span class="meny-linje"></span><span class="meny-pris">79 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Matcha Oat Latte</span><span class="meny-linje"></span><span class="meny-pris">79 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Matcha Espresso</span><span class="meny-linje"></span><span class="meny-pris">79 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Matcha Choco</span><span class="meny-linje"></span><span class="meny-pris">79 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Matcha Caramel</span><span class="meny-linje"></span><span class="meny-pris">79 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Matcha Strawberry</span><span class="meny-linje"></span><span class="meny-pris">79 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Matcha Mango</span><span class="meny-linje"></span><span class="meny-pris">79 kr</span></div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="meny-block" id="mkat-kaffe">
+        <h2 class="meny-h2" data-i18n="meny.kat.kaffe">Kaffe &amp; Te</h2>
+        <ul class="meny-lista">
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Green tea (hot)</span><span class="meny-linje"></span><span class="meny-pris">45 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Espresso</span><span class="meny-linje"></span><span class="meny-pris">32 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Americano</span><span class="meny-linje"></span><span class="meny-pris">45 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Caffe Latte</span><span class="meny-linje"></span><span class="meny-pris">52 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Cappuccino</span><span class="meny-linje"></span><span class="meny-pris">52 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Fluffy Latte</span><span class="meny-linje"></span><span class="meny-pris">58 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Fluffy Caramel-Latte</span><span class="meny-linje"></span><span class="meny-pris">58 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Fluffy Mocha</span><span class="meny-linje"></span><span class="meny-pris">58 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Milk Tea</span><span class="meny-linje"></span><span class="meny-pris">58 kr</span></div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="meny-block" id="mkat-smoothie">
+        <h2 class="meny-h2" data-i18n="meny.kat.smoothie">Smoothie</h2>
+        <ul class="meny-lista">
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Blueberry &amp; Coconut</span><span class="meny-linje"></span><span class="meny-pris">62 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Strawberry &amp; Mango</span><span class="meny-linje"></span><span class="meny-pris">62 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Avocado &amp; Banana</span><span class="meny-linje"></span><span class="meny-pris">62 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Coconut &amp; Coffee</span><span class="meny-linje"></span><span class="meny-pris">62 kr</span></div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="meny-block" id="mkat-soda">
+        <h2 class="meny-h2" data-i18n="meny.kat.soda">Soda</h2>
+        <ul class="meny-lista">
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Strawberry Soda</span><span class="meny-linje"></span><span class="meny-pris">56 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Mango Soda</span><span class="meny-linje"></span><span class="meny-pris">56 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Lemon Soda</span><span class="meny-linje"></span><span class="meny-pris">56 kr</span></div>
+          </li>
+          <li class="meny-rad">
+            <div class="meny-topp"><span class="meny-namn">Grapefruit Soda</span><span class="meny-linje"></span><span class="meny-pris">56 kr</span></div>
+          </li>
+        </ul>
+      </section>
+
+      <div class="meny-slut">
+        <p class="meny-notis" data-i18n="meny.slut">Priserna gäller i våra caféer. Har du en allergi, fråga oss i kassan så guidar vi dig rätt.</p>
+        <a class="btn btn-green" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" data-i18n="btn.order">Beställ online</a>
+      </div>
+    </div>
+  </div>
+  <div id="foot-meny"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
      COLLABORATION
 ══════════════════════════════════════════════════════════ -->
 <div id="pg-collaboration" class="pg" style="padding-top:72px;">
@@ -1420,6 +1761,7 @@
           <p class="foot-h" data-i18n="foot.nav.h">Navigering</p>
           <a class="foot-link" data-pg="hem" data-i18n="nav.hem">Hem</a>
           <a class="foot-link" data-pg="restauranger" data-i18n="nav.restauranger">Restauranger</a>
+          <a class="foot-link" data-pg="meny" data-i18n="nav.meny">Meny</a>
           <!-- <a class="foot-link" data-pg="giftcard" data-i18n="nav.giftcard">Giftcard</a> -->
           <a class="foot-link" data-pg="event" data-i18n="nav.event">Event</a>
           <a class="foot-link" data-pg="jobb" data-i18n="foot.nav.jobb">Jobba med oss</a>
@@ -1471,7 +1813,7 @@
 ══════════════════════════════════════════════════════════ -->
 <script>
 // ─── Page navigation ──────────────────────────────────────
-const ALL_PAGES = ['hem','restauranger','kungsholmen','uppsala','event','jobb','brunch','collaboration','kontakt'];  // 'giftcard' urplockad 2026-08-08
+const ALL_PAGES = ['hem','restauranger','kungsholmen','uppsala','event','jobb','meny','brunch','collaboration','kontakt'];  // 'giftcard' urplockad 2026-08-08
 let current = 'hem';
 let transitioning = false;
 const fade = document.getElementById('page-fade');
@@ -1609,6 +1951,50 @@ function dismissCookie() { ck.classList.add('hidden'); localStorage.setItem('fh-
 document.getElementById('ck-ok').addEventListener('click', dismissCookie);
 document.getElementById('ck-nec').addEventListener('click', dismissCookie);
 
+// ─── Menysidans kategorirad ───────────────────────────────
+// Klick rullar dokumentet till rubriken och centrerar chippet i sin egen rad.
+// scrollIntoView används medvetet inte: raden är klistrad, och då drar den med
+// hela dokumentet i en loop (samma fälla som på Kimlis menysida 6/9).
+(function () {
+  const rad = document.getElementById('meny-chips');
+  if (!rad) return;
+  const chips = [...rad.querySelectorAll('.meny-chip')];
+  const block = chips.map(c => document.getElementById('mkat-' + c.dataset.mkat)).filter(Boolean);
+
+  function centrera(chip) {
+    const mitt = chip.offsetLeft - (rad.clientWidth - chip.offsetWidth) / 2;
+    rad.scrollTo({ left: Math.max(0, mitt), behavior: 'smooth' });
+  }
+
+  function markera(nyckel) {
+    chips.forEach(c => c.classList.toggle('active', c.dataset.mkat === nyckel));
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const mal = document.getElementById('mkat-' + chip.dataset.mkat);
+      if (!mal) return;
+      const navB = document.getElementById('nav')?.getBoundingClientRect().bottom || 0;
+      const topp = mal.getBoundingClientRect().top + window.scrollY - navB - rad.offsetHeight - 16;
+      window.scrollTo({ top: Math.max(0, topp), behavior: 'smooth' });
+      markera(chip.dataset.mkat);
+      centrera(chip);
+    });
+  });
+
+  // Rätt chip markeras medan man rullar, utan att raden rycker i sidled på klick.
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver(poster => {
+      const synlig = poster.filter(p => p.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+      if (synlig) markera(synlig.target.id.replace('mkat-', ''));
+    }, { rootMargin: '-140px 0px -70% 0px', threshold: 0 });
+    block.forEach(b => obs.observe(b));
+  }
+
+  markera(chips[0]?.dataset.mkat);
+})();
+
 // ─── i18n ────────────────────────────────────────────────
 const T = {
   sv: {
@@ -1616,6 +2002,15 @@ const T = {
     'nav.hem':'Hem','nav.restauranger':'Restauranger','nav.giftcard':'Giftcard',
     'nav.event':'Event','nav.jobb':'Jobb','nav.brunch':'Brunch','nav.collab':'Collab',
     'nav.meny':'Meny','nav.kontakt':'Kontakt',
+    'btn.order.kort':'Beställ','btn.order.suffix':'online',
+    // Menysidan. Kategorinamnen följer Qopla, texterna är våra egna.
+    'meny.label':'Meny','meny.h1':'Allt vi serverar',
+    'meny.body':'Hela menyn med priserna som gäller i caféerna.',
+    'meny.varning':'Utbudet kan variera mellan våra enheter.',
+    'meny.kat.pancakes':'Souffle Pancakes','meny.kat.toast':'Golden Toast','meny.kat.brunch':'Brunch','meny.kat.kids':'Fluffy Kids','meny.kat.bingsu':'Bingsu','meny.kat.ube':'Ube','meny.kat.matcha':'Matcha','meny.kat.kaffe':'Kaffe & Te','meny.kat.smoothie':'Smoothie','meny.kat.soda':'Soda',
+    'meny.not.gf':'Alla pannkakor går att få glutenfria för 10 kr extra.','meny.not.brunch':'Brunchen finns även glutenfri, till samma pris.',
+    'meny.not.kids':'Barnstorlek. Glutenfri variant 109 kr.','meny.not.ube':'Hela ube-serien finns på Kungsholmen. I Uppsala serveras Ube Coconut Frappe.',
+    'meny.slut':'Priserna gäller i våra caféer. Har du en allergi, fråga oss i kassan så guidar vi dig rätt.',
     'foot.nav.h':'Navigering','foot.nav.jobb':'Jobba med oss',
     'foot.hours.h':'Öppettider','foot.hours.label':'Se respektive enhet →',
     'foot.social.h':'Följ oss','foot.brand':'Japanska fluffy pancakes och äkta matcha, en upplevelse utan motstycke i Sverige.',
@@ -1663,6 +2058,15 @@ const T = {
     'nav.hem':'Home','nav.restauranger':'Restaurants','nav.giftcard':'Gift Card',
     'nav.event':'Event','nav.jobb':'Jobs','nav.brunch':'Brunch','nav.collab':'Collab',
     'nav.meny':'Menu','nav.kontakt':'Contact',
+    'btn.order.kort':'Order','btn.order.suffix':'online',
+    // Menysidan. Kategorinamnen följer Qopla, texterna är våra egna.
+    'meny.label':'Menu','meny.h1':'Everything we serve',
+    'meny.body':'The full menu, with the prices we charge in the cafés.',
+    'meny.varning':'The selection can vary between our locations.',
+    'meny.kat.pancakes':'Souffle Pancakes','meny.kat.toast':'Golden Toast','meny.kat.brunch':'Brunch','meny.kat.kids':'Fluffy Kids','meny.kat.bingsu':'Bingsu','meny.kat.ube':'Ube','meny.kat.matcha':'Matcha','meny.kat.kaffe':'Coffee & Tea','meny.kat.smoothie':'Smoothie','meny.kat.soda':'Soda',
+    'meny.not.gf':'Every pancake can be made gluten free for 10 kr extra.','meny.not.brunch':'Brunch is also available gluten free, at the same price.',
+    'meny.not.kids':'Kids size. Gluten free 109 kr.','meny.not.ube':'The full ube range is served at Kungsholmen. In Uppsala we serve Ube Coconut Frappe.',
+    'meny.slut':'Prices apply in our cafés. If you have an allergy, ask us at the counter and we will guide you.',
     'foot.nav.h':'Navigation','foot.nav.jobb':'Work with us',
     'foot.hours.h':'Opening Hours','foot.hours.label':'See each location →',
     'foot.social.h':'Follow us','foot.brand':'Japanese fluffy pancakes and authentic matcha, an experience unlike any other in Sweden.',
@@ -1710,6 +2114,15 @@ const T = {
     'nav.hem':'Hjem','nav.restauranger':'Restauranter','nav.giftcard':'Gavekort',
     'nav.event':'Event','nav.jobb':'Job','nav.brunch':'Brunch','nav.collab':'Samarbeid',
     'nav.meny':'Menu','nav.kontakt':'Kontakt',
+    'btn.order.kort':'Bestil','btn.order.suffix':'online',
+    // Menysidan. Kategorinamnen följer Qopla, texterna är våra egna.
+    'meny.label':'Menu','meny.h1':'Alt vi serverer',
+    'meny.body':'Hele menuen med de priser, der gælder i caféerne.',
+    'meny.varning':'Udvalget kan variere mellem vores steder.',
+    'meny.kat.pancakes':'Souffle Pancakes','meny.kat.toast':'Golden Toast','meny.kat.brunch':'Brunch','meny.kat.kids':'Fluffy Kids','meny.kat.bingsu':'Bingsu','meny.kat.ube':'Ube','meny.kat.matcha':'Matcha','meny.kat.kaffe':'Kaffe & te','meny.kat.smoothie':'Smoothie','meny.kat.soda':'Sodavand',
+    'meny.not.gf':'Alle pandekager kan laves glutenfri for 10 kr ekstra.','meny.not.brunch':'Brunchen fås også glutenfri, til samme pris.',
+    'meny.not.kids':'Børnestørrelse. Glutenfri 109 kr.','meny.not.ube':'Hele ube-serien serveres på Kungsholmen. I Uppsala serverer vi Ube Coconut Frappe.',
+    'meny.slut':'Priserne gælder i vores caféer. Har du en allergi, så spørg os ved kassen, så guider vi dig.',
     'foot.nav.h':'Navigation','foot.nav.jobb':'Arbejd hos os',
     'foot.hours.h':'Åbningstider','foot.hours.label':'Se den respektive enhed →',
     'foot.social.h':'Følg os','foot.brand':'Japanske fluffy pandekager og ægte matcha, en oplevelse uden sidestykke i Sverige.',
@@ -1753,10 +2166,19 @@ const T = {
     'form.sending':'Sender…','form.sent':'✓ Sendt!','form.error':'⚠ Prøv igen',
   },
   no: {
-    'bingsu.badge':'Nyhet','bingsu.title':'Nå finnes en barnemeny','bingsu.date':'En fluffy pannekake + drikke','bingsu.loc':'Kungsholmen & Uppsala','bingsu.text':'Nå får de små sin egen meny. De samme fluffy soufflépannekakene som dere elsker, i perfekt størrelse for de minste gjestene. Fra 99 kr.','bingsu.order':'Bestill online',
+    'bingsu.badge':'Nyåpning','bingsu.title':'Vi åpner i Mall of Scandinavia','bingsu.date':'Fredag 11. september','bingsu.loc':'Solna & Stockholm','bingsu.text':'Vårt tredje sted åpner dørene i Mall of Scandinavia. Samme fluffy soufflépannekaker, samme matcha og ube, nå også i Solna.','bingsu.order':'Bestill online',
     'nav.hem':'Hjem','nav.restauranger':'Restauranter','nav.giftcard':'Gavekort',
     'nav.event':'Event','nav.jobb':'Jobb','nav.brunch':'Brunch','nav.collab':'Samarbeid',
     'nav.meny':'Meny','nav.kontakt':'Kontakt',
+    'btn.order.kort':'Bestill','btn.order.suffix':'online',
+    // Menysidan. Kategorinamnen följer Qopla, texterna är våra egna.
+    'meny.label':'Meny','meny.h1':'Alt vi serverer',
+    'meny.body':'Hele menyen med prisene som gjelder i kafeene.',
+    'meny.varning':'Utvalget kan variere mellom stedene våre.',
+    'meny.kat.pancakes':'Souffle Pancakes','meny.kat.toast':'Golden Toast','meny.kat.brunch':'Brunsj','meny.kat.kids':'Fluffy Kids','meny.kat.bingsu':'Bingsu','meny.kat.ube':'Ube','meny.kat.matcha':'Matcha','meny.kat.kaffe':'Kaffe & te','meny.kat.smoothie':'Smoothie','meny.kat.soda':'Brus',
+    'meny.not.gf':'Alle pannekaker kan lages glutenfrie for 10 kr ekstra.','meny.not.brunch':'Brunsjen finnes også glutenfri, til samme pris.',
+    'meny.not.kids':'Barnestørrelse. Glutenfri 109 kr.','meny.not.ube':'Hele ube-serien serveres på Kungsholmen. I Uppsala serverer vi Ube Coconut Frappe.',
+    'meny.slut':'Prisene gjelder i kafeene våre. Har du en allergi, spør oss i kassen, så hjelper vi deg.',
     'foot.nav.h':'Navigasjon','foot.nav.jobb':'Jobb hos oss',
     'foot.hours.h':'Åpningstider','foot.hours.label':'Se respektiv enhet →',
     'foot.social.h':'Følg oss','foot.brand':'Japanske fluffy pannekaker og ekte matcha, en opplevelse uten sidestykke i Sverige.',
