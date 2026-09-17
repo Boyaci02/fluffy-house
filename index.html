@@ -165,6 +165,47 @@
       }
     },
     {
+      "@type": "Restaurant",
+      "@id": "https://fluffyhouse.se/#mos",
+      "name": "Fluffy House Mall of Scandinavia",
+      "image": "https://fluffyhouse.se/assets/og-image.jpg",
+      "logo": "https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png",
+      "url": "https://fluffyhouse.se/",
+      "email": "info@fluffyhouse.se",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Stjärntorget 2, Mall of Scandinavia",
+        "postalCode": "169 79",
+        "addressLocality": "Solna",
+        "addressCountry": "SE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 59.3703,
+        "longitude": 18.0037
+      },
+      "servesCuisine": [
+        "Japanska fluffy pancakes",
+        "Matcha",
+        "Bingsu",
+        "Dessert",
+        "Brunch"
+      ],
+      "priceRange": "$$",
+      "parentOrganization": {
+        "@id": "https://fluffyhouse.se/#org"
+      },
+      "sameAs": [
+        "https://www.instagram.com/fluffyhouse_sweden/",
+        "https://www.tiktok.com/@fluffy.house.swed",
+        "https://www.facebook.com/profile.php?id=61579297283770"
+      ],
+      "potentialAction": {
+        "@type": "OrderAction",
+        "target": "https://fluffyhouse.qopla.com/"
+      }
+    },
+    {
       "@type": "FAQPage",
       "@id": "https://fluffyhouse.se/#faq",
       "inLanguage": "sv",
@@ -620,17 +661,8 @@
     .rest-card:hover .rest-card-img { transform: scale(1.06); }
     .rest-card-k .rest-card-img { background-image: url('https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg'); }
     .rest-card-u .rest-card-img { background-image: url('assets/matcha-latte.jpg'); }
-    .rest-card-mos { grid-column: 1 / -1; min-height: 380px; cursor: default; }
-    .rest-card-mos:hover { transform: none; box-shadow: none; }
-    .rest-card-mos .rest-card-img {
-      background-image: url('https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690df0ccd13a2e34c47fea08.jpg');
-      filter: blur(8px) brightness(0.5); transform: scale(1.05);
-    }
-    .rest-card-mos .rest-card-grad { background: rgba(0,0,0,0.35); }
-    .rest-card-mos .rest-card-body {
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      inset: 0; padding: 3rem; text-align: center;
-    }
+    /* MOS oppnade 11/9 2026: samma kort som de andra (coming soon-laget borttaget 17/9) */
+    .rest-card-m .rest-card-img { background-image: url('assets/gallery-pancakes.jpg'); }
     .rest-card-coming {
       display: inline-block; font-size: 0.6875rem; font-weight: 700;
       letter-spacing: 0.15em; text-transform: uppercase;
@@ -690,6 +722,9 @@
     .loc-hero-grad { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.65)); }
     .loc-hero-content { position: absolute; bottom: 3.5rem; left: 0; right: 0; padding: 0 4rem; }
     .loc-info-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 5rem; align-items: start; }
+    /* Grid-barn har min-width:auto och sprangde 390 px med 8 px pa alla tre enhetssidor (QA 17/9). */
+    .loc-info-grid > * { min-width: 0; }
+    .info-val { min-width: 0; overflow-wrap: anywhere; }
     .info-card {
       background: #fff; border-radius: 16px; padding: 2.5rem;
       border: 1px solid var(--c-border);
@@ -1048,14 +1083,14 @@
     <button class="bingsu-close" id="bingsu-x" aria-label="Stäng">&times;</button>
     <div class="pic" role="img" aria-label="Soufflépannkaka med sås, bär och glass"></div>
     <div class="body">
-      <span class="bingsu-badge" data-i18n="bingsu.badge">Nyöppning</span>
-      <h3 id="bingsu-title" data-i18n="bingsu.title">Vi öppnar i Mall of Scandinavia</h3>
-      <p class="bingsu-date" data-i18n="bingsu.date">Fredag 11 september</p>
+      <span class="bingsu-badge" data-i18n="bingsu.badge">Nyöppnat</span>
+      <h3 id="bingsu-title" data-i18n="bingsu.title">Nu öppet i Mall of Scandinavia</h3>
+      <p class="bingsu-date" data-i18n="bingsu.date">Öppnade fredag 11 september</p>
       <span class="bingsu-loc">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         <span data-i18n="bingsu.loc">Solna &amp; Stockholm</span>
       </span>
-      <p class="bingsu-text" data-i18n="bingsu.text">Vår tredje plats slår upp dörrarna i Mall of Scandinavia. Samma fluffiga soufflépannkakor, samma matcha och ube, nu även i Solna.</p>
+      <p class="bingsu-text" data-i18n="bingsu.text">Vårt tredje café har öppnat i Mall of Scandinavia. Samma fluffiga soufflépannkakor, samma matcha och ube, nu även i Solna.</p>
       <a class="bingsu-cta" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" data-i18n="bingsu.order">Beställ online</a>
     </div>
   </div>
@@ -1381,14 +1416,19 @@
           </div>
         </div>
 
-        <!-- Mall of Scandinavia – Coming Soon -->
-        <div class="rest-card rest-card-mos" data-r="up" data-delay="300">
+        <!-- Mall of Scandinavia, oppnade 11 september 2026 -->
+        <div class="rest-card rest-card-m" data-r="up" data-delay="300" style="cursor:pointer;" onclick="navigate('mos')">
           <div class="rest-card-img"></div>
           <div class="rest-card-grad"></div>
           <div class="rest-card-body">
-            <span class="rest-card-coming">Coming soon</span>
+            <div class="rest-card-badge" id="badge-m" style="display:none;"><span class="rest-badge-dot" id="dot-badge-m"></span> <span id="label-badge-m">Öppet nu</span></div>
             <h2 class="rest-card-name">Fluffy House<br>Mall of Scandinavia</h2>
-            <p class="rest-card-addr">Solna · Stockholm</p>
+            <p class="rest-card-addr">Stjärntorget 2 · Solna</p>
+            <div class="rest-card-meta">
+              <span class="rest-card-hours" id="hours-card-m"><span data-i18n="loc.m.hours">Följer gallerians öppettider</span><br><span style="font-weight:500; font-size:0.8125rem;" data-i18n="loc.m.floor">Plan 1, utanför Guldfynd</span></span>
+              <span class="rest-card-cta" data-i18n="rest.cta">Utforska →</span>
+            </div>
+            <a href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" class="rest-card-uber" onclick="event.stopPropagation()" id="order-card-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> Beställ online</a>
           </div>
         </div>
       </div>
@@ -1559,6 +1599,86 @@
   </div>
 
   <div id="foot-uppsala"></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     MALL OF SCANDINAVIA (oppnade 11 september 2026)
+══════════════════════════════════════════════════════════ -->
+<div id="pg-mos" class="pg" style="padding-top:72px;">
+
+  <div class="loc-hero">
+    <div class="loc-hero-img loaded" style="background-image: url('assets/gallery-pancakes.jpg');"></div>
+    <div class="loc-hero-grad"></div>
+    <div class="loc-hero-content">
+      <p style="font-size:0.6875rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:0.875rem;">Fluffy House · Solna</p>
+      <h2 class="t-h1" style="color:#fff; margin-bottom:1rem;">Mall of Scandinavia</h2>
+      <div style="display:flex; gap:0.875rem; flex-wrap:wrap;">
+        <a href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" class="btn btn-white order-m">Beställ online</a>
+        <button class="btn btn-outline-white" data-pg="restauranger" data-i18n="btn.back.rest">← Alla restauranger</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="wrap">
+      <div class="loc-info-grid">
+        <div>
+          <p class="t-label" style="margin-bottom:1rem;" data-r="up" data-i18n="loc.m.label">Om restaurangen</p>
+          <h2 class="t-h2" style="margin-bottom:1.75rem;" data-r="up" data-delay="100" data-i18n="loc.m.h2">Vårt tredje café, mitt i Mall of Scandinavia</h2>
+          <p class="t-body" style="margin-bottom:1.25rem;" data-r="up" data-delay="200" data-i18n="loc.m.p1">
+            Fluffy House Mall of Scandinavia öppnade den 11 september 2026. Samma fluffiga soufflépannkakor, samma matcha och ube som på Kungsholmen och i Uppsala, nu även i Solna.
+          </p>
+          <p class="t-body" style="margin-bottom:2.5rem;" data-r="up" data-delay="250" data-i18n="loc.m.p2">
+            Du hittar oss på plan 1 i Mall of Scandinavia, utanför Guldfynd, ett par minuter från Solna station och Friends Arena. Vi har öppet när gallerian har öppet. Glutenfria pannkakor serveras inte här, men på Kungsholmen och i Uppsala.
+          </p>
+
+          <div style="margin-bottom:3rem;" data-r="up" data-delay="300">
+            <iframe class="map-frame"
+              src="https://www.google.com/maps?q=Mall+of+Scandinavia,+Stj%C3%A4rntorget+2,+169+79+Solna&output=embed"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Fluffy House Mall of Scandinavia"
+            ></iframe>
+          </div>
+        </div>
+
+        <div data-r="right" data-delay="200">
+          <div class="info-card">
+            <div id="status-wrap-m" style="display:none; align-items:center; gap:0.625rem; margin-bottom:1.5rem;">
+              <span id="dot-m" style="width:8px;height:8px;border-radius:50%;background:#6ee49c;animation:pulse 2s ease infinite;flex-shrink:0;display:inline-block;"></span>
+              <span id="label-m" style="font-size:0.8125rem; font-weight:700; color:var(--c-matcha);">Öppet nu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Adress</span>
+              <span class="info-val">Mall of Scandinavia<br>Stjärntorget 2, 169 79 Solna</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Öppettider</span>
+              <span class="info-val" data-i18n="loc.m.hours2">Samma som Mall of Scandinavia<br><a href="https://www.mallofscandinavia.se/" target="_blank" rel="noopener" style="color:var(--c-matcha);">Se gallerians öppettider ↗</a></span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Hitta oss</span>
+              <span class="info-val" data-i18n="loc.m.floor2">Plan 1, utanför Guldfynd</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Pendeltåg</span>
+              <span class="info-val">Solna station<br>ca 3 min</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Öppnade</span>
+              <span class="info-val">11 september 2026</span>
+            </div>
+            <div style="padding-top:1.5rem; display:flex; flex-direction:column; gap:0.75rem;">
+              <a href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" class="btn btn-green order-m" style="justify-content:center;">Beställ online</a>
+              <a href="https://maps.google.com/?q=Mall+of+Scandinavia,+Stj%C3%A4rntorget+2,+Solna" target="_blank" rel="noopener" class="btn btn-outline" style="justify-content:center;">Vägbeskrivning ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="foot-mos"></div>
 </div>
 
 
@@ -2081,7 +2201,7 @@
 ══════════════════════════════════════════════════════════ -->
 <script>
 // ─── Page navigation ──────────────────────────────────────
-const ALL_PAGES = ['hem','restauranger','kungsholmen','uppsala','event','jobb','meny','brunch','collaboration','kontakt'];  // 'giftcard' urplockad 2026-08-08
+const ALL_PAGES = ['hem','restauranger','kungsholmen','uppsala','mos','event','jobb','meny','brunch','collaboration','kontakt'];  // 'giftcard' urplockad 2026-08-08
 let current = 'hem';
 let transitioning = false;
 const fade = document.getElementById('page-fade');
@@ -2267,7 +2387,7 @@ document.getElementById('ck-nec').addEventListener('click', dismissCookie);
 const T = {
   sv: {
     'faq.label':"Vanliga frågor",'faq.h2':"Bra att veta innan du kommer",'faq.q1':"Vad är japanska fluffy pancakes?",'faq.a1':"Soufflépannkakor som vispas luftiga och gräddas långsamt tills de blir höga, mjuka och lätt dallrande. Fluffy House var först i Sverige med dem när Kungsholmen öppnade i oktober 2024.",'faq.q2':"Var ligger Fluffy House?",'faq.a2':"Vi har tre caféer: Sankt Eriksgatan 44 på Kungsholmen i Stockholm, cirka 200 meter från Fridhemsplans tunnelbana, Dragarbrunnsgatan 50C i Uppsala och Mall of Scandinavia i Solna.",'faq.q3':"Vilka öppettider har ni?",'faq.a3':"Kungsholmen har öppet alla dagar 10:00–20:00, sista beställning på pannkakor 19:30. Uppsala har öppet alla dagar 10:00–19:00, sista beställning på pannkakor 18:30.",'faq.q4':"Kan man få pannkakorna glutenfria?",'faq.a4':"Ja. Alla pannkakor går att få glutenfria för 10 kr extra på Kungsholmen och i Uppsala. Har du en allergi, fråga i kassan så guidar vi dig rätt.",'faq.q5':"Kan jag beställa online?",'faq.a5':"Ja. Knappen Beställ online tar dig till vår Qopla-butik, där du väljer café och lägger din beställning.",'faq.q6':"Serverar ni brunch?",'faq.a6':"Ja. All Day Brunch med lax- eller avocadopannkaka serveras hela dagen på både Kungsholmen och i Uppsala.",
-    'bingsu.badge':'Nyöppning','bingsu.title':'Vi öppnar i Mall of Scandinavia','bingsu.date':'Fredag 11 september','bingsu.loc':'Solna & Stockholm','bingsu.text':'Vår tredje plats slår upp dörrarna i Mall of Scandinavia. Samma fluffiga soufflépannkakor, samma matcha och ube, nu även i Solna.','bingsu.order':'Beställ online',
+    'bingsu.badge':'Nyöppnat','bingsu.title':'Nu öppet i Mall of Scandinavia','bingsu.date':'Öppnade fredag 11 september','bingsu.loc':'Solna & Stockholm','bingsu.text':'Vårt tredje café har öppnat i Mall of Scandinavia. Samma fluffiga soufflépannkakor, samma matcha och ube, nu även i Solna.','bingsu.order':'Beställ online',
     'nav.hem':'Hem','nav.restauranger':'Restauranger','nav.giftcard':'Giftcard',
     'nav.event':'Event','nav.jobb':'Jobb','nav.brunch':'Brunch','nav.collab':'Collab',
     'nav.meny':'Meny','nav.kontakt':'Kontakt',
@@ -2302,7 +2422,7 @@ const T = {
     'rest.body':'Hitta din närmaste Fluffy House. Nu öppna i Stockholm och Uppsala.',
     'rest.open':'Öppet nu','rest.cta':'Utforska →','rest.uber':'Beställ online',
     'bar.pre':'Nu kan du ','bar.delivery':'beställa hem via Uber Eats','bar.cta':'Beställ hem',
-    'loc.k.label':'Om restaurangen','loc.k.h2':'Vår första enhet, hjärtat av Kungsholmen',
+    'loc.m.label':'Om restaurangen','loc.m.h2':'Vårt tredje café, mitt i Mall of Scandinavia','loc.m.p1':'Fluffy House Mall of Scandinavia öppnade den 11 september 2026. Samma fluffiga soufflépannkakor, samma matcha och ube som på Kungsholmen och i Uppsala, nu även i Solna.','loc.m.p2':'Du hittar oss på plan 1 i Mall of Scandinavia, utanför Guldfynd, ett par minuter från Solna station och Friends Arena. Vi har öppet när gallerian har öppet. Glutenfria pannkakor serveras inte här, men på Kungsholmen och i Uppsala.','loc.m.opened':'Nyöppnat · sedan 11 september 2026','loc.m.hours':'Följer gallerians öppettider','loc.m.floor':'Plan 1, utanför Guldfynd','loc.m.floor2':'Plan 1, utanför Guldfynd','loc.k.label':'Om restaurangen','loc.k.h2':'Vår första enhet, hjärtat av Kungsholmen',
     'loc.k.p1':'Det var här allt startade. Fluffy House Kungsholmen öppnade den 10 oktober 2024 och är det allra första stället i Sverige att servera äkta japanska fluffy pancakes.',
     'loc.k.p2':'Beläget på Sankt Eriksgatan 44, bara 200 meter från Fridhemsplan, är caféet lätt att nå med tunnelbana. Välkommen in och upplev matcha och soufflé-pannkakor som du aldrig smakat dem förut.',
     'loc.u.h2':'Fluffy House Uppsala, nu öppet!',
@@ -2324,7 +2444,7 @@ const T = {
   },
   en: {
     'faq.label':"FAQ",'faq.h2':"Good to know before you visit",'faq.q1':"What are Japanese fluffy pancakes?",'faq.a1':"Soufflé pancakes whipped light and cooked slowly until they are tall, soft and slightly wobbly. Fluffy House was the first in Sweden to serve them when Kungsholmen opened in October 2024.",'faq.q2':"Where is Fluffy House?",'faq.a2':"We have three cafés: Sankt Eriksgatan 44 in Kungsholmen, Stockholm, about 200 metres from Fridhemsplan metro station, Dragarbrunnsgatan 50C in Uppsala, and Mall of Scandinavia in Solna.",'faq.q3':"What are your opening hours?",'faq.a3':"Kungsholmen is open every day 10:00–20:00, last pancake order 19:30. Uppsala is open every day 10:00–19:00, last pancake order 18:30.",'faq.q4':"Can the pancakes be made gluten free?",'faq.a4':"Yes. Every pancake can be made gluten free for 10 kr extra at Kungsholmen and in Uppsala. If you have an allergy, ask at the counter and we will guide you.",'faq.q5':"Can I order online?",'faq.a5':"Yes. The Order online button takes you to our Qopla shop, where you pick a café and place your order.",'faq.q6':"Do you serve brunch?",'faq.a6':"Yes. All Day Brunch with a salmon or avocado pancake is served all day at both Kungsholmen and Uppsala.",
-    'bingsu.badge':'Now opening','bingsu.title':'We are opening at Mall of Scandinavia','bingsu.date':'Friday 11 September','bingsu.loc':'Solna & Stockholm','bingsu.text':'Our third place opens its doors at Mall of Scandinavia. The same fluffy soufflé pancakes, the same matcha and ube, now in Solna too.','bingsu.order':'Order online',
+    'bingsu.badge':'Now open','bingsu.title':'Now open at Mall of Scandinavia','bingsu.date':'Opened Friday 11 September','bingsu.loc':'Solna & Stockholm','bingsu.text':'Our third place opens its doors at Mall of Scandinavia. The same fluffy soufflé pancakes, the same matcha and ube, now in Solna too.','bingsu.order':'Order online',
     'nav.hem':'Home','nav.restauranger':'Restaurants','nav.giftcard':'Gift Card',
     'nav.event':'Event','nav.jobb':'Jobs','nav.brunch':'Brunch','nav.collab':'Collab',
     'nav.meny':'Menu','nav.kontakt':'Contact',
@@ -2359,7 +2479,7 @@ const T = {
     'rest.body':'Find your nearest Fluffy House. Now open in Stockholm and Uppsala.',
     'rest.open':'Open now','rest.cta':'Explore →','rest.uber':'Order online',
     'bar.pre':'You can now ','bar.delivery':'order delivery on Uber Eats','bar.cta':'Order now',
-    'loc.k.label':'About the restaurant','loc.k.h2':'Our first location, heart of Kungsholmen',
+    'loc.m.label':'About the restaurant','loc.m.h2':'Our third café, in the middle of Mall of Scandinavia','loc.m.p1':'Fluffy House Mall of Scandinavia opened on 11 September 2026. The same fluffy soufflé pancakes, the same matcha and ube as at Kungsholmen and in Uppsala, now in Solna too.','loc.m.p2':'Find us on level 1 of Mall of Scandinavia, outside Guldfynd, a couple of minutes from Solna station and Friends Arena. We are open whenever the mall is open. Gluten-free pancakes are not served here, but at Kungsholmen and in Uppsala.','loc.m.opened':'Newly opened · since 11 September 2026','loc.m.hours':'Same hours as the mall','loc.m.floor':'Level 1, outside Guldfynd','loc.m.floor2':'Level 1, outside Guldfynd','loc.k.label':'About the restaurant','loc.k.h2':'Our first location, heart of Kungsholmen',
     'loc.k.p1':'This is where it all started. Fluffy House Kungsholmen opened on 10 October 2024 and is the very first place in Sweden to serve authentic Japanese fluffy pancakes.',
     'loc.k.p2':'Located at Sankt Eriksgatan 44, just 200 metres from Fridhemsplan, the café is easy to reach by metro. Come in and experience matcha and soufflé pancakes like you\'ve never tasted them before.',
     'loc.u.h2':'Fluffy House Uppsala, now open!',
@@ -2380,7 +2500,7 @@ const T = {
     'form.sending':'Sending…','form.sent':'✓ Sent!','form.error':'⚠ Try again',
   },
   da: {
-    'bingsu.badge':'Nyåbning','bingsu.title':'Vi åbner i Mall of Scandinavia','bingsu.date':'Fredag den 11. september','bingsu.loc':'Solna & Stockholm','bingsu.text':'Vores tredje sted slår dørene op i Mall of Scandinavia. De samme fluffy soufflépandekager, den samme matcha og ube, nu også i Solna.','bingsu.order':'Bestil online',
+    'bingsu.badge':'Nyåbnet','bingsu.title':'Nu åbent i Mall of Scandinavia','bingsu.date':'Åbnede fredag den 11. september','bingsu.loc':'Solna & Stockholm','bingsu.text':'Vores tredje café har åbnet i Mall of Scandinavia. De samme fluffy soufflépandekager, den samme matcha og ube, nu også i Solna.','bingsu.order':'Bestil online',
     'nav.hem':'Hjem','nav.restauranger':'Restauranter','nav.giftcard':'Gavekort',
     'nav.event':'Event','nav.jobb':'Job','nav.brunch':'Brunch','nav.collab':'Samarbeid',
     'nav.meny':'Menu','nav.kontakt':'Kontakt',
@@ -2415,7 +2535,7 @@ const T = {
     'rest.body':'Find din nærmeste Fluffy House. Nu åbent i Stockholm og Uppsala.',
     'rest.open':'Åbent nu','rest.cta':'Udforsk →','rest.uber':'Bestil online',
     'bar.pre':'Du kan nu ','bar.delivery':'bestille hjem via Uber Eats','bar.cta':'Bestil hjem',
-    'loc.k.label':'Om restauranten','loc.k.h2':'Vores første enhed, hjertet af Kungsholmen',
+    'loc.m.label':'Om restauranten','loc.m.h2':'Vores tredje café, midt i Mall of Scandinavia','loc.m.p1':'Fluffy House Mall of Scandinavia åbnede den 11. september 2026. De samme fluffige soufflépandekager, den samme matcha og ube som på Kungsholmen og i Uppsala, nu også i Solna.','loc.m.p2':'Du finder os på plan 1 i Mall of Scandinavia, uden for Guldfynd, et par minutter fra Solna station og Friends Arena. Vi har åbent, når centret har åbent. Glutenfri pandekager serveres ikke her, men på Kungsholmen og i Uppsala.','loc.m.opened':'Nyåbnet · siden 11. september 2026','loc.m.hours':'Følger centrets åbningstider','loc.m.floor':'Plan 1, uden for Guldfynd','loc.m.floor2':'Plan 1, uden for Guldfynd','loc.k.label':'Om restauranten','loc.k.h2':'Vores første enhed, hjertet af Kungsholmen',
     'loc.k.p1':'Det var her, det hele startede. Fluffy House Kungsholmen åbnede den 10. oktober 2024 og er det første sted i Sverige, der serverer ægte japanske fluffy pandekager.',
     'loc.k.p2':'Beliggende på Sankt Eriksgatan 44, kun 200 meter fra Fridhemsplan, er caféen nem at nå med metro. Kom ind og oplev matcha og soufflé-pandekager som du aldrig har smagt dem før.',
     'loc.u.h2':'Fluffy House Uppsala, nu åbent!',
@@ -2436,7 +2556,7 @@ const T = {
     'form.sending':'Sender…','form.sent':'✓ Sendt!','form.error':'⚠ Prøv igen',
   },
   no: {
-    'bingsu.badge':'Nyåpning','bingsu.title':'Vi åpner i Mall of Scandinavia','bingsu.date':'Fredag 11. september','bingsu.loc':'Solna & Stockholm','bingsu.text':'Vårt tredje sted åpner dørene i Mall of Scandinavia. Samme fluffy soufflépannekaker, samme matcha og ube, nå også i Solna.','bingsu.order':'Bestill online',
+    'bingsu.badge':'Nyåpnet','bingsu.title':'Nå åpent i Mall of Scandinavia','bingsu.date':'Åpnet fredag 11. september','bingsu.loc':'Solna & Stockholm','bingsu.text':'Vårt tredje sted åpner dørene i Mall of Scandinavia. Samme fluffy soufflépannekaker, samme matcha og ube, nå også i Solna.','bingsu.order':'Bestill online',
     'nav.hem':'Hjem','nav.restauranger':'Restauranter','nav.giftcard':'Gavekort',
     'nav.event':'Event','nav.jobb':'Jobb','nav.brunch':'Brunch','nav.collab':'Samarbeid',
     'nav.meny':'Meny','nav.kontakt':'Kontakt',
@@ -2471,7 +2591,7 @@ const T = {
     'rest.body':'Finn din nærmeste Fluffy House. Nå åpent i Stockholm og Uppsala.',
     'rest.open':'Åpent nå','rest.cta':'Utforsk →','rest.uber':'Bestill online',
     'bar.pre':'Du kan nå ','bar.delivery':'bestille hjem via Uber Eats','bar.cta':'Bestill hjem',
-    'loc.k.label':'Om restauranten','loc.k.h2':'Vår første enhet, hjertet av Kungsholmen',
+    'loc.m.label':'Om restauranten','loc.m.h2':'Vår tredje kafé, midt i Mall of Scandinavia','loc.m.p1':'Fluffy House Mall of Scandinavia åpnet 11. september 2026. De samme fluffige sufflépannekakene, den samme matchaen og uben som på Kungsholmen og i Uppsala, nå også i Solna.','loc.m.p2':'Du finner oss i plan 1 i Mall of Scandinavia, utenfor Guldfynd, et par minutter fra Solna stasjon og Friends Arena. Vi har åpent når kjøpesenteret har åpent. Glutenfrie pannekaker serveres ikke her, men på Kungsholmen og i Uppsala.','loc.m.opened':'Nyåpnet · siden 11. september 2026','loc.m.hours':'Følger senterets åpningstider','loc.m.floor':'Plan 1, utenfor Guldfynd','loc.m.floor2':'Plan 1, utenfor Guldfynd','loc.k.label':'Om restauranten','loc.k.h2':'Vår første enhet, hjertet av Kungsholmen',
     'loc.k.p1':'Det var her alt startet. Fluffy House Kungsholmen åpnet 10. oktober 2024 og er det aller første stedet i Sverige som serverer ekte japanske fluffy pannekaker.',
     'loc.k.p2':'Plassert på Sankt Eriksgatan 44, bare 200 meter fra Fridhemsplan, er kaféen lett å nå med T-bane. Kom inn og opplev matcha og soufflé-pannekaker som du aldri har smakt dem før.',
     'loc.u.h2':'Fluffy House Uppsala, nå åpent!',
