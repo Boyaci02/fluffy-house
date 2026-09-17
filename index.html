@@ -724,6 +724,8 @@
     .loc-info-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 5rem; align-items: start; }
     /* Grid-barn har min-width:auto och sprangde 390 px med 8 px pa alla tre enhetssidor (QA 17/9). */
     .loc-info-grid > * { min-width: 0; }
+    /* Reveal-lagret translateX pa infokortet under vikningen gav 8 px sidscroll pa mobil innan det synts. */
+    .pg { overflow-x: clip; }
     .info-val { min-width: 0; overflow-wrap: anywhere; }
     .info-card {
       background: #fff; border-radius: 16px; padding: 2.5rem;
