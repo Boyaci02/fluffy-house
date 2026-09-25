@@ -854,8 +854,12 @@
     #deliverybar .db-txt { display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem; text-align: center; }
     #deliverybar .db-txt svg { width: 15px; height: 15px; }
     @media (max-width: 560px) {
-      #deliverybar { font-size: 0.76rem; gap: 0.5rem; }
+      /* Tva banners ovanpa varandra at for mycket av skarmen pa mobil: 40 + 62 px
+         av ca 650. Bada bantas, och --bar-h foljer med sa allt under hamnar ratt. */
+      :root { --bar-h: 32px; }
+      #deliverybar { font-size: 0.72rem; gap: 0.4rem; height: var(--bar-h); padding: 0 0.75rem; }
       #deliverybar .db-long { display: none; }
+      #deliverybar .db-txt svg { width: 13px; height: 13px; }
     }
     body {
       padding-top: var(--bar-h);
@@ -962,6 +966,10 @@
       transition: opacity 0.3s ease;
     }
     #mob-menu.open { opacity: 1; pointer-events: all; }
+    /* Bannerna ligger over menyn i staplingsordningen och tackte stängknappen.
+       Nar menyn ar oppen ska de bort helt. */
+    body.menu-open #deliverybar,
+    body.menu-open #gf-bar { opacity: 0; pointer-events: none; transition: opacity 0.2s ease; }
     #nav.mob-hidden { opacity: 0; pointer-events: none; transition: opacity 0.2s ease; }
 
     .mob-menu-header {
@@ -1078,6 +1086,28 @@
       object-fit: cover;
       pointer-events: none;
     }
+    /* Den suddiga kopian ligger underst och fyller ytan; den skarpa ovanpa visas
+       hel. Pa mobil ar heron smalare an filmen, da racker cover och den suddiga
+       behovs inte. */
+    .hero-video--bak { filter: blur(28px) saturate(1.15); transform: scale(1.12); }
+    @media (min-width: 761px) {
+      .hero:has(.hero-content--video) .hero-video:not(.hero-video--bak) { object-fit: contain; }
+    }
+    @media (max-width: 760px) {
+      .hero-video--bak { display: none; }
+      /* Naven far egen botten pa mobil sa den inte behover ligga genomskinlig
+         ovanpa skyltens rubrik. */
+      body.has-gf-bar .hero:has(.hero-content--video) ~ * #nav,
+      .hero:has(.hero-content--video) + * #nav { }
+      #nav.hero-mode.over-video { background: rgba(28,28,26,.55); backdrop-filter: blur(10px); }
+    }
+    /* Filmen ar gjord for menyskarmarna i 9:16 och bar egen rubrik och pris.
+       Pa dator ar heron bredare an sa, filmen skalas efter bredden och det som
+       syns blir sjalva produkten, vilket ar snyggt. Pa mobil ar heron SMALARE
+       an 9:16, och da skar cover bort sidorna sa rubriken kapas mitt i ordet.
+       Dar visas filmen i sin helhet i stallet, mot samma grona som den ar
+       gjord mot, sa skylten alltid syns hel. */
+    }
     .hero-grad {
       position: absolute; inset: 0;
       background: linear-gradient(
@@ -1093,6 +1123,19 @@
       padding: 0 4rem 5rem;
       width: 100%;
       display: flex; align-items: flex-end; justify-content: space-between; gap: 3rem;
+    }
+    /* Video-hero: filmen bar budskapet, sa bara knapparna ligger kvar och de
+       hamnar i nederkanten dar videon ar lugn. */
+    .hero-content--video { padding-bottom: 3.25rem; }
+    .hero-content--video .hero-text { max-width: none; width: 100%; }
+    .hero-content--video .hero-actions { justify-content: flex-start; }
+    .hero:has(.hero-content--video) .hero-grad {
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.42) 0%, rgba(0,0,0,.16) 9%, rgba(0,0,0,0) 20%),
+        linear-gradient(to top, rgba(0,0,0,.78) 0%, rgba(0,0,0,.35) 18%, rgba(0,0,0,0) 42%);
+    }
+    @media (max-width: 760px) {
+      .hero-content--video { padding-bottom: 2.25rem; }
     }
     .hero-text { max-width: 720px; }
     .hero-label { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 1.25rem; }
@@ -1581,10 +1624,11 @@
   /* When banner is visible push the fixed nav down */
   body.has-gf-bar #nav{margin-top:var(--gf-h,38px)}
   @media (max-width:760px){
-    .gf-bar-inner{padding:8px 14px;gap:8px}
-    .gf-bar-text{gap:4px 12px;font-size:.78rem}
-    .gf-bar-label{font-size:.62rem}
-    body.has-gf-bar #nav{margin-top:var(--gf-h,62px)}
+    .gf-bar-inner{padding:5px 12px;gap:6px}
+    .gf-bar-text{gap:2px 10px;font-size:.72rem;line-height:1.25}
+    .gf-bar-label{font-size:.58rem}
+    .gf-bar-close{width:24px;height:24px;right:8px}
+    body.has-gf-bar #nav{margin-top:var(--gf-h,44px)}
   }
   #bingsu-pop.launched .bingsu-pre{display:none}
   #bingsu-pop.launched p.bingsu-post{display:block}
@@ -1733,14 +1777,15 @@
 
   <!-- Hero -->
   <div class="hero">
-    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
-      <source src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/690e029a068dfc10465ebc86.mp4" type="video/mp4" />
+    <video class="hero-video hero-video--bak" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+      <source src="assets/hero-loop.mp4" type="video/mp4" />
+    </video>
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-loop-poster.jpg">
+      <source src="assets/hero-loop.mp4" type="video/mp4" />
     </video>
     <div class="hero-grad"></div>
-    <div class="hero-content">
+    <div class="hero-content hero-content--video">
       <div class="hero-text">
-        <h1 class="hero-title">Fluffy<br>House</h1>
-        <p class="hero-sub" data-i18n="hero.sub">Japanska fluffy pancakes och äkta matcha, en upplevelse utan motstycke i Sverige.</p>
         <div class="hero-actions">
           <a href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" class="btn btn-white" data-i18n="btn.order">Beställ online</a>
           <button class="btn btn-outline-white" data-pg="restauranger" data-i18n="hero.find">Hitta oss</button>
@@ -2753,6 +2798,7 @@ function openDrawer() {
   ham.classList.add('open');
   ham.setAttribute('aria-expanded', 'true');
   document.body.style.overflow = 'hidden';
+  document.body.classList.add('menu-open');
   navEl.classList.add('mob-hidden');
 }
 function closeMob() {
@@ -2761,10 +2807,24 @@ function closeMob() {
   ham.classList.remove('open');
   ham.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
+  document.body.classList.remove('menu-open');
   navEl.classList.remove('mob-hidden');
   setTimeout(() => { overlay.style.display = ''; }, 300);
 }
 ham.addEventListener('click', () => mob.classList.contains('open') ? closeMob() : openDrawer());
+
+// ─── Hero-video: hall den suddiga bakgrundskopian i takt med den skarpa ───
+// Bada startar samtidigt, men en flik som varit i bakgrunden eller en langsam
+// laddning kan gora att de glider isar, och da visar de tva olika scener.
+(() => {
+  const bak = document.querySelector('.hero-video--bak');
+  const fram = document.querySelector('.hero-video:not(.hero-video--bak)');
+  if (!bak || !fram) return;
+  const synka = () => { if (Math.abs(bak.currentTime - fram.currentTime) > 0.25) bak.currentTime = fram.currentTime; };
+  fram.addEventListener('play', synka);
+  fram.addEventListener('seeked', synka);
+  setInterval(synka, 2000);
+})();
 mobClose?.addEventListener('click', closeMob);
 overlay.addEventListener('click', closeMob);
 
@@ -2782,6 +2842,9 @@ window.addEventListener('scroll', () => {
 
 // Init hero mode on load
 nav.classList.add('hero-mode');
+// Video-heron bar egen text hogst upp. Pa mobil far naven en egen bakgrund sa
+// den inte lagger sig genomskinlig ovanpa skyltens rubrik.
+if (document.querySelector('.hero-content--video')) nav.classList.add('over-video');
 
 // ─── Footer injection ─────────────────────────────────────
 const footTpl = document.getElementById('foot-tpl');
