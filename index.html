@@ -1097,8 +1097,6 @@
       .hero-video--bak { display: none; }
       /* Naven far egen botten pa mobil sa den inte behover ligga genomskinlig
          ovanpa skyltens rubrik. */
-      body.has-gf-bar .hero:has(.hero-content--video) ~ * #nav,
-      .hero:has(.hero-content--video) + * #nav { }
       #nav.hero-mode.over-video { background: rgba(28,28,26,.55); backdrop-filter: blur(10px); }
     }
     /* Filmen ar gjord for menyskarmarna i 9:16 och bar egen rubrik och pris.
@@ -1107,6 +1105,17 @@
        an 9:16, och da skar cover bort sidorna sa rubriken kapas mitt i ordet.
        Dar visas filmen i sin helhet i stallet, mot samma grona som den ar
        gjord mot, sa skylten alltid syns hel. */
+    /* Lagenergilage pa iPhone blockerar all autouppspelning, och da ritar
+       Safari en stor play-knapp mitt i heron. Da doljs filmen och samma bild
+       som ar affisch till filmen far ligga kvar som stillbild i stallet. */
+    .hero.hero-stillbild .hero-video { display: none; }
+    .hero.hero-stillbild {
+      background-image: url("assets/hero-loop-poster.jpg");
+      background-size: cover; background-position: center;
+    }
+    @media (min-width: 761px) {
+      .hero.hero-stillbild { background-size: contain; background-repeat: no-repeat;
+        background-color: #4a5f22; }
     }
     .hero-grad {
       position: absolute; inset: 0;
@@ -1777,10 +1786,10 @@
 
   <!-- Hero -->
   <div class="hero">
-    <video class="hero-video hero-video--bak" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <video class="hero-video hero-video--bak" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-hidden="true" disablepictureinpicture>
       <source src="assets/hero-loop.mp4" type="video/mp4" />
     </video>
-    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-loop-poster.jpg">
+    <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/hero-loop-poster.jpg" disablepictureinpicture>
       <source src="assets/hero-loop.mp4" type="video/mp4" />
     </video>
     <div class="hero-grad"></div>
@@ -2824,6 +2833,26 @@ ham.addEventListener('click', () => mob.classList.contains('open') ? closeMob() 
   fram.addEventListener('play', synka);
   fram.addEventListener('seeked', synka);
   setInterval(synka, 2000);
+
+  // Safari kraver att ljudet ar avstangt som EGENSKAP, inte bara som attribut,
+  // innan den slapper fram autouppspelning. Sen forsoker vi starta sjalva i
+  // stallet for att lita pa autoplay-attributet.
+  const hero = fram.closest('.hero');
+  const starta = () => {
+    [bak, fram].forEach(v => { v.muted = true; v.defaultMuted = true; v.playsInline = true; });
+    return Promise.allSettled([bak.play(), fram.play()]);
+  };
+  const rullar = () => !fram.paused && !fram.ended;
+  starta();
+  // Forsta beroringen eller skrollen ar en anvandargest, och da slapper Safari
+  // ofta fram filmen aven nar den nekade vid sidladdning.
+  const vidGest = () => { starta().then(() => { if (rullar()) hero?.classList.remove('hero-stillbild'); }); };
+  ['touchstart', 'pointerdown', 'scroll'].forEach(h =>
+    window.addEventListener(h, vidGest, { once: true, passive: true }));
+  // Lagenergilage pa iPhone slapper aldrig fram filmen. Da ska ingen play-knapp
+  // ligga kvar mitt i heron, utan affischbilden far vara hero.
+  setTimeout(() => { if (!rullar()) hero?.classList.add('hero-stillbild'); }, 1600);
+  fram.addEventListener('playing', () => hero?.classList.remove('hero-stillbild'));
 })();
 mobClose?.addEventListener('click', closeMob);
 overlay.addEventListener('click', closeMob);
