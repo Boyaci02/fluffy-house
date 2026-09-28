@@ -1147,6 +1147,17 @@
       .hero-content--video { padding-bottom: 2.25rem; }
     }
     .hero-text { max-width: 720px; }
+    /* Filmen bar sjalva wordmarket, sa sidans H1 ligger kvar i DOM:en for
+       skarmlasare och sokmotorer utan att rita nagot ovanpa heron. */
+    .hero-h1 {
+      position: absolute;
+      width: 1px; height: 1px;
+      margin: -1px; padding: 0; border: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
     .hero-label { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 1.25rem; }
     .hero-title { font-size: clamp(4rem, 11vw, 9rem); font-weight: 800; letter-spacing: -0.04em; line-height: 0.92; color: #fff; margin-bottom: 1.5rem; }
     .hero-sub { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 400; line-height: 1.65; color: rgba(255,255,255,0.72); margin-bottom: 2.5rem; max-width: 440px; }
@@ -1795,6 +1806,7 @@
     <div class="hero-grad"></div>
     <div class="hero-content hero-content--video">
       <div class="hero-text">
+        <h1 class="hero-h1" data-i18n="hero.h1">Fluffy House, japanska fluffy pancakes och matcha i Stockholm</h1>
         <div class="hero-actions">
           <a href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" class="btn btn-white" data-i18n="btn.order">Beställ online</a>
           <button class="btn btn-outline-white" data-pg="restauranger" data-i18n="hero.find">Hitta oss</button>
@@ -2972,6 +2984,7 @@ const T = {
     'foot.social.h':'Följ oss','foot.brand':'Japanska fluffy pancakes och äkta matcha, en upplevelse utan motstycke i Sverige.',
     'foot.copy':'© Fluffy House Stockholm AB','foot.power':'Powered By Syns Nu',
     'hero.sub':'Japanska fluffy pancakes och äkta matcha, en upplevelse utan motstycke i Sverige.',
+    'hero.h1':'Fluffy House, japanska fluffy pancakes och matcha i Stockholm',
     'hero.find':'Hitta oss','btn.order':'Beställ online',
     'btn.back.rest':'← Alla restauranger','btn.directions':'Vägbeskrivning ↗',
     'btn.instagram':'Instagram ↗','btn.contact':'Kontakta oss',
@@ -3029,6 +3042,7 @@ const T = {
     'foot.social.h':'Follow us','foot.brand':'Japanese fluffy pancakes and authentic matcha, an experience unlike any other in Sweden.',
     'foot.copy':'© Fluffy House Stockholm AB','foot.power':'Powered By Syns Nu',
     'hero.sub':'Japanese fluffy pancakes and authentic matcha, an experience unlike any other in Sweden.',
+    'hero.h1':'Fluffy House, Japanese fluffy pancakes and matcha in Stockholm',
     'hero.find':'Find us','btn.order':'Order online',
     'btn.back.rest':'← All restaurants','btn.directions':'Directions ↗',
     'btn.instagram':'Instagram ↗','btn.contact':'Contact us',
@@ -3085,6 +3099,7 @@ const T = {
     'foot.social.h':'Følg os','foot.brand':'Japanske fluffy pandekager og ægte matcha, en oplevelse uden sidestykke i Sverige.',
     'foot.copy':'© Fluffy House Stockholm AB','foot.power':'Powered By Syns Nu',
     'hero.sub':'Japanske fluffy pandekager og ægte matcha, en oplevelse uden sidestykke i Sverige.',
+    'hero.h1':'Fluffy House, japanske fluffy pandekager og matcha i Stockholm',
     'hero.find':'Find os','btn.order':'Bestil online',
     'btn.back.rest':'← Alle restauranter','btn.directions':'Rutevejledning ↗',
     'btn.instagram':'Instagram ↗','btn.contact':'Kontakt os',
@@ -3141,6 +3156,7 @@ const T = {
     'foot.social.h':'Følg oss','foot.brand':'Japanske fluffy pannekaker og ekte matcha, en opplevelse uten sidestykke i Sverige.',
     'foot.copy':'© Fluffy House Stockholm AB','foot.power':'Powered By Syns Nu',
     'hero.sub':'Japanske fluffy pannekaker og ekte matcha, en opplevelse uten sidestykke i Sverige.',
+    'hero.h1':'Fluffy House, japanske fluffy pannekaker og matcha i Stockholm',
     'hero.find':'Finn oss','btn.order':'Bestill online',
     'btn.back.rest':'← Alle restauranter','btn.directions':'Veibeskrivelse ↗',
     'btn.instagram':'Instagram ↗','btn.contact':'Kontakt oss',
