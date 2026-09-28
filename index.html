@@ -31,7 +31,7 @@
       "name": "Fluffy House",
       "legalName": "Fluffy House Stockholm AB",
       "url": "https://fluffyhouse.se/",
-      "logo": "https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png",
+      "logo": "https://fluffyhouse.se/assets/logo.webp",
       "email": "info@fluffyhouse.se",
       "sameAs": [
         "https://www.instagram.com/fluffyhouse_sweden/",
@@ -55,7 +55,7 @@
       "@id": "https://fluffyhouse.se/#kungsholmen",
       "name": "Fluffy House Kungsholmen",
       "image": "https://fluffyhouse.se/assets/og-image.jpg",
-      "logo": "https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png",
+      "logo": "https://fluffyhouse.se/assets/logo.webp",
       "url": "https://fluffyhouse.se/",
       "email": "info@fluffyhouse.se",
       "address": {
@@ -115,7 +115,7 @@
       "@id": "https://fluffyhouse.se/#uppsala",
       "name": "Fluffy House Uppsala",
       "image": "https://fluffyhouse.se/assets/og-image.jpg",
-      "logo": "https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png",
+      "logo": "https://fluffyhouse.se/assets/logo.webp",
       "url": "https://fluffyhouse.se/",
       "email": "info@fluffyhouse.se",
       "address": {
@@ -172,7 +172,7 @@
       "@id": "https://fluffyhouse.se/#mos",
       "name": "Fluffy House Mall of Scandinavia",
       "image": "https://fluffyhouse.se/assets/og-image.jpg",
-      "logo": "https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png",
+      "logo": "https://fluffyhouse.se/assets/logo.webp",
       "url": "https://fluffyhouse.se/",
       "email": "info@fluffyhouse.se",
       "address": {
@@ -826,8 +826,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://storage.googleapis.com" />
-  <link rel="preload" as="image" href="assets/hero-poster.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/hero-loop-poster.jpg" fetchpriority="high" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
 
   <style>
@@ -923,7 +922,6 @@
     .nav-right { justify-content: flex-end; }
     .nav-logo { display: flex; justify-content: center; }
     .nav-logo img { height: 38px; width: auto; object-fit: contain; transition: filter 0.4s ease; }
-    .nav-logo .logo-light { display: none; }
     #nav.hero-mode .nav-logo .logo-dark { filter: brightness(0) invert(1); }
 
     .nav-a {
@@ -1630,7 +1628,7 @@
   .bingsu-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border:none;border-radius:999px;background:rgba(255,255,255,.85);color:var(--c-ink);font-size:1.25rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s ease}
   .bingsu-close:hover{background:#fff}
   .bingsu-post{display:none} /* default (pre-fas): dölj post-element */
-  /* Glutenfri slim top banner (samma design som midsommar) */
+  /* Glutenfri slim top banner */
   #gf-bar{position:fixed;top:var(--bar-h);left:0;right:0;z-index:2900;background:#3a5039;color:#f4f6e8;font-size:.82rem;letter-spacing:.01em;box-shadow:0 2px 12px rgba(0,0,0,.08);transform:translateY(calc(-100% - var(--bar-h)));transition:transform .42s var(--ease-out-expo)}
   #gf-bar.visible{transform:none}
   .gf-bar-inner{max-width:1280px;margin:0 auto;padding:9px 20px;display:flex;align-items:center;justify-content:center;gap:14px;position:relative}
@@ -1653,22 +1651,6 @@
   #bingsu-pop.launched .bingsu-pre{display:none}
   #bingsu-pop.launched p.bingsu-post{display:block}
   #bingsu-pop.launched a.bingsu-post{display:inline-block}
-  /* Midsommar-popup (datumstyrd) */
-  #mid-pop{position:fixed;inset:0;z-index:3000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(28,28,26,.55);backdrop-filter:blur(4px);opacity:0;transition:opacity .35s var(--ease-out-expo)}
-  #mid-pop.open{display:flex;opacity:1}
-  .mid-pop-card{position:relative;width:100%;max-width:520px;background:var(--c-cream);border-radius:24px;padding:40px 36px 34px;box-shadow:0 30px 80px rgba(28,28,26,.3);transform:translateY(18px) scale(.98);transition:transform .45s var(--ease-out-expo);text-align:center}
-  #mid-pop.open .mid-pop-card{transform:none}
-  .mid-pop-badge{display:inline-block;background:var(--c-matcha);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 13px;border-radius:999px}
-  .mid-pop-card h3{font-size:1.55rem;line-height:1.15;color:var(--c-ink);margin:15px 0 24px;font-weight:800;letter-spacing:-.02em}
-  .mid-pop-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 2rem;text-align:left;margin-bottom:28px}
-  .mid-pop-grid p{font-size:.95rem;color:var(--c-ink);margin-bottom:.4rem}
-  .mid-pop-grid p.dim{color:#6b6560}
-  .mid-pop-loc{display:flex;align-items:center;gap:.5rem;margin-bottom:.7rem}
-  .mid-pop-loc b{font-size:.95rem;font-weight:800;color:var(--c-ink)}
-  .mid-pop-pill{font-size:.58rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:.2rem .55rem}
-  .mid-pop-pill.open{color:#1f7a3d;background:#dff0e2}
-  .mid-pop-pill.closed{color:#9a3434;background:#f3dede}
-  @media(max-width:560px){.mid-pop-grid{grid-template-columns:1fr;gap:1.1rem}.mid-pop-card{max-width:360px;padding:30px 24px 28px}.mid-pop-card h3{font-size:1.3rem}}
   @media(max-width:640px){
     #bingsu-pop{align-items:flex-start;overflow-y:auto}
     .bingsu-card{grid-template-columns:1fr;max-width:360px;margin:auto}
@@ -1718,8 +1700,7 @@
 
     <div class="nav-logo">
       <span data-pg="hem" style="cursor:pointer;">
-        <img class="logo-dark" width="625" height="438" src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png" alt="Fluffy House" onerror="this.parentElement.innerHTML='<span style=\'font-weight:800;font-size:1rem;letter-spacing:-0.02em;color:var(--c-ink)\'>Fluffy House</span>'" />
-        <img class="logo-light" width="3780" height="3780" src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd02f35d1b410f47979f27.png" alt="Fluffy House" onerror="this.parentElement.innerHTML='<span style=\'font-weight:800;font-size:1rem;letter-spacing:-0.02em;color:#fff\'>Fluffy House</span>'" />
+        <img class="logo-dark" width="320" height="224" src="assets/logo.webp" alt="Fluffy House" onerror="this.parentElement.innerHTML='<span style=\'font-weight:800;font-size:1rem;letter-spacing:-0.02em;color:var(--c-ink)\'>Fluffy House</span>'" />
       </span>
     </div>
 
@@ -1761,8 +1742,8 @@
 <!-- Drawer menu -->
 <div id="mob-menu" role="dialog" aria-label="Navigation" aria-modal="true">
   <div class="mob-menu-header">
-    <img class="mob-menu-logo" width="625" height="438"
-      src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png"
+    <img class="mob-menu-logo" width="320" height="224"
+      src="assets/logo.webp"
       alt="Fluffy House"
       onerror="this.outerHTML='<span style=\'font-weight:800;font-size:1rem;color:#1c1c1a;\'>Fluffy House</span>'"
     />
@@ -1796,7 +1777,7 @@
 <div id="pg-hem" class="pg on">
 
   <!-- Hero -->
-  <div class="hero">
+  <div class="hero" id="hero">
     <video class="hero-video hero-video--bak" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-hidden="true" disablepictureinpicture>
       <source src="assets/hero-loop.mp4" type="video/mp4" />
     </video>
@@ -1825,7 +1806,7 @@
   </div>
 
   <!-- About -->
-  <div class="about-grid">
+  <div class="about-grid" id="om">
     <div class="about-img-col">
       <div class="about-img"></div>
     </div>
@@ -1860,7 +1841,7 @@
   </div>
 
   <!-- Gallery -->
-  <div class="sec">
+  <div class="sec" id="bilder">
     <div class="wrap">
       <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; margin-bottom:2.5rem; flex-wrap:wrap;">
         <div>
@@ -1942,7 +1923,7 @@
               <span class="rest-card-hours">10:00–20:00 · Alla dagar<br><span style="font-weight:500; font-size:0.8125rem;">Sista beställning: pannkakor 19:30 · drycker 20:00</span></span>
               <span class="rest-card-cta" data-i18n="rest.cta">Utforska →</span>
             </div>
-            <a href="https://qopla.com/restaurant/fluffy-house/qvygdw1PqE/order" target="_blank" rel="noopener" class="rest-card-uber" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg><span data-i18n="rest.uber">Beställ online</span></a>
+            <a href="https://qopla.com/restaurant/fluffy-house---st:eriksgatan/qvygdw1PqE/order" target="_blank" rel="noopener" class="rest-card-uber" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg><span data-i18n="rest.uber">Beställ online</span></a>
           </div>
         </div>
 
@@ -2253,7 +2234,7 @@
 ══════════════════════════════════════════════════════════ -->
 <div id="pg-event" class="pg" style="padding-top:72px;">
   <div class="cs-wrap">
-    <img src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png" alt="Fluffy House" width="625" height="438" style="height:52px;width:auto;margin-bottom:3rem;opacity:0.25;" onerror="this.style.display='none'" />
+    <img src="assets/logo.webp" alt="Fluffy House" width="320" height="224" style="height:52px;width:auto;margin-bottom:3rem;opacity:0.25;" onerror="this.style.display='none'" />
     <div class="cs-pill" data-i18n="cs.pill">Kommer snart</div>
     <h2 class="t-h1" style="color:var(--c-ink); margin-bottom:1.25rem;" data-i18n="event.h1">Event</h2>
     <p class="t-body" style="max-width:460px; margin:0 auto 2.5rem;" data-i18n="event.body">You will soon be able to book your events at Fluffy House.</p>
@@ -2351,7 +2332,7 @@
      shop Fluffy House - St:Eriksgatan, meny "Meny"). Inget pris
      skrivs för hand: ändras menyn i kassan hämtas den om.
 ══════════════════════════════════════════════════════════ -->
-<div id="pg-meny" class="pg" style="padding-top:72px;">
+<div id="pg-meny" class="pg" data-granska="meny" style="padding-top:72px;">
   <div class="sec">
     <div class="wrap-sm">
       <div class="meny-head">
@@ -2678,8 +2659,8 @@
         <!-- Brand -->
         <div class="foot-brand">
           <img
-            src="https://storage.googleapis.com/msgsndr/1FYpgqYgXr6SzFnCzKew/media/68dd7a2ed79c183a31aa76d1.png"
-            alt="Fluffy House" width="625" height="438" loading="lazy"
+            src="assets/logo.webp"
+            alt="Fluffy House" width="320" height="224" loading="lazy"
             onerror="this.outerHTML='<div style=\'font-weight:800;font-size:1.125rem;letter-spacing:-0.02em;color:#1c1c1a;margin-bottom:1.5rem;\'>Fluffy House</div>'"
           />
           <p data-i18n="foot.brand">Japanska fluffy pancakes och äkta matcha, en upplevelse utan motstycke i Sverige.</p>
@@ -3333,19 +3314,16 @@ applyLang(currentLang);
 updateOpenStatus();
 setInterval(updateOpenStatus, 60_000);
 
-// ─── Popup: midsommar (datumstyrt 15–22 juni) annars brunch Uppsala-lansering ───
+// ─── Popup: lanseringen av Mall of Scandinavia ───
 (function () {
-  var now = new Date();
-  var isMid = now >= new Date(2026, 5, 15) && now < new Date(2026, 5, 22);
-  // Under midsommar pausas brunch-popupen och midsommar-popupen visas istället.
-  var pop = document.getElementById(isMid ? 'mid-pop' : 'bingsu-pop');
+  var pop = document.getElementById('bingsu-pop');
   if (!pop) return;
 
   function open()  { pop.classList.add('open'); }
   function close() { pop.classList.remove('open'); }
 
   setTimeout(open, 1200);
-  var x = pop.querySelector(isMid ? '#mid-pop-x' : '#bingsu-x');
+  var x = pop.querySelector('#bingsu-x');
   if (x) x.addEventListener('click', close);
   pop.addEventListener('click', function (e) { if (e.target === pop) close(); });
   document.addEventListener('keydown', function (e) {
@@ -3355,24 +3333,12 @@ setInterval(updateOpenStatus, 60_000);
   if (orderLink) orderLink.addEventListener('click', close);
 })();
 
-// ─── Slim top-banner: midsommaröppettider (datumstyrt) annars glutenfri ───
+// ─── Slim top-banner: glutenfritt ───
 (function () {
   var bar = document.getElementById('gf-bar');
   if (!bar) return;
 
-  // Midsommar 2026: visa öppettider i bannern 15–22 juni, glutenfri-meddelande annars.
-  // Ingen stäng-knapp längre (kan inte döljas) — så ingen råkar missa midsommar-infon.
-  var now = new Date();
-  var isMid = now >= new Date(2026, 5, 15) && now < new Date(2026, 5, 22);
-
-  if (isMid) {
-    bar.setAttribute('aria-label', 'Midsommar öppettider 2026');
-    var lbl = bar.querySelector('.gf-bar-label');
-    var msg = bar.querySelector('.gf-bar-msg');
-    if (lbl) { lbl.removeAttribute('data-i18n'); lbl.textContent = 'Midsommar · Kungsholmen'; }
-    if (msg) { msg.removeAttribute('data-i18n'); msg.innerHTML = 'Öppet 19/6 <strong>10–15</strong> · 20/6 <strong>11–17</strong> · Uppsala stängt'; }
-  }
-
+  // Ingen stäng-knapp: baren är smal och ska alltid gå att läsa.
   document.body.classList.add('has-gf-bar');
   requestAnimationFrame(function () { bar.classList.add('visible'); });
 
@@ -3389,28 +3355,35 @@ setInterval(updateOpenStatus, 60_000);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(mat);
 })();
 
-// ─── Midsommaröppettider: startsidans sektion + restaurangsidornas info-kort (datumstyrt 15–22 juni) ───
-(function () {
-  var now = new Date();
-  var isMid = now >= new Date(2026, 5, 15) && now < new Date(2026, 5, 22);
-  if (!isMid) return;
-  ['mid-section', 'mid-row-k', 'mid-row-u'].forEach(function (id) {
-    var el = document.getElementById(id);
-    if (el) el.style.display = '';
-  });
-})();
 
 </script>
 <script>
 (function(){
-  var MAP={hero:["#hero","header",".hero"],om:["#om","#about",".about"],
-    meny:["#meny","#menu",".menu"],bilder:["#bilder","#galleri","#gallery",".gallery"],
-    kontakt:["#kontakt","#contact","footer"],stil:["body"],ovrigt:["body"]};
+  /* Sajten ar en vy-vaxlare: hero, om och bilder bor i startvyn, menyn i sin egen.
+     Darfor byts vy forst nar sektionen ligger nagon annanstans, sedan scrollas det. */
+  var MAP={hero:{vy:"hem",sel:["#hero","header",".hero"]},
+    om:{vy:"hem",sel:["#om","#about",".about"]},
+    meny:{vy:"meny",sel:["#pg-meny",".meny-head"]},
+    bilder:{vy:"hem",sel:["#bilder","#galleri","#gallery",".gallery"]},
+    /* Footern klonas ur foot-tpl till alla vyer, sa den far inget id:
+       vi tar den som ligger i vyn som ar pa. */
+    kontakt:{vy:null,sel:[".pg.on footer","footer"]},
+    stil:{vy:null,sel:["body"]},ovrigt:{vy:null,sel:["body"]}};
+  function rulla(sel){
+    for(var i=0;i<sel.length;i++){
+      var el=document.querySelector(sel[i]);
+      if(el&&el.getClientRects().length){el.scrollIntoView({behavior:"smooth",block:"start"});return true;}
+    }
+    return false;
+  }
   window.addEventListener("message",function(e){
     var d=e.data||{}; if(d.type!=="granska-scroll") return;
-    var sels=MAP[d.section]||[]; for(var i=0;i<sels.length;i++){
-      var el=document.querySelector(sels[i]);
-      if(el){el.scrollIntoView({behavior:"smooth",block:"start"}); break;}
+    var m=MAP[d.section]; if(!m) return;
+    if(m.vy&&typeof navigate==="function"&&typeof current!=="undefined"&&current!==m.vy){
+      navigate(m.vy);
+      setTimeout(function(){rulla(m.sel);},420);   /* efter vy-overgangens 160+80 ms */
+    } else {
+      rulla(m.sel);
     }
   },false);
 })();
