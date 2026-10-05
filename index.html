@@ -68,8 +68,8 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 59.33476,
-        "longitude": 18.033
+        "latitude": 59.3348136,
+        "longitude": 18.0331006
       },
       "openingHoursSpecification": [
         {
@@ -185,8 +185,8 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 59.3703,
-        "longitude": 18.0037
+        "latitude": 59.3703148,
+        "longitude": 18.0034337
       },
       "servesCuisine": [
         "Japanska fluffy pancakes",
@@ -1461,6 +1461,12 @@
     }
     .lang-opt:hover { background: var(--c-cream); }
     .lang-opt.active { color: var(--c-matcha); font-weight: 700; }
+    /* Språkkoden står där flaggan stod. Fast bredd så namnen ligger på samma linje. */
+    .lang-opt-code {
+      flex: 0 0 1.75rem; font-size: 0.6875rem; font-weight: 700;
+      letter-spacing: 0.06em; color: rgba(28,28,26,0.62);
+    }
+    .lang-opt.active .lang-opt-code { color: var(--c-matcha); }
     .lang-check { margin-left: auto; font-size: 0.7rem; display: none; }
     .lang-opt.active .lang-check { display: inline; }
 
@@ -1569,7 +1575,9 @@
     }
     @media (max-width: 400px) {
       .nav-order { padding: 0 0.75rem; }
-      #lang-code { display: none; }
+      /* Koden är det enda som står i knappen nu, så den får inte döljas.
+         Knappen krymper i stället. */
+      .lang-btn { padding: 0.35rem 0.5rem; gap: 0.25rem; }
     }
 
     /* Från 1100 px ryms alla kategorier på en rad: låt dem radbrytas i stället
@@ -1718,15 +1726,14 @@
       <!-- Language picker -->
       <div class="lang-picker" id="lang-picker">
         <button class="lang-btn" id="lang-btn" aria-haspopup="listbox" aria-expanded="false">
-          <span id="lang-flag">🇸🇪</span>
           <span id="lang-code">SV</span>
           <svg class="lang-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="lang-dd" id="lang-dd" role="listbox">
-          <button class="lang-opt active" data-lang="sv" role="option">🇸🇪 Svenska <span class="lang-check">✓</span></button>
-          <button class="lang-opt" data-lang="en" role="option">🇬🇧 English <span class="lang-check">✓</span></button>
-          <button class="lang-opt" data-lang="da" role="option">🇩🇰 Dansk <span class="lang-check">✓</span></button>
-          <button class="lang-opt" data-lang="no" role="option">🇳🇴 Norsk <span class="lang-check">✓</span></button>
+          <button class="lang-opt active" data-lang="sv" role="option"><span class="lang-opt-code">SV</span>Svenska<span class="lang-check">✓</span></button>
+          <button class="lang-opt" data-lang="en" role="option"><span class="lang-opt-code">EN</span>English<span class="lang-check">✓</span></button>
+          <button class="lang-opt" data-lang="da" role="option"><span class="lang-opt-code">DA</span>Dansk<span class="lang-check">✓</span></button>
+          <button class="lang-opt" data-lang="no" role="option"><span class="lang-opt-code">NO</span>Norsk<span class="lang-check">✓</span></button>
         </div>
       </div>
 
@@ -3178,13 +3185,12 @@ const T = {
   },
 };
 
-const LANG_META = { sv:{flag:'🇸🇪',code:'SV'}, en:{flag:'🇬🇧',code:'EN'}, da:{flag:'🇩🇰',code:'DA'}, no:{flag:'🇳🇴',code:'NO'} };
+const LANG_META = { sv:{code:'SV'}, en:{code:'EN'}, da:{code:'DA'}, no:{code:'NO'} };
 let currentLang = localStorage.getItem('fh-lang') || 'sv';
 
 function applyLang(lang) {
   currentLang = lang;
   document.documentElement.lang = lang;
-  document.getElementById('lang-flag').textContent = LANG_META[lang].flag;
   document.getElementById('lang-code').textContent = LANG_META[lang].code;
   document.querySelectorAll('.lang-opt').forEach(o => o.classList.toggle('active', o.dataset.lang === lang));
   const t = T[lang];
