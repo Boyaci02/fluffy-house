@@ -2910,6 +2910,25 @@ function initReveal() {
 }
 initReveal();
 
+// ─── Djuplänk från undersidor ─────────────────────────────
+// Guidesidorna länkar till /#meny, /#kontakt osv. Vyn byts direkt utan
+// fade, och hero-läget släpps eftersom bara startvyn har video.
+(function () {
+  const pg = location.hash.slice(1);
+  if (!ALL_PAGES.includes(pg) || pg === 'hem') return;
+  document.getElementById('pg-hem')?.classList.remove('on');
+  document.getElementById('pg-' + pg)?.classList.add('on');
+  current = pg;
+  updateNav(pg);
+  updateHeroNav();
+  initReveal();
+  window.scrollTo(0, 0);
+})();
+window.addEventListener('hashchange', () => {
+  const pg = location.hash.slice(1) || 'hem';
+  if (ALL_PAGES.includes(pg)) navigate(pg);
+});
+
 // ─── Cookie ───────────────────────────────────────────────
 const ck = document.getElementById('cookie');
 if (!localStorage.getItem('fh-cookie')) {

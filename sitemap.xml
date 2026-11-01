@@ -8,4 +8,12 @@
       <image:title>Japanska fluffy pancakes på Fluffy House</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://fluffyhouse.se/japanska-pannkakor/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <image:image>
+      <image:loc>https://fluffyhouse.se/assets/gallery-pancakes.jpg</image:loc>
+      <image:title>Japanska soufflépannkakor med jordgubbar på Fluffy House</image:title>
+    </image:image>
+  </url>
 </urlset>
