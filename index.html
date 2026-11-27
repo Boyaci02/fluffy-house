@@ -908,6 +908,9 @@
     }
     .btn:focus-visible { outline: 3px solid var(--c-matcha); outline-offset: 3px; }
     .btn:active { transform: scale(0.97) !important; }
+    .order-ocksa { margin: 14px 0 0; font-size: 14px; line-height: 1.4; opacity: .75; letter-spacing: .01em; }
+    .order-ocksa--ljus { color: #fff; opacity: .85; }
+    @media (max-width: 640px) { .order-ocksa { margin-top: 12px; font-size: 13px; } }
     .btn-green { background: var(--c-matcha); color: #fff; box-shadow: 0 4px 24px rgba(58,97,71,0.28); }
     .btn-green:hover { background: #2e5039; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(58,97,71,0.4); }
     .btn-white { background: #fff; color: var(--c-ink); box-shadow: 0 4px 20px rgba(0,0,0,0.14); }
@@ -1821,6 +1824,7 @@
           <a href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" class="btn btn-white" data-i18n="btn.order">Beställ online</a>
           <button class="btn btn-outline-white" data-pg="restauranger" data-i18n="hero.find">Hitta oss</button>
         </div>
+        <p class="order-ocksa order-ocksa--ljus" data-i18n="order.ocksa">Finns även på Foodora och Wolt</p>
       </div>
     </div>
   </div>
@@ -1854,6 +1858,7 @@
         <a href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" class="btn btn-green" data-i18n="btn.order">Beställ online</a>
         <button class="btn btn-outline" data-pg="restauranger" data-i18n="hero.find">Hitta oss</button>
       </div>
+      <p class="order-ocksa" data-i18n="order.ocksa">Finns även på Foodora och Wolt</p>
     </div>
   </div>
 
@@ -2380,6 +2385,7 @@
         <p class="t-body" data-r="up" data-delay="200" data-i18n="meny.body">Soufflépannkakor som bakas på beställning, matcha vispad för hand och drycker vi gör själva.</p>
         <p class="meny-varning" data-r="up" data-delay="250" data-i18n="meny.varning">Utbudet kan variera mellan våra enheter.</p>
         <a class="btn btn-green meny-cta" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" data-r="up" data-delay="300" data-i18n="btn.order">Beställ online</a>
+        <p class="order-ocksa" data-i18n="order.ocksa">Finns även på Foodora och Wolt</p>
       </div>
 
       <div class="meny-chips" id="meny-chips" role="tablist" aria-label="Kategorier">
@@ -2626,6 +2632,7 @@
       <div class="meny-slut">
         <p class="meny-notis" data-i18n="meny.slut">Priserna gäller i våra caféer. Har du en allergi, fråga oss i kassan så guidar vi dig rätt.</p>
         <a class="btn btn-green" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" data-i18n="btn.order">Beställ online</a>
+        <p class="order-ocksa" data-i18n="order.ocksa">Finns även på Foodora och Wolt</p>
       </div>
     </div>
   </div>
@@ -3024,7 +3031,7 @@ const T = {
     'foot.copy':'© Fluffy House Stockholm AB','foot.power':'Powered By Syns Nu',
     'hero.sub':'Japanska fluffy pancakes och äkta matcha, en upplevelse utan motstycke i Sverige.',
     'hero.h1':'Fluffy House, japanska fluffy pancakes och matcha i Stockholm',
-    'hero.find':'Hitta oss','btn.order':'Beställ online',
+    'hero.find':'Hitta oss','btn.order':'Beställ online','order.ocksa':'Finns även på Foodora och Wolt',
     'btn.back.rest':'← Alla restauranger','btn.directions':'Vägbeskrivning ↗',
     'btn.instagram':'Instagram ↗','btn.contact':'Kontakta oss',
     'ticker.pancakes':'Japanska Fluffy Pancakes','ticker.matcha':'Äkta Matcha',
@@ -3082,7 +3089,7 @@ const T = {
     'foot.copy':'© Fluffy House Stockholm AB','foot.power':'Powered By Syns Nu',
     'hero.sub':'Japanese fluffy pancakes and authentic matcha, an experience unlike any other in Sweden.',
     'hero.h1':'Fluffy House, Japanese fluffy pancakes and matcha in Stockholm',
-    'hero.find':'Find us','btn.order':'Order online',
+    'hero.find':'Find us','btn.order':'Order online','order.ocksa':'Also on Foodora and Wolt',
     'btn.back.rest':'← All restaurants','btn.directions':'Directions ↗',
     'btn.instagram':'Instagram ↗','btn.contact':'Contact us',
     'ticker.pancakes':'Japanese Fluffy Pancakes','ticker.matcha':'Authentic Matcha',
@@ -3139,7 +3146,7 @@ const T = {
     'foot.copy':'© Fluffy House Stockholm AB','foot.power':'Powered By Syns Nu',
     'hero.sub':'Japanske fluffy pandekager og ægte matcha, en oplevelse uden sidestykke i Sverige.',
     'hero.h1':'Fluffy House, japanske fluffy pandekager og matcha i Stockholm',
-    'hero.find':'Find os','btn.order':'Bestil online',
+    'hero.find':'Find os','btn.order':'Bestil online','order.ocksa':'Findes også på Foodora og Wolt',
     'btn.back.rest':'← Alle restauranter','btn.directions':'Rutevejledning ↗',
     'btn.instagram':'Instagram ↗','btn.contact':'Kontakt os',
     'ticker.pancakes':'Japanske Fluffy Pandekager','ticker.matcha':'Ægte Matcha',
