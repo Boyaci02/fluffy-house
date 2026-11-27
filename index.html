@@ -908,9 +908,6 @@
     }
     .btn:focus-visible { outline: 3px solid var(--c-matcha); outline-offset: 3px; }
     .btn:active { transform: scale(0.97) !important; }
-    .order-ocksa { margin: 14px 0 0; font-size: 14px; line-height: 1.4; opacity: .75; letter-spacing: .01em; }
-    .order-ocksa--ljus { color: #fff; opacity: .85; }
-    @media (max-width: 640px) { .order-ocksa { margin-top: 12px; font-size: 13px; } }
     .btn-green { background: var(--c-matcha); color: #fff; box-shadow: 0 4px 24px rgba(58,97,71,0.28); }
     .btn-green:hover { background: #2e5039; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(58,97,71,0.4); }
     .btn-white { background: #fff; color: var(--c-ink); box-shadow: 0 4px 20px rgba(0,0,0,0.14); }
@@ -1636,7 +1633,7 @@
 </head>
 <body>
 <div id="deliverybar">
-  <span class="db-txt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg><span><span class="db-long" data-i18n="bar.pre">Nu kan du </span><span data-i18n="bar.delivery">beställa hem via Uber Eats</span></span></span>
+  <span class="db-txt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg><span><span class="db-long" data-i18n="bar.pre">Nu kan du </span><span data-i18n="bar.delivery">beställa hem via Uber Eats, Foodora och Wolt</span></span></span>
 </div>
 
 <!-- Page fade overlay -->
@@ -1857,7 +1854,6 @@
         <a href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" class="btn btn-green" data-i18n="btn.order">Beställ online</a>
         <button class="btn btn-outline" data-pg="restauranger" data-i18n="hero.find">Hitta oss</button>
       </div>
-      <p class="order-ocksa" data-i18n="order.ocksa">Finns även på Foodora och Wolt</p>
     </div>
   </div>
 
@@ -2384,7 +2380,6 @@
         <p class="t-body" data-r="up" data-delay="200" data-i18n="meny.body">Soufflépannkakor som bakas på beställning, matcha vispad för hand och drycker vi gör själva.</p>
         <p class="meny-varning" data-r="up" data-delay="250" data-i18n="meny.varning">Utbudet kan variera mellan våra enheter.</p>
         <a class="btn btn-green meny-cta" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" data-r="up" data-delay="300" data-i18n="btn.order">Beställ online</a>
-        <p class="order-ocksa" data-i18n="order.ocksa">Finns även på Foodora och Wolt</p>
       </div>
 
       <div class="meny-chips" id="meny-chips" role="tablist" aria-label="Kategorier">
@@ -2631,7 +2626,6 @@
       <div class="meny-slut">
         <p class="meny-notis" data-i18n="meny.slut">Priserna gäller i våra caféer. Har du en allergi, fråga oss i kassan så guidar vi dig rätt.</p>
         <a class="btn btn-green" href="https://fluffyhouse.qopla.com/" target="_blank" rel="noopener" data-i18n="btn.order">Beställ online</a>
-        <p class="order-ocksa" data-i18n="order.ocksa">Finns även på Foodora och Wolt</p>
       </div>
     </div>
   </div>
@@ -3030,7 +3024,7 @@ const T = {
     'foot.copy':'© Fluffy House Stockholm AB','foot.power':'Powered By Syns Nu',
     'hero.sub':'Japanska fluffy pancakes och äkta matcha, en upplevelse utan motstycke i Sverige.',
     'hero.h1':'Fluffy House, japanska fluffy pancakes och matcha i Stockholm',
-    'hero.find':'Hitta oss','btn.order':'Beställ online','order.ocksa':'Finns även på Foodora och Wolt',
+    'hero.find':'Hitta oss','btn.order':'Beställ online',
     'btn.back.rest':'← Alla restauranger','btn.directions':'Vägbeskrivning ↗',
     'btn.instagram':'Instagram ↗','btn.contact':'Kontakta oss',
     'ticker.pancakes':'Japanska Fluffy Pancakes','ticker.matcha':'Äkta Matcha',
@@ -3046,7 +3040,7 @@ const T = {
     'rest.label':'Våra enheter','rest.h1':'Restauranger',
     'rest.body':'Hitta din närmaste Fluffy House. Nu öppna i Stockholm, Solna och Uppsala.',
     'rest.open':'Öppet nu','rest.cta':'Utforska →','rest.uber':'Beställ online',
-    'bar.pre':'Nu kan du ','bar.delivery':'beställa hem via Uber Eats','bar.cta':'Beställ hem',
+    'bar.pre':'Nu kan du ','bar.delivery':'beställa hem via Uber Eats, Foodora och Wolt','bar.cta':'Beställ hem',
     'loc.m.label':'Om restaurangen','loc.m.h2':'Vårt tredje café, mitt i Mall of Scandinavia','loc.m.p1':'Fluffy House Mall of Scandinavia öppnade den 11 september 2026. Samma fluffiga soufflépannkakor, samma matcha och ube som på Kungsholmen och i Uppsala, nu även i Solna.','loc.m.p2':'Du hittar oss på plan 1 i Mall of Scandinavia, utanför Guldfynd, ett par minuter från Solna station och Friends Arena. Vi har öppet när gallerian har öppet. Glutenfria pannkakor serveras inte här, men på Kungsholmen och i Uppsala.','loc.m.opened':'Nyöppnat · sedan 11 september 2026','loc.m.hours':'Följer gallerians öppettider','loc.m.floor':'Plan 1, utanför Guldfynd','loc.m.floor2':'Plan 1, utanför Guldfynd','loc.k.label':'Om restaurangen','loc.k.h2':'Vår första enhet, hjärtat av Kungsholmen',
     'loc.k.p1':'Det var här allt startade. Fluffy House Kungsholmen öppnade den 10 oktober 2024 och är det allra första stället i Sverige att servera äkta japanska fluffy pancakes.',
     'loc.k.p2':'Beläget på Sankt Eriksgatan 44, bara 200 meter från Fridhemsplan, är caféet lätt att nå med tunnelbana. Välkommen in och upplev matcha och soufflé-pannkakor som du aldrig smakat dem förut.',
@@ -3088,7 +3082,7 @@ const T = {
     'foot.copy':'© Fluffy House Stockholm AB','foot.power':'Powered By Syns Nu',
     'hero.sub':'Japanese fluffy pancakes and authentic matcha, an experience unlike any other in Sweden.',
     'hero.h1':'Fluffy House, Japanese fluffy pancakes and matcha in Stockholm',
-    'hero.find':'Find us','btn.order':'Order online','order.ocksa':'Also on Foodora and Wolt',
+    'hero.find':'Find us','btn.order':'Order online',
     'btn.back.rest':'← All restaurants','btn.directions':'Directions ↗',
     'btn.instagram':'Instagram ↗','btn.contact':'Contact us',
     'ticker.pancakes':'Japanese Fluffy Pancakes','ticker.matcha':'Authentic Matcha',
@@ -3104,7 +3098,7 @@ const T = {
     'rest.label':'Our locations','rest.h1':'Restaurants',
     'rest.body':'Find your nearest Fluffy House. Now open in Stockholm, Solna and Uppsala.',
     'rest.open':'Open now','rest.cta':'Explore →','rest.uber':'Order online',
-    'bar.pre':'You can now ','bar.delivery':'order delivery on Uber Eats','bar.cta':'Order now',
+    'bar.pre':'You can now ','bar.delivery':'order delivery on Uber Eats, Foodora and Wolt','bar.cta':'Order now',
     'loc.m.label':'About the restaurant','loc.m.h2':'Our third café, in the middle of Mall of Scandinavia','loc.m.p1':'Fluffy House Mall of Scandinavia opened on 11 September 2026. The same fluffy soufflé pancakes, the same matcha and ube as at Kungsholmen and in Uppsala, now in Solna too.','loc.m.p2':'Find us on level 1 of Mall of Scandinavia, outside Guldfynd, a couple of minutes from Solna station and Friends Arena. We are open whenever the mall is open. Gluten-free pancakes are not served here, but at Kungsholmen and in Uppsala.','loc.m.opened':'Newly opened · since 11 September 2026','loc.m.hours':'Same hours as the mall','loc.m.floor':'Level 1, outside Guldfynd','loc.m.floor2':'Level 1, outside Guldfynd','loc.k.label':'About the restaurant','loc.k.h2':'Our first location, heart of Kungsholmen',
     'loc.k.p1':'This is where it all started. Fluffy House Kungsholmen opened on 10 October 2024 and is the very first place in Sweden to serve authentic Japanese fluffy pancakes.',
     'loc.k.p2':'Located at Sankt Eriksgatan 44, just 200 metres from Fridhemsplan, the café is easy to reach by metro. Come in and experience matcha and soufflé pancakes like you\'ve never tasted them before.',
@@ -3145,7 +3139,7 @@ const T = {
     'foot.copy':'© Fluffy House Stockholm AB','foot.power':'Powered By Syns Nu',
     'hero.sub':'Japanske fluffy pandekager og ægte matcha, en oplevelse uden sidestykke i Sverige.',
     'hero.h1':'Fluffy House, japanske fluffy pandekager og matcha i Stockholm',
-    'hero.find':'Find os','btn.order':'Bestil online','order.ocksa':'Findes også på Foodora og Wolt',
+    'hero.find':'Find os','btn.order':'Bestil online',
     'btn.back.rest':'← Alle restauranter','btn.directions':'Rutevejledning ↗',
     'btn.instagram':'Instagram ↗','btn.contact':'Kontakt os',
     'ticker.pancakes':'Japanske Fluffy Pandekager','ticker.matcha':'Ægte Matcha',
@@ -3161,7 +3155,7 @@ const T = {
     'rest.label':'Vores enheder','rest.h1':'Restauranter',
     'rest.body':'Find din nærmeste Fluffy House. Nu åbent i Stockholm, Solna og Uppsala.',
     'rest.open':'Åbent nu','rest.cta':'Udforsk →','rest.uber':'Bestil online',
-    'bar.pre':'Du kan nu ','bar.delivery':'bestille hjem via Uber Eats','bar.cta':'Bestil hjem',
+    'bar.pre':'Du kan nu ','bar.delivery':'bestille hjem via Uber Eats, Foodora og Wolt','bar.cta':'Bestil hjem',
     'loc.m.label':'Om restauranten','loc.m.h2':'Vores tredje café, midt i Mall of Scandinavia','loc.m.p1':'Fluffy House Mall of Scandinavia åbnede den 11. september 2026. De samme fluffige soufflépandekager, den samme matcha og ube som på Kungsholmen og i Uppsala, nu også i Solna.','loc.m.p2':'Du finder os på plan 1 i Mall of Scandinavia, uden for Guldfynd, et par minutter fra Solna station og Friends Arena. Vi har åbent, når centret har åbent. Glutenfri pandekager serveres ikke her, men på Kungsholmen og i Uppsala.','loc.m.opened':'Nyåbnet · siden 11. september 2026','loc.m.hours':'Følger centrets åbningstider','loc.m.floor':'Plan 1, uden for Guldfynd','loc.m.floor2':'Plan 1, uden for Guldfynd','loc.k.label':'Om restauranten','loc.k.h2':'Vores første enhed, hjertet af Kungsholmen',
     'loc.k.p1':'Det var her, det hele startede. Fluffy House Kungsholmen åbnede den 10. oktober 2024 og er det første sted i Sverige, der serverer ægte japanske fluffy pandekager.',
     'loc.k.p2':'Beliggende på Sankt Eriksgatan 44, kun 200 meter fra Fridhemsplan, er caféen nem at nå med metro. Kom ind og oplev matcha og soufflé-pandekager som du aldrig har smagt dem før.',
@@ -3218,7 +3212,7 @@ const T = {
     'rest.label':'Våre enheter','rest.h1':'Restauranter',
     'rest.body':'Finn din nærmeste Fluffy House. Nå åpent i Stockholm, Solna og Uppsala.',
     'rest.open':'Åpent nå','rest.cta':'Utforsk →','rest.uber':'Bestill online',
-    'bar.pre':'Du kan nå ','bar.delivery':'bestille hjem via Uber Eats','bar.cta':'Bestill hjem',
+    'bar.pre':'Du kan nå ','bar.delivery':'bestille hjem via Uber Eats, Foodora og Wolt','bar.cta':'Bestill hjem',
     'loc.m.label':'Om restauranten','loc.m.h2':'Vår tredje kafé, midt i Mall of Scandinavia','loc.m.p1':'Fluffy House Mall of Scandinavia åpnet 11. september 2026. De samme fluffige sufflépannekakene, den samme matchaen og uben som på Kungsholmen og i Uppsala, nå også i Solna.','loc.m.p2':'Du finner oss i plan 1 i Mall of Scandinavia, utenfor Guldfynd, et par minutter fra Solna stasjon og Friends Arena. Vi har åpent når kjøpesenteret har åpent. Glutenfrie pannekaker serveres ikke her, men på Kungsholmen og i Uppsala.','loc.m.opened':'Nyåpnet · siden 11. september 2026','loc.m.hours':'Følger senterets åpningstider','loc.m.floor':'Plan 1, utenfor Guldfynd','loc.m.floor2':'Plan 1, utenfor Guldfynd','loc.k.label':'Om restauranten','loc.k.h2':'Vår første enhet, hjertet av Kungsholmen',
     'loc.k.p1':'Det var her alt startet. Fluffy House Kungsholmen åpnet 10. oktober 2024 og er det aller første stedet i Sverige som serverer ekte japanske fluffy pannekaker.',
     'loc.k.p2':'Plassert på Sankt Eriksgatan 44, bare 200 meter fra Fridhemsplan, er kaféen lett å nå med T-bane. Kom inn og opplev matcha og soufflé-pannekaker som du aldri har smakt dem før.',
